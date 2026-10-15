@@ -28,7 +28,8 @@ ul{list-style:none}
 /* ===== header ===== */
 .site-header{display:contents}
 .site-title{text-align:center;padding:35px 20px}
-.site-title a{display:inline-block}
+.site-title a{display:inline-block;vertical-align:top}
+.site-title{line-height:0}
 .site-title img{width:790px;height:auto}
 
 .nav-bar{position:sticky;top:0;z-index:50;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -257,7 +258,8 @@ ul{list-style:none}
 .pcard .pn{display:block;text-align:center;padding-top:12px;font-size:16px;letter-spacing:.06em}
 .pcard .pp{display:block;text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
-.pd-ph{background:var(--tint)}
+.pd-ph{background:var(--tint);aspect-ratio:1/1}
+.pd-ph img{width:100%;height:100%;object-fit:contain}
 .pp-big{font-family:var(--sans);font-size:18px;color:var(--ink-sub);margin:16px 0 32px}
 .buy label{display:block;font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:8px}
 .qty{display:flex;margin-bottom:24px}

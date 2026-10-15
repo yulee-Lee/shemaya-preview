@@ -28,7 +28,8 @@ ul{list-style:none}
 /* ===== header ===== */
 .site-header{display:contents}
 .site-title{text-align:center;padding:35px 20px}
-.site-title a{display:inline-block}
+.site-title a{display:inline-block;vertical-align:top}
+.site-title{line-height:0}
 .site-title img{width:790px;height:auto}
 
 .nav-bar{position:sticky;top:0;z-index:50;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -257,7 +258,8 @@ ul{list-style:none}
 .pcard .pn{display:block;text-align:center;padding-top:12px;font-size:16px;letter-spacing:.06em}
 .pcard .pp{display:block;text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
-.pd-ph{background:var(--tint)}
+.pd-ph{background:var(--tint);aspect-ratio:1/1}
+.pd-ph img{width:100%;height:100%;object-fit:contain}
 .pp-big{font-family:var(--sans);font-size:18px;color:var(--ink-sub);margin:16px 0 32px}
 .buy label{display:block;font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:8px}
 .qty{display:flex;margin-bottom:24px}
@@ -339,7 +341,7 @@ ul{list-style:none}
 <section class="hero"><div class="wrap"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / <a id="pSeries" href="shop.html">商品</a></nav></div></section>
 <div class="wrap inner">
   <div class="pd" id="pd" hidden>
-    <div class="pd-ph"><img id="pImg" src="" width="800" height="800" alt=""></div>
+    <div class="pd-ph" id="pPh"></div>
     <div>
       <h1 class="sec-title" id="pName"></h1>
       <p class="pp-big">價格待提供</p>
@@ -379,8 +381,9 @@ d08:{n:'紫金光蓮花',s:'保健排毒系列',u:'series-detox.html',w:800,h:80
   var d = Object.prototype.hasOwnProperty.call(P, code) ? P[code] : null;
   if (!d) { document.getElementById('pNone').hidden = false; document.title = '找不到這個商品｜Shemaya 夏克緹薩滿的金色大門'; return; }
   document.getElementById('pd').hidden = false;
-  var im = document.getElementById('pImg');
-  im.src = 'assets/' + code + '.webp'; im.width = d.w; im.height = d.h; im.alt = d.n;
+  var im = document.createElement('img');
+  im.width = d.w; im.height = d.h; im.alt = d.n; im.src = 'assets/' + code + '.webp';
+  document.getElementById('pPh').appendChild(im);
   document.getElementById('pName').textContent = d.n;
   var s = document.getElementById('pSeries'); s.textContent = d.s; s.href = d.u;
   document.title = d.n + '｜Shemaya 夏克緹薩滿的金色大門';

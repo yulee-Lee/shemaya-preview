@@ -28,7 +28,8 @@ ul{list-style:none}
 /* ===== header ===== */
 .site-header{display:contents}
 .site-title{text-align:center;padding:35px 20px}
-.site-title a{display:inline-block}
+.site-title a{display:inline-block;vertical-align:top}
+.site-title{line-height:0}
 .site-title img{width:790px;height:auto}
 
 .nav-bar{position:sticky;top:0;z-index:50;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -257,7 +258,8 @@ ul{list-style:none}
 .pcard .pn{display:block;text-align:center;padding-top:12px;font-size:16px;letter-spacing:.06em}
 .pcard .pp{display:block;text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
-.pd-ph{background:var(--tint)}
+.pd-ph{background:var(--tint);aspect-ratio:1/1}
+.pd-ph img{width:100%;height:100%;object-fit:contain}
 .pp-big{font-family:var(--sans);font-size:18px;color:var(--ink-sub);margin:16px 0 32px}
 .buy label{display:block;font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:8px}
 .qty{display:flex;margin-bottom:24px}
@@ -339,16 +341,17 @@ ul{list-style:none}
 <section class="hero"><div class="wrap hero-in"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 立即預約</nav><h1 class="sec-title">立即預約</h1></div></div></section>
 <div class="wrap inner narrow">
   <p class="note">這是測試站的預約表單示範，按下送出只會在頁面上顯示結果，資料不會送出也不會儲存。正式站上線後才會真正收件。</p>
-  <form class="bk" id="bk" novalidate>
-    <div class="f"><label for="bkName">姓名 <em>必填</em></label><input id="bkName" name="name" autocomplete="name" maxlength="40" required></div>
-    <div class="f"><label for="bkContact">聯絡方式（LINE ID、電話或 Email）<em>必填</em></label><input id="bkContact" name="contact" maxlength="80" required></div>
-    <div class="f"><label for="bkSvc">想預約的服務 <em>必填</em></label><select id="bkSvc" name="svc" required><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心能量解讀</option><option>量身訂作療程</option><option>前世回溯</option><option>各種業力釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option><option>訂製個人蓮花譚崔瑜伽</option><option>Agni 除苗六步驟</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>人生道路校準</option><option>解決重複發生的議題</option><option>釋放舊能量與負擔</option><option>負向信念刪除</option><option>關係高端療癒</option><option>消除停滯堵塞</option><option>脈輪充電</option></optgroup><optgroup label="靈性訓練授證"><option>脈輪花精卡療癒師</option><option>薩滿水晶療癒</option><option>光藥草保健療癒</option><option>浴光之路</option><option>神聖藥草祭司</option><option>水知識</option><option>四大元素與基督之光</option><option>狼祭司與熊部落</option><option>天狼星工作坊</option></optgroup><optgroup label="薩滿部落"><option>重回你的薩滿道路</option><option>火薩滿聖蛇解毒</option><option>阿里山薩滿僻靜之旅</option><option>天狼星薩滿之旅</option><option>預約自己的薩滿療癒</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>住宅</option><option>商業空間</option><option>廠房</option><option>工作室</option></optgroup><option>其他</option></select></div>
-    <div class="f"><label for="bkTime">希望時段</label><input id="bkTime" name="time" maxlength="60" placeholder="例：平日晚上、週六下午"></div>
-    <div class="f"><label for="bkNote">備註</label><textarea id="bkNote" name="note" rows="4" maxlength="500"></textarea></div>
-    <button class="btn" type="submit">送出預約</button>
-  </form>
+  <noscript><p class="pending">預約表單示範需要開啟 JavaScript。</p></noscript>
+  <div class="bk" id="bk" role="form" aria-label="預約表單示範">
+    <div class="f"><label for="bkName">姓名 <em>必填</em></label><input id="bkName" maxlength="40" required></div>
+    <div class="f"><label for="bkContact">聯絡方式（LINE ID、電話或 Email）<em>必填</em></label><input id="bkContact" maxlength="80" required></div>
+    <div class="f"><label for="bkSvc">想預約的服務 <em>必填</em></label><select id="bkSvc" required><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心能量解讀</option><option>量身訂作療程</option><option>前世回溯</option><option>各種業力釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option><option>訂製個人蓮花譚崔瑜伽</option><option>Agni 除苗六步驟</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>人生道路校準</option><option>解決重複發生的議題</option><option>釋放舊能量與負擔</option><option>負向信念刪除</option><option>關係高端療癒</option><option>消除停滯堵塞</option><option>脈輪充電</option></optgroup><optgroup label="靈性訓練授證"><option>脈輪花精卡療癒師</option><option>薩滿水晶療癒</option><option>光藥草保健療癒</option><option>浴光之路</option><option>神聖藥草祭司</option><option>水知識</option><option>四大元素與基督之光</option><option>狼祭司與熊部落</option><option>天狼星工作坊</option></optgroup><optgroup label="薩滿部落"><option>重回你的薩滿道路</option><option>火薩滿聖蛇解毒</option><option>阿里山薩滿僻靜之旅</option><option>天狼星薩滿之旅</option><option>預約自己的薩滿療癒</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>住宅</option><option>商業空間</option><option>廠房</option><option>工作室</option></optgroup><option>其他</option></select></div>
+    <div class="f"><label for="bkTime">希望時段</label><input id="bkTime" maxlength="60" placeholder="例：平日晚上、週六下午"></div>
+    <div class="f"><label for="bkNote">備註</label><textarea id="bkNote" rows="4" maxlength="500"></textarea></div>
+    <button class="btn" id="bkSend" type="button">送出預約</button>
+  </div>
   <p class="notice" id="bkMsg" role="status" aria-live="polite"></p>
-  <p class="line-alt">也可以直接加官方 LINE 詢問：<a class="tlink" href="https://line.me/R/ti/p/@864sevrh" target="_blank" rel="noopener">@864sevrh</a></p>
+  <p class="line-alt">Shemaya 的官方 LINE 等聯絡方式：<span class="pending">待 Shemaya 提供</span></p>
 </div>
 <script>
 (function () {
@@ -356,8 +359,7 @@ ul{list-style:none}
   var fName = document.getElementById('bkName'), fContact = document.getElementById('bkContact'), fSvc = document.getElementById('bkSvc');
   var s = new URLSearchParams(location.search).get('s');
   if (s) { Array.prototype.forEach.call(fSvc.options, function (o) { if (o.text === s) o.selected = true; }); }
-  f.addEventListener('submit', function (e) {
-    e.preventDefault();
+  document.getElementById('bkSend').addEventListener('click', function () {
     var bad = null;
     [fName, fContact, fSvc].forEach(function (el) {
       var empty = !el.value.trim();

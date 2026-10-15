@@ -28,7 +28,8 @@ ul{list-style:none}
 /* ===== header ===== */
 .site-header{display:contents}
 .site-title{text-align:center;padding:35px 20px}
-.site-title a{display:inline-block}
+.site-title a{display:inline-block;vertical-align:top}
+.site-title{line-height:0}
 .site-title img{width:790px;height:auto}
 
 .nav-bar{position:sticky;top:0;z-index:50;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -257,7 +258,8 @@ ul{list-style:none}
 .pcard .pn{display:block;text-align:center;padding-top:12px;font-size:16px;letter-spacing:.06em}
 .pcard .pp{display:block;text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
-.pd-ph{background:var(--tint)}
+.pd-ph{background:var(--tint);aspect-ratio:1/1}
+.pd-ph img{width:100%;height:100%;object-fit:contain}
 .pp-big{font-family:var(--sans);font-size:18px;color:var(--ink-sub);margin:16px 0 32px}
 .buy label{display:block;font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:8px}
 .qty{display:flex;margin-bottom:24px}
@@ -340,11 +342,9 @@ ul{list-style:none}
 <div class="wrap inner">
 <section class="item" id="spray"><h2>能量精華噴霧</h2><div class="pgrid">
 <a class="pcard" href="series-sirius.html"><img src="assets/series-sirius.webp" width="800" height="800" alt="天狼星系列" loading="lazy"><span class="pn">天狼星系列</span><span class="pp">11 款</span></a>
-<a class="pcard" href="series-detox.html"><img src="assets/d02.webp" width="800" height="800" alt="保健排毒系列" loading="lazy"><span class="pn">保健排毒系列</span><span class="pp">8 款</span></a>
-</div>
-<h3 class="sub-h3">其他系列</h3><p class="note">以下系列的商品由 Shemaya 自行上架，系列名稱待確認。</p><div class="pgrid">
-<figure class="pcard static"><img src="assets/o-poppy.webp" width="800" height="800" alt="罌粟花精" loading="lazy"><figcaption class="pn">罌粟花精</figcaption></figure><figure class="pcard static"><img src="assets/o-wolf.webp" width="800" height="800" alt="金光狼" loading="lazy"><figcaption class="pn">金光狼</figcaption></figure><figure class="pcard static"><img src="assets/o-crystal.webp" width="800" height="800" alt="和諧水晶精素" loading="lazy"><figcaption class="pn">和諧水晶精素</figcaption></figure><figure class="pcard static"><img src="assets/o-christ.webp" width="800" height="800" alt="基督之愛五隻產品" loading="lazy"><figcaption class="pn">基督之愛五隻產品</figcaption></figure>
-</div></section>
+<a class="pcard" href="series-detox.html"><img src="assets/d07.webp" width="800" height="800" alt="保健排毒系列" loading="lazy"><span class="pn">保健排毒系列</span><span class="pp">8 款</span></a>
+<a class="pcard" href="series-other.html?s=flower"><img src="assets/o-flower.webp" width="800" height="800" alt="身心情緒花精系列" loading="lazy"><span class="pn">身心情緒花精系列</span><span class="pp">商品由 Shemaya 自行上架</span></a><a class="pcard" href="series-other.html?s=healer"><img src="assets/o-healer.webp" width="800" height="800" alt="療癒師產品系列" loading="lazy"><span class="pn">療癒師產品系列</span><span class="pp">商品由 Shemaya 自行上架</span></a><a class="pcard" href="series-other.html?s=crystal"><img src="assets/o-crystal.webp" width="800" height="800" alt="水晶光能系列" loading="lazy"><span class="pn">水晶光能系列</span><span class="pp">商品由 Shemaya 自行上架</span></a><a class="pcard" href="series-other.html?s=christ"><img src="assets/o-christ.webp" width="800" height="800" alt="基督之愛系列" loading="lazy"><span class="pn">基督之愛系列</span><span class="pp">商品由 Shemaya 自行上架</span></a>
+</div><p class="note">其他四個系列的名稱依資料夾暫訂，待 Shemaya 確認。</p></section>
 <section class="item" id="crystal"><h2>靈性水晶</h2><p class="pending">商品由 Shemaya 自行上架</p></section></div>
 </main>
 <footer>
