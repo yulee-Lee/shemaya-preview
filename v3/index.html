@@ -78,8 +78,9 @@ ul{list-style:none}
 .svc li:nth-child(5){grid-column:2/span 2}
 .svc a{display:block}
 .svc .fr{display:block;overflow:hidden;background:var(--tint);aspect-ratio:3/4}
-.svc img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-.svc a:hover img,.svc a:focus-visible img{transform:scale(1.03)}
+.svc img{width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.svc a:hover img,.svc a:focus-visible img{opacity:.88}
+.svc .note{display:block;margin-top:4px;font-family:var(--sans);font-size:12px;letter-spacing:.08em;color:#9a9286;text-align:center}
 .svc h3{font-size:18px;font-weight:700;letter-spacing:.06em;margin-top:16px;text-align:center;transition:color .2s}
 .svc a:hover h3,.svc a:focus-visible h3{color:var(--accent-dark)}
 
@@ -144,7 +145,8 @@ ul{list-style:none}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1180px){
-  .courses{grid-template-columns:1fr}
+  .courses{gap:40px}
+  .course{grid-template-columns:140px 1fr;gap:20px}
   .about{gap:56px}
 }
 @media (max-width:1024px){
@@ -180,12 +182,16 @@ ul{list-style:none}
   .sub-h{background:#efede9;color:var(--accent-dark);text-align:left;padding:12px 20px 6px 36px;border-color:#e5e5e5}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
-  .svc{grid-template-columns:repeat(3,1fr);gap:32px 24px}
-  .svc li,.svc li:nth-child(5){grid-column:auto}
-  .svc li:nth-child(7){grid-column:2}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
   .free{grid-template-columns:repeat(3,1fr)}
   .fw-in{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media (min-width:768px) and (max-width:1023px){
+  .svc{grid-template-columns:repeat(3,1fr);gap:32px 24px}
+  .svc li,.svc li:nth-child(5){grid-column:auto}
+  .svc li:nth-child(7){grid-column:2}
+  .course{grid-template-columns:1fr;gap:16px}
+  .course .ph{max-width:240px}
 }
 @media (max-width:767px){
   :root{--gut:16px;--sec:56px}
@@ -195,7 +201,7 @@ ul{list-style:none}
   .svc li,.svc li:nth-child(5),.svc li:nth-child(7){grid-column:auto;scroll-snap-align:start}
   .svc h3{font-size:17px;margin-top:12px}
   .course-group{font-size:19px;margin:56px 0 24px}
-  .courses{gap:40px}
+  .courses{grid-template-columns:1fr;gap:40px}
   .course{grid-template-columns:112px 1fr;gap:16px}
   .course p{font-size:15px;line-height:1.7}
   .course .more{margin-top:8px}
@@ -269,7 +275,7 @@ ul{list-style:none}
         <li><a href="#"><span class="fr"><img src="assets/sv-tribe.webp" width="900" height="1200" alt="薩滿部落" loading="lazy"></span><h3>薩滿部落</h3></a></li>
         <li><a href="#"><span class="fr"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼" loading="lazy"></span><h3>靈魂藍圖解碼</h3></a></li>
         <li><a href="#"><span class="fr"><img src="assets/sv-space.webp" width="900" height="1200" alt="空間能量風水" loading="lazy"></span><h3>空間能量風水</h3></a></li>
-        <li><a href="#shop"><span class="fr"><img src="assets/sv-shop.webp" width="600" height="800" alt="靈性商店" loading="lazy"></span><h3>靈性商店</h3></a></li>
+        <li><a href="#shop"><span class="fr"><img src="assets/sv-shop.webp" width="600" height="800" alt="靈性商店" loading="lazy"></span><h3>靈性商店</h3><span class="note">暫用商品圖，主圖待提供</span></a></li>
       </ul>
     </div>
   </section>
