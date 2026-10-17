@@ -135,15 +135,20 @@ ul{list-style:none}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
 /* ===== responsive ===== */
-@media (max-width:1280px){
+@media (max-width:1340px){
   .menu>li+li{margin-left:28px}
   .menu>li+li::before{left:-17px}
 }
-@media (max-width:1180px){
+@media (max-width:1260px){
   .menu>li{font-size:14.5px}
   .menu>li+li{margin-left:22px}
   .menu>li+li::before{left:-14px}
   .nav-in{padding:0 130px 0 20px}
+}
+@media (max-width:1100px){
+  .menu>li{font-size:14px}
+  .menu>li+li{margin-left:18px}
+  .menu>li+li::before{left:-12px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -342,6 +347,10 @@ ul{list-style:none}
   .cal-grid .day{height:40px;font-size:14px}
   .slot{flex:1;min-width:0}
 }
+/* 只展示照片的商品卡（保健排毒系列暫不販售）：不是連結，不做滑過效果 */
+figure.pcard:hover img{opacity:1}
+/* 頁面大標題用 90% 黑（客戶 10/17） */
+.sec-title{color:#1a1a1a}
 </style>
 </head>
 <body>
@@ -376,6 +385,7 @@ ul{list-style:none}
           <div class="dd"><ul class="sub">
             <li><a href="space.html#home">住宅</a></li><li><a href="space.html#commercial">商業空間</a></li><li><a href="space.html#factory">廠房</a></li><li><a href="space.html#studio">工作室</a></li>
           </ul></div></li>
+        <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
             <li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#spray">能量精華噴霧</a></li>
@@ -389,9 +399,8 @@ ul{list-style:none}
 <main id="top">
 <section class="hero"><div class="wrap hero-in"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / 保健排毒系列</nav><h1 class="sec-title">保健排毒系列</h1></div></div></section>
 <div class="wrap inner">
-<p class="note">觀音甘露圖待提供，收到後補上。</p>
-<div class="pgrid">
-<a class="pcard" href="product.html?p=d01"><img src="assets/d01.webp" width="800" height="800" alt="光纖" loading="lazy"><span class="pn">光纖</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=d02"><img src="assets/d02.webp" width="800" height="800" alt="銀之水" loading="lazy"><span class="pn">銀之水</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=d03"><img src="assets/d03.webp" width="800" height="800" alt="卡利黑狼" loading="lazy"><span class="pn">卡利黑狼</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=d04"><img src="assets/d04.webp" width="800" height="800" alt="水晶狼" loading="lazy"><span class="pn">水晶狼</span><span class="pp">NT$1,300 起</span></a><a class="pcard" href="product.html?p=d05"><img src="assets/d05.webp" width="800" height="800" alt="蛇魔法解藥" loading="lazy"><span class="pn">蛇魔法解藥</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=d06"><img src="assets/d06.webp" width="800" height="800" alt="銀光星星" loading="lazy"><span class="pn">銀光星星</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=d07"><img src="assets/d07.webp" width="800" height="800" alt="金白光蓮花" loading="lazy"><span class="pn">金白光蓮花</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=d08"><img src="assets/d08.webp" width="800" height="800" alt="紫金光蓮花" loading="lazy"><span class="pn">紫金光蓮花</span><span class="pp">NT$1,300</span></a>
+<p class="note">這個系列目前暫不販售，先保留商品照片。</p><div class="pgrid">
+<figure class="pcard"><img src="assets/d01.webp" width="800" height="800" alt="光纖" loading="lazy"><figcaption class="pn">光纖</figcaption></figure><figure class="pcard"><img src="assets/d02.webp" width="800" height="800" alt="銀之水" loading="lazy"><figcaption class="pn">銀之水</figcaption></figure><figure class="pcard"><img src="assets/d03.webp" width="800" height="800" alt="卡利黑狼" loading="lazy"><figcaption class="pn">卡利黑狼</figcaption></figure><figure class="pcard"><img src="assets/d04.webp" width="800" height="800" alt="水晶狼" loading="lazy"><figcaption class="pn">水晶狼</figcaption></figure><figure class="pcard"><img src="assets/d05.webp" width="800" height="800" alt="蛇魔法解藥" loading="lazy"><figcaption class="pn">蛇魔法解藥</figcaption></figure><figure class="pcard"><img src="assets/d06.webp" width="800" height="800" alt="銀光星星" loading="lazy"><figcaption class="pn">銀光星星</figcaption></figure><figure class="pcard"><img src="assets/d07.webp" width="800" height="800" alt="金白光蓮花" loading="lazy"><figcaption class="pn">金白光蓮花</figcaption></figure><figure class="pcard"><img src="assets/d08.webp" width="800" height="800" alt="紫金光蓮花" loading="lazy"><figcaption class="pn">紫金光蓮花</figcaption></figure>
 </div></div>
 </main>
 <footer>

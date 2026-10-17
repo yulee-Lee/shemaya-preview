@@ -135,15 +135,20 @@ ul{list-style:none}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
 /* ===== responsive ===== */
-@media (max-width:1280px){
+@media (max-width:1340px){
   .menu>li+li{margin-left:28px}
   .menu>li+li::before{left:-17px}
 }
-@media (max-width:1180px){
+@media (max-width:1260px){
   .menu>li{font-size:14.5px}
   .menu>li+li{margin-left:22px}
   .menu>li+li::before{left:-14px}
   .nav-in{padding:0 130px 0 20px}
+}
+@media (max-width:1100px){
+  .menu>li{font-size:14px}
+  .menu>li+li{margin-left:18px}
+  .menu>li+li::before{left:-12px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -342,6 +347,10 @@ ul{list-style:none}
   .cal-grid .day{height:40px;font-size:14px}
   .slot{flex:1;min-width:0}
 }
+/* 只展示照片的商品卡（保健排毒系列暫不販售）：不是連結，不做滑過效果 */
+figure.pcard:hover img{opacity:1}
+/* 頁面大標題用 90% 黑（客戶 10/17） */
+.sec-title{color:#1a1a1a}
 </style>
 </head>
 <body>
@@ -376,6 +385,7 @@ ul{list-style:none}
           <div class="dd"><ul class="sub">
             <li><a href="space.html#home">住宅</a></li><li><a href="space.html#commercial">商業空間</a></li><li><a href="space.html#factory">廠房</a></li><li><a href="space.html#studio">工作室</a></li>
           </ul></div></li>
+        <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
             <li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#spray">能量精華噴霧</a></li>
@@ -393,7 +403,7 @@ ul{list-style:none}
 <h2 class="course-group">認識 SHEMAYA</h2>
 <section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <h2 class="course-group">小型工作坊</h2>
-<section class="item" id="growth"><h2>身心成長</h2><p class="pending">內容待 Shemaya 提供</p></section>
+<section class="item" id="growth"><h2>身心成長</h2><div class="gal one"><img src="assets/x-growth.webp" width="800" height="800" alt="身心成長" loading="lazy"></div><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="fullmoon"><h2>滿月火典療癒</h2><div class="gal one"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典療癒" loading="lazy"></div><div class="prose"><p>Shakti 夏克緹：源自古印第安梵語，意指神聖的母親，也是神聖的女性創造力量。</p><p>夏克緹火典是獻給神聖母親的儀式，藉由火的形式將神聖母親能量帶到地球上來，滋養、增長、療癒每個存有的女性創造面向，並療癒長久以來失衡的男女能量。</p><p>透過夏克緹之火餵養大地，協助各存有（大地及人）達成陰陽和諧平衡，每個人內在女性能量也將得到充電，也特別支持女性朋友們。</p></div></section>
 <section class="item" id="body"><h2>身體解密</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="family"><h2>親子伴侶關係</h2><p class="pending">內容待 Shemaya 提供</p></section>

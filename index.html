@@ -68,13 +68,14 @@ ul{list-style:none}
 .menu-toggle,.mbook,.sub-toggle{display:none}
 
 /* ===== banner ===== */
-.banner{height:400px;background:#e9e6e0;display:flex;align-items:center;justify-content:center;color:#8f887c;font-family:var(--sans);font-size:14px;letter-spacing:.2em}
+.banner{background:#e9e6e0;line-height:0}
+.banner img{width:100%;height:auto;max-height:600px;object-fit:cover;object-position:50% 75%}
 
 /* ===== content ===== */
 .site-content{max-width:1440px;margin:0 auto;padding:60px 150px;display:flex;align-items:flex-start;gap:57px}
-.main-card{flex:0 0 783px;max-width:783px;background:var(--white);border:1px solid var(--line);margin-top:-120px;padding:60px 77px 77px;position:relative;z-index:2}
-.entry-title{font-size:44.2px;line-height:1.3;font-weight:700}
-.entry-title.sm{font-size:32px;margin-top:72px}
+.main-card{flex:0 0 783px;max-width:783px;background:var(--white);border:1px solid var(--line);margin-top:0;padding:60px 77px 77px;position:relative;z-index:2}
+.entry-title{font-size:36px;line-height:1.35;font-weight:700;color:#1a1a1a}
+.entry-title.sm{font-size:28px;margin-top:72px}
 .course{display:flex;gap:30px;margin-top:50px;align-items:flex-start}
 .course .ph{flex:0 0 245px;border:1px solid var(--line);padding:5px;background:#fff}
 .course .ph img{width:233px;height:163px;object-fit:cover}
@@ -122,15 +123,20 @@ ul{list-style:none}
   .main-card{flex:1 1 auto;max-width:none}
   .fw-in{padding:0 40px}
 }
-@media (max-width:1280px){
+@media (max-width:1340px){
   .menu>li+li{margin-left:28px}
   .menu>li+li::before{left:-17px}
 }
-@media (max-width:1180px){
+@media (max-width:1260px){
   .menu>li{font-size:14.5px}
   .menu>li+li{margin-left:22px}
   .menu>li+li::before{left:-14px}
   .nav-in{padding:0 130px 0 20px}
+}
+@media (max-width:1100px){
+  .menu>li{font-size:14px}
+  .menu>li+li{margin-left:18px}
+  .menu>li+li::before{left:-12px}
 }
 @media (max-width:1024px){
   html{scroll-padding-top:72px}
@@ -163,18 +169,17 @@ ul{list-style:none}
   .sub a{text-align:left;padding:13px 20px 13px 36px;font-size:14.5px;color:#444;border-color:#e5e5e5}
   .sub a:hover,.sub a:focus-visible{color:var(--accent-dark)}
   .sub-h{background:#efede9;color:var(--accent-dark);text-align:left;padding:12px 20px 6px 36px;border-color:#e5e5e5}
-  .banner{height:240px}
   .site-content{flex-direction:column;padding:40px 24px;gap:48px}
-  .main-card{margin-top:-80px;padding:40px 32px 48px;width:100%}
+  .main-card{margin-top:0;padding:40px 32px 48px;width:100%}
   .sidebar{width:100%;flex:none}
   .fw-in{grid-template-columns:1fr 1fr;padding:0 24px;gap:40px}
 }
 @media (max-width:600px){
-  .banner{height:180px}
+  .banner img{height:200px;object-position:22% 60%}
   .site-content{padding:32px 16px}
-  .main-card{margin-top:-60px;padding:28px 20px 36px}
-  .entry-title{font-size:30px}
-  .entry-title.sm{font-size:24px}
+  .main-card{margin-top:0;padding:28px 20px 36px}
+  .entry-title{font-size:26px}
+  .entry-title.sm{font-size:22px}
   .course-group{font-size:19px}
   .course{flex-direction:column;gap:16px;margin-top:36px}
   .course .ph{flex:none;width:100%}
@@ -217,6 +222,7 @@ ul{list-style:none}
           <div class="dd"><ul class="sub">
             <li><a href="p/space.html#home">住宅</a></li><li><a href="p/space.html#commercial">商業空間</a></li><li><a href="p/space.html#factory">廠房</a></li><li><a href="p/space.html#studio">工作室</a></li>
           </ul></div></li>
+        <li><a href="p/videos.html">影音課程</a></li>
         <li class="has-sub"><a href="p/shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
             <li><a href="p/shop.html#crystal">靈性水晶</a></li><li><a href="p/shop.html#spray">能量精華噴霧</a></li>
@@ -228,7 +234,7 @@ ul{list-style:none}
   </nav>
 </header>
 
-<div class="banner" id="top" role="img" aria-label="Banner 圖片位置">BANNER 圖片由客戶提供</div>
+<div class="banner" id="top"><img src="assets/banner-1920.webp" srcset="assets/banner-960.webp 960w, assets/banner-1920.webp 1920w" sizes="100vw" width="1920" height="683" alt="Shemaya 在山中湖畔" fetchpriority="high"></div>
 
 <div class="site-content">
   <main class="main-card">
@@ -260,7 +266,7 @@ ul{list-style:none}
       <a href="p/product.html?p=s08"><img src="assets/p-sirius-08.webp" width="500" height="500" alt="源頭星星" loading="lazy"><span>源頭星星</span></a>
       <a href="p/product.html?p=s09"><img src="assets/p-sirius-09.webp" width="500" height="500" alt="恩典之花" loading="lazy"><span>恩典之花</span></a>
       <a href="p/product.html?p=s10"><img src="assets/p-sirius-10.webp" width="500" height="500" alt="三位一體" loading="lazy"><span>三位一體</span></a>
-      <a href="p/series-detox.html"><img src="assets/s-detox.webp" width="800" height="800" alt="保健排毒系列：銀之水" loading="lazy"><span>保健排毒系列</span></a>
+      <a href="p/series-nature.html"><img src="assets/s-nature.webp" width="800" height="800" alt="自然之愛系列：金光醇蜜" loading="lazy"><span>自然之愛系列</span></a>
     </div>
   </main>
 

@@ -135,15 +135,20 @@ ul{list-style:none}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
 /* ===== responsive ===== */
-@media (max-width:1280px){
+@media (max-width:1340px){
   .menu>li+li{margin-left:28px}
   .menu>li+li::before{left:-17px}
 }
-@media (max-width:1180px){
+@media (max-width:1260px){
   .menu>li{font-size:14.5px}
   .menu>li+li{margin-left:22px}
   .menu>li+li::before{left:-14px}
   .nav-in{padding:0 130px 0 20px}
+}
+@media (max-width:1100px){
+  .menu>li{font-size:14px}
+  .menu>li+li{margin-left:18px}
+  .menu>li+li::before{left:-12px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -342,6 +347,10 @@ ul{list-style:none}
   .cal-grid .day{height:40px;font-size:14px}
   .slot{flex:1;min-width:0}
 }
+/* 只展示照片的商品卡（保健排毒系列暫不販售）：不是連結，不做滑過效果 */
+figure.pcard:hover img{opacity:1}
+/* 頁面大標題用 90% 黑（客戶 10/17） */
+.sec-title{color:#1a1a1a}
 </style>
 </head>
 <body>
@@ -376,6 +385,7 @@ ul{list-style:none}
           <div class="dd"><ul class="sub">
             <li><a href="space.html#home">住宅</a></li><li><a href="space.html#commercial">商業空間</a></li><li><a href="space.html#factory">廠房</a></li><li><a href="space.html#studio">工作室</a></li>
           </ul></div></li>
+        <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
             <li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#spray">能量精華噴霧</a></li>
@@ -391,7 +401,8 @@ ul{list-style:none}
 <div class="wrap inner">
 <section class="item" id="spray"><h2>能量精華噴霧</h2><div class="pgrid">
 <a class="pcard" href="series-sirius.html"><img src="assets/series-sirius.webp" width="800" height="800" alt="天狼星系列" loading="lazy"><span class="pn">天狼星系列</span><span class="pp">10 款＋整套</span></a>
-<a class="pcard" href="series-detox.html"><img src="assets/d07.webp" width="800" height="800" alt="保健排毒系列" loading="lazy"><span class="pn">保健排毒系列</span><span class="pp">8 款</span></a>
+<a class="pcard" href="series-nature.html"><img src="assets/n01.webp" width="800" height="800" alt="自然之愛系列" loading="lazy"><span class="pn">自然之愛系列</span><span class="pp">8 款</span></a>
+<a class="pcard" href="series-detox.html"><img src="assets/d07.webp" width="800" height="800" alt="保健排毒系列" loading="lazy"><span class="pn">保健排毒系列</span><span class="pp">暫不販售，僅展示照片</span></a>
 <a class="pcard" href="series-other.html?s=flower"><img src="assets/o-flower.webp" width="800" height="800" alt="身心情緒花精系列" loading="lazy"><span class="pn">身心情緒花精系列</span><span class="pp">商品由 Shemaya 自行上架</span></a><a class="pcard" href="series-other.html?s=healer"><img src="assets/o-healer.webp" width="800" height="800" alt="療癒師產品系列" loading="lazy"><span class="pn">療癒師產品系列</span><span class="pp">商品由 Shemaya 自行上架</span></a><a class="pcard" href="series-other.html?s=crystal"><img src="assets/o-crystal.webp" width="800" height="800" alt="水晶光能系列" loading="lazy"><span class="pn">水晶光能系列</span><span class="pp">商品由 Shemaya 自行上架</span></a><a class="pcard" href="series-other.html?s=christ"><img src="assets/o-christ.webp" width="800" height="800" alt="基督之愛系列" loading="lazy"><span class="pn">基督之愛系列</span><span class="pp">商品由 Shemaya 自行上架</span></a>
 </div><p class="note">其他四個系列的名稱依資料夾暫訂，待 Shemaya 確認。</p></section>
 <section class="item" id="crystal"><h2>靈性水晶</h2><p class="pending">商品由 Shemaya 自行上架</p></section></div>
