@@ -293,6 +293,55 @@ ul{list-style:none}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
 }
+
+/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+.prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
+.prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
+.prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
+.doc>h3{font-size:20px}
+.doc>.prose>h4:first-child{margin-top:4px}
+.kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
+.testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
+.testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
+.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
+.wide-ph img{width:100%;height:auto;display:block}
+.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
+.series-intro{margin-bottom:40px}
+.pdesc{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
+.tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.bk .lab{display:block;font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px}
+.bk .lab em{font-style:normal;font-weight:400;font-size:12px;color:var(--accent-dark);margin-left:6px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.cal{border:1px solid #b9b2a6;background:var(--white);padding:16px}
+.cal[aria-invalid="true"]{border-color:#a3271f}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font:700 16px var(--sans)}
+.cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
+.cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
+.cal-grid button.day:disabled{cursor:default}
+.cal-grid .day.open{background:var(--tint);color:var(--ink);font-weight:700;cursor:pointer}
+.cal-grid .day.open:hover{border-color:var(--accent)}
+.cal-grid .day.sel{background:var(--accent);color:#fff}
+.cal-grid .day:focus-visible,.slot:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cal-slots{margin-top:16px;min-height:96px}
+.cal-hint{font:14px var(--sans);color:var(--ink-sub);margin-bottom:8px}
+.slot-row{display:flex;flex-wrap:wrap;gap:8px}
+.slot{min-width:96px;height:44px;padding:0 12px;border:1px solid #b9b2a6;background:var(--white);font:15px var(--sans);color:var(--ink);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.slot:disabled{color:#a49d92;background:var(--tint);text-decoration:line-through;cursor:default}
+@media (max-width:767px){
+  .f2{grid-template-columns:1fr}
+  .kinds{padding:12px 16px;font-size:15px;gap:6px 14px}
+  .cal{padding:12px}
+  .cal-grid .day{height:40px;font-size:14px}
+  .slot{flex:1;min-width:0}
+}
 </style>
 </head>
 <body>
@@ -305,11 +354,11 @@ ul{list-style:none}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係高端療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -340,18 +389,19 @@ ul{list-style:none}
 <main id="top">
 <section class="hero"><div class="wrap hero-in has-ph"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖解碼</nav><h1 class="sec-title">靈魂藍圖解碼</h1></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼"></div></div></section>
 <div class="wrap inner">
-<nav class="toc" aria-label="本頁項目"><ul><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li></ul></nav>
+<nav class="toc" aria-label="本頁項目"><ul><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li><li><a href="#feedback">解讀回饋</a></li></ul></nav>
 <section class="item" id="five-stages"><h2>生命五階段</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=生命五階段">預約或詢問這個項目</a></section>
-<section class="item" id="partner"><h2>伴侶感情關係解碼</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=伴侶感情關係解碼">預約或詢問這個項目</a></section>
+<section class="item" id="partner"><h2>伴侶感情關係解碼</h2><div class="prose"><h3 class="doc-t">情感模式解碼</h3><p>情感交流與相互了解是經營伴侶關係，甚至是婚姻關係中很重要的事。</p><p>但是常常遇到某些事，我們不了解為何對方會這樣想？為什麼他會這樣作？為什麼他不能感受到我的情緒？</p><p>答案很簡單，因為對方思緒回路跟你是完全不同。</p><p>作了幾對伴侶的感情模式解碼，發現每個人的情感認知及需求都不同，以致在伴侶或夫妻關係之間，有時感到不被理解，甚至有誤解或情感失落。</p><p>在東方傳統文化裡，男女性交往時常會看重對象是否孝順，而有些女性婚後才發現，對方太重視父母，妻子只有盡不完的責任義務（勞碌）卻得不到丈夫應給的重視（自己順位被擺最後）另外有家業大的家庭，娶妻是為繁衍後代來繼承家業，感情再怎麼經營也比不上生個男孩強。這不是古代宮鬥才有嗎？不，二十一世紀的今天，不少人心中仍有這樣的思維，在遇到重大抉擇時會立見高下。</p><p>透過預約解讀彼此的情感模式，有個案看明白了！對方其實只想要二人世界，想要被陪伴，無奈當事人並未表明不想有小孩。生了小孩意味著不輕鬆要犧牲，也要更多付出時間和精神、金錢⋯等代價。偽單親媽媽常抱怨先生缺乏責任感？明明生活一起，自己卻過著偽單親的生活。這即是伴侶關係中，一個人想努力完整家庭，另外一個人只想要兩人世界，對彼此的期待不同，最後造成失落與痛苦。</p><p>夫妻關係或伴侶關係，泰半影響到個人對人生的幸福感。若能儘早去了解自己的情感模式，以及你所重視的情人、伴侶或是其他家人的情感模式是很重要的學習功課。</p><p>一旦了解自己的性格、情緒模式，也了解對方的規格模組，看懂、學會用新的方法去相處，慢慢地改變，自然就越來越輕鬆愉快。也由於看懂了，我們才能更專注在自己身上，不必強求對方做不到的事。</p><p>情感解碼也能用來解碼：親子模式或事業夥伴模式、婆媳模式、師生、同儕模式等各種關係模式，只要你認爲重要的人都可以。</p><p>想了解更多嗎？歡迎私訊預約我。</p></div><a class="tlink" href="booking.html?s=伴侶感情關係解碼">預約或詢問這個項目</a></section>
 <section class="item" id="fortune"><h2>人生大運流年運勢</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=人生大運流年運勢">預約或詢問這個項目</a></section>
 <section class="item" id="timeline"><h2>六個月時間線大師解讀</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=六個月時間線大師解讀">預約或詢問這個項目</a></section>
+<section class="item" id="feedback"><h2>解讀回饋</h2><div class="prose"><h3 class="doc-t">靈魂藍圖解讀</h3><h4>個案Ａ：</h4><p>「Shemaya老師為兒子做靈魂藍圖解讀，是將從我腦袋中擷取育兒多年的困惑與掙扎、包含兒子的思維與挫折，老師從各個角度把它們解析出來，再指引我應對的方法。這不像是坊間的解讀，更像是在看靈魂星盤啊。</p><p>老師的解讀是由幼年時期貫穿到成年的每個階段環節，以有根有據的給了實際的建議。過往的我，內心有某些對孩子的某些直覺，也很努力去了解孩子，可總有不得其門而入，自己一直有失敗之感，這些挫折深深的打擊著我和兒子，還不斷的累積，形成彼此都痛苦的相處模式。老師為我作深度的解讀分析後，也給了我重新調整的方向與實際做法；也引導我，如何在和孩子互動下學習裡去成就彼此。</p><p>最棒的是，老師為我找出長久以來，一直累積在我頭部的負向信念，然後她幫我刪除掉，超棒的！接下來在與孩子相處裡，我能察覺到自己的某些慣性模式出現，也較能輕鬆一點，能夠放慢腳步、去轉換思維與換新的做法，讓我非常開心。</p><p>真心推薦預約Shemaya老師量身定做的個人靈魂藍圖解讀，能為自己、或為家人、為伴侶，或為孩子提早看見自己的性格、品質狀態。這能解惑了我長年來的困擾，這人生是非常有幫助的。」</p><h4>個案Ｂ：</h4><p>「自從開始靈性學習與療癒，我先生不斷掙扎於靈性與現實生活之間，既想遵從內心渴望，又苦於害怕放手固執信念後，無力守護家人。這也造成我們不少次意見相左的不愉快。即使看到問題，我們也有心無力，無方向無方法去處理啊。</p><p>這次Shemaya老師為我先生做的靈魂藍圖解讀，老師也為他刪除一個他累生累世累積下來某個很沈重信念後，先生感覺身上沉重的負擔減輕了許多。看到他這樣，我由衷開心與感動。非常謝謝老師的時間付出與專業指引。」</p><p>以上為一對一的個人諮商，歡迎預約</p></div></section>
 </div>
 </main>
 <footer>
   <div class="footer-widgets">
     <div class="fw-in">
       <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月女性療癒聚</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
+      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>

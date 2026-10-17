@@ -293,6 +293,55 @@ ul{list-style:none}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
 }
+
+/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+.prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
+.prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
+.prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
+.doc>h3{font-size:20px}
+.doc>.prose>h4:first-child{margin-top:4px}
+.kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
+.testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
+.testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
+.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
+.wide-ph img{width:100%;height:auto;display:block}
+.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
+.series-intro{margin-bottom:40px}
+.pdesc{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
+.tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.bk .lab{display:block;font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px}
+.bk .lab em{font-style:normal;font-weight:400;font-size:12px;color:var(--accent-dark);margin-left:6px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.cal{border:1px solid #b9b2a6;background:var(--white);padding:16px}
+.cal[aria-invalid="true"]{border-color:#a3271f}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font:700 16px var(--sans)}
+.cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
+.cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
+.cal-grid button.day:disabled{cursor:default}
+.cal-grid .day.open{background:var(--tint);color:var(--ink);font-weight:700;cursor:pointer}
+.cal-grid .day.open:hover{border-color:var(--accent)}
+.cal-grid .day.sel{background:var(--accent);color:#fff}
+.cal-grid .day:focus-visible,.slot:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cal-slots{margin-top:16px;min-height:96px}
+.cal-hint{font:14px var(--sans);color:var(--ink-sub);margin-bottom:8px}
+.slot-row{display:flex;flex-wrap:wrap;gap:8px}
+.slot{min-width:96px;height:44px;padding:0 12px;border:1px solid #b9b2a6;background:var(--white);font:15px var(--sans);color:var(--ink);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.slot:disabled{color:#a49d92;background:var(--tint);text-decoration:line-through;cursor:default}
+@media (max-width:767px){
+  .f2{grid-template-columns:1fr}
+  .kinds{padding:12px 16px;font-size:15px;gap:6px 14px}
+  .cal{padding:12px}
+  .cal-grid .day{height:40px;font-size:14px}
+  .slot{flex:1;min-width:0}
+}
 </style>
 </head>
 <body>
@@ -305,11 +354,11 @@ ul{list-style:none}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係高端療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -344,39 +393,40 @@ ul{list-style:none}
     <div class="pd-ph" id="pPh"></div>
     <div>
       <h1 class="sec-title" id="pName"></h1>
-      <p class="pp-big">價格待提供</p>
+      <p class="pp-big" id="pPrice"></p>
       <form class="buy" id="buy" novalidate>
+        <div id="sizeBox" hidden><label for="size">容量</label><select id="size"></select></div>
         <label for="qty">數量</label>
         <div class="qty"><button type="button" data-q="-1" aria-label="減少">−</button><input id="qty" type="number" min="1" max="99" value="1" inputmode="numeric"><button type="button" data-q="1" aria-label="增加">+</button></div>
         <button class="btn" type="submit">加入購物車</button>
       </form>
       <p class="notice" id="buyMsg" role="status" aria-live="polite"></p>
-      <p class="pending">商品介紹待 Shemaya 提供</p>
     </div>
   </div>
+  <div class="prose pdesc" id="pDesc"></div>
   <div id="pNone" hidden><h1 class="sec-title">找不到這個商品</h1><p class="note">網址可能有誤，請回商店重新選擇。</p><a class="btn" href="shop.html">回靈性商店</a></div>
 </div>
 <script>
 (function () {
-  var P = {s01:{n:'金光網絡',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s02:{n:'金白光火焰',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s03:{n:'金光泥土',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s04:{n:'金光種子',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s05:{n:'藍光星星',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s06:{n:'自我價值',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s07:{n:'銀白光珍珠',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s08:{n:'源頭星星',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s09:{n:'恩典之花',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s10:{n:'三位一體',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-s11:{n:'星際薩滿之愛',s:'天狼星系列',u:'series-sirius.html',w:800,h:800},
-d01:{n:'光纖',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d02:{n:'銀之水',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d03:{n:'卡利黑狼',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d04:{n:'水晶狼',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d05:{n:'蛇魔法解藥',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d06:{n:'銀光星星',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d07:{n:'金白光蓮花',s:'保健排毒系列',u:'series-detox.html',w:800,h:800},
-d08:{n:'紫金光蓮花',s:'保健排毒系列',u:'series-detox.html',w:800,h:800}};
+  var P = {s01:{"n": "金光網絡", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["來自薩滿的祝福—與萬物合一和諧", "如蜘蛛網般的金光網絡，使人克服內心很深的分離及孤獨感，金光網絡將獨來獨往的人們，帶回與人群的和諧韻律，回到萬物合一的完整結構，對身體層健康也很有幫助。", "特別推薦：獨自生活或工作的人，常獨來獨往行動的，習慣宅在家，常品味孤獨的人，不愛交際，和人群相處常感格格不入，想和他人建立連結的人。"]},
+s02:{"n": "金白光火焰", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["天狼星金白光火焰能快速燒毀屏蔽你去感知真實的雜訊（障礙物），包含來自社會集體意識或主流媒體的訊息，或是來自內心的自我逃避。（比如把自己搞得很忙以逃避必須面對的問題）", "金白光火焰協助人從頭腦的操控回到心，並清除分散你注意力的雜亂能量，使人重新聚焦去分辨什麼是真實，什麼才是對你最重要的事物。它讓人回到耳目清新、專注、高效率，並聚焦在對你最重要的事物。金白光火焰也能消融外來的干擾或障蔽，提升獨立思考的能力。有人在接受天狼星金白光火焰的淨化後，突然不想要再「慣性的」滑手機。（每人想戒除的慣性不同，也許是沾黏在某種群組、逛購物平台、新聞⋯等等）"]},
+s03:{"n": "金光泥土", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["撫慰過去你經歷過的失敗與挫折，填補身體及氣場留下的舊有創傷陰影。它修復每次靈魂轉世時，在世間所留下的軌跡。金光泥土以地球富饒豐盛的金光之愛包覆你，使你打開心之眼再度經驗地球。Shemaya星光系統的金光泥土是很薩滿的，是很美的祝福。金光泥土能使人重新與地球連結，重新與很深的愛連結。", "它帶來非常獨特的經驗，使人敞開心以及新視野去經驗地球：被靈魂遺忘許久的，對地球的美好記憶。 在瞬間，你會經驗自己是如此被祝福著，被地球豐盛的金光及被飽滿的創造力包圍著，內心湧出對大地所有的恩典與感激。它重新打開你心中的愛，透過這份愛去原諒自己，原諒在地球上曾經驗過的一切。它帶你看見地球是宇宙銀河中最美麗的家園。", "金光泥土特別支持那些在社會中，難以找到自己的位置的人，以及對在地球扎根有困難的人們。Shemaya 能透過手印、真言將來自她星光源頭的神聖能量，帶給土地及空間，也能帶給人們，協助人們回到愛及信任，克服生活中的考驗。", "推薦：給正在走自我內在旅程，想要放下心中陰影去寬恕，想要穿越自身的習性和業力，而得到自由的人，以及對適應地球生活感到困難的人。"]},
+s04:{"n": "金光種子", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["在你心中種下愛的種子", "帶著滿滿的神性之母的愛及智慧的金光種子，可放在脈輪或氣場上灑下金光種子，豐盛的金光會無限擴展，使神性之母無邊的愛在你之內發芽、生長茁壯。", "＊金光種子噴霧：神性之母的愛是充滿愛和智慧的，它使人去感受在愛中被保護，憶起內在本有智慧，金光種子能使人真的走入黃金世紀。特別支持年幼孩子、敏感體質者、需要很多愛的人、想要被支持的人們。", "＊天狼星火典油：金光種子火典可用於環境、土地、空間、人們⋯都因而被祝福。天狼星金光種子會隨著火焰佈滿你的身心給予溫暖及深度滋養持，亦可用來作為特定主題的曼達拉，快速提升你空間的頻率。"]},
+s05:{"n": "藍光星星", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["藍光星星能打開喉輪的阻塞，移除過去曾被指責、被誤解、否限制或言語傷害等原因，導致在氣場或身上形成「難以表達自我」的限制，藍光星星能迅速找到氣場中的過往陰影或印記，釋放它並消融喉輪的堵塞與限縮。", "藍光星星也讓人連結心與喉輪去發聲，強化表達與溝通能力，使言語情感清晰、流暢表達不再卡住。當你內在準備好時，藍光星星能為作更多：帶回你所隱藏的面向，與個人特有的力量，包含打開薩滿的療癒吟唱等天賦潛能。特別推薦：想突破自我限制者、想強化溝通表達力、強化藝術創作表達、吟唱創造藝術"]},
+s06:{"n": "自我價值", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["自我價值星光會為你找到在氣場上，那些別人貼在你身上的負面評價或標籤，並快速剝除它。", "它移除過去讓你覺得不值得的相關陰影，燒毀其負面評價與相關的意識，讓你不再退縮迴避，也能擴展太陽神經叢，為你帶回自身的力量與勇氣！", "這顆星星能為你移除有關不值得的陰影，淨化清晰眉心輪並擴展你的太陽神經叢。它也為臍輪強化自我實踐的勇氣，讓你對自我重新定位。它將你從偏離了自己的生命道路中帶回來，看到亮點，肯定你的自我價值。", "推薦：難以肯定自己的人，或是穿著別人的服裝，一直在演別人的生命劇本的人。"]},
+s07:{"n": "銀白光珍珠", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["這道明亮的星光能找到深藏在你身體裡的僵化想法或舊經驗，並在允許下消融舊信念框架。這些舊的、僵化信念可能包含來自家族的信念框架、靈性潔癖、害怕被看見、合理化待在舒適圈的理由、內心很深的無力感...等各種的僵化想法。", "銀白色的珍珠光能快速消融那些造成個人內在很固執的情緒或經驗，使人能夠放手長期僵化的信念或經驗，像是不可能、我沒辦法、做不到⋯等消極的意識。", "推薦給：想要跳脫心中牢不可破魔咒的人，已發現的缺點、弱點，想要改進的人"]},
+s08:{"n": "源頭星星", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["協助你與自身天堂連結，得到來自源頭之光的滋養與支持與保護。", "它同時具有強大的身心修復力，源頭星星帶著純淨之光的祝福與保護，能支持你的每一天生活。", "推薦給：內心常覺得孤單的人，身心需要常充電的人，協助將天堂扎根在地球"]},
+s09:{"n": "恩典之花", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["接納並整合你不同的面相～", "重新連結在許多轉世經驗裡，你已經發展出來的各種靈魂品質，並將某些被你抗拒在外的靈魂品質帶回，並與此世的你合一。", "特別推薦給那些想要自我接納的人，想整合自身不同品質，歡迎力量回來的人。或是對自己「某些樣子」不滿意的人，對自我標準很高，或是難以看見自己成就的人。"]},
+s10:{"n": "三位一體", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["校準你的身心能量系統", "越在意的事件發生，常會使人產生強烈情緒或是創傷，而造成脈輪的陰影或是氣場裂縫，有時個人力量會被推出原本的重心，產生系統不平衡或某些部位的空洞感。", "不在自己能量中軸時，我們身心可能伴隨著這些狀態：很快就沒電力、做很多事都感到吃力、常酸痛、脊椎側彎或是多夢亂夢、手腳冰冷、或彎腰駝背、能躺則躺能坐就不站。或是內心常覺得這個不行那個沒辦法、或是都是別人的錯，或是好難愛自己、或常沒安全感，或過度迷戀物質或愛情、或是做什麼工作都不快樂、常想換工作、或害怕走出舒適圈，或不想上班.，或遇問題就逃避，或對愛人有強烈控制欲、社恐不喜人際互動、或是空想卻無行動力、或是做很多卻沒做到重點、或用力蠻幹不能變通，或常忙於服務他人的需求。天狼星三位一體能將那些將你推出自己能量中軸的陰影、阻塞移除，這道光束能重新校準你的能量中軸，它給予脈輪力量，並協助你的心穩穩的連結天地，好好的生活。", "推薦：想要生出過關打怪的大力量，想腳踏實地、想逐夢踏實的人。"]},
+s11:{"n": "星際薩滿之愛", "s": "天狼星系列", "u": "series-sirius.html", "w": 800, "h": 800, "o": [["十瓶整套", 11500]], "set": true, "d": ["天狼星星光系列十瓶整套：金光網絡、金白光火焰、金光泥土、金光種子、藍光星星、自我價值、銀白光珍珠、源頭星星、恩典之花、三位一體。", "天狼星的光訊息是Shemaya於2019年所下載的薩滿星光系統，至2026年止共下載了10顆星光。", "其星光以粒子形式進入人體，以高速振盪成為一股新電流，它可優化人類DNA，並降低受身體限制的影響，更順利接收宇宙新層級資訊。", "天狼星星光能打開人類限制性的認知，更多與宇宙萬物合一，體驗合一無二元對立的觀點及智慧，並重新喚醒個人靈魂本有的智慧。天狼星的光訊息與人體內的水分子共振，帶來淨化並形成水訊號重組，能促進身體器官與器官之間的溝通與合作，對健康也有實際協助。"]},
+d01:{"n": "光纖", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": ["光纖花精", "你有這樣的經驗嗎？", "每次搭飛機，在起飛的一剎那，我的胸口會有繃緊感，有時在迫降時有胸悶感，但這種心臟像要飛出去的感覺並不是每次，像去年搭土耳其航空去歐洲，起降都很平順，不知是機師技術太好還是飛機太優秀？沒以前（搭長榮華航）心臟快跳出來的經驗。", "當飛機快速向上爬升或是高速迫降時，容易使人們氣場會變大變稀薄，有些人的星光體因此容易走位而產生不舒服的感覺，這時手上有光纖就能幫忙。", "剛下飛機的國外學生來找我，提到在她的飛機降落時，使她雙顎突然不舒服有疼痛感，不舒服感持續沒有消失。我看到光纖花精能幫助她，於是給她光纖。", "請她將光纖塗後頸，我再為她塗在她兩邊太陽穴，接著光纖中的金光能量就自動跑。當金光絲細線一條條被串連，很快的她身心能量一下就“刷”的完全落地，不再卡在半空中那樣。最後我請她把手放在眉心輪氣場做加強，瞬間，原本被壓迫的頭部能量也速速歸位，整個人的氣場也變大起來！她說哇！頭部變得很輕盈，眼睛看出去很亮呢。這過程不到3分鐘，效果很明顯。", "其實光纖不只能處理雪丁（shedding）帶來的覆蓋感和能量斷線感。", "凡舉想強化你的能量弱點，身心太勞累，氣場出現漏電感，或因為身體受傷而產生的能量薄弱或斷裂，也或是受到驚嚇而產生能量點凍結，光纖花精都能幫忙修復的。"]},
+d02:{"n": "銀之水", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": []},
+d03:{"n": "卡利黑狼", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": []},
+d04:{"n": "水晶狼", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300], ["50ml", 2000]], "set": false, "d": []},
+d05:{"n": "蛇魔法解藥", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": []},
+d06:{"n": "銀光星星", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": []},
+d07:{"n": "金白光蓮花", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": []},
+d08:{"n": "紫金光蓮花", "s": "保健排毒系列", "u": "series-detox.html", "w": 800, "h": 800, "o": [["30ml", 1300]], "set": false, "d": []}};
   var code = new URLSearchParams(location.search).get('p');
   var d = Object.prototype.hasOwnProperty.call(P, code) ? P[code] : null;
   if (!d) { document.getElementById('pNone').hidden = false; document.title = '找不到這個商品｜Shemaya 夏克緹薩滿的金色大門'; return; }
@@ -385,6 +435,18 @@ d08:{n:'紫金光蓮花',s:'保健排毒系列',u:'series-detox.html',w:800,h:80
   im.width = d.w; im.height = d.h; im.alt = d.n; im.src = 'assets/' + code + '.webp';
   document.getElementById('pPh').appendChild(im);
   document.getElementById('pName').textContent = d.n;
+  function money(v) { return 'NT$' + v.toLocaleString('en-US'); }
+  var sel = document.getElementById('size'), price = document.getElementById('pPrice');
+  d.o.forEach(function (o, i) { var op = document.createElement('option'); op.value = i; op.textContent = o[0] + '　' + money(o[1]); sel.appendChild(op); });
+  function showPrice() { var o = d.o[Number(sel.value) || 0]; price.textContent = (d.set ? '整套優惠價 ' : '') + money(o[1]) + (d.set ? '' : '／' + o[0]); }
+  document.getElementById('sizeBox').hidden = d.o.length < 2;
+  sel.addEventListener('change', showPrice); showPrice();
+  var box = document.getElementById('pDesc');
+  if (d.d.length) {
+    d.d.forEach(function (t) { var p = document.createElement('p'); p.textContent = t; box.appendChild(p); });
+  } else {
+    var p = document.createElement('p'); p.className = 'pending'; p.textContent = '商品介紹待 Shemaya 提供'; box.appendChild(p);
+  }
   var s = document.getElementById('pSeries'); s.textContent = d.s; s.href = d.u;
   document.title = d.n + '｜Shemaya 夏克緹薩滿的金色大門';
   var q = document.getElementById('qty');
@@ -395,7 +457,7 @@ d08:{n:'紫金光蓮花',s:'保健排毒系列',u:'series-detox.html',w:800,h:80
   q.addEventListener('change', clamp);
   document.getElementById('buy').addEventListener('submit', function (e) {
     e.preventDefault(); clamp();
-    document.getElementById('buyMsg').textContent = '測試站不開放購買。正式站開放後，可將商品加入購物車並以 ATM 轉帳付款。（' + d.n + ' × ' + q.value + '）';
+    document.getElementById('buyMsg').textContent = '測試站不開放購買。正式站開放後，可將商品加入購物車並以 ATM 轉帳付款。（' + d.n + (d.o.length > 1 ? ' ' + d.o[Number(sel.value)][0] : '') + ' × ' + q.value + '）';
   });
 })();
 </script>
@@ -404,7 +466,7 @@ d08:{n:'紫金光蓮花',s:'保健排毒系列',u:'series-detox.html',w:800,h:80
   <div class="footer-widgets">
     <div class="fw-in">
       <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月女性療癒聚</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
+      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>

@@ -293,6 +293,55 @@ ul{list-style:none}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
 }
+
+/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+.prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
+.prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
+.prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
+.doc>h3{font-size:20px}
+.doc>.prose>h4:first-child{margin-top:4px}
+.kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
+.testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
+.testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
+.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
+.wide-ph img{width:100%;height:auto;display:block}
+.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
+.series-intro{margin-bottom:40px}
+.pdesc{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
+.tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.bk .lab{display:block;font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px}
+.bk .lab em{font-style:normal;font-weight:400;font-size:12px;color:var(--accent-dark);margin-left:6px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.cal{border:1px solid #b9b2a6;background:var(--white);padding:16px}
+.cal[aria-invalid="true"]{border-color:#a3271f}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font:700 16px var(--sans)}
+.cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
+.cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
+.cal-grid button.day:disabled{cursor:default}
+.cal-grid .day.open{background:var(--tint);color:var(--ink);font-weight:700;cursor:pointer}
+.cal-grid .day.open:hover{border-color:var(--accent)}
+.cal-grid .day.sel{background:var(--accent);color:#fff}
+.cal-grid .day:focus-visible,.slot:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cal-slots{margin-top:16px;min-height:96px}
+.cal-hint{font:14px var(--sans);color:var(--ink-sub);margin-bottom:8px}
+.slot-row{display:flex;flex-wrap:wrap;gap:8px}
+.slot{min-width:96px;height:44px;padding:0 12px;border:1px solid #b9b2a6;background:var(--white);font:15px var(--sans);color:var(--ink);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.slot:disabled{color:#a49d92;background:var(--tint);text-decoration:line-through;cursor:default}
+@media (max-width:767px){
+  .f2{grid-template-columns:1fr}
+  .kinds{padding:12px 16px;font-size:15px;gap:6px 14px}
+  .cal{padding:12px}
+  .cal-grid .day{height:40px;font-size:14px}
+  .slot{flex:1;min-width:0}
+}
 </style>
 </head>
 <body>
@@ -305,11 +354,11 @@ ul{list-style:none}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係高端療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -339,13 +388,13 @@ ul{list-style:none}
 </header>
 <main id="top">
 <section class="hero"><div class="wrap hero-in has-ph"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 認識 Shemaya</nav><h1 class="sec-title">認識 Shemaya</h1></div><div class="hero-ph"><img src="assets/about.webp" width="900" height="1205" alt="Shemaya 形象照"></div></div></section>
-<div class="wrap inner narrow"><section class="item" id="who"><h2>Shemaya 是誰</h2><div class="prose"><p>原為視覺設計師，自25年前開始探索心靈，由於治幼女的病，她跑遍美國丶法國積極接受專業的療癒訓練。</p><p>她累積12餘年紮實的專業教學，與豐富的個案經驗，Shemaya擅長支持人們掙脫現實生活綑綁拿回力量，並整合實現自我價值，形塑輕盈快樂。</p><p>她陪伴人們走上自己的道路，穿越懷疑與陰影，走上轉化之路並迎回天賦潛能。</p><p>現職為聖火傳承靈性大師的她，定居於多山的天母，她於各地帶領授證課程：浴光之路、四元素與基督之光丶神聖自然藥草祭司丶水知識丶狼祭司與熊部落丶天狼星薩滿工作坊丶脈輪花精訓練等。 她也不定期提供高山的薩滿僻靜，帶領人們於阿里山擁抱大地母親。</p></div></section><section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section><p><a class="btn" href="booking.html">預約個案時間</a></p></div>
+<div class="wrap inner narrow"><section class="item" id="who"><h2>Shemaya 是誰</h2><div class="prose"><p>原為視覺設計師，自25年前開始探索心靈，由於治幼女的病，她跑遍美國丶法國積極接受專業的療癒訓練。</p><p>她累積12餘年紮實的專業教學，與豐富的個案經驗，Shemaya擅長支持人們掙脫現實生活綑綁拿回力量，並整合實現自我價值，形塑輕盈快樂。</p><p>她陪伴人們走上自己的道路，穿越懷疑與陰影，走上轉化之路並迎回天賦潛能。</p><p>現職為聖火傳承靈性大師的她，定居於多山的天母，她於各地帶領授證課程：浴光之路、四元素與基督之光丶神聖自然藥草祭司丶水知識丶狼祭司與熊部落丶天狼星薩滿工作坊丶脈輪花精訓練等。 她也不定期提供高山的薩滿僻靜，帶領人們於阿里山擁抱大地母親。</p></div></section><section class="item" id="turn"><h2>Shemaya浴光之路</h2><div class="prose"><p>1997年從美國畢業回台灣，我分別在內湖園區，南港園區做設計工作。即使收入不錯，工作環境優雅，還有股票領，但不知怎麼我就不快樂。心中一直「我不屬於這裡」之感。加上對身心靈感興趣，幾乎我把賺來的錢，都拿去上各式各樣身心靈的課。每隔一段時間就會湧出想離職的心。滑著104，我仍不知道離開設計後，還能作什麼呢？於是我去考了美容執照、芳療師認證、保險業務員執照⋯幾經嘗試才明白那些都不是我的路。</p><p>朋友介紹我一位有名算八字的老先生。當時我沮喪地問他，我到底適合做什麼呢？家人都推我去考公務員，但我不想啊。這位慈祥的老先生，仔細看完我的八字後，他說像你這麼多才華的人，去做公務員太可惜。我聽完愣住，不懂。接下來他說的話，我更不懂了。他說你最適合做的就是坐在人們的面前，幫他們解決疑難雜症等困難。</p><p>嗄？當年我才20幾歲，那是什麼工作我完全沒想像力，所以我愣住，我問那有這種工作？老先生說你就是很出色的專業顧問， 幫人們解決他的疑難雜症的顧問。</p><p>我對老先生說，自己做設計做得很不快樂（那是我專業），讓我賺錢最容易的。老先生說我注定在這個的專業中做10年，才會離開。後來我離職又回總共三進三出，正式離開設計界還真的剛好滿10年。那年，我38歲結婚。39歲女兒出生，她的病帶我正式進入魔鬼級特訓班。為了療癒她，我投資大筆財力與精神赴國外進修，從過敏兒身心顧問開始，到身心整合療育服務，到靈性教練與技術專業的教學。20幾年後，我真的走到老先生說的位置啊。</p><p>如果問我，當上班族，時間到就能領薪水不好嗎？</p><p>好啊，但是這份安全感也有限制與不自由。自雇者需要有紀律的安排時間和工作效能才能長久走下去，而且也沒有穩定收入。雖然如此，我還是比以前做設計時快樂。也許這就是算命老先生說的適合的位置吧。</p><p>你想要更快的走上自己的道路嗎？</p><p>讓Shemaya 用更快速更好的方法，幫助你釐清並指引方向。</p></div></section><section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section><p><a class="btn" href="booking.html">預約個案時間</a></p></div>
 </main>
 <footer>
   <div class="footer-widgets">
     <div class="fw-in">
       <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月女性療癒聚</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
+      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>

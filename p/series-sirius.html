@@ -293,6 +293,55 @@ ul{list-style:none}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
 }
+
+/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+.prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
+.prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
+.prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
+.doc>h3{font-size:20px}
+.doc>.prose>h4:first-child{margin-top:4px}
+.kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
+.testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
+.testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
+.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
+.wide-ph img{width:100%;height:auto;display:block}
+.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
+.series-intro{margin-bottom:40px}
+.pdesc{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
+.tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.bk .lab{display:block;font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px}
+.bk .lab em{font-style:normal;font-weight:400;font-size:12px;color:var(--accent-dark);margin-left:6px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.cal{border:1px solid #b9b2a6;background:var(--white);padding:16px}
+.cal[aria-invalid="true"]{border-color:#a3271f}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font:700 16px var(--sans)}
+.cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
+.cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
+.cal-grid button.day:disabled{cursor:default}
+.cal-grid .day.open{background:var(--tint);color:var(--ink);font-weight:700;cursor:pointer}
+.cal-grid .day.open:hover{border-color:var(--accent)}
+.cal-grid .day.sel{background:var(--accent);color:#fff}
+.cal-grid .day:focus-visible,.slot:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cal-slots{margin-top:16px;min-height:96px}
+.cal-hint{font:14px var(--sans);color:var(--ink-sub);margin-bottom:8px}
+.slot-row{display:flex;flex-wrap:wrap;gap:8px}
+.slot{min-width:96px;height:44px;padding:0 12px;border:1px solid #b9b2a6;background:var(--white);font:15px var(--sans);color:var(--ink);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.slot:disabled{color:#a49d92;background:var(--tint);text-decoration:line-through;cursor:default}
+@media (max-width:767px){
+  .f2{grid-template-columns:1fr}
+  .kinds{padding:12px 16px;font-size:15px;gap:6px 14px}
+  .cal{padding:12px}
+  .cal-grid .day{height:40px;font-size:14px}
+  .slot{flex:1;min-width:0}
+}
 </style>
 </head>
 <body>
@@ -305,11 +354,11 @@ ul{list-style:none}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係高端療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -340,16 +389,16 @@ ul{list-style:none}
 <main id="top">
 <section class="hero"><div class="wrap hero-in"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / 天狼星系列</nav><h1 class="sec-title">天狼星系列</h1></div></div></section>
 <div class="wrap inner">
-
+<div class="series-intro prose"><p>天狼星的光訊息是Shemaya於2019年所下載的薩滿星光系統，至2026年止共下載了10顆星光。</p><p>其星光以粒子形式進入人體，以高速振盪成為一股新電流，它可優化人類DNA，並降低受身體限制的影響，更順利接收宇宙新層級資訊。</p><p>天狼星星光能打開人類限制性的認知，更多與宇宙萬物合一，體驗合一無二元對立的觀點及智慧，並重新喚醒個人靈魂本有的智慧。天狼星的光訊息與人體內的水分子共振，帶來淨化並形成水訊號重組，能促進身體器官與器官之間的溝通與合作，對健康也有實際協助。</p></div>
 <div class="pgrid">
-<a class="pcard" href="product.html?p=s01"><img src="assets/s01.webp" width="800" height="800" alt="金光網絡" loading="lazy"><span class="pn">金光網絡</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s02"><img src="assets/s02.webp" width="800" height="800" alt="金白光火焰" loading="lazy"><span class="pn">金白光火焰</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s03"><img src="assets/s03.webp" width="800" height="800" alt="金光泥土" loading="lazy"><span class="pn">金光泥土</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s04"><img src="assets/s04.webp" width="800" height="800" alt="金光種子" loading="lazy"><span class="pn">金光種子</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s05"><img src="assets/s05.webp" width="800" height="800" alt="藍光星星" loading="lazy"><span class="pn">藍光星星</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s06"><img src="assets/s06.webp" width="800" height="800" alt="自我價值" loading="lazy"><span class="pn">自我價值</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s07"><img src="assets/s07.webp" width="800" height="800" alt="銀白光珍珠" loading="lazy"><span class="pn">銀白光珍珠</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s08"><img src="assets/s08.webp" width="800" height="800" alt="源頭星星" loading="lazy"><span class="pn">源頭星星</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s09"><img src="assets/s09.webp" width="800" height="800" alt="恩典之花" loading="lazy"><span class="pn">恩典之花</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s10"><img src="assets/s10.webp" width="800" height="800" alt="三位一體" loading="lazy"><span class="pn">三位一體</span><span class="pp">價格待提供</span></a><a class="pcard" href="product.html?p=s11"><img src="assets/s11.webp" width="800" height="800" alt="星際薩滿之愛" loading="lazy"><span class="pn">星際薩滿之愛</span><span class="pp">價格待提供</span></a>
+<a class="pcard" href="product.html?p=s01"><img src="assets/s01.webp" width="800" height="800" alt="金光網絡" loading="lazy"><span class="pn">金光網絡</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s02"><img src="assets/s02.webp" width="800" height="800" alt="金白光火焰" loading="lazy"><span class="pn">金白光火焰</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s03"><img src="assets/s03.webp" width="800" height="800" alt="金光泥土" loading="lazy"><span class="pn">金光泥土</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s04"><img src="assets/s04.webp" width="800" height="800" alt="金光種子" loading="lazy"><span class="pn">金光種子</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s05"><img src="assets/s05.webp" width="800" height="800" alt="藍光星星" loading="lazy"><span class="pn">藍光星星</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s06"><img src="assets/s06.webp" width="800" height="800" alt="自我價值" loading="lazy"><span class="pn">自我價值</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s07"><img src="assets/s07.webp" width="800" height="800" alt="銀白光珍珠" loading="lazy"><span class="pn">銀白光珍珠</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s08"><img src="assets/s08.webp" width="800" height="800" alt="源頭星星" loading="lazy"><span class="pn">源頭星星</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s09"><img src="assets/s09.webp" width="800" height="800" alt="恩典之花" loading="lazy"><span class="pn">恩典之花</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s10"><img src="assets/s10.webp" width="800" height="800" alt="三位一體" loading="lazy"><span class="pn">三位一體</span><span class="pp">NT$1,300</span></a><a class="pcard" href="product.html?p=s11"><img src="assets/s11.webp" width="800" height="800" alt="星際薩滿之愛" loading="lazy"><span class="pn">星際薩滿之愛</span><span class="pp">整套優惠價 NT$11,500</span></a>
 </div></div>
 </main>
 <footer>
   <div class="footer-widgets">
     <div class="fw-in">
       <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月女性療癒聚</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
+      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>

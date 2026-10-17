@@ -293,6 +293,55 @@ ul{list-style:none}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
 }
+
+/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+.prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
+.prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
+.prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
+.doc>h3{font-size:20px}
+.doc>.prose>h4:first-child{margin-top:4px}
+.kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
+.testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
+.testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
+.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
+.wide-ph img{width:100%;height:auto;display:block}
+.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
+.series-intro{margin-bottom:40px}
+.pdesc{margin-top:48px;padding-top:32px;border-top:1px solid var(--line)}
+.buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
+.tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.bk .lab{display:block;font-family:var(--sans);font-size:15px;font-weight:700;margin-bottom:8px}
+.bk .lab em{font-style:normal;font-weight:400;font-size:12px;color:var(--accent-dark);margin-left:6px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+.cal{border:1px solid #b9b2a6;background:var(--white);padding:16px}
+.cal[aria-invalid="true"]{border-color:#a3271f}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;font:700 16px var(--sans)}
+.cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
+.cal-head button:disabled{opacity:.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
+.cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
+.cal-grid button.day:disabled{cursor:default}
+.cal-grid .day.open{background:var(--tint);color:var(--ink);font-weight:700;cursor:pointer}
+.cal-grid .day.open:hover{border-color:var(--accent)}
+.cal-grid .day.sel{background:var(--accent);color:#fff}
+.cal-grid .day:focus-visible,.slot:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.cal-slots{margin-top:16px;min-height:96px}
+.cal-hint{font:14px var(--sans);color:var(--ink-sub);margin-bottom:8px}
+.slot-row{display:flex;flex-wrap:wrap;gap:8px}
+.slot{min-width:96px;height:44px;padding:0 12px;border:1px solid #b9b2a6;background:var(--white);font:15px var(--sans);color:var(--ink);cursor:pointer}
+.slot[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.slot:disabled{color:#a49d92;background:var(--tint);text-decoration:line-through;cursor:default}
+@media (max-width:767px){
+  .f2{grid-template-columns:1fr}
+  .kinds{padding:12px 16px;font-size:15px;gap:6px 14px}
+  .cal{padding:12px}
+  .cal-grid .day{height:40px;font-size:14px}
+  .slot{flex:1;min-width:0}
+}
 </style>
 </head>
 <body>
@@ -305,11 +354,11 @@ ul{list-style:none}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係高端療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -340,14 +389,15 @@ ul{list-style:none}
 <main id="top">
 <section class="hero"><div class="wrap hero-in has-ph"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 一對一深度療癒</nav><h1 class="sec-title">一對一深度療癒</h1></div><div class="hero-ph"><img src="assets/sv-1on1.webp" width="900" height="1200" alt="一對一深度療癒"></div></div></section>
 <div class="wrap inner">
-<nav class="toc" aria-label="本頁項目"><ul><li><a href="#reading">身心能量解讀</a></li><li><a href="#custom">量身訂作療程</a></li><li><a href="#past-life">前世回溯</a></li><li><a href="#karma">各種業力釋放</a></li><li><a href="#potential">個人潛能閱讀</a></li><li><a href="#reincarnation">消融轉世迴路</a></li><li><a href="#lotus">蓮花身心療癒</a></li><li><a href="#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="#agni">Agni 除苗六步驟</a></li></ul></nav>
+<nav class="toc" aria-label="本頁項目"><ul><li><a href="#reading">身心能量解讀</a></li><li><a href="#custom">量身訂作療程</a></li><li><a href="#past-life">前世回溯</a></li><li><a href="#karma">各種業力釋放</a></li><li><a href="#trauma">創傷釋放</a></li><li><a href="#potential">個人潛能閱讀</a></li><li><a href="#reincarnation">消融轉世迴路</a></li><li><a href="#lotus">蓮花身心療癒</a></li><li><a href="#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="#agni">Agni 除苗六步驟</a></li></ul></nav>
 <section class="item" id="reading"><h2>身心能量解讀</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=身心能量解讀">預約或詢問這個項目</a></section>
 <section class="item" id="custom"><h2>量身訂作療程</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=量身訂作療程">預約或詢問這個項目</a></section>
-<section class="item" id="past-life"><h2>前世回溯</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=前世回溯">預約或詢問這個項目</a></section>
-<section class="item" id="karma"><h2>各種業力釋放</h2><article class="doc"><h3>名字業力釋放療程</h3><div class="prose"><p>名字業力釋放療程</p><p>＊名字的家族業力釋放</p><p>原生家庭的名字攜帶了家庭的業力，角色的稱謂則跟隨著某種角色的責任丶義務，比如要支撐家庭經濟的責任丶孕育照顧的丶帶領指揮的丶保護丶承擔後果的種種責任。而乳名丶偏名丶稱謂都代著某種定義，也可能是某種框架，當個人真實的力量被這些名字丶稱謂的責任和壓力所框住，不只會限制自身能量的自由，也會遮蔽自己的真實，這也是能夠去釋放丶轉化儲存在你身體和氣場裡的業力結構的「名字唱誦」療程的重點。</p><p>乳名丶偏名丶稱謂都帶某種定義，也可能帶著某種框架。曾經你被叫喚過的名字丶稱謂丶綽號、乳名/偏名，都連結著「叫你的人」當下的情緒、意念及業力。</p><p>當想到某人叫自己某的稱謂時，常伴隨著某種情緒（執愛丶嘲弄丶嬉笑⋯）能量，而這些能量會一直儲存在我們的身體和氣場。透過「唱誦名字」療程，能夠快速去釋放丶轉化儲存在你身體和氣場裡的業力結構。</p><p>一生最少都要做一次「名字的業力釋放」，尤其是想要活出自己，更自由的人更不能錯過。</p><p>（線上連線，一對一進行）</p><p>Ｓ案主：</p><p>當父母為我取的本名被唱出時，舊記憶排山倒海的浮現，關於被處罰責罵的害怕丶委屈，爲努力符合長輩期許的壓力，以及被長輩們植入的人生信念丶價值觀⋯。</p><p>Ａ案主：</p><p>某些別名被唱誦時，瞬間回到當年的自己，體驗戀愛中甜蜜及失戀的傷心能量⋯，然後一一被清理掉，一種自由回來，而不再受過去的名稱所捆綁。</p><p>Ｃ案主：</p><p>看到某些稱謂所帶的能量索求，使個案疲於奔命應付，他自身的力量被分割而無法專注於自己。</p><p>Ｅ案主：</p><p>沒想到名字的業力釋放那麼大！尤其本名釋放時，有很多被強迫的壓力，像是來自長輩老師們給我的壓力，釋放很多頭暈、沈重的意識，以及壓迫帶來的肩痛，脾臟痛⋯。後來隨著逐步釋放骨盆、髖骨、膝蓋⋯逐漸都釋放掉累積的沈重壓力與束縛捆綁。</p><p>名字的家族業力釋放完成後，身體某些地方的流動較慢，老師請我作某個動作，我作著作著就流淚了。這讓我若有所思想到領到自己的靈性名字時，對名字並沒感覺。這次做完自己本名的家族業力釋放療程後，竟然跟自己的靈性名字更接近，也能感受到真實的自己像是個無憂無慮的快樂小女孩。</p><p>Shemaya 提供靈性大師級的「名字的家族業力釋放」以及「靈性名字的力量迎回」一對一能量療程服務。</p><p>歡迎預約</p></div></article><article class="doc"><h3>親密伴侶的業力釋放</h3><div class="prose"><p>親密伴侶的業力釋放</p><p>來自不同家庭背景的二個人，共同生活後，總會在責任、金錢、孩子教養、家庭、未來、人生⋯有不同的想法及期待，當然也會有意見相歧的點。這些背後常常是承襲自原生家庭的信念/三觀，而有各自相異的能量結構。所謂的夫妻、親密伴侶的關係，業力常常是相互影響，甚至是捆綁的，而演變成某種程度的衝突或是限制。</p><p>親密夥伴的業力釋放，能協助個人從夫妻、親密伴侶之間的能量捆綁中跳脫，並允許個人再度自由，有足夠空間給自己，不再感到綁手綁腳的受限制，或是壓抑在對方的某些期待下而不快樂。</p><p>以下是個案回饋</p><p>個案Ｅ：「作了和先生的親密關係業力釋放，老師在我為釋放的過程中，我感受到原來自己能量是被架空的！，「非常驚訝⋯沒想到自己被影響那麼多！」，「現在感覺變自由，變輕很多。」</p><p>個案Ｓ：「常被要求「做什麼都要一起」壓縮了屬於我的空間與時間，讓我長期以來幾乎無法做自己想做的事，這讓我不快樂。日常的家務、家族聚會、旅遊等亦把我原有的空間、時間全部占滿了，過年過節更甚。我很累不開心仍必須接受身不由己的捆綁。</p><p>療程結束後，我釋放不少隱藏的憤怒與束縛， 感覺身心變得好清涼又好平靜。」</p></div></article><article class="doc"><h3>錢幣創傷釋放</h3><div class="prose"><p>錢幣創傷釋放</p><p>人生中出現的卡點中，某些卡點可能很強烈。它讓我們和過去（記得或不記得）的陰影創傷產生連結，情緒上因而感到煩躁或擔憂、被捆綁而動彈不得的感覺，甚至暫時失去力量。</p><p>在深層的靈性療育角度，我們不在事件上做分析，而是跳出眼前故事情節，去看這個能量的舊結構最初從何而來？因為大部分我們所經歷過的創傷，如果未去處理常會自動複製，而成為長長的創傷鏈結。倘若我們能夠從舊結構去處理，在根源上療傷並釋放相關的陰影與痛苦，則可能為止畫上句點，終結無止境的創傷迴路。</p><p>比如長期的無自信，有金錢相關的匮乏，和人之間的衝突，事業上的瓶頸⋯總是在有人踩到你內在（知道或不知道）的地雷，接著產生相對的爆炸反應，問題往往不在引發的事件或那個對象，而是必須去處理背後的那個能量結構。</p><p>錢幣的創傷釋釋放，是靈性大師獨特的療癒技巧。根據你眼前的身心情緒事件，我為了你追溯與此事有關的最原始年份，從源頭去做療育，去釋放儲存在因果體及情緒體的糾結和創傷陰影。透過錢幣創傷的釋放，我們可以不再受限於過去的失敗經驗，而能夠自由的，重新做出對自己有利的選擇，自然也是更支持我們邁向成功。</p><p>案例：</p><p>某位朋友在處理言語霸凌的過程，內心浮出深深的悲傷，以及焦慮、遲疑，她感知到更深的議題必須被處理，於是約了這埸療癒。</p><p>透過閱讀時間線，療程中，她釋放在古老的久遠前的創傷，同時也釋放喉輪卡住及眉心輪的沈重。療程進行一半，她說已經釋放好多，否則之前被困在不平靜中，而沒有辦法好好做自己的事。療程快結束時，我看見她周遭被金光所充滿，直到最後她全身轉為愛的綠光。這是能量運作很大，也讓人感動的靈性療程。</p></div></article><article class="doc"><h3>靈性名字業力釋放</h3><div class="prose"><p>靈性名字業力釋放</p><p>當我們的靈性名字被迎接下來後，靈性名字所攜帶的品質與光能量，尚不能完全均勻的分布在個人的氣場中，它被很多家族朋友們對你的稱謂所遮蓋住，以至於你感受不到自己的品質。</p><p>所以在有了自己靈性名後．如果想要擁抱自己的靈性品質，想靈性名字力量迎回之前，我建議要先做名字的家族業力釋放。</p><p>Shemaya 提供靈性大師的「名字的家族業力釋放」以及「靈性名字的力量迎回」的一對一能量療程服務。</p><p>歡迎預約</p></div></article><a class="tlink" href="booking.html?s=各種業力釋放">預約或詢問這個項目</a></section>
+<section class="item" id="past-life"><h2>前世回溯</h2><div class="prose"><p>我們的某些議題產生的挑戰與困綁，可能都與過去世某些生命經驗的相關，這些未療癒的印記能量常儲存在光體中，讓我們與人互動時，不自覺去重複某些慣性或思想模式，有時也會產生某些身體症狀、某些情緒、某些負面想法，或是特定的行為反應模式，而導致讓人難以快樂與自由。</p><p>身為靈性大師的Shemaya透過第九脈輪，以神性母親能量帶你作前世回溯，這能有助於追溯童年，甚至療癒前世的某些特定議題與經驗。面對難解的心結及那些阻礙自己前進的內在障礙、情緒，前世回溯能給予內在洞見及理解，並讓愛及寬恕支持過往經驗作釋放，進而得到自由。</p><p>透過特定主題的前世回溯，你能得到內在和平及自由。造成過去陰影的人事物，不再困擾你。</p><p>前世回溯範圍：</p><p>處理那些困擾你的問題，可以是家庭的某種關係、金錢、工作、健康、情感經驗、兩性關係、事業、財務狀況、意外事件、某個人的關係、和自己的關係、疾病、人生藍圖等。</p><p>請來訊預約並討論您想做的主題</p></div><a class="tlink" href="booking.html?s=前世回溯">預約或詢問這個項目</a></section>
+<section class="item" id="karma"><h2>各種業力釋放</h2><ul class="kinds" aria-label="業力釋放的種類"><li>伴侶業力釋放（親密伴侶，夫妻，情人）</li><li>關係業力釋放（各種不同的人際關係）</li><li>金錢業力釋放</li><li>父母業力釋放</li><li>祖先業力釋放</li><li>性的業力釋放</li><li>名字的家族業力釋放</li><li>靈性名字業力釋放</li><li>與疾病或與健康的業力釋放</li></ul><article class="doc"><h3>名字業力釋放療程</h3><div class="prose"><h4>＊名字的家族業力釋放</h4><p>原生家庭的名字攜帶了家庭的業力，角色的稱謂則跟隨著某種角色的責任丶義務，比如要支撐家庭經濟的責任丶孕育照顧的丶帶領指揮的丶保護丶承擔後果的種種責任。而乳名丶偏名丶稱謂都代著某種定義，也可能是某種框架，當個人真實的力量被這些名字丶稱謂的責任和壓力所框住，不只會限制自身能量的自由，也會遮蔽自己的真實，這也是能夠去釋放丶轉化儲存在你身體和氣場裡的業力結構的「名字唱誦」療程的重點。</p><p>乳名丶偏名丶稱謂都帶某種定義，也可能帶著某種框架。曾經你被叫喚過的名字丶稱謂丶綽號、乳名/偏名，都連結著「叫你的人」當下的情緒、意念及業力。</p><p>當想到某人叫自己某的稱謂時，常伴隨著某種情緒（執愛丶嘲弄丶嬉笑⋯）能量，而這些能量會一直儲存在我們的身體和氣場。透過「唱誦名字」療程，能夠快速去釋放丶轉化儲存在你身體和氣場裡的業力結構。</p><p>一生最少都要做一次「名字的業力釋放」，尤其是想要活出自己，更自由的人更不能錯過。</p><p>（線上連線，一對一進行）</p><p>Ｓ案主：</p><p>當父母為我取的本名被唱出時，舊記憶排山倒海的浮現，關於被處罰責罵的害怕丶委屈，爲努力符合長輩期許的壓力，以及被長輩們植入的人生信念丶價值觀⋯。</p><p>Ａ案主：</p><p>某些別名被唱誦時，瞬間回到當年的自己，體驗戀愛中甜蜜及失戀的傷心能量⋯，然後一一被清理掉，一種自由回來，而不再受過去的名稱所捆綁。</p><p>Ｃ案主：</p><p>看到某些稱謂所帶的能量索求，使個案疲於奔命應付，他自身的力量被分割而無法專注於自己。</p><p>Ｅ案主：</p><p>沒想到名字的業力釋放那麼大！尤其本名釋放時，有很多被強迫的壓力，像是來自長輩老師們給我的壓力，釋放很多頭暈、沈重的意識，以及壓迫帶來的肩痛，脾臟痛⋯。後來隨著逐步釋放骨盆、髖骨、膝蓋⋯逐漸都釋放掉累積的沈重壓力與束縛捆綁。</p><p>名字的家族業力釋放完成後，身體某些地方的流動較慢，老師請我作某個動作，我作著作著就流淚了。這讓我若有所思想到領到自己的靈性名字時，對名字並沒感覺。這次做完自己本名的家族業力釋放療程後，竟然跟自己的靈性名字更接近，也能感受到真實的自己像是個無憂無慮的快樂小女孩。</p><p>Shemaya 提供靈性大師級的「名字的家族業力釋放」以及「靈性名字的力量迎回」一對一能量療程服務。</p><p>歡迎預約</p></div><h4>＊靈性名字業力釋放</h4><div class="prose"><p>當我們的靈性名字被迎接下來後，靈性名字所攜帶的品質與光能量，尚不能完全均勻的分布在個人的氣場中，它被很多家族朋友們對你的稱謂所遮蓋住，以至於你感受不到自己的品質。</p><p>所以在有了自己靈性名後．如果想要擁抱自己的靈性品質，想靈性名字力量迎回之前，我建議要先做名字的家族業力釋放。</p><p>Shemaya 提供靈性大師的「名字的家族業力釋放」以及「靈性名字的力量迎回」的一對一能量療程服務。</p><p>歡迎預約</p></div></article><article class="doc"><h3>親密伴侶的業力釋放</h3><div class="prose"><p>來自不同家庭背景的二個人，共同生活後，總會在責任、金錢、孩子教養、家庭、未來、人生⋯有不同的想法及期待，當然也會有意見相歧的點。這些背後常常是承襲自原生家庭的信念/三觀，而有各自相異的能量結構。所謂的夫妻、親密伴侶的關係，業力常常是相互影響，甚至是捆綁的，而演變成某種程度的衝突或是限制。</p><p>親密夥伴的業力釋放，能協助個人從夫妻、親密伴侶之間的能量捆綁中跳脫，並允許個人再度自由，有足夠空間給自己，不再感到綁手綁腳的受限制，或是壓抑在對方的某些期待下而不快樂。</p><p>以下是個案回饋</p><p>個案Ｅ：「作了和先生的親密關係業力釋放，老師在我為釋放的過程中，我感受到原來自己能量是被架空的！，「非常驚訝⋯沒想到自己被影響那麼多！」，「現在感覺變自由，變輕很多。」</p><p>個案Ｓ：「常被要求「做什麼都要一起」壓縮了屬於我的空間與時間，讓我長期以來幾乎無法做自己想做的事，這讓我不快樂。日常的家務、家族聚會、旅遊等亦把我原有的空間、時間全部占滿了，過年過節更甚。我很累不開心仍必須接受身不由己的捆綁。</p><p>療程結束後，我釋放不少隱藏的憤怒與束縛， 感覺身心變得好清涼又好平靜。」</p></div></article><a class="tlink" href="booking.html?s=各種業力釋放">預約或詢問這個項目</a></section>
+<section class="item" id="trauma"><h2>創傷釋放</h2><p class="note">創傷釋放與業力釋放是不同的大類，詳細內容 Shemaya 整理中。</p><article class="doc"><h3>創傷釋放</h3><p class="pending">內容待 Shemaya 提供</p></article><article class="doc"><h3>錢幣創傷釋放</h3><div class="prose"><p>人生中出現的卡點中，某些卡點可能很強烈。它讓我們和過去（記得或不記得）的陰影創傷產生連結，情緒上因而感到煩躁或擔憂、被捆綁而動彈不得的感覺，甚至暫時失去力量。</p><p>在深層的靈性療育角度，我們不在事件上做分析，而是跳出眼前故事情節，去看這個能量的舊結構最初從何而來？因為大部分我們所經歷過的創傷，如果未去處理常會自動複製，而成為長長的創傷鏈結。倘若我們能夠從舊結構去處理，在根源上療傷並釋放相關的陰影與痛苦，則可能為止畫上句點，終結無止境的創傷迴路。</p><p>比如長期的無自信，有金錢相關的匮乏，和人之間的衝突，事業上的瓶頸⋯總是在有人踩到你內在（知道或不知道）的地雷，接著產生相對的爆炸反應，問題往往不在引發的事件或那個對象，而是必須去處理背後的那個能量結構。</p><p>錢幣的創傷釋釋放，是靈性大師獨特的療癒技巧。根據你眼前的身心情緒事件，我為了你追溯與此事有關的最原始年份，從源頭去做療育，去釋放儲存在因果體及情緒體的糾結和創傷陰影。透過錢幣創傷的釋放，我們可以不再受限於過去的失敗經驗，而能夠自由的，重新做出對自己有利的選擇，自然也是更支持我們邁向成功。</p><p>案例：</p><p>某位朋友在處理言語霸凌的過程，內心浮出深深的悲傷，以及焦慮、遲疑，她感知到更深的議題必須被處理，於是約了這埸療癒。</p><p>透過閱讀時間線，療程中，她釋放在古老的久遠前的創傷，同時也釋放喉輪卡住及眉心輪的沈重。療程進行一半，她說已經釋放好多，否則之前被困在不平靜中，而沒有辦法好好做自己的事。療程快結束時，我看見她周遭被金光所充滿，直到最後她全身轉為愛的綠光。這是能量運作很大，也讓人感動的靈性療程。</p></div></article><article class="doc"><h3>大師創傷鏈</h3><p class="pending">內容待 Shemaya 提供</p></article><a class="tlink" href="booking.html?s=創傷釋放">預約或詢問這個項目</a></section>
 <section class="item" id="potential"><h2>個人潛能閱讀</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=個人潛能閱讀">預約或詢問這個項目</a></section>
 <section class="item" id="reincarnation"><h2>消融轉世迴路</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=消融轉世迴路">預約或詢問這個項目</a></section>
-<section class="item" id="lotus"><h2>蓮花身心療癒</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=蓮花身心療癒">預約或詢問這個項目</a></section>
+<section class="item" id="lotus"><h2>蓮花身心療癒</h2><div class="prose"><h3 class="doc-t">瑪哈蓮花</h3><h4>心肺與肝臟療育</h4><h4>心的療癒重點：</h4><p>＊移除心的自我保護</p><p>＊釋放儲存在心的毒素或黑暗能量</p><p>＊撫去心的悲傷</p><p>＊提升強化心的力量</p><p>＊將心所散落的面向帶回整合</p><p>＊支持你的療癒道路</p><h4>特別推薦給</h4><p>#常覺得呼吸有點卡的人</p><p>#心中感到有空洞感的人</p><p>#想要更敞開卻害怕的人</p><p>#渴望活出愛的人</p><h4>肺的療癒重點：</h4><p>＊淨化肺累積的灰塵（此生或過去生）</p><p>＊重新感受到神的呼吸，透過呼吸與神的呼吸同步，內在的合一感能帶來安定以及平靜</p><p>＊更容易跟隨神性指引，能放下緊繃及慣性的控制。</p><h4>個案～</h4><p>透過光我看見個案的過去世能文又能武，由於鋒芒畢露多次遭人嫉妒、陷害而受傷，於是心豎立保護屏障，選擇收斂自己光退隱至人群後。心告訴我她一直難以忠實於自己。她的耳邊堆積很多像烏雲般的「別人說」、「你應該⋯」等來自旁人的傳統信念、道德框架意識、批判籠罩著她⋯導致她常常拉扯，然後妥協於外在現實，說服自己去放棄內在的渴望。心的毒素被清理後，那堆烏雲也快速散去。</p><p>我接收個案的左肺第一句話是「好鬱卒啊！」（啥？鬱卒?）左肺持續說「她常常忽略自己」，「在內在拉扯，最後總是放棄了自己真正想要的」，「覺得自己不重要⋯」。右肺則是對個案說「要快樂」我將肺的這些話轉達給她，個案哈哈大笑地說很準。</p><p>療程做完後，個案感覺自己眉心輪有很多能量離開，我也明顯感到她的意識頻率也更提高了，不僅心變大，能量也更流動。這位新朋友跟我分享說「每次深夜時，總是會跳出Shemaya 老師的貼文，我很被觸動的心臟碰碰跳，幾次想要發出預約訊息，但打了幾個字就又刪除，心想算了算了，找個理由說服自己，太晚了，打擾不認識的老師不太好⋯。就這麼來來回回地，鼓起勇氣又打消念頭！直到某一夜的深夜，看到文章心臟回應的跳動，讓我無法再忽略它了，才鼓起勇氣與老師聯絡。所以我完全懂自己的肺所說的「好鬱卒」呀。」原來，學會珍愛自己的心，重視自己內心真正的想法，心肺就不會再鬱卒了。</p><p>新時代的已婚女性也能透過靈性學習去完整自己，去展露自己的力量，而不再透過自我犧牲去成就對家庭的愛。女性也配得自主和自由。女性應透過自我成長，將愛關注於自己以及所愛的家人，而達到全面雙贏的局面。</p><p>(本文經當事人同意分享）</p><hr class="sep"><h4>＊瑪哈蓮花療癒—肝與脾（可線上施作）</h4><p>肝臟是儲存業力的器官，而業力指的是未回到愛，不在愛中的故事，也是需要被平衡、要回到平靜與愛的過往經驗。它們可能是過去我們曾經傷害過他人、被傷害過而還未和解的經歷，都由肝臟為我們承載著。在這個療程中，我會引導你去敞開心以透過及神的恩典中，能以更快速度去釋放儲存在肝臟的業力，如此能降低被過去的業力所捆綁，而在生活中去平衡這些業力帶來的挑戰，釋放肝臟負擔，身心也會感受到更輕盈。</p><h4>療癒重點：</h4><p>釋放個人業力</p><p>釋放家族業力</p><p>釋放國家業力</p></div><p class="pending">最後一段心得的開頭待 Shemaya 確認，確認後補上</p><a class="tlink" href="booking.html?s=蓮花身心療癒">預約或詢問這個項目</a></section>
 <section class="item" id="tantra"><h2>訂製個人蓮花譚崔瑜伽</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=訂製個人蓮花譚崔瑜伽">預約或詢問這個項目</a></section>
 <section class="item" id="agni"><h2>Agni 除苗六步驟</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=Agni 除苗六步驟">預約或詢問這個項目</a></section>
 </div>
@@ -356,7 +406,7 @@ ul{list-style:none}
   <div class="footer-widgets">
     <div class="fw-in">
       <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月女性療癒聚</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
+      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>
