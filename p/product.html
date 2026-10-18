@@ -353,13 +353,24 @@ ul{list-style:none}
 figure.pcard:hover img{opacity:1}
 /* 頁面大標題用 90% 黑（客戶 10/17） */
 .sec-title{color:#1a1a1a}
+/* 空間能量風水：長文在左，右側三張圖垂直排列；手機改為文章上方三張並排 */
+.side-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
+.side-ph{display:grid;gap:20px}
+.side-ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--tint)}
+@media (max-width:1024px){
+  .side-grid{grid-template-columns:minmax(0,1fr) 240px;gap:32px}
+}
+@media (max-width:767px){
+  .side-grid{grid-template-columns:1fr;gap:20px}
+  .side-ph{order:-1;grid-template-columns:repeat(3,1fr);gap:8px}
+}
 </style>
 <script src="products.js"></script>
 </head>
 <body>
 <div class="test-bar">測試站：僅供確認版面與連結，內容與價格以正式站為準</div>
 <header class="site-header">
-  <div class="site-title"><a href="../index.html" aria-label="回首頁"><img src="assets/logo-gold.webp" width="1600" height="233" alt="Shemaya 夏克緹薩滿的金色大門"></a></div>
+  <div class="site-title"><a href="../index.html" aria-label="回首頁"><img src="assets/logo-gold.webp" width="1600" height="189" alt="Shemaya 夏克緹薩滿的金色大門"></a></div>
   <nav class="nav-bar" aria-label="主選單">
     <div class="nav-in">
       <button class="menu-toggle" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><i></i>選單</button>
