@@ -355,14 +355,16 @@ figure.pcard:hover img{opacity:1}
 .sec-title{color:#1a1a1a}
 /* 空間能量風水：長文在左，右側三張圖垂直排列；手機改為文章上方三張並排 */
 .side-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
-.side-ph{display:grid;gap:20px}
+.side-ph{display:grid;gap:20px;grid-column:2;grid-row:1}
+.side-tx{grid-column:1;grid-row:1;min-width:0}
 .side-ph img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--tint)}
 @media (max-width:1024px){
   .side-grid{grid-template-columns:minmax(0,1fr) 240px;gap:32px}
 }
 @media (max-width:767px){
   .side-grid{grid-template-columns:1fr;gap:20px}
-  .side-ph{order:-1;grid-template-columns:repeat(3,1fr);gap:8px}
+  .side-ph,.side-tx{grid-column:auto;grid-row:auto}
+  .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
 }
 </style>
 </head>
