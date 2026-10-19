@@ -366,6 +366,21 @@ figure.pcard:hover img{opacity:1}
   .side-ph,.side-tx{grid-column:auto;grid-row:auto}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
 }
+/* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
+.hero-in.has-ph.has-toc{grid-template-rows:auto auto;align-items:start;row-gap:0}
+.has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:end}
+.has-toc>.hero-ph{grid-column:2;grid-row:1/3}
+.has-toc>.toc{grid-column:1;grid-row:2;align-self:start;margin:32px 0 0;background:var(--bg)}
+@media (max-width:767px){
+  .has-toc>.hero-tx{align-self:center}
+  .has-toc>.hero-ph{grid-row:1}
+  .has-toc>.toc{grid-column:1/-1;margin-top:24px}
+}
+/* 生命轉彎為天命鋪路：文末兩個按鈕 */
+.cta2{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
+.btn.btn-o:hover{background:var(--tint)}
+@media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
 </style>
 </head>
 <body>
@@ -409,7 +424,7 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / 保健排毒系列</nav><h1 class="sec-title">保健排毒系列</h1></div></div></section>
+<section class="hero"><div class="wrap hero-in"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / 保健排毒系列</nav><h1 class="sec-title">保健排毒系列</h1></div></div></section>
 <div class="wrap inner">
 <p class="note">這個系列目前暫不販售，先保留商品照片。</p><div class="pgrid">
 <figure class="pcard"><img src="assets/d01.webp" width="800" height="800" alt="光纖" loading="lazy"><figcaption class="pn">光纖</figcaption></figure><figure class="pcard"><img src="assets/d02.webp" width="800" height="800" alt="銀之水" loading="lazy"><figcaption class="pn">銀之水</figcaption></figure><figure class="pcard"><img src="assets/d03.webp" width="800" height="800" alt="卡利黑狼" loading="lazy"><figcaption class="pn">卡利黑狼</figcaption></figure><figure class="pcard"><img src="assets/d04.webp" width="800" height="800" alt="水晶狼" loading="lazy"><figcaption class="pn">水晶狼</figcaption></figure><figure class="pcard"><img src="assets/d05.webp" width="800" height="800" alt="蛇魔法解藥" loading="lazy"><figcaption class="pn">蛇魔法解藥</figcaption></figure><figure class="pcard"><img src="assets/d06.webp" width="800" height="800" alt="銀光星星" loading="lazy"><figcaption class="pn">銀光星星</figcaption></figure><figure class="pcard"><img src="assets/d07.webp" width="800" height="800" alt="金白光蓮花" loading="lazy"><figcaption class="pn">金白光蓮花</figcaption></figure><figure class="pcard"><img src="assets/d08.webp" width="800" height="800" alt="紫金光蓮花" loading="lazy"><figcaption class="pn">紫金光蓮花</figcaption></figure>

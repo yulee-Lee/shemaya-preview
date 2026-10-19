@@ -366,6 +366,21 @@ figure.pcard:hover img{opacity:1}
   .side-ph,.side-tx{grid-column:auto;grid-row:auto}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
 }
+/* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
+.hero-in.has-ph.has-toc{grid-template-rows:auto auto;align-items:start;row-gap:0}
+.has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:end}
+.has-toc>.hero-ph{grid-column:2;grid-row:1/3}
+.has-toc>.toc{grid-column:1;grid-row:2;align-self:start;margin:32px 0 0;background:var(--bg)}
+@media (max-width:767px){
+  .has-toc>.hero-tx{align-self:center}
+  .has-toc>.hero-ph{grid-row:1}
+  .has-toc>.toc{grid-column:1/-1;margin-top:24px}
+}
+/* 生命轉彎為天命鋪路：文末兩個按鈕 */
+.cta2{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
+.btn.btn-o:hover{background:var(--tint)}
+@media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
 </style>
 </head>
 <body>
@@ -409,9 +424,8 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖解碼</nav><h1 class="sec-title">靈魂藍圖解碼</h1></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼"></div></div></section>
+<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖解碼</nav><h1 class="sec-title">靈魂藍圖解碼</h1></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li><li><a href="#feedback">解讀回饋</a></li></ul></nav></div></section>
 <div class="wrap inner">
-<nav class="toc" aria-label="本頁項目"><ul><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li><li><a href="#feedback">解讀回饋</a></li></ul></nav>
 <section class="item" id="five-stages"><h2>生命五階段</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=生命五階段">預約或詢問這個項目</a></section>
 <section class="item" id="partner"><h2>伴侶感情關係解碼</h2><div class="prose"><h3 class="doc-t">情感模式解碼</h3><p>情感交流與相互了解是經營伴侶關係，甚至是婚姻關係中很重要的事。</p><p>但是常常遇到某些事，我們不了解為何對方會這樣想？為什麼他會這樣作？為什麼他不能感受到我的情緒？</p><p>答案很簡單，因為對方思緒回路跟你是完全不同。</p><p>作了幾對伴侶的感情模式解碼，發現每個人的情感認知及需求都不同，以致在伴侶或夫妻關係之間，有時感到不被理解，甚至有誤解或情感失落。</p><p>在東方傳統文化裡，男女性交往時常會看重對象是否孝順，而有些女性婚後才發現，對方太重視父母，妻子只有盡不完的責任義務（勞碌）卻得不到丈夫應給的重視（自己順位被擺最後）另外有家業大的家庭，娶妻是為繁衍後代來繼承家業，感情再怎麼經營也比不上生個男孩強。這不是古代宮鬥才有嗎？不，二十一世紀的今天，不少人心中仍有這樣的思維，在遇到重大抉擇時會立見高下。</p><p>透過預約解讀彼此的情感模式，有個案看明白了！對方其實只想要二人世界，想要被陪伴，無奈當事人並未表明不想有小孩。生了小孩意味著不輕鬆要犧牲，也要更多付出時間和精神、金錢⋯等代價。偽單親媽媽常抱怨先生缺乏責任感？明明生活一起，自己卻過著偽單親的生活。這即是伴侶關係中，一個人想努力完整家庭，另外一個人只想要兩人世界，對彼此的期待不同，最後造成失落與痛苦。</p><p>夫妻關係或伴侶關係，泰半影響到個人對人生的幸福感。若能儘早去了解自己的情感模式，以及你所重視的情人、伴侶或是其他家人的情感模式是很重要的學習功課。</p><p>一旦了解自己的性格、情緒模式，也了解對方的規格模組，看懂、學會用新的方法去相處，慢慢地改變，自然就越來越輕鬆愉快。也由於看懂了，我們才能更專注在自己身上，不必強求對方做不到的事。</p><p>情感解碼也能用來解碼：親子模式或事業夥伴模式、婆媳模式、師生、同儕模式等各種關係模式，只要你認爲重要的人都可以。</p><p>想了解更多嗎？歡迎私訊預約我。</p></div><a class="tlink" href="booking.html?s=伴侶感情關係解碼">預約或詢問這個項目</a></section>
 <section class="item" id="fortune"><h2>人生大運流年運勢</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=人生大運流年運勢">預約或詢問這個項目</a></section>

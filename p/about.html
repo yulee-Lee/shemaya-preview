@@ -366,6 +366,21 @@ figure.pcard:hover img{opacity:1}
   .side-ph,.side-tx{grid-column:auto;grid-row:auto}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
 }
+/* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
+.hero-in.has-ph.has-toc{grid-template-rows:auto auto;align-items:start;row-gap:0}
+.has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:end}
+.has-toc>.hero-ph{grid-column:2;grid-row:1/3}
+.has-toc>.toc{grid-column:1;grid-row:2;align-self:start;margin:32px 0 0;background:var(--bg)}
+@media (max-width:767px){
+  .has-toc>.hero-tx{align-self:center}
+  .has-toc>.hero-ph{grid-row:1}
+  .has-toc>.toc{grid-column:1/-1;margin-top:24px}
+}
+/* 生命轉彎為天命鋪路：文末兩個按鈕 */
+.cta2{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
+.btn.btn-o:hover{background:var(--tint)}
+@media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
 </style>
 </head>
 <body>
@@ -409,8 +424,8 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph"><div><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 認識 Shemaya</nav><h1 class="sec-title">認識 Shemaya</h1></div><div class="hero-ph"><img src="assets/about.webp" width="900" height="1205" alt="Shemaya 形象照"></div></div></section>
-<div class="wrap inner narrow"><section class="item" id="who"><h2>Shemaya 是誰</h2><div class="prose"><p>原為視覺設計師，自25年前開始探索心靈，由於治幼女的病，她跑遍美國丶法國積極接受專業的療癒訓練。</p><p>她累積12餘年紮實的專業教學，與豐富的個案經驗，Shemaya擅長支持人們掙脫現實生活綑綁拿回力量，並整合實現自我價值，形塑輕盈快樂。</p><p>她陪伴人們走上自己的道路，穿越懷疑與陰影，走上轉化之路並迎回天賦潛能。</p><p>現職為聖火傳承靈性大師的她，定居於多山的天母，她於各地帶領授證課程：浴光之路、四元素與基督之光丶神聖自然藥草祭司丶水知識丶狼祭司與熊部落丶天狼星薩滿工作坊丶脈輪花精訓練等。 她也不定期提供高山的薩滿僻靜，帶領人們於阿里山擁抱大地母親。</p></div></section><section class="item" id="turn"><h2>Shemaya浴光之路</h2><div class="prose"><p>1997年從美國畢業回台灣，我分別在內湖園區，南港園區做設計工作。即使收入不錯，工作環境優雅，還有股票領，但不知怎麼我就不快樂。心中一直「我不屬於這裡」之感。加上對身心靈感興趣，幾乎我把賺來的錢，都拿去上各式各樣身心靈的課。每隔一段時間就會湧出想離職的心。滑著104，我仍不知道離開設計後，還能作什麼呢？於是我去考了美容執照、芳療師認證、保險業務員執照⋯幾經嘗試才明白那些都不是我的路。</p><p>朋友介紹我一位有名算八字的老先生。當時我沮喪地問他，我到底適合做什麼呢？家人都推我去考公務員，但我不想啊。這位慈祥的老先生，仔細看完我的八字後，他說像你這麼多才華的人，去做公務員太可惜。我聽完愣住，不懂。接下來他說的話，我更不懂了。他說你最適合做的就是坐在人們的面前，幫他們解決疑難雜症等困難。</p><p>嗄？當年我才20幾歲，那是什麼工作我完全沒想像力，所以我愣住，我問那有這種工作？老先生說你就是很出色的專業顧問， 幫人們解決他的疑難雜症的顧問。</p><p>我對老先生說，自己做設計做得很不快樂（那是我專業），讓我賺錢最容易的。老先生說我注定在這個的專業中做10年，才會離開。後來我離職又回總共三進三出，正式離開設計界還真的剛好滿10年。那年，我38歲結婚。39歲女兒出生，她的病帶我正式進入魔鬼級特訓班。為了療癒她，我投資大筆財力與精神赴國外進修，從過敏兒身心顧問開始，到身心整合療育服務，到靈性教練與技術專業的教學。20幾年後，我真的走到老先生說的位置啊。</p><p>如果問我，當上班族，時間到就能領薪水不好嗎？</p><p>好啊，但是這份安全感也有限制與不自由。自雇者需要有紀律的安排時間和工作效能才能長久走下去，而且也沒有穩定收入。雖然如此，我還是比以前做設計時快樂。也許這就是算命老先生說的適合的位置吧。</p><p>你想要更快的走上自己的道路嗎？</p><p>讓Shemaya 用更快速更好的方法，幫助你釐清並指引方向。</p></div></section><section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section><p><a class="btn" href="booking.html">預約個案時間</a></p></div>
+<section class="hero"><div class="wrap hero-in has-ph"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 認識 Shemaya</nav><h1 class="sec-title">認識 Shemaya</h1></div><div class="hero-ph"><img src="assets/about.webp" width="900" height="1205" alt="Shemaya 形象照"></div></div></section>
+<div class="wrap inner narrow"><section class="item" id="who"><h2>Shemaya 是誰</h2><div class="prose"><p>原為視覺設計師，自25年前開始探索心靈，由於治幼女的病，她跑遍美國丶法國積極接受專業的療癒訓練。</p><p>她累積12餘年紮實的專業教學，與豐富的個案經驗，Shemaya擅長支持人們掙脫現實生活綑綁拿回力量，並整合實現自我價值，形塑輕盈快樂。</p><p>她陪伴人們走上自己的道路，穿越懷疑與陰影，走上轉化之路並迎回天賦潛能。</p><p>現職為聖火傳承靈性大師的她，定居於多山的天母，她於各地帶領授證課程：浴光之路、四元素與基督之光丶神聖自然藥草祭司丶水知識丶狼祭司與熊部落丶天狼星薩滿工作坊丶脈輪花精訓練等。 她也不定期提供高山的薩滿僻靜，帶領人們於阿里山擁抱大地母親。</p></div></section><section class="item" id="turn"><h2>生命轉彎為天命鋪路</h2><div class="prose"><h3 class="doc-t">轉彎走上為天命鋪的路</h3><p>1997年從美國畢業，回台後我在內湖園區，南港園區做設計工作。那時收入優渥，工作環境優雅還領股票，但心中總有聲音說「我不屬於這裡」。我把賺來的錢都拿去上有興趣的身心靈課程，每隔一陣子就會湧出想離職的心。滑著求職網，迷惘的不知離開設計我能作什麼？於是我去考了美容執照、芳療師認證、保險業務員執照⋯幾經嘗試才明白那些都不是我的路。</p><p>朋友介紹我一位聲譽卓著的命理老先生。當時我沮喪地問他「我到底適合做什麼？身邊的人都勸我去考穩定的公務員，但我心裡不想。」老先生仔細看完命盤後，慈祥的說「像你這麼多才多藝的人，去做公務員太可惜了。」我聽完愣住。接下來他說的話，我更不懂了。他說「你最適合做的就是坐在人們的面前，幫人解決疑難雜症的軍師。」嗄？當年二十多歲的我滿臉錯愕，根本無法想像那是什麼樣的工作。老先生篤定地說，「你將會是很出色的專業顧問，專門幫人們解決生命裡的疑難雜症。」</p><p>我無奈地坦白，其實自己做設計很不快樂，但那是我最容易賺錢的方式。老先生說，「這份專業，你命中注定要做十年才會真正離開」。後來我離職又回任總共三進三出，正式告別設計界時還真的是滿10年。那年我結婚，隔年女兒出生，她的病帶我進入難以想像的魔鬼特訓班。為了療治她，我投資大筆金錢與精神赴國外進修，從過敏兒身心療癒開始，到身心整合療育，一路深耕至靈性教練師與專業的教學傳承。二十多年後的今天，當我坐在眾多學員面前時，赫然發現當年那位老先生說的話，果然成真了。</p><h3 class="doc-t">每一次轉彎都在為天命鋪路</h3><p>有人問我：當個規律打卡、時間一到就有薪水進帳的上班族，不好嗎？</p><p>當然很好。但那份安穩的背後，往往伴隨著某些束縛與妥協。</p><p>選擇成為獨立創業者，是需要高度自律去架構時間與工作節奏，更要面對無固定薪水的挑戰；但我卻比過去從事設計時，感到更充實快樂。</p><p>因為我知道，自己終於站在靈魂真正渴望的位置上。</p><p>你是否也正站在人生的十字路口，渴望更快找到屬於自己的軌道？</p><p>生命中看似繞遠的路，都是不可或缺的養分；但你不必獨自困在迷霧裡碰撞多年。</p><p>讓走過漫長轉折的 Shemaya，以溫暖篤定的視野與扎實的引導，陪伴你釐清迷惘、撥開盲點，從容走上屬於你的天命之路。</p></div><p class="cta2"><a class="btn" href="booking.html">預約一對一深度諮詢</a><a class="btn btn-o" href="explore.html">探索身心覺醒</a></p></section><section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section><p><a class="btn" href="booking.html">預約個案時間</a></p></div>
 </main>
 <footer>
   <div class="footer-widgets">
