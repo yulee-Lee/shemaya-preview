@@ -383,6 +383,9 @@ figure.pcard:hover img{opacity:1}
 .btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
 .btn.btn-o:hover{background:var(--tint)}
 @media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
+/* 薩滿部落目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
+.toc .toc-h{flex-basis:100%;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--ink-sub)}
+.toc .toc-h~.toc-h{margin-top:10px}
 </style>
 </head>
 <body>
@@ -407,7 +410,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿部落</a>
           <div class="dd"><ul class="sub">
-            <li><a href="tribe.html#return">重回你的薩滿道路</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇解毒</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="tribe.html#sirius-trip">天狼星薩滿之旅</a></li><li><a href="tribe.html#book-shaman">預約自己的薩滿療癒</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="tribe.html#sirius-trip">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -436,7 +439,7 @@ figure.pcard:hover img{opacity:1}
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
     <div id="panelSvc" role="tabpanel" aria-labelledby="tabSvc">
-      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心能量解讀</option><option>量身訂作療程</option><option>前世回溯</option><option>各種業力釋放</option><option>創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option><option>訂製個人蓮花譚崔瑜伽</option><option>Agni 除苗六步驟</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>人生道路校準</option><option>解決重複發生的議題</option><option>釋放舊能量與負擔</option><option>負向信念刪除</option><option>關係結構療癒</option><option>消除停滯堵塞</option><option>脈輪充電</option></optgroup><optgroup label="薩滿部落"><option>預約自己的薩滿療癒</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
+      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心能量解讀</option><option>量身訂作療程</option><option>前世回溯</option><option>各種業力釋放</option><option>創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option><option>訂製個人蓮花譚崔瑜伽</option><option>Agni 除苗六步驟</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>人生道路校準</option><option>解決重複發生的議題</option><option>釋放舊能量與負擔</option><option>負向信念刪除</option><option>關係結構療癒</option><option>消除停滯堵塞</option><option>脈輪充電</option></optgroup><optgroup label="薩滿部落"><option>北美印地安神聖符號</option><option>火薩滿聖蛇</option><option>鑽石療癒-重返薩滿之路</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
       <div class="f"><span class="lab" id="calLab">選擇日期與時段 <em>必填</em></span>
         <div class="cal" id="cal" role="group" aria-labelledby="calLab">
           <div class="cal-head"><button type="button" id="calPrev" aria-label="上個月">‹</button><span id="calTitle" aria-live="polite"></span><button type="button" id="calNext" aria-label="下個月">›</button></div>
@@ -446,7 +449,7 @@ figure.pcard:hover img{opacity:1}
       </div>
     </div>
     <div id="panelCourse" role="tabpanel" aria-labelledby="tabCourse" hidden>
-      <div class="f"><label for="bkCourse">想報名的課程 <em>必填</em></label><select id="bkCourse"><option value="">請選擇</option><option>脈輪花精卡療癒師</option><option>薩滿水晶療癒</option><option>光藥草保健療癒</option><option>浴光之路</option><option>神聖藥草祭司</option><option>水知識</option><option>四大元素與基督之光</option><option>狼祭司與熊部落</option><option>天狼星工作坊</option><option>重回你的薩滿道路</option><option>火薩滿聖蛇解毒</option><option>阿里山薩滿僻靜之旅</option><option>天狼星薩滿之旅</option></select></div>
+      <div class="f"><label for="bkCourse">想報名的課程 <em>必填</em></label><select id="bkCourse"><option value="">請選擇</option><option>脈輪花精卡療癒師</option><option>薩滿水晶療癒</option><option>光藥草保健療癒</option><option>浴光之路</option><option>神聖藥草祭司</option><option>水知識</option><option>四大元素與基督之光</option><option>狼祭司與熊部落</option><option>天狼星工作坊</option><option>阿里山薩滿僻靜之旅</option><option>天狼星薩滿之旅</option></select></div>
       <p class="note">開課日期確認後，Shemaya 會再與您聯絡。</p>
     </div>
     <div class="f"><label for="bkName">姓名 <em>必填</em></label><input id="bkName" maxlength="40" autocomplete="name"></div>
