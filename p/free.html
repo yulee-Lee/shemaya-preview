@@ -367,12 +367,13 @@ figure.pcard:hover img{opacity:1}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
 }
 /* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
-.hero-in.has-ph.has-toc{grid-template-rows:auto auto;align-items:start;row-gap:0}
-.has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:end}
+/* 第一列只取標題本身高度、剩餘高度給目錄列：網路分段載入時目錄晚到也不會改變標題位置（10/19 線上量到置底對齊造成位移） */
+.hero-in.has-ph.has-toc{grid-template-rows:auto 1fr;align-items:start;row-gap:0}
+.has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:start;padding-top:24px}
 .has-toc>.hero-ph{grid-column:2;grid-row:1/3}
 .has-toc>.toc{grid-column:1;grid-row:2;align-self:start;margin:32px 0 0;background:var(--bg)}
 @media (max-width:767px){
-  .has-toc>.hero-tx{align-self:center}
+  .has-toc>.hero-tx{align-self:center;padding-top:0}
   .has-toc>.hero-ph{grid-row:1}
   .has-toc>.toc{grid-column:1/-1;margin-top:24px}
 }
