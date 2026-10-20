@@ -48,9 +48,9 @@ ul{list-style:none}
 .dd::before{content:"";position:absolute;left:50%;top:6px;margin-left:-10px;border:10px solid transparent;border-top-width:0;border-bottom-color:var(--dd)}
 .menu>li:hover>.dd,.menu>li:focus-within>.dd{visibility:visible;opacity:1}
 .sub{background:var(--dd);max-height:var(--dd-max,70vh);overflow-y:auto;overscroll-behavior:contain}
-.sub a{display:block;padding:20px;font-size:15.3px;line-height:19.89px;font-style:italic;color:#fff;text-align:center;border-bottom:1px solid var(--dd-line)}
+.sub a{display:block;padding:9px 20px;font-size:15.3px;line-height:19.89px;font-style:italic;color:#fff;text-align:center;border-bottom:1px solid var(--dd-line)}
 .sub li:last-child a{border-bottom:0}
-.sub-h{display:block;padding:14px 20px 6px;font-family:var(--sans);font-size:12.8px;font-weight:700;letter-spacing:.1em;color:#c9a96a;text-align:center;font-style:normal;border-bottom:1px solid var(--dd-line)}
+.sub-h{display:block;padding:10px 20px 4px;font-family:var(--sans);font-size:12.8px;font-weight:700;letter-spacing:.1em;color:#c9a96a;text-align:center;font-style:normal;border-bottom:1px solid var(--dd-line)}
 .course-group{font-size:22px;font-weight:700;line-height:1.4;margin-top:56px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .course-group.first{margin-top:36px}
 .course-group+.course{margin-top:32px}
@@ -241,6 +241,8 @@ ul{list-style:none}
 .crumbs{font-family:var(--sans);font-size:13px;color:var(--ink-sub);margin-bottom:16px;letter-spacing:.04em}
 .crumbs a{color:var(--accent-dark);border-bottom:1px solid currentColor}
 .lead{color:var(--ink-sub);margin-top:16px}
+.title-row{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:28px;row-gap:8px}
+.hero-tags{font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--ink-sub);letter-spacing:.04em;margin:0}
 .inner{padding-top:56px;padding-bottom:var(--sec)}
 .inner.narrow{max-width:calc(800px + var(--gut)*2)}
 .toc{margin-bottom:56px;padding:24px;background:var(--white);border:1px solid var(--line)}
@@ -414,11 +416,11 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tara">度母蓮花瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">個人身心解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#tara">度母蓮花瑜伽</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
           <div class="dd"><ul class="sub">
@@ -430,7 +432,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="booking.html">預約薩滿療程</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -459,7 +461,7 @@ figure.pcard:hover img{opacity:1}
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
     <div id="panelSvc" role="tabpanel" aria-labelledby="tabSvc">
-      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心能量解讀</option><option>量身訂作療程</option><option>前世回溯</option><option>各種業力釋放</option><option>創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option><option>度母蓮花瑜伽</option><option>Agni 除苗六步驟</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>解決重複發生的議題</option><option>釋放舊能量與負擔</option><option>負向信念刪除</option><option>關係結構療癒</option><option>消除停滯堵塞</option><option>脈輪充電</option></optgroup><optgroup label="薩滿課程"><option>北美印地安神聖符號</option><option>火薩滿聖蛇</option><option>鑽石療癒-重返薩滿之路</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
+      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>個人身心解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>度母蓮花瑜伽</option><option>消除停滯堵塞</option></optgroup><optgroup label="薩滿課程"><option>北美印地安神聖符號</option><option>聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
       <div class="f"><span class="lab" id="calLab">選擇日期與時段 <em>必填</em></span>
         <div class="cal" id="cal" role="group" aria-labelledby="calLab">
           <div class="cal-head"><button type="button" id="calPrev" aria-label="上個月">‹</button><span id="calTitle" aria-live="polite"></span><button type="button" id="calNext" aria-label="下個月">›</button></div>
@@ -584,7 +586,7 @@ figure.pcard:hover img{opacity:1}
   // 從各頁「預約／報名」連結帶入項目
   var s = new URLSearchParams(location.search).get('s');
   // 已上線舊網址相容：項目改名後，舊的預約連結（?s=舊名稱）仍帶入新名稱
-  var RENAMED = { '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '度母蓮花瑜伽' };
+  var RENAMED = { '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '度母蓮花瑜伽', '火薩滿聖蛇': '聖蛇取毒', '身心能量解讀': '個人身心解讀' };
   if (s && Object.prototype.hasOwnProperty.call(RENAMED, s)) s = RENAMED[s];
   if (s) {
     var hit = false;
