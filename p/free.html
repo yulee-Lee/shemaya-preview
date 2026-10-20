@@ -136,20 +136,25 @@ ul{list-style:none}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
 /* ===== responsive ===== */
-@media (max-width:1340px){
-  .menu>li+li{margin-left:28px}
-  .menu>li+li::before{left:-17px}
+@media (max-width:1436px){
+  .menu>li+li{margin-left:27px}
+  .menu>li+li::before{left:-16px}
 }
-@media (max-width:1260px){
+@media (max-width:1340px){
   .menu>li{font-size:14.5px}
   .menu>li+li{margin-left:22px}
   .menu>li+li::before{left:-14px}
-  .nav-in{padding:0 130px 0 20px}
 }
-@media (max-width:1100px){
+@media (max-width:1260px){
   .menu>li{font-size:14px}
   .menu>li+li{margin-left:18px}
   .menu>li+li::before{left:-12px}
+  .nav-in{padding:0 130px 0 20px}
+}
+@media (max-width:1100px){
+  .menu>li{font-size:13px}
+  .menu>li+li{margin-left:15px}
+  .menu>li+li::before{left:-10px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -249,9 +254,6 @@ ul{list-style:none}
 .doc h3{font-size:19px;font-weight:700;margin-bottom:12px;color:var(--accent-dark)}
 .pending{display:inline-block;background:var(--tint);color:var(--ink-sub);font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:10px 16px;border-left:3px solid var(--accent)}
 .note{color:var(--ink-sub);font-family:var(--sans);font-size:14px;margin-bottom:24px}
-.item-grid{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
-.item-ph{aspect-ratio:1/1;background:var(--tint)}
-.item-ph img{width:100%;height:100%;object-fit:contain}
 .ph-empty{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--tint);color:var(--ink-sub);font-family:var(--sans);font-size:13px}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
 .gal.one{grid-template-columns:minmax(0,320px)}
@@ -293,8 +295,7 @@ ul{list-style:none}
   .toc ul{gap:6px 16px;font-size:14px}
   .item{padding:32px 0}
   .item>h2{font-size:21px;margin-bottom:16px}
-  .item-grid{grid-template-columns:1fr;gap:16px}
-  .item-ph,.ph-empty{max-width:200px}
+  .ph-empty{max-width:200px}
   .gal{grid-template-columns:1fr 1fr;gap:12px}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
@@ -309,9 +310,6 @@ ul{list-style:none}
 .kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
 .testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
 .testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
-.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
-.wide-ph img{width:100%;height:auto;display:block}
-.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
 .series-intro{margin-bottom:40px}
 .pdesc{grid-column:1/-1;margin-top:16px;padding-top:32px;border-top:1px solid var(--line)}
 .buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
@@ -383,9 +381,24 @@ figure.pcard:hover img{opacity:1}
 .btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
 .btn.btn-o:hover{background:var(--tint)}
 @media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
-/* 薩滿部落目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
+/* 薩滿課程目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
 .toc .toc-h{flex-basis:100%;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--ink-sub)}
 .toc .toc-h~.toc-h{margin-top:10px}
+/* 客戶 10/20：每個療程項目／課程都是說明文字在左、主圖在右（同空間能量風水頁的右欄寬）；手機主圖排在文字上方 */
+/* 圖在 DOM 中排在文字之前，桌機以格線放到右欄：網路分段載入時手機版不會因圖晚到而推擠文字 */
+.item-side{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
+.is-ph{grid-column:2;grid-row:1;display:grid;gap:16px}
+.is-tx{grid-column:1;grid-row:1;min-width:0}
+.is-ph img{display:block;width:100%;height:auto;background:var(--tint)}
+.vid-ph video{display:block;width:100%;height:auto;background:#000}
+@media (max-width:1024px){
+  .item-side{grid-template-columns:minmax(0,1fr) 280px;gap:32px}
+}
+@media (max-width:767px){
+  .item-side{grid-template-columns:1fr;gap:20px}
+  .is-ph,.is-tx{grid-column:auto;grid-row:auto}
+  .is-ph{max-width:560px}
+}
 </style>
 </head>
 <body>
@@ -398,17 +411,21 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tara">度母蓮花瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+          </ul></div></li>
+        <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
+          <div class="dd"><ul class="sub">
+            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">初階課程</li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#herb-care">光藥草保健療癒</a></li><li class="sub-h">進階與深度訓練</li><li><a href="courses.html#yuguang">浴光之路</a></li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li>
+            <li class="sub-h">初階課程</li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#herb-care">光藥草保健療癒</a></li><li class="sub-h">進階與深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li>
           </ul></div></li>
-        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿部落</a>
+        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
             <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li>
           </ul></div></li>
@@ -435,16 +452,16 @@ figure.pcard:hover img{opacity:1}
 <h2 class="course-group">認識 SHEMAYA</h2>
 <section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <h2 class="course-group">小型工作坊</h2>
-<section class="item" id="growth"><h2>身心成長</h2><div class="gal one"><img src="assets/x-growth.webp" width="800" height="800" alt="身心成長" loading="lazy"></div><p class="pending">內容待 Shemaya 提供</p></section>
-<section class="item" id="fullmoon"><h2>滿月火典療癒</h2><div class="gal one"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典療癒" loading="lazy"></div><div class="prose"><p>Shakti 夏克緹：源自古印第安梵語，意指神聖的母親，也是神聖的女性創造力量。</p><p>夏克緹火典是獻給神聖母親的儀式，藉由火的形式將神聖母親能量帶到地球上來，滋養、增長、療癒每個存有的女性創造面向，並療癒長久以來失衡的男女能量。</p><p>透過夏克緹之火餵養大地，協助各存有（大地及人）達成陰陽和諧平衡，每個人內在女性能量也將得到充電，也特別支持女性朋友們。</p></div></section>
+<section class="item" id="growth"><h2>身心成長</h2><div class="item-side"><div class="is-ph"><img src="assets/x-growth.webp" width="800" height="800" alt="身心成長" loading="lazy"></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div></section>
+<section class="item" id="fullmoon"><h2>滿月火典療癒</h2><div class="item-side"><div class="is-ph"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典療癒" loading="lazy"></div><div class="is-tx"><div class="prose"><p>Shakti 夏克緹：源自古印第安梵語，意指神聖的母親，也是神聖的女性創造力量。</p><p>夏克緹火典是獻給神聖母親的儀式，藉由火的形式將神聖母親能量帶到地球上來，滋養、增長、療癒每個存有的女性創造面向，並療癒長久以來失衡的男女能量。</p><p>透過夏克緹之火餵養大地，協助各存有（大地及人）達成陰陽和諧平衡，每個人內在女性能量也將得到充電，也特別支持女性朋友們。</p></div></div></div></section>
 <section class="item" id="body"><h2>身體解密</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="family"><h2>親子伴侶關係</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <h2 class="course-group">免費課程與公益</h2>
-<section class="item" id="attune"><h2>免費點化</h2><div class="gal one"><img src="assets/x-attune.webp" width="800" height="800" alt="免費點化" loading="lazy"></div><div class="prose"><h3 class="doc-t">心輪冥想點化</h3><p>心輪冥想是黃金世紀層級的冥想，每天早晚練習十五分鐘，能帶來身心穩定、思緒清晰、身心能量流動、陰陽平衡、反應敏捷，能夠聆聽心與內在高我溝通，甚至與神交流，處理生活或事業上的決策都能清晰正確。</p><p>心輪冥想點化是Shemaya提供的免費服務之一，需要面對面到現場，點化後，必須持續做14天以上的心輪冥想。</p></div></section>
-<section class="item" id="meditation"><h2>靜心冥想帶領</h2><div class="gal one"><img src="assets/f-5.webp" width="600" height="600" alt="靜心冥想帶領" loading="lazy"></div><p class="pending">內容待 Shemaya 提供</p></section>
+<section class="item" id="attune"><h2>免費點化</h2><div class="item-side"><div class="is-ph"><img src="assets/x-attune.webp" width="800" height="800" alt="免費點化" loading="lazy"></div><div class="is-tx"><div class="prose"><h3 class="doc-t">心輪冥想點化</h3><p>心輪冥想是黃金世紀層級的冥想，每天早晚練習十五分鐘，能帶來身心穩定、思緒清晰、身心能量流動、陰陽平衡、反應敏捷，能夠聆聽心與內在高我溝通，甚至與神交流，處理生活或事業上的決策都能清晰正確。</p><p>心輪冥想點化是Shemaya提供的免費服務之一，需要面對面到現場，點化後，必須持續做14天以上的心輪冥想。</p></div></div></div></section>
+<section class="item" id="meditation"><h2>靜心冥想帶領</h2><div class="item-side"><div class="is-ph"><img src="assets/f-5.webp" width="600" height="600" alt="靜心冥想帶領" loading="lazy"></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div></section>
 <section class="item" id="mother"><h2>神性之母的祝福</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="reading-club"><h2>心靈讀書會</h2><p class="pending">內容待 Shemaya 提供</p></section>
-<section class="item" id="land"><h2>土地服務</h2><div class="gal one"><img src="assets/f-6.webp" width="600" height="600" alt="土地服務" loading="lazy"></div><p class="pending">內容待 Shemaya 提供</p></section>
+<section class="item" id="land"><h2>土地服務</h2><div class="item-side"><div class="is-ph"><img src="assets/f-6.webp" width="600" height="600" alt="土地服務" loading="lazy"></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div></section>
 <section class="item" id="irregular"><h2>不定期服務</h2><p class="pending">內容待 Shemaya 提供</p></section>
 </div>
 </main>

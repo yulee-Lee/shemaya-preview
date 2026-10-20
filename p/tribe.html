@@ -5,7 +5,7 @@
 <link rel="expect" href="#page-end" blocking="render">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>薩滿部落｜Shemaya 夏克緹薩滿的金色大門</title>
+<title>薩滿課程｜Shemaya 夏克緹薩滿的金色大門</title>
 <meta name="description" content="Shemaya 一對一深度療癒、身心探索、靈性訓練授證課程與靈性商店。">
 <link rel="icon" type="image/webp" href="assets/logo-gold.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,20 +136,25 @@ ul{list-style:none}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
 /* ===== responsive ===== */
-@media (max-width:1340px){
-  .menu>li+li{margin-left:28px}
-  .menu>li+li::before{left:-17px}
+@media (max-width:1436px){
+  .menu>li+li{margin-left:27px}
+  .menu>li+li::before{left:-16px}
 }
-@media (max-width:1260px){
+@media (max-width:1340px){
   .menu>li{font-size:14.5px}
   .menu>li+li{margin-left:22px}
   .menu>li+li::before{left:-14px}
-  .nav-in{padding:0 130px 0 20px}
 }
-@media (max-width:1100px){
+@media (max-width:1260px){
   .menu>li{font-size:14px}
   .menu>li+li{margin-left:18px}
   .menu>li+li::before{left:-12px}
+  .nav-in{padding:0 130px 0 20px}
+}
+@media (max-width:1100px){
+  .menu>li{font-size:13px}
+  .menu>li+li{margin-left:15px}
+  .menu>li+li::before{left:-10px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -249,9 +254,6 @@ ul{list-style:none}
 .doc h3{font-size:19px;font-weight:700;margin-bottom:12px;color:var(--accent-dark)}
 .pending{display:inline-block;background:var(--tint);color:var(--ink-sub);font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:10px 16px;border-left:3px solid var(--accent)}
 .note{color:var(--ink-sub);font-family:var(--sans);font-size:14px;margin-bottom:24px}
-.item-grid{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
-.item-ph{aspect-ratio:1/1;background:var(--tint)}
-.item-ph img{width:100%;height:100%;object-fit:contain}
 .ph-empty{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--tint);color:var(--ink-sub);font-family:var(--sans);font-size:13px}
 .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
 .gal.one{grid-template-columns:minmax(0,320px)}
@@ -293,8 +295,7 @@ ul{list-style:none}
   .toc ul{gap:6px 16px;font-size:14px}
   .item{padding:32px 0}
   .item>h2{font-size:21px;margin-bottom:16px}
-  .item-grid{grid-template-columns:1fr;gap:16px}
-  .item-ph,.ph-empty{max-width:200px}
+  .ph-empty{max-width:200px}
   .gal{grid-template-columns:1fr 1fr;gap:12px}
   .pgrid{grid-template-columns:1fr 1fr;gap:16px}
   .pd{grid-template-columns:1fr;gap:24px}
@@ -309,9 +310,6 @@ ul{list-style:none}
 .kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
 .testimonial{margin-top:32px;padding-top:24px;border-top:1px dashed var(--line)}
 .testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
-.wide-ph{max-width:900px;margin-bottom:24px;background:var(--tint)}
-.wide-ph img{width:100%;height:auto;display:block}
-.gal.one img{aspect-ratio:auto;height:auto;object-fit:contain}
 .series-intro{margin-bottom:40px}
 .pdesc{grid-column:1/-1;margin-top:16px;padding-top:32px;border-top:1px solid var(--line)}
 .buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
@@ -383,9 +381,24 @@ figure.pcard:hover img{opacity:1}
 .btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
 .btn.btn-o:hover{background:var(--tint)}
 @media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
-/* 薩滿部落目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
+/* 薩滿課程目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
 .toc .toc-h{flex-basis:100%;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--ink-sub)}
 .toc .toc-h~.toc-h{margin-top:10px}
+/* 客戶 10/20：每個療程項目／課程都是說明文字在左、主圖在右（同空間能量風水頁的右欄寬）；手機主圖排在文字上方 */
+/* 圖在 DOM 中排在文字之前，桌機以格線放到右欄：網路分段載入時手機版不會因圖晚到而推擠文字 */
+.item-side{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
+.is-ph{grid-column:2;grid-row:1;display:grid;gap:16px}
+.is-tx{grid-column:1;grid-row:1;min-width:0}
+.is-ph img{display:block;width:100%;height:auto;background:var(--tint)}
+.vid-ph video{display:block;width:100%;height:auto;background:#000}
+@media (max-width:1024px){
+  .item-side{grid-template-columns:minmax(0,1fr) 280px;gap:32px}
+}
+@media (max-width:767px){
+  .item-side{grid-template-columns:1fr;gap:20px}
+  .is-ph,.is-tx{grid-column:auto;grid-row:auto}
+  .is-ph{max-width:560px}
+}
 </style>
 </head>
 <body>
@@ -398,17 +411,21 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tantra">訂製個人蓮花譚崔瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
+            <li><a href="healing.html#reading">身心能量解讀</a></li><li><a href="healing.html#custom">量身訂作療程</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li><li><a href="healing.html#tara">度母蓮花瑜伽</a></li><li><a href="healing.html#agni">Agni 除苗六步驟</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">人生道路校準</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#repeat">解決重複發生的議題</a></li><li><a href="explore.html#release">釋放舊能量與負擔</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li><li><a href="explore.html#chakra">脈輪充電</a></li>
+          </ul></div></li>
+        <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
+          <div class="dd"><ul class="sub">
+            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">初階課程</li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#herb-care">光藥草保健療癒</a></li><li class="sub-h">進階與深度訓練</li><li><a href="courses.html#yuguang">浴光之路</a></li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li>
+            <li class="sub-h">初階課程</li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#herb-care">光藥草保健療癒</a></li><li class="sub-h">進階與深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li>
           </ul></div></li>
-        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿部落</a>
+        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
             <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li>
           </ul></div></li>
@@ -429,14 +446,14 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 薩滿部落</nav><h1 class="sec-title">薩滿部落</h1></div><div class="hero-ph"><img src="assets/sv-tribe.webp" width="900" height="1200" alt="薩滿部落"></div><nav class="toc toc-grouped" aria-label="本頁項目"><ul><li class="toc-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="toc-h">個案/療程</li><li><a href="#symbols">北美印地安神聖符號</a></li><li><a href="#fire-snake">火薩滿聖蛇</a></li><li><a href="#return">鑽石療癒-重返薩滿之路</a></li></ul></nav></div></section>
+<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 薩滿課程</nav><h1 class="sec-title">薩滿課程</h1></div><div class="hero-ph"><img src="assets/sv-tribe.webp" width="900" height="1200" alt="薩滿課程"></div><nav class="toc toc-grouped" aria-label="本頁項目"><ul><li class="toc-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="toc-h">個案/療程</li><li><a href="#symbols">北美印地安神聖符號</a></li><li><a href="#fire-snake">火薩滿聖蛇</a></li><li><a href="#return">鑽石療癒-重返薩滿之路</a></li></ul></nav></div></section>
 <div class="wrap inner">
 <h2 class="course-group">課程/工作坊</h2>
-<section class="item" id="alishan"><h2>阿里山薩滿僻靜之旅</h2><div class="wide-ph"><img src="assets/x-alishan.webp" width="1200" height="900" alt="薩滿僻靜之旅" loading="lazy"></div><div class="prose"><h3 class="doc-t">重返自然聖殿，喚醒沉睡的薩滿記憶</h3><p>群山聚集的阿里山有山神、樹神，也是花仙、天使、精靈、地精、龍族等大自然存有的故鄉，深山中有薩滿的元素聖殿及大地聖殿，Shemaya以聖殿帶領者的身份，引領參與者禮敬大地母親，並燃起獻給大地的神聖之火，釋放那些不再服務於你的生命舊架構。</p><h4>透過大地聖殿力量與元素做身心淨化</h4><p>為更深的靈性轉化做準備，Shemaya以印加薩滿的寬恕儀式，送走個人過往的陰影殘渣。再以亞馬遜神聖部落的聖蛇之光，移除陳舊思維、舊幻象或心靈毒素、古老誓言詛咒、契約等無形束縛。</p><h4>聲音是薩滿與神聖的溝通力量</h4><p>課程中，Shemaya會打開天狼星的高次元智慧，喚醒你塵封已久的薩滿記憶。透過神聖呼吸，與天地共同吟唱靈魂之歌，她以天狼星星光瓦解個人的喉輪的堵塞，並點化你與自然存有、靈性世界的溝通能力。這讓你的聲音帶入光的頻率，快速與光層級的自然存有們溝通。</p><h4>薩滿火舞之夜</h4><p>在月光與山峯下，Shemaya會帶領每個人需要的療癒主題，這也是眾多班學員們在薩滿僻靜旅程中，身心得到最大突破的時刻。</p><h4>與土地合一以蓮花度母脈輪調頻</h4><p>破曉時分，赤足踏上晨光照拂的山林土地，由 Shemaya 親授的蓮花度母身心瑜珈，更新各大脈輪的信息，為深層轉化做好準備。</p><h4>與自然存有合作創造魔法藥水</h4><p>這個單元充滿了美與創造力， Shemaya帶領你去創造療癒自己身心的專屬魔法水，並為你下載其中訊息，再將所需的光訊息與自然存有的愛，帶入個人身心帶來愛與美的能量大整合。經驗中，這是常令參與學員們怦然心動，感動難忘的單元。</p><h4>整合陰影迎回個人天賦潛能</h4><p>帶入脈輪更新轉化，在這場神聖儀式中，獨特金光鑰會釋放你個人的堵塞。接下來是大家引頸期盼的壓軸戲～由Shemaya為你取回你個人遺失許久的天賦工具！個人的專屬天賦工具，是含著不可思議的自我療癒力量，隨後為你解讀訊息，並透過交換療癒，讓你更熟悉這股力量，讓它落地完整去支持你的日常生活，向人們分享你的薩滿天賦。</p><p>歷年來，每梯次的阿里山薩滿僻靜課程，內容有不同的更新與變化，重複參加者都會有不同的收穫。</p><p>帶領者：Shemaya承載古老火薩滿的源頭之光，多生多世身為薩滿，曾行走於西伯利亞、中南美洲（印加、阿茲特克）、北美印地安薩滿⋯。在地球創造之始，Shemaya是參與地球創造之初的火薩滿。她帶著非常多的薩滿經驗及藥草療癒知識。（以上摘自Agni 與Durga為Shemaya 下載的阿卡莎生命之書）</p><p>Shemaya 現為聖火傳承靈性大師、靈性老師、火薩滿、浴光之路帶領人，她也帶領四大元素與基督之光、水知識、神聖自然藥草祭司、狼祭司與熊部落、天狼星星光薩滿之旅、脈輪花精等課程。自2016年起，Shemaya陸續帶領人們走上阿里山深處，開啟二或三日的薩滿僻靜之旅，見證許多生命在山林與聖火中蛻變重聚。</p><p>私訊 Shemaya 了解近期梯次與報名細節</p></div><article class="doc testimonial"><h3>學員心得</h3><div class="prose"><h4>學員ＳＭ～突破愛自己的限制</h4><p>隨著Shemaya 老師的薩滿鼓聲，我回到古老部落，彷彿是準備為愛出征的時刻。卡莉的黑光引領我察覺深藏後背與尾椎的古老創傷。夜晚時分，老師升起寬恕火典及黑光療癒，帶我走得更深-從後心輪、心輪剝洋蔥似的，一層層往深處挖掘，背後深處的痛點持續浮出，那是過去世身為薩滿時未療癒的陰影。療癒到尾椎，配合「我是…及我是」的話語，突然間我情緒湧上，哭得很慘的我，釋放了從小一直期待自己成為什麼樣或是像別人一樣，那個不接受自己原本模樣的自己。</p><p>從老師手上接到我的天賦「耶穌之愛的玫瑰」後，我仍無法與耶穌連結，老師帶我頂禮後，心鬆了，情緒卻上來哭得很傷心，老師便請我作「我愛我自己」，不知怎麼我就是說不出口！突然想到在學習或在工作上，我總是嚴格要求自己要完美、要做到最好、要一百分，否則就是失敗，總是責備、批判著自己。謝謝老師的溫柔與耐心，給我足夠時間去釋放情緒。</p><p>當老師的薩滿鼓聲一響起，原本還有拘束的，隨著越來越多的鼓聲流動讓我充滿力量～啊！那為所愛的族人、為愛出征般的力量，隨著我恣意旋轉、跳舞，我對山谷發出最深長的吶喊！原始的力量湧出！我釋放了身上枷鎖⋯隨興、奔放、流動⋯自由都回來了！忍不住我又向山谷仰天吶喊，釋放那女性的狂野！</p><p>回程等車時，我決定試試給出我的天賦禮物。這次我全然與耶穌連結，很開心成功了！薩滿鼓聲和舞動、爆發的野性⋯⋯著實幫助我好大！ 謝謝這次深入的薩滿內在旅程，兩次心的哭泣，釋放了好多長期不接受自己，對自己嚴苛的要求、批判情緒，以及那些古老的、被遺忘的陰影包袱。謝謝老師，謝謝來自大地母親、天狼星及印第安薩滿鼓聲的療癒力量，也謝謝大山讓我睡得很沉，身心都得到深度休息。（學員ＳＭ）</p><h4>學員Ｈ</h4><p>夜晚火典後，跟隨老師的薩滿鼓聲，我心中深處有股悸動讓我去跟大地連結，透過心的吟唱、舞蹈去重新憶起「我是誰！」隨風四起的狼嚎聲中，那長久在城市受限的我，喉輪終於被解放！</p><p>無論做什麼活動，我始終無法喚起心中那股深刻的熱情！而在山上的薩滿僻靜夜晚，我第一次清楚的聽到狼群的呼喚！心中有種感覺「這就是我！是我一直在做的事！」隨著Shemaya 老師帶領，我與大自然存有們連結時，我眼淚突然不停地流，沒料到祂們竟然會像我的老友重逢一樣，那麼熟悉、真實！我說：「回去好痛苦。」大自然存有們回應：「我們會在這一直等你」，我的淚水更像大雨止不住了！</p><p>老師的二天薩滿課程內容，使我感到離真實的自己更靠近，慢慢地拼出屬於我的靈魂拼圖，心很感動。每次上Shemaya老師的課，總讓我印象很深刻，尤其這次老師為大家取回個人的天賦禮物，我很快感知到自己的「薩滿力量錦帶」會根據身心不同狀況而量身變化。我很快就能得心應手，給出時像極了電影裡的魔法，當給出力量天賦時，我的心湧出的喜悅是前所未見的美好。（學員H)</p><h4>學員Ｏ～突破喉輪的堵塞</h4><p>我有許多累世留下的意識殼，讓我無法自在的放開在自己。看著大家吟唱 、開展舞動，在草原上翻滾 ⋯深深觸擊我，心覺得這真是很美的畫面。</p><p>在火典後老師帶大家在草地盡情吟唱、舞動身軀。也許是Shemaya老師看到我放不開，突然神來一筆的朝我擊鼓並對我的心嘶吼，頓時衝破了我內在某層卡住的枷鎖，這讓我的聲音由緩緩小聲的喊，轉變成能夠用生命去吶喊的強大力量！這一喊 ，也讓我咳出卡住許久的能量。我的聲音力量的共鳴打開了！連講話聲音都變得更加渾厚扎實。</p><p>還有難忘的能量泉彩蛋及同學們愛的協助，特別是老師以紅罌粟花花精去柔化我這個老戰士魂的下意識防備牆，頓時一股暖流湧入我胸口並向下流動，軟化我的心也讓我能感受到大家對我滿滿的關懷與愛。最後的神木之旅，躺在神木下的石板時，有股能量讓我的心酸酸的鬆動了。</p><p>離開前我深擁神木！我感謝大地！感謝神木，突然一股暖暖的愛回流湧上我的心 ，湧上後腦，流至整個背部。謝謝大山讓我帶著這份祝福，結束這美妙的靈性旅程。（學員Ｏ）</p><h4>學員Ｄ</h4><p>從來沒想過自己會踏入部落走薩滿旅程，以前認為很遙遠的事，此刻心卻這麼近。老師給出的純粹黑光，將我內心深層層陰影撥開，我也在夥伴交換療癒走一段旅程。有老師在旁協助，我順利給出自己的金光蓮花，這是收穫很多的夜晚。</p><p>早晨在山上大地上做譚崔蓮花瑜珈，令我想起前年做臍輪體位時，那時的我在現實生活完全沒有做自己的勇氣，做起臍輪幾乎無法撐住。這二年追隨Shemaya老師的帶領與學習，讓我跨越了不少自我設限，破除了舊思維及激發做自己的勇氣。這次我竟然在腳傷未癒下，完美地做到臍輪體位了！我嚐到自我挑戰所帶來成就感與欣喜。</p><p>老師幫我接下的是太陽的金火，能協助臣服及帶來和平的火。剛開始，我擺脫不了頭腦而無法掌握，在老師細心帶領下，終於我拋開頭腦的束縛，回到心與信任，使用掌中的火便越是順暢。我期許將自己光的禮物分享給更多人。隔天和家人上梅嶺，先生一直說路很陡，我卻無任何困難。那是因為我更落地，雙腳變很有力量的緣故。很期待未來再次踏上老師帶領的薩滿僻靜之旅。（學員Ｄ）</p><h4>學員Ｆ</h4><p>在薩滿原諒儀式時，我看到內心的內心認為自己不可能被接納，而這個陰影也造成我習慣性的隱避與退縮。當Shemaya 老師將天狼星金白光火典帶下來時，我的腿開始痛，突然記起老師說天狼星金白光火焰會掀起那些自己逃避已久、不願面對的議題，這火焰讓那些對當事人很重要，卻一直被忽略的議題浮出表面，能被看到然後被處理。所幸老師過來幫我療癒，腳很快恢復了。</p><p>老師教我們和大地母親連結，透過與最純淨的水和自然存有合作去療癒⋯這些使我生起奇特的熟悉感。只要信任自己、信任我的雙手允許能量自由流動即可。提供能量服務使我變得很有精神，完全不像在平日疲累的我。</p><p>在某段療癒時，老師打開手擁抱我說「再也不會有人因為你的力量去傷害你了」，我的眼淚倏然而下。老師便用她的藥草精華在我光體上療育，臍輪痛感後，我看見也去釋放掉過去生被火刑時受到的痛楚。在過去舊時代，我們的光不被允許自由展現，這也導致很多薩滿是隱密而不想被看見的。（學員Ｆ）</p><h4>學員Ｓ～被大山召喚</h4><p>謝謝Shemaya老師的阿里山僻靜工作坊，天狼星星光的療癒能量在阿里山上超支持的，讓我整個身心靈被充電飽飽。雖然一起上山都是陌生朋友，見面後卻像認識許久的族人般親切。才剛抵達山區，意外的，我感受到大山土地對我的召喚，不禁放聲大哭起來，Shemaya老師的擁抱真的很溫暖。後續同學們用各種方式來支持我，我都有感受被支持好感動。</p><p>這次我終於突破限制，能在這麼多人面前擊鼓吟唱，還一起瘋狂跳舞，真的好開心！好喜歡這三天在阿里山的所有人事物的發生，至今回想起來，我的心還留在阿里山不想回來啊， 我也開始期待老師下次的阿里山僻靜工作坊（學員Ｓ)</p><h4>學員EN</h4><p>謝謝 Shemaya老師一路上無微不至的照顧，旅程一開始就感受到滿滿的愛，還有很棒的同學交換療癒。老師把課程擴充成2天豐富的療癒，沒想到還有療癒池的彩蛋，實在充滿驚喜！ 老師直指核心的建議和療癒手法也受益良多。我們好棒喔，大家一路上合作無間。在見到神木們後，又被自然存有們充了滿滿的電，身心超舒展的。希望以後還能跟大家同行。（學員ＥＮ）</p><h4>學員Ｎ～找回自己的聲音</h4><p>圍繞著夜晚的火焰，Shemaya 老師雙手連結我和另一位同學去支持我們去跟自己的力量動物連結，並透過狼嚎呼喚祂們。一開始我很害羞不太想叫，但我聽到老師、同學在狼吼，我只好放開跟著嚎叫，越叫越大聲後其他人也開始隨著狼或其他動物的聲音，哇！放下所有矜持，我的心終於被打開了！心感到很快樂，很舒暢！</p><p>我的狼嚎叫來越大聲，還發出超響亮的OM。老師以能量指引我穿梭，我重重踱起右腳，呼喚我的狼群！以權威又霸氣的方式，啊嗚啊嗚的呼喚我的狼群！頓時我渾身充滿了力量！好舒爽、好滿足！我真的突破了喉輪的限制，也找回自己聲音及力量！真好！ （學員Ｎ)</p><h4>（學員Ｔ）療癒原生家庭的缺憾</h4><p>傍晚大家圍坐著，等待接收Shemaya天狼星給個人的療癒，我雙手越來越冰冷，想說可能傍晚氣溫下降索性把窗戶都關上，Shemaya笑問有這麼冷喔？Shemaya老師給我的是黑光鑽石! 我的雙手和身體竟然奇妙地暖和起來，她的能量是那麼柔和，像母親般擁抱的愛的品質！這是我第一次接受黑光，原來並不像頭腦想像的那樣直接或劇烈，Shemaya老師的黑光是充滿夏克緹的、如母親臨在的愛，能讓我穩妥被承接著。</p><p>接著Shemaya為我讀到的主題是原生家庭。我閉眼跟隨她的能量指引， 她以黑光帶我回到那合一中，完全跳脫頭腦意識的介入，毫無情緒評判，我只是觀看著！過往的創傷、自我對話、分離感⋯等頭腦的碎念在當下都不存在了！曾幾何時，我選擇停止給出愛，而就在此刻當下，我重新選擇愛。我再次從心給出愛送給家人，以及在天堂我摯愛的母親。透過這合一的圓圈，最後愛又再次回到我身上，哇！整個內在過程很平靜，完全抽離頭腦的侷限、超脫的，我經驗了美好的內在旅程。</p><p>躺在大地上仰望著天空好美的藍，內心好平靜、喜悅、好享受，好真實、好自在！我感受到原來大地母親的愛無所不在！兩天時間過得飛快，彷彿跟家人回家團聚般的自然、開心和自在，與其說參加課程，更像是久遠的靈魂邀約及重聚。我回到自己內在與自己的親密，頭腦是安靜的，這些很內在之旅，很難以用文字詳述這兩天內美好的發生。</p><p>感受到Shemaya老師內在的敞開，她帶著愛、勇氣迎向未知的心，有她一路持續的穿越學習及前進，才能讓每次的薩滿之旅順利開展。看著她拖著行李大包小包的上山，那肯定都是愛，才能去支持薩滿僻靜的準備。謝謝Shemaya老師一路支持陪伴。（學員Ｔ）</p><h4>學員Ｂ</h4><p>對薩滿印象停留在印地安、深山、儀式，既有點神祕又有點害怕，由於我很想去阿里山，加上有信任的Shemaya老師，所以就報名了。以往報靈性能量課程，課未開始前，我的人生議題會先行浮現，雖習慣這樣的能量預備模式，但前往嘉義火車上我還是流下了淚。在Shemaya 老師設置那美到不行的天狼星金白光焰曼達拉後，她又為我的眉心輪釋放掉已滿到爆炸的思緒，讓我靜下來好好感受。最接近我印象中的薩滿，應該是晚上火典及火薩滿儀式吧！</p><p>大家圍著火，老師擊起薩滿鼓，我心想這跟電視裡一樣啊！沒想到更精彩的在後—Shemaya 老師連結同學形成狼族三人組，一起仰天長嘯地～～狼嚎！其他人漸漸也被狼群的能量帶動，開始狼嚎起來！狼嚎強化了我喉輪的力量，突然我喉嚨有股能量要衝出來，超想罵出那些卡在喉嚨的陳年壓抑的聲音！於是我大聲吼，吼出了我人生中最大聲的話！呼！真是好暢快！管它有點小丟臉，這可打開了我原本堵塞的喉輪呀！ 經過這次的大釋放，回到日常生活後我的表達更流暢了。</p><p>Shemaya 老師的黃金世紀薩滿僻靜課程內容實在太豐富！二天一夜很快就過了。這次的課程完全更新我對薩滿的既有印象！</p><p>我了解到薩滿是禮敬大地母親、回到與萬物合一的愛中，大地媽媽的愛有著各式各樣的豐盛之愛，精彩無比。（學員Ｂ）</p></div></article><a class="tlink" href="booking.html?s=阿里山薩滿僻靜之旅">報名或詢問這門課程</a></section>
+<section class="item" id="alishan"><h2>阿里山薩滿僻靜之旅</h2><div class="item-side"><div class="is-ph"><img src="assets/x-alishan.webp" width="1200" height="900" alt="薩滿僻靜之旅" loading="lazy"><div class="vid-ph"><video controls playsinline preload="metadata" width="720" height="720" style="aspect-ratio:720/720" poster="assets/v-alishan-poster.webp" aria-label="黃金世紀薩滿僻靜之旅影片"><source src="assets/v-alishan.mp4" type="video/mp4"></video></div></div><div class="is-tx"><div class="prose"><h3 class="doc-t">重返自然聖殿，喚醒沉睡的薩滿記憶</h3><p>群山聚集的阿里山有山神、樹神，也是花仙、天使、精靈、地精、龍族等大自然存有的故鄉，深山中有薩滿的元素聖殿及大地聖殿，Shemaya以聖殿帶領者的身份，引領參與者禮敬大地母親，並燃起獻給大地的神聖之火，釋放那些不再服務於你的生命舊架構。</p><h4>透過大地聖殿力量與元素做身心淨化</h4><p>為更深的靈性轉化做準備，Shemaya以印加薩滿的寬恕儀式，送走個人過往的陰影殘渣。再以亞馬遜神聖部落的聖蛇之光，移除陳舊思維、舊幻象或心靈毒素、古老誓言詛咒、契約等無形束縛。</p><h4>聲音是薩滿與神聖的溝通力量</h4><p>課程中，Shemaya會打開天狼星的高次元智慧，喚醒你塵封已久的薩滿記憶。透過神聖呼吸，與天地共同吟唱靈魂之歌，她以天狼星星光瓦解個人的喉輪的堵塞，並點化你與自然存有、靈性世界的溝通能力。這讓你的聲音帶入光的頻率，快速與光層級的自然存有們溝通。</p><h4>薩滿火舞之夜</h4><p>在月光與山峯下，Shemaya會帶領每個人需要的療癒主題，這也是眾多班學員們在薩滿僻靜旅程中，身心得到最大突破的時刻。</p><h4>與土地合一以蓮花度母脈輪調頻</h4><p>破曉時分，赤足踏上晨光照拂的山林土地，由 Shemaya 親授的蓮花度母身心瑜珈，更新各大脈輪的信息，為深層轉化做好準備。</p><h4>與自然存有合作創造魔法藥水</h4><p>這個單元充滿了美與創造力， Shemaya帶領你去創造療癒自己身心的專屬魔法水，並為你下載其中訊息，再將所需的光訊息與自然存有的愛，帶入個人身心帶來愛與美的能量大整合。經驗中，這是常令參與學員們怦然心動，感動難忘的單元。</p><h4>整合陰影迎回個人天賦潛能</h4><p>帶入脈輪更新轉化，在這場神聖儀式中，獨特金光鑰會釋放你個人的堵塞。接下來是大家引頸期盼的壓軸戲～由Shemaya為你取回你個人遺失許久的天賦工具！個人的專屬天賦工具，是含著不可思議的自我療癒力量，隨後為你解讀訊息，並透過交換療癒，讓你更熟悉這股力量，讓它落地完整去支持你的日常生活，向人們分享你的薩滿天賦。</p><p>歷年來，每梯次的阿里山薩滿僻靜課程，內容有不同的更新與變化，重複參加者都會有不同的收穫。</p><p>帶領者：Shemaya承載古老火薩滿的源頭之光，多生多世身為薩滿，曾行走於西伯利亞、中南美洲（印加、阿茲特克）、北美印地安薩滿⋯。在地球創造之始，Shemaya是參與地球創造之初的火薩滿。她帶著非常多的薩滿經驗及藥草療癒知識。（以上摘自Agni 與Durga為Shemaya 下載的阿卡莎生命之書）</p><p>Shemaya 現為聖火傳承靈性大師、靈性老師、火薩滿、浴光之路帶領人，她也帶領四大元素與基督之光、水知識、神聖自然藥草祭司、狼祭司與熊部落、天狼星星光薩滿之旅、脈輪花精等課程。自2016年起，Shemaya陸續帶領人們走上阿里山深處，開啟二或三日的薩滿僻靜之旅，見證許多生命在山林與聖火中蛻變重聚。</p><p>私訊 Shemaya 了解近期梯次與報名細節</p></div><article class="doc testimonial"><h3>學員心得</h3><div class="prose"><h4>學員ＳＭ～突破愛自己的限制</h4><p>隨著Shemaya 老師的薩滿鼓聲，我回到古老部落，彷彿是準備為愛出征的時刻。卡莉的黑光引領我察覺深藏後背與尾椎的古老創傷。夜晚時分，老師升起寬恕火典及黑光療癒，帶我走得更深-從後心輪、心輪剝洋蔥似的，一層層往深處挖掘，背後深處的痛點持續浮出，那是過去世身為薩滿時未療癒的陰影。療癒到尾椎，配合「我是…及我是」的話語，突然間我情緒湧上，哭得很慘的我，釋放了從小一直期待自己成為什麼樣或是像別人一樣，那個不接受自己原本模樣的自己。</p><p>從老師手上接到我的天賦「耶穌之愛的玫瑰」後，我仍無法與耶穌連結，老師帶我頂禮後，心鬆了，情緒卻上來哭得很傷心，老師便請我作「我愛我自己」，不知怎麼我就是說不出口！突然想到在學習或在工作上，我總是嚴格要求自己要完美、要做到最好、要一百分，否則就是失敗，總是責備、批判著自己。謝謝老師的溫柔與耐心，給我足夠時間去釋放情緒。</p><p>當老師的薩滿鼓聲一響起，原本還有拘束的，隨著越來越多的鼓聲流動讓我充滿力量～啊！那為所愛的族人、為愛出征般的力量，隨著我恣意旋轉、跳舞，我對山谷發出最深長的吶喊！原始的力量湧出！我釋放了身上枷鎖⋯隨興、奔放、流動⋯自由都回來了！忍不住我又向山谷仰天吶喊，釋放那女性的狂野！</p><p>回程等車時，我決定試試給出我的天賦禮物。這次我全然與耶穌連結，很開心成功了！薩滿鼓聲和舞動、爆發的野性⋯⋯著實幫助我好大！ 謝謝這次深入的薩滿內在旅程，兩次心的哭泣，釋放了好多長期不接受自己，對自己嚴苛的要求、批判情緒，以及那些古老的、被遺忘的陰影包袱。謝謝老師，謝謝來自大地母親、天狼星及印第安薩滿鼓聲的療癒力量，也謝謝大山讓我睡得很沉，身心都得到深度休息。（學員ＳＭ）</p><h4>學員Ｈ</h4><p>夜晚火典後，跟隨老師的薩滿鼓聲，我心中深處有股悸動讓我去跟大地連結，透過心的吟唱、舞蹈去重新憶起「我是誰！」隨風四起的狼嚎聲中，那長久在城市受限的我，喉輪終於被解放！</p><p>無論做什麼活動，我始終無法喚起心中那股深刻的熱情！而在山上的薩滿僻靜夜晚，我第一次清楚的聽到狼群的呼喚！心中有種感覺「這就是我！是我一直在做的事！」隨著Shemaya 老師帶領，我與大自然存有們連結時，我眼淚突然不停地流，沒料到祂們竟然會像我的老友重逢一樣，那麼熟悉、真實！我說：「回去好痛苦。」大自然存有們回應：「我們會在這一直等你」，我的淚水更像大雨止不住了！</p><p>老師的二天薩滿課程內容，使我感到離真實的自己更靠近，慢慢地拼出屬於我的靈魂拼圖，心很感動。每次上Shemaya老師的課，總讓我印象很深刻，尤其這次老師為大家取回個人的天賦禮物，我很快感知到自己的「薩滿力量錦帶」會根據身心不同狀況而量身變化。我很快就能得心應手，給出時像極了電影裡的魔法，當給出力量天賦時，我的心湧出的喜悅是前所未見的美好。（學員H)</p><h4>學員Ｏ～突破喉輪的堵塞</h4><p>我有許多累世留下的意識殼，讓我無法自在的放開在自己。看著大家吟唱 、開展舞動，在草原上翻滾 ⋯深深觸擊我，心覺得這真是很美的畫面。</p><p>在火典後老師帶大家在草地盡情吟唱、舞動身軀。也許是Shemaya老師看到我放不開，突然神來一筆的朝我擊鼓並對我的心嘶吼，頓時衝破了我內在某層卡住的枷鎖，這讓我的聲音由緩緩小聲的喊，轉變成能夠用生命去吶喊的強大力量！這一喊 ，也讓我咳出卡住許久的能量。我的聲音力量的共鳴打開了！連講話聲音都變得更加渾厚扎實。</p><p>還有難忘的能量泉彩蛋及同學們愛的協助，特別是老師以紅罌粟花花精去柔化我這個老戰士魂的下意識防備牆，頓時一股暖流湧入我胸口並向下流動，軟化我的心也讓我能感受到大家對我滿滿的關懷與愛。最後的神木之旅，躺在神木下的石板時，有股能量讓我的心酸酸的鬆動了。</p><p>離開前我深擁神木！我感謝大地！感謝神木，突然一股暖暖的愛回流湧上我的心 ，湧上後腦，流至整個背部。謝謝大山讓我帶著這份祝福，結束這美妙的靈性旅程。（學員Ｏ）</p><h4>學員Ｄ</h4><p>從來沒想過自己會踏入部落走薩滿旅程，以前認為很遙遠的事，此刻心卻這麼近。老師給出的純粹黑光，將我內心深層層陰影撥開，我也在夥伴交換療癒走一段旅程。有老師在旁協助，我順利給出自己的金光蓮花，這是收穫很多的夜晚。</p><p>早晨在山上大地上做譚崔蓮花瑜珈，令我想起前年做臍輪體位時，那時的我在現實生活完全沒有做自己的勇氣，做起臍輪幾乎無法撐住。這二年追隨Shemaya老師的帶領與學習，讓我跨越了不少自我設限，破除了舊思維及激發做自己的勇氣。這次我竟然在腳傷未癒下，完美地做到臍輪體位了！我嚐到自我挑戰所帶來成就感與欣喜。</p><p>老師幫我接下的是太陽的金火，能協助臣服及帶來和平的火。剛開始，我擺脫不了頭腦而無法掌握，在老師細心帶領下，終於我拋開頭腦的束縛，回到心與信任，使用掌中的火便越是順暢。我期許將自己光的禮物分享給更多人。隔天和家人上梅嶺，先生一直說路很陡，我卻無任何困難。那是因為我更落地，雙腳變很有力量的緣故。很期待未來再次踏上老師帶領的薩滿僻靜之旅。（學員Ｄ）</p><h4>學員Ｆ</h4><p>在薩滿原諒儀式時，我看到內心的內心認為自己不可能被接納，而這個陰影也造成我習慣性的隱避與退縮。當Shemaya 老師將天狼星金白光火典帶下來時，我的腿開始痛，突然記起老師說天狼星金白光火焰會掀起那些自己逃避已久、不願面對的議題，這火焰讓那些對當事人很重要，卻一直被忽略的議題浮出表面，能被看到然後被處理。所幸老師過來幫我療癒，腳很快恢復了。</p><p>老師教我們和大地母親連結，透過與最純淨的水和自然存有合作去療癒⋯這些使我生起奇特的熟悉感。只要信任自己、信任我的雙手允許能量自由流動即可。提供能量服務使我變得很有精神，完全不像在平日疲累的我。</p><p>在某段療癒時，老師打開手擁抱我說「再也不會有人因為你的力量去傷害你了」，我的眼淚倏然而下。老師便用她的藥草精華在我光體上療育，臍輪痛感後，我看見也去釋放掉過去生被火刑時受到的痛楚。在過去舊時代，我們的光不被允許自由展現，這也導致很多薩滿是隱密而不想被看見的。（學員Ｆ）</p><h4>學員Ｓ～被大山召喚</h4><p>謝謝Shemaya老師的阿里山僻靜工作坊，天狼星星光的療癒能量在阿里山上超支持的，讓我整個身心靈被充電飽飽。雖然一起上山都是陌生朋友，見面後卻像認識許久的族人般親切。才剛抵達山區，意外的，我感受到大山土地對我的召喚，不禁放聲大哭起來，Shemaya老師的擁抱真的很溫暖。後續同學們用各種方式來支持我，我都有感受被支持好感動。</p><p>這次我終於突破限制，能在這麼多人面前擊鼓吟唱，還一起瘋狂跳舞，真的好開心！好喜歡這三天在阿里山的所有人事物的發生，至今回想起來，我的心還留在阿里山不想回來啊， 我也開始期待老師下次的阿里山僻靜工作坊（學員Ｓ)</p><h4>學員EN</h4><p>謝謝 Shemaya老師一路上無微不至的照顧，旅程一開始就感受到滿滿的愛，還有很棒的同學交換療癒。老師把課程擴充成2天豐富的療癒，沒想到還有療癒池的彩蛋，實在充滿驚喜！ 老師直指核心的建議和療癒手法也受益良多。我們好棒喔，大家一路上合作無間。在見到神木們後，又被自然存有們充了滿滿的電，身心超舒展的。希望以後還能跟大家同行。（學員ＥＮ）</p><h4>學員Ｎ～找回自己的聲音</h4><p>圍繞著夜晚的火焰，Shemaya 老師雙手連結我和另一位同學去支持我們去跟自己的力量動物連結，並透過狼嚎呼喚祂們。一開始我很害羞不太想叫，但我聽到老師、同學在狼吼，我只好放開跟著嚎叫，越叫越大聲後其他人也開始隨著狼或其他動物的聲音，哇！放下所有矜持，我的心終於被打開了！心感到很快樂，很舒暢！</p><p>我的狼嚎叫來越大聲，還發出超響亮的OM。老師以能量指引我穿梭，我重重踱起右腳，呼喚我的狼群！以權威又霸氣的方式，啊嗚啊嗚的呼喚我的狼群！頓時我渾身充滿了力量！好舒爽、好滿足！我真的突破了喉輪的限制，也找回自己聲音及力量！真好！ （學員Ｎ)</p><h4>（學員Ｔ）療癒原生家庭的缺憾</h4><p>傍晚大家圍坐著，等待接收Shemaya天狼星給個人的療癒，我雙手越來越冰冷，想說可能傍晚氣溫下降索性把窗戶都關上，Shemaya笑問有這麼冷喔？Shemaya老師給我的是黑光鑽石! 我的雙手和身體竟然奇妙地暖和起來，她的能量是那麼柔和，像母親般擁抱的愛的品質！這是我第一次接受黑光，原來並不像頭腦想像的那樣直接或劇烈，Shemaya老師的黑光是充滿夏克緹的、如母親臨在的愛，能讓我穩妥被承接著。</p><p>接著Shemaya為我讀到的主題是原生家庭。我閉眼跟隨她的能量指引， 她以黑光帶我回到那合一中，完全跳脫頭腦意識的介入，毫無情緒評判，我只是觀看著！過往的創傷、自我對話、分離感⋯等頭腦的碎念在當下都不存在了！曾幾何時，我選擇停止給出愛，而就在此刻當下，我重新選擇愛。我再次從心給出愛送給家人，以及在天堂我摯愛的母親。透過這合一的圓圈，最後愛又再次回到我身上，哇！整個內在過程很平靜，完全抽離頭腦的侷限、超脫的，我經驗了美好的內在旅程。</p><p>躺在大地上仰望著天空好美的藍，內心好平靜、喜悅、好享受，好真實、好自在！我感受到原來大地母親的愛無所不在！兩天時間過得飛快，彷彿跟家人回家團聚般的自然、開心和自在，與其說參加課程，更像是久遠的靈魂邀約及重聚。我回到自己內在與自己的親密，頭腦是安靜的，這些很內在之旅，很難以用文字詳述這兩天內美好的發生。</p><p>感受到Shemaya老師內在的敞開，她帶著愛、勇氣迎向未知的心，有她一路持續的穿越學習及前進，才能讓每次的薩滿之旅順利開展。看著她拖著行李大包小包的上山，那肯定都是愛，才能去支持薩滿僻靜的準備。謝謝Shemaya老師一路支持陪伴。（學員Ｔ）</p><h4>學員Ｂ</h4><p>對薩滿印象停留在印地安、深山、儀式，既有點神祕又有點害怕，由於我很想去阿里山，加上有信任的Shemaya老師，所以就報名了。以往報靈性能量課程，課未開始前，我的人生議題會先行浮現，雖習慣這樣的能量預備模式，但前往嘉義火車上我還是流下了淚。在Shemaya 老師設置那美到不行的天狼星金白光焰曼達拉後，她又為我的眉心輪釋放掉已滿到爆炸的思緒，讓我靜下來好好感受。最接近我印象中的薩滿，應該是晚上火典及火薩滿儀式吧！</p><p>大家圍著火，老師擊起薩滿鼓，我心想這跟電視裡一樣啊！沒想到更精彩的在後—Shemaya 老師連結同學形成狼族三人組，一起仰天長嘯地～～狼嚎！其他人漸漸也被狼群的能量帶動，開始狼嚎起來！狼嚎強化了我喉輪的力量，突然我喉嚨有股能量要衝出來，超想罵出那些卡在喉嚨的陳年壓抑的聲音！於是我大聲吼，吼出了我人生中最大聲的話！呼！真是好暢快！管它有點小丟臉，這可打開了我原本堵塞的喉輪呀！ 經過這次的大釋放，回到日常生活後我的表達更流暢了。</p><p>Shemaya 老師的黃金世紀薩滿僻靜課程內容實在太豐富！二天一夜很快就過了。這次的課程完全更新我對薩滿的既有印象！</p><p>我了解到薩滿是禮敬大地母親、回到與萬物合一的愛中，大地媽媽的愛有著各式各樣的豐盛之愛，精彩無比。（學員Ｂ）</p></div></article></div></div><a class="tlink" href="booking.html?s=阿里山薩滿僻靜之旅">報名或詢問這門課程</a></section>
 <h2 class="course-group">個案/療程</h2>
 <section class="item" id="symbols"><h2>北美印地安神聖符號</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=北美印地安神聖符號">預約或詢問這個項目</a></section>
 <section class="item" id="fire-snake"><h2>火薩滿聖蛇</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=火薩滿聖蛇">預約或詢問這個項目</a></section>
-<section class="item" id="return"><h2>鑽石療癒-重返薩滿之路</h2><article class="doc"><h3>重回你的薩滿之道</h3><div class="prose"><p>重回你的薩滿之道鑽石療癒</p><p>「重新連結你的薩滿之道」的白金光鑽石“，是由Sun Ya協助，由Shemaya的星際源頭—天狼星所下載的鑽石。核心是金光，外在閃耀著純淨的白光，帶著清晰與強大的力量，能剝除在你之內所有屬於薩滿的黑暗與幻象，從分離到重新連結，連結到自身的源頭，並且協助人憶起自己，去重新連結個人的薩滿道路。</p><p>對於準備好的人，這個重新連結你的薩滿之道的鑽石，能夠集中你所有的力量，去專注在自己道路上的目標。</p><p>＊有關這顆鑽石的故事：</p><p>Shemaya，你穿越了那些薩滿的古老黑暗，人們被你的光吸引，許多人們帶著不同的古老，未療癒的薩滿經驗與黑暗能量來到你身邊。那是在亞特蘭提斯崩毀後，薩滿們使用的那些具有獨特力量的薩滿藥草，但人們不知，那股力量帶他進入的的並不是天堂，而是不同的世界；與自身議題有關的各種幻象。千百年來薩滿的黑暗經驗，一直儲存在脈輪中，很不容易被意識到。</p><p>你的光，常常是像鏡子般，映照出人們長久以來自己所抗拒的議題：那些關於古老的黑暗與光的分離。由於這些太強大，而且是不對光所敞開的，是很艱難的考驗。如果人們沒有去意識到這些衝突，是來自身的幻象所創造出來的，便會對你產生抗拒或是投射。而這與光的對抗，若強大到無法穿越，人們會選擇轉身離開。這也是你已經驗到的某些學員們的狀態。</p><p>這個白金光鑽石能剝除在個人之內，所有屬於薩滿的黑暗與幻象，從分離到重新連結，連結到自身的源頭，並且協助人憶起自己所屬的部落，重新連結個人自己的薩滿道路。對於準備好的人，這個重新連結你的薩滿之道的鑽石，能夠集中你所有的力量，去專注在自己道路上的目標。</p></div></article><a class="tlink" href="booking.html?s=鑽石療癒-重返薩滿之路">預約或詢問這個項目</a></section>
+<section class="item" id="return"><h2>鑽石療癒-重返薩滿之路</h2><div class="item-side"><div class="is-ph"><img src="assets/x-return.webp" width="1200" height="900" alt="天狼星 重返你的薩滿道路 鑽石" loading="lazy"></div><div class="is-tx"><article class="doc"><h3>重回你的薩滿之道</h3><div class="prose"><p>重回你的薩滿之道鑽石療癒</p><p>「重新連結你的薩滿之道」的白金光鑽石“，是由Sun Ya協助，由Shemaya的星際源頭—天狼星所下載的鑽石。核心是金光，外在閃耀著純淨的白光，帶著清晰與強大的力量，能剝除在你之內所有屬於薩滿的黑暗與幻象，從分離到重新連結，連結到自身的源頭，並且協助人憶起自己，去重新連結個人的薩滿道路。</p><p>對於準備好的人，這個重新連結你的薩滿之道的鑽石，能夠集中你所有的力量，去專注在自己道路上的目標。</p><p>＊有關這顆鑽石的故事：</p><p>Shemaya，你穿越了那些薩滿的古老黑暗，人們被你的光吸引，許多人們帶著不同的古老，未療癒的薩滿經驗與黑暗能量來到你身邊。那是在亞特蘭提斯崩毀後，薩滿們使用的那些具有獨特力量的薩滿藥草，但人們不知，那股力量帶他進入的的並不是天堂，而是不同的世界；與自身議題有關的各種幻象。千百年來薩滿的黑暗經驗，一直儲存在脈輪中，很不容易被意識到。</p><p>你的光，常常是像鏡子般，映照出人們長久以來自己所抗拒的議題：那些關於古老的黑暗與光的分離。由於這些太強大，而且是不對光所敞開的，是很艱難的考驗。如果人們沒有去意識到這些衝突，是來自身的幻象所創造出來的，便會對你產生抗拒或是投射。而這與光的對抗，若強大到無法穿越，人們會選擇轉身離開。這也是你已經驗到的某些學員們的狀態。</p><p>這個白金光鑽石能剝除在個人之內，所有屬於薩滿的黑暗與幻象，從分離到重新連結，連結到自身的源頭，並且協助人憶起自己所屬的部落，重新連結個人自己的薩滿道路。對於準備好的人，這個重新連結你的薩滿之道的鑽石，能夠集中你所有的力量，去專注在自己道路上的目標。</p></div></article></div></div><a class="tlink" href="booking.html?s=鑽石療癒-重返薩滿之路">預約或詢問這個項目</a></section>
 </div>
 </main>
 <footer>
