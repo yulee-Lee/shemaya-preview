@@ -108,6 +108,8 @@ ul{list-style:none}
 .row{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 96px)/4);gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
 .row a{scroll-snap-align:start;display:block}
 .row img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.row .noimg{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1/1;background:var(--tint);color:var(--ink-sub);font-style:normal;font-size:14px}
+.row .noimg::before{content:"圖待提供"}
 .row span{display:block;text-align:center;padding-top:16px;font-size:16px;letter-spacing:.06em}
 
 /* about */
@@ -364,6 +366,7 @@ figure.pcard:hover img{opacity:1}
   .side-grid{grid-template-columns:1fr;gap:20px}
   .side-ph,.side-tx{grid-column:auto;grid-row:auto}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
+  .side-ph.n4{grid-template-columns:repeat(2,1fr)}
 }
 /* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
 /* 第一列只取標題本身高度、剩餘高度給目錄列：網路分段載入時目錄晚到也不會改變標題位置（10/19 線上量到置底對齊造成位移） */
@@ -419,7 +422,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
           <div class="dd"><ul class="sub">
-            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li>
+            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li><li><a href="yuguang.html#yg-share">浴光之路學員分享</a></li><li><a href="yuguang.html#kids-share">兒童浴光學員分享</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -427,7 +430,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -437,7 +440,7 @@ figure.pcard:hover img{opacity:1}
         <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#spray">能量精華噴霧</a></li>
+            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
@@ -446,10 +449,12 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 浴光之路</nav><h1 class="sec-title">浴光之路</h1></div><div class="hero-ph"><img src="assets/x-yg-hero.webp" width="1200" height="900" alt="浴光之路"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#yuguang">浴光之路</a></li><li><a href="#kids">兒童浴光之路</a></li></ul></nav></div></section>
+<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 浴光之路</nav><h1 class="sec-title">浴光之路</h1></div><div class="hero-ph"><img src="assets/x-yg-hero.webp" width="1200" height="900" alt="浴光之路"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#yuguang">浴光之路</a></li><li><a href="#kids">兒童浴光之路</a></li><li><a href="#yg-share">浴光之路學員分享</a></li><li><a href="#kids-share">兒童浴光學員分享</a></li></ul></nav></div></section>
 <div class="wrap inner">
 <section class="item" id="yuguang"><h2>浴光之路</h2><div class="item-side"><div class="is-ph"><img src="assets/x-yuguang.webp" width="1200" height="900" alt="浴光之路" loading="lazy"></div><div class="is-tx"><div class="prose"><p>浴光之路是一條通往愛的道路。四天完整而深度轉化的靈性課程，是許多人的靈性及生命開展中極重要的訓練！在八位靈性協助者陪伴下，透過課程中深度的光的諸多練習及點化，脈輪中的過往經驗與堵塞將被清理，你所遺忘的「我是誰」，將在光中被喚醒。</p><p>我們將開始面對自己，找到自己，浴光讓心敞開去連結完整自我，轉化自身弱點，迎回本有潛能，拿回力量。浴光開啟全新的道路，讓我們在黃金世紀活出真實的力量，並且服務自他。</p><p>「快樂幸福的所有關鍵都已在你心中，神性就在你之內，等待著被你發掘、領悟與整合到你的新生命之流。</p><p>你已經遺忘自己究竟是誰，但你所需要找回的都已在你之內，你只需找到它。浴光之路將指引你一條通往活出完整自己的路。」</p><p>「浴光之路是一條你真正能踏上且到達自己的路，並讓你覺知到你生命中，你內心所渴望達到的一切，都已經在那裡等著你。你只需有勇氣踏出這一步！」</p><p>The Path into Light R『浴光之路』是由德國籍老師 Agni Eickermann 創辦的課程，創辦至今30多年，觸及所有以光工作為道路的人，目前於20多個國家仍持續地舉辦。</p><p>Agni曾說：「療癒本身最好的詮釋是自由，只有你能讓自己自由，它無法從任何療法而來，也無法從任何上師那裡而來，它只能來自你的心。」</p><p>你能為任何人做的最好的事就是：成為你自己！</p><h4>課程訓練重點：</h4><p>1，重新連結自身的光</p><p>2，打開對精微能量的感知能力</p><p>3，覺知自己的能量狀態與使用光工具</p><p>4，學習運用精微能量的療癒技巧</p><p>5，移除七個主要脈輪的阻塞</p><p>6，探索脈輪的個別品質與力量</p><p>7，學習使用脈輪能量在生活中</p><p>8，與靈性協助者連結</p><p>9，領取生命任務活出更大的自己</p><p>10，維持七大脈輪的光穩定的擴展</p><p>12，移除不屬於自己的外來能量</p><p>13，拆解失敗的鎖鏈，並創造成功鎖鏈</p><p>14，看見閱讀未來的五年</p><p>15，點化並強化在傳承之內和彼此的聯繫</p><p>你想學習透過脈輪來清理照顧自己，或是想突破現狀嗎？想要探索了解自己的生命任務嗎？你想快速前進，想要找到人生真實的方向嗎？</p><p>讓Shemaya陪你走上你的浴光之路。</p></div></div></div><a class="tlink" href="booking.html?s=浴光之路">報名或詢問這門課程</a></section>
 <section class="item" id="kids"><h2>兒童浴光之路</h2><div class="item-side"><div class="is-ph"><img src="assets/x-kids.webp" width="1200" height="900" alt="兒童浴光" loading="lazy"></div><div class="is-tx"><div class="prose"><p>來自天堂的孩子們，依然有著與自身天堂連結的管道，然而隨著逐漸長大，孩子想探索世界的好奇心被壓抑，受到外在環境和教育體制信念影響，孩子的天堂連結管道變得越來越小，甚至遺忘了自己是誰，許多孩子可能也將自己的天賦、潛能縮退，變得疏於對外去展現自我本質，也不知道自己是有創造能力。</p><p>兒童浴光之路是協助兒童重新記起「我是誰？」並協助孩子打開光的感知，找回內在穩定、專注及扎根的安全感。浴光開啟個人自身奧秘，八位靈性協助者及帶領老師會全程以光和愛帶領孩子去看見孩子在哪裡受阻礙、綑綁？哪部分需要去學習的？</p><p>透過一個個脈輪的練習去化解舊有束縛，逐漸轉化回到本有的純淨與快樂後，當光的管道被打開，孩子被引導去迎回自己的能量工具，各個光層級的工具、技巧，並相互練習如何運用在日常生活中，為生活帶入更多自由及創造。</p><p>孩子們透過團體互動、遊戲、練習的方式去探索自己，也會學習到如何善用光工具來保護自己、協助別人，為植物、動物及地球送出祝福，也讓自己自信，加深自我價值及心性穩定。</p><p>最後，孩子會體驗到自身能力的無限，透過世界觀、宇宙觀的帶入，孩子打破原有認知的侷限，心擴展更大，真實去感受自己的光是獨特的、無限性的，促使孩子從二元分別、限制性走向與萬物融合一體，為生命播下有力量的希望種子。</p><p>有豐富親子經驗的Shemaya，曾協助不少帶著新世紀能量而來的孩子們及其母親們，整合身心及突破內外在考驗。</p><p>歡迎您家中14歲以下的兒童，來參加Shemaya的兒童浴光。想知道更多相關資訊，歡迎詢問Shemaya</p></div></div></div><a class="tlink" href="booking.html?s=兒童浴光之路">報名或詢問這門課程</a></section>
+<section class="item" id="yg-share"><h2>浴光之路學員分享</h2><p class="pending">內容待 Shemaya 提供</p></section>
+<section class="item" id="kids-share"><h2>兒童浴光學員分享</h2><div class="prose"><h4>小朋友媽媽回饋：</h4><p>我的兒子Daru是心地善良，不喜歡與人爭的孩子。Daru曾是個表達上不清不楚，需要媽媽代為翻譯，甚至連爸爸都不清楚他想表達什麼。這次趁暑假回台灣，讓他上了Shemaya老師的兒童浴光後，在表達能力上有明顯進步。</p><p>以往他在學校若有不開心並不會主動說，都是我感知到他不對勁，與他談心才能知道。浴光之後，他時常與我聊天，表達在校的情緒感受。學校老師曾提及，Daru在校遇困難時不會主動求助，非得老師發現他的問題才能去幫助他。浴光之後，我發現他能勇於提出問題及尋求幫助。</p><p>以前他常做惡夢，有時還會哭泣。浴光之後，做惡夢的次數變少了，即使做了惡夢也不再那麼驚恐，還能平靜的跟我述說著他的夢。</p><p>娘家爸爸有次跟我說，他走路浮浮的不穩、不踏實。我也觀察到他在跑步時，身體有些不太協調，似乎能量沒有穩穩紮根在地球。此外他對於進入陌生環境也常感到不安。在兒童浴光之後，他的手腳更靈活，人也自在多了，就是一種安心放鬆的狀態。</p><p>Shemaya老師曾說Daru是非常支持我的小孩，以前我沒感受到這點，上過兒童浴光後，他果真更支持我，我也能感受到他對我無限的愛與貼心。</p><p>浴光課程對孩子來說，就是在遊戲中學習光、使用光工具，Daru會使用光在肚子痛、肚子餓時及送光祝福他人。感謝Shemaya帶領的兒童浴光課程，讓Daru每一天都能安心自在地球上生活、學習。</p><p>Shemaya 帶領的兒童浴光，歡迎你的孩子一起浴光</p></div></section>
 </div>
 </main>
 <footer>

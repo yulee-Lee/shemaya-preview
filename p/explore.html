@@ -108,6 +108,8 @@ ul{list-style:none}
 .row{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 96px)/4);gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
 .row a{scroll-snap-align:start;display:block}
 .row img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.row .noimg{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1/1;background:var(--tint);color:var(--ink-sub);font-style:normal;font-size:14px}
+.row .noimg::before{content:"圖待提供"}
 .row span{display:block;text-align:center;padding-top:16px;font-size:16px;letter-spacing:.06em}
 
 /* about */
@@ -364,6 +366,7 @@ figure.pcard:hover img{opacity:1}
   .side-grid{grid-template-columns:1fr;gap:20px}
   .side-ph,.side-tx{grid-column:auto;grid-row:auto}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
+  .side-ph.n4{grid-template-columns:repeat(2,1fr)}
 }
 /* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
 /* 第一列只取標題本身高度、剩餘高度給目錄列：網路分段載入時目錄晚到也不會改變標題位置（10/19 線上量到置底對齊造成位移） */
@@ -419,7 +422,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
           <div class="dd"><ul class="sub">
-            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li>
+            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li><li><a href="yuguang.html#yg-share">浴光之路學員分享</a></li><li><a href="yuguang.html#kids-share">兒童浴光學員分享</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -427,7 +430,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -437,7 +440,7 @@ figure.pcard:hover img{opacity:1}
         <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#spray">能量精華噴霧</a></li>
+            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
@@ -454,7 +457,7 @@ figure.pcard:hover img{opacity:1}
 <section class="item" id="release"><h2>釋放舊能量與負擔</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=釋放舊能量與負擔">預約或詢問這個項目</a></section>
 <section class="item" id="belief"><h2>負向信念刪除</h2><div class="item-side"><div class="is-ph"><img src="assets/x-belief.webp" width="1200" height="900" alt="負向信念刪除" loading="lazy"></div><div class="is-tx"><div class="prose"><h3 class="doc-t">刪除錯誤劇本 負向信念</h3><p>你的人生劇本怎麼寫，命運就會如實的呈現！</p><p>錯誤的人生信念會障礙我們，難以達到想要的幸福自由。所以心理治療師常以多次會談協助個案去看見背後的信念，以便處理那些障礙自己的想法。</p><p>你想要用更快速的方式，去了解自己的卡點嗎？</p><p>你想去釋放那些自己也許未意識到的錯誤信念嗎？</p><p>很多看似正確，卻牢牢框住自己的信念，比如「不夠好」、「還要更努力」、「必須完美」⋯「我要更努力」，「我是好人」、「我很窮」、「我不夠好」、「必須省」、「不可能」、「我很胖」、「沒人愛我」、「大家都這樣」、「必須忍耐」、「有錢才會幸福」、「只能靠自己」⋯</p><p>你，也曾有類似以上的想法嗎？</p><p>你想改變自己的人生劇本嗎？</p><p>讓我帶你去看見那個被隱藏的自己！</p><p>各種人際關係的議題、親密關係、健康、金錢、事業、家庭議題、人生的自我實現⋯。</p><p>無論你想解決的事情是什麼，我會透過深入的諮商，為你找到在你底層的根本信念，然後會透過光能量去移除深植在你頭腦中、身體氣場中，那些對你不利的想法、有害信念。最後還會為你輸入全新的高頻意識。</p><p>療程包括諮詢、釐清問題點、能量工作、刪除對你最重要的負向信念，再為你植入新的正向意識。以線上進行，療程約1-1.2小時</p></div></div></div><a class="tlink" href="booking.html?s=負向信念刪除">預約或詢問這個項目</a></section>
 <section class="item" id="relation"><h2>關係結構療癒</h2><div class="item-side"><div class="is-ph"><img src="assets/x-relation.webp" width="900" height="1021" alt="Love Relationship 關係結構療癒" loading="lazy"></div><div class="is-tx"><div class="prose"><p>個人過去生命的經歷常會影響遇事時的情緒反應方式。當我們越了解自己情感連結的根基，就越能夠改善眼前的各種關係 。</p><p>因為過去的感受經驗總會影響我們現在建立的連結，和維持情緒的能力，因此那些未被處理的情緒思考會妨害到我們生命中新的人際關係，尤其是看待他人的方式以及處理情緒。</p><p>想要擁有美好的人生，我們要積極與身邊的人事物建立流暢的關係，因此有意識並順利的，去釋放各種舊的能量結構就非常重要。各種舊結構包含長久以來的信念結構、能量結構，乃至舊的關係結構。</p><p>這個一對一療程，是針對個人議題去釋放個人的關係結構的療癒。</p><p>可以選擇任一主題：</p><p>與親密伴侶的關係</p><p>與自己的關係</p><p>與原生家庭的關係</p><p>與女性力量的關係</p><p>與金錢的關係</p><p>與權威的關係</p><p>與性的關係</p><p>與外在世界的關係</p><p>與神的關係</p><p>與大地母親的關係</p><p>療程約1.8~2.2小時，線上或現場皆可</p><p>歡迎私訊預約</p></div></div></div><a class="tlink" href="booking.html?s=關係結構療癒">預約或詢問這個項目</a></section>
-<section class="item" id="unblock"><h2>消除停滯堵塞</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=消除停滯堵塞">預約或詢問這個項目</a></section>
+<section class="item" id="unblock"><h2>消除停滯堵塞</h2><div class="item-side"><div class="is-ph"><img src="assets/x-unblock.webp" width="1200" height="900" alt="身心清理 消除堵塞" loading="lazy"></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div><a class="tlink" href="booking.html?s=消除停滯堵塞">預約或詢問這個項目</a></section>
 <section class="item" id="chakra"><h2>脈輪充電</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=脈輪充電">預約或詢問這個項目</a></section>
 </div>
 </main>

@@ -108,6 +108,8 @@ ul{list-style:none}
 .row{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 96px)/4);gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:16px;scrollbar-width:thin}
 .row a{scroll-snap-align:start;display:block}
 .row img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
+.row .noimg{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:1/1;background:var(--tint);color:var(--ink-sub);font-style:normal;font-size:14px}
+.row .noimg::before{content:"圖待提供"}
 .row span{display:block;text-align:center;padding-top:16px;font-size:16px;letter-spacing:.06em}
 
 /* about */
@@ -364,6 +366,7 @@ figure.pcard:hover img{opacity:1}
   .side-grid{grid-template-columns:1fr;gap:20px}
   .side-ph,.side-tx{grid-column:auto;grid-row:auto}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
+  .side-ph.n4{grid-template-columns:repeat(2,1fr)}
 }
 /* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
 /* 第一列只取標題本身高度、剩餘高度給目錄列：網路分段載入時目錄晚到也不會改變標題位置（10/19 線上量到置底對齊造成位移） */
@@ -419,7 +422,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
           <div class="dd"><ul class="sub">
-            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li>
+            <li><a href="yuguang.html">浴光之路</a></li><li><a href="yuguang.html#kids">兒童浴光之路</a></li><li><a href="yuguang.html#yg-share">浴光之路學員分享</a></li><li><a href="yuguang.html#kids-share">兒童浴光學員分享</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
@@ -427,7 +430,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">火薩滿聖蛇</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -437,7 +440,7 @@ figure.pcard:hover img{opacity:1}
         <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#spray">能量精華噴霧</a></li>
+            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
