@@ -14,7 +14,7 @@
 <style>
 :root{
   --bg:#fdfbf7;--white:#ffffff;--ink:#1f1d1a;--ink-sub:#55504a;--line:#e6e1d8;--tint:#f3efe8;
-  --accent:#a6803a;--accent-dark:#86672c;--dd:#222222;--dd-line:rgba(255,255,255,.1);
+  --accent:#a6803a;--accent-dark:#86672c;--dd:#ffffff;--dd-line:rgba(0,0,0,.08);
   --serif:"Noto Serif TC",Georgia,serif;--sans:Lato,"Noto Sans TC",Helvetica,sans-serif;
   --wrap:1200px;--gut:40px;--sec:96px;
 }
@@ -45,16 +45,16 @@ ul{list-style:none}
 .menu>li:hover>a,.menu>li:focus-within>a{color:var(--accent)}
 
 .dd{position:absolute;left:50%;top:calc(100% - 16px);width:240px;margin-left:-120px;padding-top:16px;z-index:60;visibility:hidden;opacity:0;transition:opacity .15s}
-.dd::before{content:"";position:absolute;left:50%;top:6px;margin-left:-10px;border:10px solid transparent;border-top-width:0;border-bottom-color:var(--dd)}
+.dd::before{content:"";position:absolute;left:50%;top:7px;z-index:1;margin-left:-10px;border:10px solid transparent;border-top-width:0;border-bottom-color:var(--dd);filter:drop-shadow(0 -1px 0 var(--line))}
 .menu>li:hover>.dd,.menu>li:focus-within>.dd{visibility:visible;opacity:1}
-.sub{background:var(--dd);max-height:var(--dd-max,70vh);overflow-y:auto;overscroll-behavior:contain}
-.sub a{display:block;padding:9px 20px;font-size:15.3px;line-height:19.89px;font-style:italic;color:#fff;text-align:center;border-bottom:1px solid var(--dd-line)}
+.sub{background:var(--dd);border:1px solid var(--line);box-shadow:0 10px 24px rgba(0,0,0,.1);max-height:var(--dd-max,70vh);overflow-y:auto;overscroll-behavior:contain}
+.sub a{display:block;padding:9px 20px;font-size:15.3px;line-height:19.89px;font-style:italic;color:#1a1a1a;text-align:center;border-bottom:1px solid var(--dd-line)}
 .sub li:last-child a{border-bottom:0}
-.sub-h{display:block;padding:10px 20px 4px;font-family:var(--sans);font-size:12.8px;font-weight:700;letter-spacing:.1em;color:#c9a96a;text-align:center;font-style:normal;border-bottom:1px solid var(--dd-line)}
+.sub-h{display:block;padding:10px 20px 4px;font-family:var(--sans);font-size:12.8px;font-weight:700;letter-spacing:.1em;color:var(--accent-dark);text-align:center;font-style:normal;border-bottom:1px solid var(--dd-line)}
 .course-group{font-size:22px;font-weight:700;line-height:1.4;margin-top:56px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .course-group.first{margin-top:36px}
 .course-group+.course{margin-top:32px}
-.sub a:hover,.sub a:focus-visible{color:#e2c78f}
+.sub a:hover,.sub a:focus-visible{color:var(--accent-dark);background:#f7f2e8}
 
 .book{position:absolute;right:24px;top:50%;transform:translateY(-50%);background:var(--accent);color:#fff;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.12em;padding:11px 20px;transition:background .15s}
 .book:hover{background:var(--accent-dark)}
@@ -190,10 +190,13 @@ ul{list-style:none}
   .dd::before{display:none}
   .menu>li:hover>.dd,.menu>li:focus-within>.dd{visibility:visible}
   .dd.open{display:block}
-  .sub{max-height:none;background:#f7f6f4}
+  .sub{max-height:none;background:#f7f6f4;border:0;box-shadow:none}
   .sub a{text-align:left;padding:13px 20px 13px 36px;font-size:14.5px;color:#444;border-color:#e5e5e5}
   .sub a:hover,.sub a:focus-visible{color:var(--accent-dark)}
   .sub-h{background:#efede9;color:var(--accent-dark);text-align:left;padding:12px 20px 6px 36px;border-color:#e5e5e5}
+  .picks-in{grid-template-columns:1fr;gap:32px}
+  .strip{padding:40px 24px 0}
+  .fbvid{padding:0 24px 48px}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
@@ -258,7 +261,7 @@ ul{list-style:none}
           </ul></div></li>
         <li class="has-sub"><a href="../p/tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="../p/courses.html#water">薩滿水知識</a></li><li><a href="../p/tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="../p/courses.html#elements">四大元素與基督之光</a></li><li><a href="../p/courses.html#wolf">狼祭司與熊部落</a></li><li><a href="../p/courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="../p/courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="../p/tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="../p/tribe.html#fire-snake">聖蛇取毒</a></li><li><a href="../p/tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="../p/tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="../p/booking.html">預約薩滿療程</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="../p/courses.html#water">薩滿水知識</a></li><li><a href="../p/tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="../p/courses.html#elements">四大元素與基督之光</a></li><li><a href="../p/courses.html#wolf">狼祭司與熊部落</a></li><li><a href="../p/courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="../p/courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="../p/tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="../p/tribe.html#fire-snake">聖蛇薩滿取毒</a></li><li><a href="../p/tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="../p/tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="../p/booking.html">預約薩滿療程</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="../p/soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -268,7 +271,7 @@ ul{list-style:none}
         <li><a href="../p/videos.html">影音課程</a></li>
         <li class="has-sub"><a href="../p/shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="../p/shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="../p/shop.html#crystal-spray">水晶光噴霧</a></li><li><a href="../p/shop.html#crystal">水晶設計區</a></li><li><a href="../p/shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="../p/shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="../p/shop.html#comb">拉希米女神髮梳</a></li>
+            <li><a href="../p/shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="../p/shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="../p/shop.html#crystal">水晶設計區</a></li><li><a href="../p/shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="../p/shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="../p/shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="../p/booking.html">立即預約</a>
@@ -322,11 +325,11 @@ ul{list-style:none}
       </div>
       <div class="row" id="shopRow" tabindex="0" aria-label="靈性商店分類，可左右捲動">
       <a href="../p/shop.html#spray"><img src="assets/p-sirius-00.webp" width="500" height="500" alt="光精華噴霧（六大系列）" loading="lazy"><span>光精華噴霧（六大系列）</span></a>
-      <a href="../p/shop.html#crystal-spray"><img src="assets/h-crystal-spray.webp" width="500" height="500" alt="水晶光噴霧" loading="lazy"><span>水晶光噴霧</span></a>
+      <a href="../p/shop.html#crystal-spray"><img src="assets/h-crystal-spray.webp" width="500" height="500" alt="水晶光能噴霧" loading="lazy"><span>水晶光能噴霧</span></a>
       <a href="../p/shop.html#crystal"><i class="noimg" aria-hidden="true"></i><span>水晶設計區</span></a>
       <a href="../p/shop.html#lighthouse"><img src="assets/h-lighthouse.webp" width="500" height="500" alt="空間風水淨化劑（光屋）" loading="lazy"><span>空間風水淨化劑（光屋）</span></a>
       <a href="../p/shop.html#cards"><img src="assets/h-cards.webp" width="500" height="500" alt="阿卡莎脈輪花精卡" loading="lazy"><span>阿卡莎脈輪花精卡</span></a>
-      <a href="../p/shop.html#comb"><img src="assets/h-comb.webp" width="500" height="500" alt="拉希米女神髮梳" loading="lazy"><span>拉希米女神髮梳</span></a>
+      <a href="../p/shop.html#comb"><img src="assets/h-comb.webp" width="500" height="500" alt="拉克希米女神髮梳" loading="lazy"><span>拉克希米女神髮梳</span></a>
     </div>
     </div>
   </section>

@@ -14,7 +14,7 @@
 <style>
 :root{
   --bg:#fdfbf7;--white:#ffffff;--ink:#1f1d1a;--ink-sub:#55504a;--line:#e6e1d8;--tint:#f3efe8;
-  --accent:#a6803a;--accent-dark:#86672c;--dd:#222222;--dd-line:rgba(255,255,255,.1);
+  --accent:#a6803a;--accent-dark:#86672c;--dd:#ffffff;--dd-line:rgba(0,0,0,.08);
   --serif:"Noto Serif TC",Georgia,serif;--sans:Lato,"Noto Sans TC",Helvetica,sans-serif;
   --wrap:1200px;--gut:40px;--sec:96px;
 }
@@ -45,16 +45,16 @@ ul{list-style:none}
 .menu>li:hover>a,.menu>li:focus-within>a{color:var(--accent)}
 
 .dd{position:absolute;left:50%;top:calc(100% - 16px);width:240px;margin-left:-120px;padding-top:16px;z-index:60;visibility:hidden;opacity:0;transition:opacity .15s}
-.dd::before{content:"";position:absolute;left:50%;top:6px;margin-left:-10px;border:10px solid transparent;border-top-width:0;border-bottom-color:var(--dd)}
+.dd::before{content:"";position:absolute;left:50%;top:7px;z-index:1;margin-left:-10px;border:10px solid transparent;border-top-width:0;border-bottom-color:var(--dd);filter:drop-shadow(0 -1px 0 var(--line))}
 .menu>li:hover>.dd,.menu>li:focus-within>.dd{visibility:visible;opacity:1}
-.sub{background:var(--dd);max-height:var(--dd-max,70vh);overflow-y:auto;overscroll-behavior:contain}
-.sub a{display:block;padding:9px 20px;font-size:15.3px;line-height:19.89px;font-style:italic;color:#fff;text-align:center;border-bottom:1px solid var(--dd-line)}
+.sub{background:var(--dd);border:1px solid var(--line);box-shadow:0 10px 24px rgba(0,0,0,.1);max-height:var(--dd-max,70vh);overflow-y:auto;overscroll-behavior:contain}
+.sub a{display:block;padding:9px 20px;font-size:15.3px;line-height:19.89px;font-style:italic;color:#1a1a1a;text-align:center;border-bottom:1px solid var(--dd-line)}
 .sub li:last-child a{border-bottom:0}
-.sub-h{display:block;padding:10px 20px 4px;font-family:var(--sans);font-size:12.8px;font-weight:700;letter-spacing:.1em;color:#c9a96a;text-align:center;font-style:normal;border-bottom:1px solid var(--dd-line)}
+.sub-h{display:block;padding:10px 20px 4px;font-family:var(--sans);font-size:12.8px;font-weight:700;letter-spacing:.1em;color:var(--accent-dark);text-align:center;font-style:normal;border-bottom:1px solid var(--dd-line)}
 .course-group{font-size:22px;font-weight:700;line-height:1.4;margin-top:56px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .course-group.first{margin-top:36px}
 .course-group+.course{margin-top:32px}
-.sub a:hover,.sub a:focus-visible{color:#e2c78f}
+.sub a:hover,.sub a:focus-visible{color:var(--accent-dark);background:#f7f2e8}
 
 .book{position:absolute;right:24px;top:50%;transform:translateY(-50%);background:var(--accent);color:#fff;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.12em;padding:11px 20px;transition:background .15s}
 .book:hover{background:var(--accent-dark)}
@@ -190,10 +190,13 @@ ul{list-style:none}
   .dd::before{display:none}
   .menu>li:hover>.dd,.menu>li:focus-within>.dd{visibility:visible}
   .dd.open{display:block}
-  .sub{max-height:none;background:#f7f6f4}
+  .sub{max-height:none;background:#f7f6f4;border:0;box-shadow:none}
   .sub a{text-align:left;padding:13px 20px 13px 36px;font-size:14.5px;color:#444;border-color:#e5e5e5}
   .sub a:hover,.sub a:focus-visible{color:var(--accent-dark)}
   .sub-h{background:#efede9;color:var(--accent-dark);text-align:left;padding:12px 20px 6px 36px;border-color:#e5e5e5}
+  .picks-in{grid-template-columns:1fr;gap:32px}
+  .strip{padding:40px 24px 0}
+  .fbvid{padding:0 24px 48px}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
@@ -404,6 +407,18 @@ figure.pcard:hover img{opacity:1}
   .is-ph,.is-tx{grid-column:auto;grid-row:auto}
   .is-ph{max-width:560px}
 }
+/* 客戶 10/21：區段標題右側「個案回饋」按鈕（金色字），點了捲到該區段個案回饋開頭；寬度不夠時換到標題下方 */
+.item-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-bottom:24px}
+.item-h>h2{font-size:24px;line-height:1.4;font-weight:700;letter-spacing:.04em}
+.fb-link{display:inline-block;padding:5px 16px;border:1px solid var(--accent);color:var(--accent-dark);font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;line-height:1.6}
+.fb-link:hover,.fb-link:focus-visible{background:var(--tint)}
+/* 客戶 10/21：光屋、花卡、髮梳售價右邊「我要訂購」（手機可換行） */
+.buyline{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:8px}
+.buyline span{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink)}
+@media (max-width:767px){
+  .item-h{margin-bottom:16px}
+  .item-h>h2{font-size:21px}
+}
 </style>
 </head>
 <body>
@@ -432,7 +447,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="booking.html">預約薩滿療程</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">聖蛇薩滿取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="booking.html">預約薩滿療程</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -442,7 +457,7 @@ figure.pcard:hover img{opacity:1}
         <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉希米女神髮梳</a></li>
+            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
@@ -461,7 +476,7 @@ figure.pcard:hover img{opacity:1}
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
     <div id="panelSvc" role="tabpanel" aria-labelledby="tabSvc">
-      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>個人身心解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>度母蓮花瑜伽</option><option>消除停滯堵塞</option></optgroup><optgroup label="薩滿課程"><option>北美印地安神聖符號</option><option>聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
+      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>個人身心解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>度母蓮花瑜伽</option><option>消除停滯堵塞</option></optgroup><optgroup label="薩滿課程"><option>北美印地安神聖符號</option><option>聖蛇薩滿取毒</option><option>鑽石療癒-重返薩滿之路</option></optgroup><optgroup label="靈魂藍圖解碼"><option>生命五階段</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
       <div class="f"><span class="lab" id="calLab">選擇日期與時段 <em>必填</em></span>
         <div class="cal" id="cal" role="group" aria-labelledby="calLab">
           <div class="cal-head"><button type="button" id="calPrev" aria-label="上個月">‹</button><span id="calTitle" aria-live="polite"></span><button type="button" id="calNext" aria-label="下個月">›</button></div>
@@ -568,6 +583,8 @@ figure.pcard:hover img{opacity:1}
           return function () {
             g.querySelectorAll('.day.sel').forEach(function (x) { x.classList.remove('sel'); });
             el.classList.add('sel');
+            // 換到另一天就清掉原本選的時段，必須在這一天重新選（Codex 10/21 實作檢查 R-001）
+            if (picked && picked.k !== key(dd)) picked = null;
             drawSlots(dd);
           };
         })(d, cell));
@@ -586,7 +603,7 @@ figure.pcard:hover img{opacity:1}
   // 從各頁「預約／報名」連結帶入項目
   var s = new URLSearchParams(location.search).get('s');
   // 已上線舊網址相容：項目改名後，舊的預約連結（?s=舊名稱）仍帶入新名稱
-  var RENAMED = { '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '度母蓮花瑜伽', '火薩滿聖蛇': '聖蛇取毒', '身心能量解讀': '個人身心解讀' };
+  var RENAMED = { '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '度母蓮花瑜伽', '火薩滿聖蛇': '聖蛇薩滿取毒', '聖蛇取毒': '聖蛇薩滿取毒', '身心能量解讀': '個人身心解讀' };
   if (s && Object.prototype.hasOwnProperty.call(RENAMED, s)) s = RENAMED[s];
   if (s) {
     var hit = false;
