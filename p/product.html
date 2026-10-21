@@ -37,8 +37,8 @@ ul{list-style:none}
 .nav-in{position:relative;display:flex;justify-content:center;align-items:center;max-width:1440px;margin:0 auto;padding:0 150px}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
-.menu>li+li{margin-left:40px}
-.menu>li+li::before{content:"/";position:absolute;left:-24px;top:24px;color:#bbb}
+.menu>li+li{margin-left:33px}
+.menu>li+li::before{content:"/";position:absolute;left:-20px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -139,24 +139,24 @@ ul{list-style:none}
 
 /* ===== responsive ===== */
 @media (max-width:1436px){
-  .menu>li+li{margin-left:27px}
-  .menu>li+li::before{left:-16px}
+  .menu>li+li{margin-left:21px}
+  .menu>li+li::before{left:-13px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:22px}
-  .menu>li+li::before{left:-14px}
+  .menu>li+li{margin-left:16px}
+  .menu>li+li::before{left:-11px}
 }
 @media (max-width:1260px){
   .menu>li{font-size:14px}
-  .menu>li+li{margin-left:18px}
-  .menu>li+li::before{left:-12px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-9px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
-  .menu>li{font-size:13px}
-  .menu>li+li{margin-left:15px}
-  .menu>li+li::before{left:-10px}
+  .menu>li{font-size:12.5px}
+  .menu>li+li{margin-left:12px}
+  .menu>li+li::before{left:-9px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -412,6 +412,12 @@ figure.pcard:hover img{opacity:1}
 .item-h>h2{font-size:24px;line-height:1.4;font-weight:700;letter-spacing:.04em}
 .fb-link{display:inline-block;padding:5px 16px;border:1px solid var(--accent);color:var(--accent-dark);font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;line-height:1.6}
 .fb-link:hover,.fb-link:focus-visible{background:var(--tint)}
+/* 客戶 10/21 14:45：各種創傷釋放標題右側三個子項連結；靈魂藍圖解析與療癒文尾右側「我要預約」 */
+.sub-links{display:flex;flex-wrap:wrap;gap:8px 12px}
+.cta-r{text-align:right;margin-top:28px}
+@media (max-width:767px){ .cta-r .btn{display:block;text-align:center;padding:14px 20px} }
+/* 客戶 10/21 14:45：各種業力釋放右欄三張圖（原比例直排）；手機三張並排在文字上方 */
+@media (max-width:767px){ .is-ph.trio{max-width:none;grid-template-columns:repeat(3,1fr);gap:8px;align-items:start} }
 /* 客戶 10/21：光屋、花卡、髮梳售價右邊「我要訂購」（手機可換行） */
 .buyline{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:8px}
 .buyline span{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink)}
@@ -432,7 +438,7 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">個人身心解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
+            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
@@ -444,11 +450,11 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">初階課程</li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#herb-care">光藥草保健療癒</a></li><li class="sub-h">進階與深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li>
+            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
           </ul></div></li>
-        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
+        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程與療程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">聖蛇薩滿取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="booking.html">預約薩滿療程</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#fire-snake">薩滿聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#session">預約你的薩滿療程</a></li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">

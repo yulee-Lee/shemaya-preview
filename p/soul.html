@@ -37,8 +37,8 @@ ul{list-style:none}
 .nav-in{position:relative;display:flex;justify-content:center;align-items:center;max-width:1440px;margin:0 auto;padding:0 150px}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
-.menu>li+li{margin-left:40px}
-.menu>li+li::before{content:"/";position:absolute;left:-24px;top:24px;color:#bbb}
+.menu>li+li{margin-left:33px}
+.menu>li+li::before{content:"/";position:absolute;left:-20px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -139,24 +139,24 @@ ul{list-style:none}
 
 /* ===== responsive ===== */
 @media (max-width:1436px){
-  .menu>li+li{margin-left:27px}
-  .menu>li+li::before{left:-16px}
+  .menu>li+li{margin-left:21px}
+  .menu>li+li::before{left:-13px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:22px}
-  .menu>li+li::before{left:-14px}
+  .menu>li+li{margin-left:16px}
+  .menu>li+li::before{left:-11px}
 }
 @media (max-width:1260px){
   .menu>li{font-size:14px}
-  .menu>li+li{margin-left:18px}
-  .menu>li+li::before{left:-12px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-9px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
-  .menu>li{font-size:13px}
-  .menu>li+li{margin-left:15px}
-  .menu>li+li::before{left:-10px}
+  .menu>li{font-size:12.5px}
+  .menu>li+li{margin-left:12px}
+  .menu>li+li::before{left:-9px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -412,6 +412,12 @@ figure.pcard:hover img{opacity:1}
 .item-h>h2{font-size:24px;line-height:1.4;font-weight:700;letter-spacing:.04em}
 .fb-link{display:inline-block;padding:5px 16px;border:1px solid var(--accent);color:var(--accent-dark);font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;line-height:1.6}
 .fb-link:hover,.fb-link:focus-visible{background:var(--tint)}
+/* 客戶 10/21 14:45：各種創傷釋放標題右側三個子項連結；靈魂藍圖解析與療癒文尾右側「我要預約」 */
+.sub-links{display:flex;flex-wrap:wrap;gap:8px 12px}
+.cta-r{text-align:right;margin-top:28px}
+@media (max-width:767px){ .cta-r .btn{display:block;text-align:center;padding:14px 20px} }
+/* 客戶 10/21 14:45：各種業力釋放右欄三張圖（原比例直排）；手機三張並排在文字上方 */
+@media (max-width:767px){ .is-ph.trio{max-width:none;grid-template-columns:repeat(3,1fr);gap:8px;align-items:start} }
 /* 客戶 10/21：光屋、花卡、髮梳售價右邊「我要訂購」（手機可換行） */
 .buyline{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:8px}
 .buyline span{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink)}
@@ -431,7 +437,7 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">個人身心解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
+            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
@@ -443,11 +449,11 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">初階課程</li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#herb-care">光藥草保健療癒</a></li><li class="sub-h">進階與深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li>
+            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
           </ul></div></li>
-        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程</a>
+        <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程與療程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅訓練</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#fire-snake">聖蛇薩滿取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li><li><a href="booking.html">預約薩滿療程</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#fire-snake">薩滿聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#session">預約你的薩滿療程</a></li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
           <div class="dd"><ul class="sub">
@@ -466,8 +472,9 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖解碼</nav><h1 class="sec-title">靈魂藍圖解碼</h1></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li><li><a href="#feedback">解讀回饋</a></li></ul></nav></div></section>
+<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖解碼</nav><h1 class="sec-title">靈魂藍圖解碼</h1></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#blueprint">靈魂藍圖解析與療癒</a></li><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li><li><a href="#feedback">解讀回饋</a></li></ul></nav></div></section>
 <div class="wrap inner">
+<section class="item" id="blueprint"><h2>靈魂藍圖解析與療癒</h2><div class="item-side"><div class="is-ph"><img src="assets/x-blueprint.webp" width="900" height="1200" alt="靈魂藍圖解碼 解讀你的人生藍圖" loading="lazy"></div><div class="is-tx"><div class="prose"><p>每個人誕生的時間點都透露個人此生的靈魂藍圖，透過去解析個人很多組的密碼組合，其中的每一組都有其強大力量，對此人都能產生正面及負面的影響力，而造就不同的人生劇本。靈魂藍圖是我們在投生到地球前自己所設計好的考卷，透過一連串的考題去磨練心智，去成就智慧。有些人的考題很高階困難，有的人考題比較輕鬆。整體來說，個人主修功課就是個人過去都還沒學會的，所以對當事人而言都是較困難的。考不過的人生課題，就下輩子繼續修，一直持續沒過關的課題，往往會越加沉重棘手。我們主修密碼倘若能修得好，靈魂所帶來的天賦就能打開，人生各方面也能有所躍進。</p><p>Shemaya提供的靈魂藍圖解析套組，融合不同領域的專業，及個人豐富的人生歷練，以專業療癒師的能力，能讓你更知曉自己的心性、行為模式，如何了形塑自己的價值觀、人生觀，揭露所隱藏的個人優勢與弱點。</p><p>能確實掌握生命中所有的重點、該努力的方向。當你越了解自己的特質、慣性、惰性，面對重要選擇時，就越能有所覺察與有精準的下手處，而少一些盲目與重複。</p><p>療程內容：個人靈魂藍圖的人生計劃解析：包含原生家庭、幼年、青少年期、成年、中年期與老年期的各階段裡，你可能經驗到的人生考題，因個性造成的缺點與障礙，如何排除困難，如何穿越考題。解析也包含了個人對情感的行為模式，安全感、金錢觀、信任議題、與親密關係的建構，人生觀等如何影響你的家庭或職場成就。</p><p>接著我們再透過解析的內人做諮商談話，我會抓出你最重要的卡點，為你做能量工作，協助釋放深植在你腦袋的錯誤信念，讓你能夠將新的，對你完整而有益的人生藍圖，一步步真正落實在你的生活裡。</p><p>療育內容包含個人內在心性剖析、人生藍圖計畫深度解讀，最棒的還有對你很重要的能量清理療程，整個專案內容是很重要而且非常超值的，建議每個人一生最少要做一次。</p></div><p class="cta-r"><a class="btn" href="booking.html?s=靈魂藍圖解析與療癒">我要預約</a></p></div></div></section>
 <section class="item" id="five-stages"><h2>生命五階段</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=生命五階段">預約或詢問這個項目</a></section>
 <section class="item" id="partner"><h2>伴侶感情關係解碼</h2><div class="prose"><h3 class="doc-t">情感模式解碼</h3><p>情感交流與相互了解是經營伴侶關係，甚至是婚姻關係中很重要的事。</p><p>但是常常遇到某些事，我們不了解為何對方會這樣想？為什麼他會這樣作？為什麼他不能感受到我的情緒？</p><p>答案很簡單，因為對方思緒回路跟你是完全不同。</p><p>作了幾對伴侶的感情模式解碼，發現每個人的情感認知及需求都不同，以致在伴侶或夫妻關係之間，有時感到不被理解，甚至有誤解或情感失落。</p><p>在東方傳統文化裡，男女性交往時常會看重對象是否孝順，而有些女性婚後才發現，對方太重視父母，妻子只有盡不完的責任義務（勞碌）卻得不到丈夫應給的重視（自己順位被擺最後）另外有家業大的家庭，娶妻是為繁衍後代來繼承家業，感情再怎麼經營也比不上生個男孩強。這不是古代宮鬥才有嗎？不，二十一世紀的今天，不少人心中仍有這樣的思維，在遇到重大抉擇時會立見高下。</p><p>透過預約解讀彼此的情感模式，有個案看明白了！對方其實只想要二人世界，想要被陪伴，無奈當事人並未表明不想有小孩。生了小孩意味著不輕鬆要犧牲，也要更多付出時間和精神、金錢⋯等代價。偽單親媽媽常抱怨先生缺乏責任感？明明生活一起，自己卻過著偽單親的生活。這即是伴侶關係中，一個人想努力完整家庭，另外一個人只想要兩人世界，對彼此的期待不同，最後造成失落與痛苦。</p><p>夫妻關係或伴侶關係，泰半影響到個人對人生的幸福感。若能儘早去了解自己的情感模式，以及你所重視的情人、伴侶或是其他家人的情感模式是很重要的學習功課。</p><p>一旦了解自己的性格、情緒模式，也了解對方的規格模組，看懂、學會用新的方法去相處，慢慢地改變，自然就越來越輕鬆愉快。也由於看懂了，我們才能更專注在自己身上，不必強求對方做不到的事。</p><p>情感解碼也能用來解碼：親子模式或事業夥伴模式、婆媳模式、師生、同儕模式等各種關係模式，只要你認爲重要的人都可以。</p><p>想了解更多嗎？歡迎私訊預約我。</p></div><a class="tlink" href="booking.html?s=伴侶感情關係解碼">預約或詢問這個項目</a></section>
 <section class="item" id="fortune"><h2>人生大運流年運勢</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=人生大運流年運勢">預約或詢問這個項目</a></section>
