@@ -26,19 +26,21 @@ a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 ul{list-style:none}
 
-/* ===== header ===== */
+
 .site-header{display:contents}
-.site-title{text-align:center;padding:35px 20px}
+
+.site-title{text-align:center;padding:20px 20px}
 .site-title a{display:inline-block;vertical-align:top}
 .site-title{line-height:0}
-.site-title img{width:790px;height:auto}
+.site-title img{width:600px;height:auto}
 
 .nav-bar{position:sticky;top:0;z-index:50;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .nav-in{position:relative;display:flex;justify-content:center;align-items:center;max-width:1440px;margin:0 auto;padding:0 150px}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
-.menu>li+li{margin-left:33px}
-.menu>li+li::before{content:"/";position:absolute;left:-20px;top:24px;color:#bbb}
+
+.menu>li+li{margin-left:30px}
+.menu>li+li::before{content:"/";position:absolute;left:-18px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -62,10 +64,10 @@ ul{list-style:none}
 .menu-toggle,.mbook,.sub-toggle{display:none}
 
 
-/* ===== banner ===== */
+
 .banner{width:100%;height:max(180px,calc(100vw * 800 / 2880));background:var(--tint);display:flex;align-items:center;justify-content:center;color:var(--ink-sub);font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-align:center;padding:0 16px}
 
-/* ===== sections ===== */
+
 .sec{padding:var(--sec) 0}
 .sec.alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .wrap{max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding:0 var(--gut)}
@@ -74,7 +76,7 @@ ul{list-style:none}
 .sec-head{margin-bottom:56px;padding-bottom:24px;border-bottom:1px solid var(--line)}
 .sec-head.row-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
 
-/* services */
+
 .svc{display:grid;grid-template-columns:repeat(8,1fr);gap:40px 32px}
 .svc li{grid-column:span 2;min-width:0}
 .svc li:nth-child(5){grid-column:2/span 2}
@@ -86,7 +88,7 @@ ul{list-style:none}
 .svc h3{font-size:20px;font-weight:700;letter-spacing:.06em;margin-top:16px;text-align:center;transition:color .2s}
 .svc a:hover h3,.svc a:focus-visible h3{color:var(--accent-dark)}
 
-/* courses */
+
 .course-group{display:flex;align-items:center;gap:16px;font-size:22px;font-weight:700;line-height:1.4;letter-spacing:.06em;margin:72px 0 32px}
 .course-group.first{margin-top:0}
 .course-group::after{content:"";flex:1;height:1px;background:var(--line)}
@@ -101,7 +103,7 @@ ul{list-style:none}
 .course p{color:var(--ink-sub);font-size:17px;line-height:1.8}
 .course .more{display:inline-block;margin-top:12px;color:var(--accent-dark);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid currentColor;padding-bottom:2px}
 
-/* shop row */
+
 .row-ctrl{display:flex;gap:8px;flex-shrink:0}
 .row-ctrl button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);cursor:pointer;font-size:16px;color:var(--ink);transition:border-color .2s,color .2s}
 .row-ctrl button:hover{border-color:var(--accent);color:var(--accent-dark)}
@@ -112,7 +114,7 @@ ul{list-style:none}
 .row .noimg::before{content:"圖待提供"}
 .row span{display:block;text-align:center;padding-top:16px;font-size:16px;letter-spacing:.06em}
 
-/* about */
+
 .about{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:center}
 .about .ph{aspect-ratio:3/4;background:var(--tint)}
 .about .ph img{width:100%;height:100%;object-fit:cover}
@@ -122,13 +124,13 @@ ul{list-style:none}
 .btn:hover{background:#6f5523}
 .tlink{color:var(--accent-dark);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid currentColor;padding-bottom:2px}
 
-/* free */
+
 .free{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
 .free figure{min-width:0}
 .free img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
 .free figcaption{margin-top:12px;font-size:15px;text-align:center;letter-spacing:.06em}
 
-/* footer */
+
 .footer-widgets{background:var(--white);border-top:1px solid var(--line);padding:72px 0}
 .fw-in{max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding:0 var(--gut);display:grid;grid-template-columns:repeat(3,1fr);gap:56px}
 .widget-title{display:inline-block;font-family:var(--sans);font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--ink);padding-bottom:4px;border-bottom:2px solid var(--accent);margin-bottom:24px}
@@ -137,26 +139,26 @@ ul{list-style:none}
 .fw-in li a:hover{color:var(--accent-dark)}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
-/* ===== responsive ===== */
+
 @media (max-width:1436px){
-  .menu>li+li{margin-left:21px}
-  .menu>li+li::before{left:-13px}
+  .menu>li+li{margin-left:18px}
+  .menu>li+li::before{left:-12px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:16px}
-  .menu>li+li::before{left:-11px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-10px}
 }
 @media (max-width:1260px){
   .menu>li{font-size:14px}
-  .menu>li+li{margin-left:13px}
-  .menu>li+li::before{left:-9px}
+  .menu>li+li{margin-left:11px}
+  .menu>li+li::before{left:-8px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
   .menu>li{font-size:12.5px}
-  .menu>li+li{margin-left:12px}
-  .menu>li+li::before{left:-9px}
+  .menu>li+li{margin-left:10px}
+  .menu>li+li::before{left:-8px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -234,7 +236,24 @@ ul{list-style:none}
   *,*::before,*::after{transition:none !important;animation:none !important}
 }
 
-/* ===== 測試站內頁 ===== */
+
+
+.footer-info{background:var(--white);border-top:1px solid var(--line);padding:48px 0 56px}
+.fi{font-family:var(--sans);font-size:14px;line-height:1.75;color:var(--ink-sub)}
+.fi h3{margin:16px 0 4px;font-family:var(--sans);font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+.fi .widget-title+h3{margin-top:0}
+.fi p{margin:0 0 4px}
+.fi ol{margin:0 0 4px;padding-left:1.4em;list-style:decimal}
+.fi ol li{margin:2px 0}
+.nl-l{display:block;font-weight:700;color:var(--ink)}
+.nl-row{display:flex;gap:8px;margin-top:4px}
+.nl-row input{flex:1;min-width:0;height:42px;padding:0 12px;border:1px solid var(--line);background:#fff;font:inherit;color:var(--ink)}
+.nl-row button{flex:none;height:42px;padding:0 18px;border:0;background:var(--accent);color:#fff;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.1em;cursor:pointer}
+.nl-row button:hover{background:var(--accent-dark)}
+.nl-msg{min-height:1.75em;margin-top:8px}
+
+
+
 [hidden]{display:none !important}
 .test-bar{background:var(--ink);color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-align:center;padding:6px 16px}
 .hero{background:var(--white);border-bottom:1px solid var(--line);padding:56px 0}
@@ -308,7 +327,7 @@ ul{list-style:none}
   .pd{grid-template-columns:1fr;gap:24px}
 }
 
-/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+
 .prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
 .prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
 .prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
@@ -333,7 +352,7 @@ ul{list-style:none}
 .cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
 .cal-head button:disabled{opacity:.35;cursor:default}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:27px repeat(6,44px);gap:4px}
-/* 星期列＋六週固定列高：日曆由程式畫出前就先佔好高度，網路分段載入時下方欄位不會被往下推 */
+
 .cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
 .cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
 .cal-grid button.day:disabled{cursor:default}
@@ -355,11 +374,11 @@ ul{list-style:none}
   .cal-grid .day{height:40px;font-size:14px}
   .slot{flex:1;min-width:0}
 }
-/* 只展示照片的商品卡（保健排毒系列暫不販售）：不是連結，不做滑過效果 */
+
 figure.pcard:hover img{opacity:1}
-/* 頁面大標題用 90% 黑（客戶 10/17） */
+
 .sec-title{color:#1a1a1a}
-/* 空間能量風水：長文在左，右側三張圖垂直排列；手機改為文章上方三張並排 */
+
 .side-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
 .side-ph{display:grid;gap:20px;grid-column:2;grid-row:1}
 .side-tx{grid-column:1;grid-row:1;min-width:0}
@@ -373,8 +392,8 @@ figure.pcard:hover img{opacity:1}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
   .side-ph.n4{grid-template-columns:repeat(2,1fr)}
 }
-/* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
-/* 第一列只取標題本身高度、剩餘高度給目錄列：網路分段載入時目錄晚到也不會改變標題位置（10/19 線上量到置底對齊造成位移） */
+
+
 .hero-in.has-ph.has-toc{grid-template-rows:auto 1fr;align-items:start;row-gap:0}
 .has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:start;padding-top:24px}
 .has-toc>.hero-ph{grid-column:2;grid-row:1/3}
@@ -384,16 +403,21 @@ figure.pcard:hover img{opacity:1}
   .has-toc>.hero-ph{grid-row:1}
   .has-toc>.toc{grid-column:1/-1;margin-top:24px}
 }
-/* 生命轉彎為天命鋪路：文末兩個按鈕 */
+
+.hero-in.has-ph.ph-land{grid-template-columns:1fr 400px}
+.ph-land>.hero-ph{aspect-ratio:4/3}
+@media (max-width:1024px){ .hero-in.has-ph.ph-land{grid-template-columns:1fr 300px} }
+@media (max-width:767px){ .hero-in.has-ph.ph-land{grid-template-columns:1fr 150px} }
+
 .cta2{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
 .btn.btn-o:hover{background:var(--tint)}
 @media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
-/* 薩滿課程目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
+
 .toc .toc-h{flex-basis:100%;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--ink-sub)}
 .toc .toc-h~.toc-h{margin-top:10px}
-/* 客戶 10/20：每個療程項目／課程都是說明文字在左、主圖在右（同空間能量風水頁的右欄寬）；手機主圖排在文字上方 */
-/* 圖在 DOM 中排在文字之前，桌機以格線放到右欄：網路分段載入時手機版不會因圖晚到而推擠文字 */
+
+
 .item-side{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
 .is-ph{grid-column:2;grid-row:1;display:grid;gap:16px}
 .is-tx{grid-column:1;grid-row:1;min-width:0}
@@ -407,18 +431,25 @@ figure.pcard:hover img{opacity:1}
   .is-ph,.is-tx{grid-column:auto;grid-row:auto}
   .is-ph{max-width:560px}
 }
-/* 客戶 10/21：區段標題右側「個案回饋」按鈕（金色字），點了捲到該區段個案回饋開頭；寬度不夠時換到標題下方 */
+
 .item-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-bottom:24px}
 .item-h>h2{font-size:24px;line-height:1.4;font-weight:700;letter-spacing:.04em}
-.fb-link{display:inline-block;padding:5px 16px;border:1px solid var(--accent);color:var(--accent-dark);font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;line-height:1.6}
-.fb-link:hover,.fb-link:focus-visible{background:var(--tint)}
-/* 客戶 10/21 14:45：各種創傷釋放標題右側三個子項連結；靈魂藍圖解析與療癒文尾右側「我要預約」 */
-.sub-links{display:flex;flex-wrap:wrap;gap:8px 12px}
+.fb-link{display:inline-block;padding:2px 0;color:var(--accent-dark);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.08em;line-height:1.6;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color .15s}
+.fb-link:hover,.fb-link:focus-visible{text-decoration-color:currentColor}
+
+.sub-links{display:flex;flex-wrap:wrap;gap:4px 20px}
+
+.hero-fb{margin-top:12px}
+
+.prose ul.dots{list-style:disc;margin:0 0 12px;padding-left:1.4em;max-width:42em}
+.prose ul.dots li{margin:2px 0}
 .cta-r{text-align:right;margin-top:28px}
 @media (max-width:767px){ .cta-r .btn{display:block;text-align:center;padding:14px 20px} }
-/* 客戶 10/21 14:45：各種業力釋放右欄三張圖（原比例直排）；手機三張並排在文字上方 */
-@media (max-width:767px){ .is-ph.trio{max-width:none;grid-template-columns:repeat(3,1fr);gap:8px;align-items:start} }
-/* 客戶 10/21：光屋、花卡、髮梳售價右邊「我要訂購」（手機可換行） */
+
+
+@media (max-width:767px){ .is-ph.multi{max-width:none;grid-template-columns:repeat(2,1fr);gap:8px;align-items:start}
+  .is-ph.multi img:last-child:nth-child(odd){grid-column:1/-1} }
+
 .buyline{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:8px}
 .buyline span{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink)}
 @media (max-width:767px){
@@ -442,7 +473,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#tara">度母蓮花瑜伽</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#tara">個人化度母蓮花瑜伽</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
           <div class="dd"><ul class="sub">
@@ -450,21 +481,21 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
+            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒訓練</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程與療程</a>
           <div class="dd"><ul class="sub">
             <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#fire-snake">薩滿聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#session">預約你的薩滿療程</a></li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
-        <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
+        <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖與療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="soul.html#five-stages">生命五階段</a></li><li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
+            <li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
           </ul></div></li>
         <li><a href="space.html">空間能量風水</a></li>
         <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
+            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
@@ -473,16 +504,16 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈性訓練授證</nav><h1 class="sec-title">靈性訓練授證</h1></div><div class="hero-ph"><img src="assets/sv-cert.webp" width="900" height="1200" alt="靈性訓練授證"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#herb-priest">神聖藥草祭司</a></li><li><a href="#water">水知識</a></li><li><a href="#elements">四大元素與基督之光</a></li><li><a href="#wolf">狼祭司與熊部落</a></li><li><a href="#sirius-ws">天狼星工作坊</a></li><li><a href="#crystal">薩滿水晶療癒</a></li><li><a href="#flower">脈輪花精卡療癒師</a></li><li><a href="#herb-care">天堂光植物與身心</a></li></ul></nav></div></section>
+<section class="hero"><div class="wrap hero-in has-ph ph-land has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈性訓練授證</nav><h1 class="sec-title">靈性訓練授證</h1></div><div class="hero-ph"><img src="assets/x-hero-cert.webp" width="1200" height="900" alt="靈性訓練授證"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#herb-priest">神聖藥草祭司</a></li><li><a href="#water">水知識</a></li><li><a href="#elements">四大元素與基督之光</a></li><li><a href="#wolf">狼祭司與熊部落</a></li><li><a href="#sirius-ws">天狼星工作坊</a></li><li><a href="#crystal">薩滿水晶療癒訓練</a></li><li><a href="#flower">脈輪花精卡療癒師</a></li><li><a href="#herb-care">天堂光植物與身心</a></li></ul></nav></div></section>
 <div class="wrap inner">
 <h2 class="course-group">深度訓練</h2>
 <section class="item" id="herb-priest"><h2>神聖藥草祭司</h2><div class="item-side"><div class="is-ph"><img src="assets/c-herb.webp" width="800" height="800" alt="神聖藥草祭司課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>承自耶穌聖殿的愛及藥草女神與薩滿植物界的療癒力量，喚醒那些曾與大自然合一的人們，以及在過去對植物知識有連結的人們。</p><p>這訓練喚醒個人內在沈睡的藥草療癒能力，並賦予屬於黃金世紀全新的意識，協助你整合個人在植物藥草領域的天賦能力，讓這份與植物有關的潛能在今世得以顯化創造。</p><p>*自黑暗時代與光脫離後，個人靈魂的失落及遺忘的重新整合</p><p>*修復自身愛的斷裂，遺失的個人特質趨向完整</p><p>*療癒多世隱匿的厄色尼人</p><p>*神聖點化成為下載天堂光藥草與神聖療癒知識的管道</p><p>*打開和靈性動物溝通合作的管道，開啟黃金世紀新的合作模式</p><p>*植物藥草相關知識教導，協助憶起自身過去的天賦。鑑定藥草植物在身體丶心智丶情緒丶靈性層級的作用</p><p>*實際操練及成為下載天堂藥草植物的神聖藥草療癒祭司，後續將依個人發展而成獨特的療癒品質。</p><p>課程訓練分為二個區塊進行，共4個整天</p><p>上課地點：台北市天母（線上與現場同步）</p><p>帶領老師：Shemaya</p><p>生命實踐者，陪伴人們走在愛與光的道路上。在Akasha生命之書提及，Shemaya是很古老的靈魂，曾多次轉世為薩滿、神聖夏克緹祭司、祭司、療癒者、智者、老師。今世的生命任務之一是「集結所有關於療癒植物及療癒人們的知識訊息，走出去分享，以真實薩滿，連結植物的力量去療癒人們。」</p><p>經歷：年輕時流浪異鄉，學成歸國後在資訊丶科技界做十多年的視覺設計師，除設計師專業外，也有芳療老師丶美容丶情緒覺察療育丶身心整合諮詢顧問丶觀音傳訉者⋯等多元專長。Shemaya在十三年前走上自己的道路；持續從事身心靈教學及能量療癒服務，以愛陪以愛陪伴人們。目前是聖火傳承靈性大師丶靈性老師丶療癒師及孩子的母親。</p></div></div></div><a class="tlink" href="booking.html?s=神聖藥草祭司">報名或詢問這門課程</a></section>
-<section class="item" id="water"><h2>水知識</h2><div class="item-side"><div class="is-ph"><img src="assets/c-water.webp" width="800" height="600" alt="水知識課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>是由Agni及Mara為Shemaya所讀下來的薩滿課程之一。</p><p>地球表面有71％的面積被海洋覆蓋，水也是人體內主要的四大元素之一。我們人體有70%都是水組成的，內臟器官也含有大量的水。因此，水與我們的健康息息相關，水也儲存了大量的情緒與記憶有關。黃金世紀薩滿的水素能釋放身心壓力，協助人們在身體層次及氣場上，跳脫被情緒主宰的過往，水能送走陳舊的生命軌跡並帶來深度淨化，創造人體脈輪與光體的全新流動，帶來更多的彈性，輕盈，平靜，清晰及愛。</p><p>Agni曾說：「水是訊息的攜帶者，水為新的一切賦予命名，水讓我們找到我們的資源，並依據神聖法則運用我們的資源。」「透過水，我們會學習到如何在最佳時刻，以最有效的方式來運用我們的資源和財源，因為它擴張了我們的光。」「黃金世紀水元素是開啟我們進入合一學習之路的老師。水啟動我們的學習之路，將我們的天堂帶來地球，幫助我們完成生命任務」</p><p>Agni 與MaRa為Shemaya下載的薩滿傳承課程—薩滿的水知識工作坊，這是為黃金世紀而來的水知識，也是來自天地純粹的薩滿傳承，會開啟你和水知識的連結，也解碼在你之內的薩滿力量。</p><p>我們會藉由獨特的水結晶結構及高振動頻率，為妳釋放舊有情緒結構，並帶回隱藏許久的個人天賦。你會感知到水，知曉水是什麼，以及自己和水的連結，透過你被打開的水知識，我會為你帶回屬於你個人神聖的水療癒技巧與神聖儀式，你能用來服務人們、服務土地。</p><p>～～～～～～～～～～～～～～</p><p>2021年MaRa為Shemaya 閱讀的&lt;薩滿阿卡莎紀錄&gt;曾提及：</p><p>Shemaya你是非常古老的薩滿，某部分的你一直走在薩滿的道路上，你與地球上所有的水都有非常深的連結。你和你的部落族人一直都知道如何找到水，如何使用水，如何祈雨，如何引導水。</p><p>你已經世世代代被教導有關於薩滿的智慧。你的傳承與熊部落有關，因此你部分任務是成為薩滿去保護它。不僅是你的責任水域，還包括植物，精靈們以及各種自然存有。就像許多薩滿的知識和智慧一樣。長期以來，它們已經過變化和受保護，你知道受保護的封印。你是薩滿智慧的封印保護者。</p><p>在黑暗時代，你必須多次使用防護力去確保薩滿智慧的核心不會被觸及或改變。在這一生中，你等待回歸薩滿的力量，它們都與水相關連。</p><p>你顯然知道你也與土地、植物和動物都很有連結，而你最擅長的領域是水。在這個時期和一生中，你的任務之一是淨化地球的水質，支持水的流動和方向，水與所有元素之間的平衡，水的知識非常靠近你。</p><p>～～～～～～～～～～～</p><p>薩滿水知識解密</p><p>四個整天</p><p>上課方式：現場及線上同步</p></div><article class="doc testimonial"><div class="prose"><h3 class="doc-t">Water knowledge 學習心得</h3><p>我興沖沖報名Shemaya老師的水知識，想說應該不會像之前老師的課那樣往內走轉化那麼多吧。應該只是在學習水的相關知識吧？沒想到，最後我仍難以言語去形容老師究竟帶我們走多深。</p><p>水知識是Agni及MaRa幫Shemaya老師接下來的特別課程。老師教我們以水知識能量去做脈輪與細胞的深層清理，這也會活化、喚醒內在與水的記憶連結。課程最後解封印去迎回我們個人的水儀式，作為獨特的療癒服務。在要迎回個人的水儀式時，我的心很抗拒而看不到自己的工具。Shemaya老師帶我去取回特別的心之缽，並告訴我這是可盛裝大海母親的海水—去療癒悲傷的心。老師引導我以水缽取海水療癒我自己的心，我跟著做了，可是內在卻有種什麼快傾瀉出來的感覺。</p><h4>第一次心生想逃跑念頭</h4><p>下課後我開始哭，持續哭了兩天，不明白自己怎麼有那麼多的悲傷？無止盡的絕望？ 孤獨、憤怒、害怕、無力感…彷如海洋一樣深的傷痛，源源不絕的自我心輪流淌出來。這絕不是這一世的經驗，而是過去許多的轉世，沒被好好療癒的悲傷印記。哭兩天後，老師找到了我，在電話中她以能量帶領我去用我超抗拒的海洋心缽，去療癒我的心。整個療程結束後，之前那些無盡的悲傷、痛苦、絕望都不見了，而我心輪的愛竟能擴展到前所未有的廣闊！</p><p>回想老師幫我接下水儀式時，她提示我的水儀式是特別療癒心中巨大的悲傷，尤其那些藏在心底深處的悲傷，眼淚必須被釋放掉，心才有更多空間去承載愛。沒想到，我自己就深刻的先走一回了！好感激自己累世那麼多的傷痛，能在此刻一併被轉化，還生出更多愛及力量。每次以水祭司身份執行水儀式時，我都會被深深感動，終於感受到海洋母親的愛是那般深廣，無條件承載著世間一切悲歡喜樂，並為之淨化，然後帶著我們走向愛與平靜、喜悅。</p><h4>Shemaya老師是解封印高手</h4><p>上課前，我好奇去問老師「解封印」是什麼？沒想到在水知識中，老師真的帶我們去解除了個人靈魂的封印！陪我走過轉化的先生也見證了我走過轉化。他很感觸的說看到我被「解封印了」！聽起來很魔法啊！這神奇魔法，也為我們的日常生活帶來晉升。</p><p>課程尾聲的冥想火典中，一扇很大的門出現在我眼前，門上有著非常光亮的十字架。門從兩邊向內推開，內部教堂又新又亮，明亮到我眼睛都快睜不開了。老師說水知識打開了我的心，也更新了我內在的聖殿，這是更新過的、有更多光的聖殿。老師鼓勵我多作療癒，讓人們去觸碰自己內在的神聖與愛。最後我們也見證每位水祭司所給出的個人水儀式，好感動！我不再覺得自己渺小，反而對能給出靈性服務而感到真心喜悅。</p><p>我終於明白老師的水知識，真的不是頭腦層級所能理解的知識了！</p><p>深深感謝在黃金世紀裡，自己能跟隨Shemaya老師學習，從自我療癒到療癒他人，融入合一所帶來的美好。水祭司們的水儀式所帶給世界的所有正向影響也觸動我，專注在療癒時，我們和世界萬物是合一的，我們每個人都是重要的。祈願這世界，所有人都迎向更多的愛與和平</p><p>Om Namah Shivaya</p></div></article></div></div><a class="tlink" href="booking.html?s=水知識">報名或詢問這門課程</a></section>
-<section class="item" id="elements"><h2>四大元素與基督之光</h2><div class="item-side"><div class="is-ph"><img src="assets/c-elements.webp" width="800" height="800" alt="四大元素與基督之光課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><p>透過與天使群合作，你將潛入大地之心，重溯自己在地球的旅程，那些亞特蘭提斯時期及黑暗時代留下的個人陰影將被消融，在你之內的薩滿力量得以修復整合。</p><p>第五天的基督之光帶你回到萬物合一的愛中，古老的天堂與地球經驗，被整合轉化為黃金世紀的新力量，為你所用。</p><p>來自天堂大地，不同品質的元素重新整合你的身心，為重生做準備。</p><p>過去令你難以在地球扎根的陰影，在此時已被消融。第五天，你隱藏許久的力量和面向，將會在基督之光整合。當你準備好時，Shemaya 會為你取回屬於你個人的靈性天賦。Shemaya 會教你如何使用這獨一無二的神聖天賦或光工具。</p><p>五天的蛻變過程，協助你從舊到全新，打開你薩滿的力量，並和物質世界接軌。你開始和四方的大靈合作，以雙手或呼吸、薩滿吟唱、舞蹈，帶下不同的元素能量，為自己及他人帶來黃金世紀創造性的療癒。</p><p>基督之光整合並更新不同面向的你</p><p>迎回個人天賦力量及團體療癒</p><p>上課方式：現場及視訊同步</p></div><article class="doc testimonial"><div class="prose"><h3 class="doc-t">四大元素與基督之光課程學員分享</h3><h4>＊我被天狼星薩滿星光圈粉了</h4><p>從第一天風元素到最後一天的基督之光，我都有著滿滿的感動，彷彿走過千山萬水，穿越不同時空，像剝洋蔥一樣一層又一層，走過了好深的療癒，最後也迎回自己遺忘的面向。</p><p>沒想到課程第一天就直接帶出長期被我忽略的議題，那種長期以來，心很深的孤單、無法融入群體、被誤解的傷心於是我把自己藏起來了。我在接受老師的天狼星金光網絡療癒時，透過螢幕給遠距的我全然的愛的擁抱，當下我全身震顫感動不已，天狼星巨大的愛讓我願意敞開心，將好深好深的悲傷都釋放了。風也清掉我深藏的那些對外在發生的不公不義的憤怒與絕望，這些的古老情緒釋放完，也終結了我最近太陽神經叢的不適。沒想到我就在驚艷和淚水中完成了第一個元素。那些湧出的情緒和釋放都被神聖之愛接住，我很安心，好感動能有老師和夥伴協助與接納。</p><p>沒想到進入火元素，把我更多內在隱藏的議題帶出來。後心輪和後勺浮出的諸多自我批判，還有接收來自他人的批判，幸好這些頑固的信念，都在Shemaya老師的天狼星自我價值星星的星光中轉化了。</p><p>Shemaya老師會協助我們去檢視夥伴需療癒的核心點，透過結合不同元素，以天狼星星光能量綜合為夥伴作療癒工作。這優異的療癒簡直無比快速，還充滿了滋養效果，讓我被老師的天狼星薩滿星光系列圈粉了。</p><p>金光泥土真的有深的愛，她深撫慰我過往在地球上遺留的創傷以及無法原諒的故事。我在愛及淚水中，放手了古老陰影與創傷。如果不是在課程中這樣深入的走一遭，憑我自己是沒辦法看到的，更遑論去作修復療癒。</p><p>每個元素代表的品質，老師耐心帶我們走過，深刻體驗到元素的個別力量與合作帶來的效應。在老師帶領的前世回溯裡，我看到自己是如何跟大地母親有了裂痕，哭得非常傷心的我，竟然在土元素裡得到愛的重生！我一直對土元素充滿抗拒，在土元素這天課程後，我深深感受到大地母親廣大的包容，天地萬物都是愛，讓我願意重新在地球上好好生活。</p><p>最後一天，大家排隊等待Shemaya老師幫個人取回天賦時，我非常焦慮。但是，當老師將它放入我手裡的那刻，我卻忍不住大哭了……那是一種被我遺忘很久了，我終於等到你了的心情！老師說，訊息一下就下來了，好像天賦等不及要回來似的！耶穌說，這是我遺忘很久的紅寶石之心，它可協助療癒哀傷、悲傷、憂鬱、心的創傷等等，也與寬恕有關。</p><p>Shemaya 老師總是毫不保留的傾囊相授，教我們很多療癒師的核心精神及專業技巧，都使我受益匪淺。在夥伴療癒的分享裡，也看到老師天狼星薩滿星光噴霧和四大元素結合，療癒效率是如何加乘的。課程內容都觸碰到每個人身心內藏得很深的情緒。當不舒服的情緒浮現，我偷偷叫苦，但又很快地被轉化掉，透過老師紮實的訓練，許多概念我越來越清楚，在不斷熟加應用後，療癒變得很輕盈愉快。</p><p>老師的「四大元素和基督之光」課程，帶給我和家人完整的療癒技巧，支持著我們的日常生活。它教我如何更輕鬆與天地、大自然作連結，協助我在順流與臣服中，看見一切事件背後的課題與美意，也讓我能穿越古老創傷、清除掉有毒意識及不被愛的印記，送走那些不再服務於我的信念等等……，我的心除了感恩還是感恩！謝謝Shemaya老師、謝謝同學、謝謝大地母親、四元素、謝謝這一切。</p><p>Om Namah Shivaya</p></div></article></div></div><a class="tlink" href="booking.html?s=四大元素與基督之光">報名或詢問這門課程</a></section>
+<section class="item" id="water"><div class="item-h"><h2>水知識</h2><a class="fb-link" href="#water-fb">學員回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/c-water.webp" width="800" height="600" alt="水知識課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>是由Agni及Mara為Shemaya所讀下來的薩滿課程之一。</p><p>地球表面有71％的面積被海洋覆蓋，水也是人體內主要的四大元素之一。我們人體有70%都是水組成的，內臟器官也含有大量的水。因此，水與我們的健康息息相關，水也儲存了大量的情緒與記憶有關。黃金世紀薩滿的水素能釋放身心壓力，協助人們在身體層次及氣場上，跳脫被情緒主宰的過往，水能送走陳舊的生命軌跡並帶來深度淨化，創造人體脈輪與光體的全新流動，帶來更多的彈性，輕盈，平靜，清晰及愛。</p><p>Agni曾說：「水是訊息的攜帶者，水為新的一切賦予命名，水讓我們找到我們的資源，並依據神聖法則運用我們的資源。」「透過水，我們會學習到如何在最佳時刻，以最有效的方式來運用我們的資源和財源，因為它擴張了我們的光。」「黃金世紀水元素是開啟我們進入合一學習之路的老師。水啟動我們的學習之路，將我們的天堂帶來地球，幫助我們完成生命任務」</p><p>Agni 與MaRa為Shemaya下載的薩滿傳承課程—薩滿的水知識工作坊，這是為黃金世紀而來的水知識，也是來自天地純粹的薩滿傳承，會開啟你和水知識的連結，也解碼在你之內的薩滿力量。</p><p>我們會藉由獨特的水結晶結構及高振動頻率，為妳釋放舊有情緒結構，並帶回隱藏許久的個人天賦。你會感知到水，知曉水是什麼，以及自己和水的連結，透過你被打開的水知識，我會為你帶回屬於你個人神聖的水療癒技巧與神聖儀式，你能用來服務人們、服務土地。</p><p>～～～～～～～～～～～～～～</p><p>2021年MaRa為Shemaya 閱讀的&lt;薩滿阿卡莎紀錄&gt;曾提及：</p><p>Shemaya你是非常古老的薩滿，某部分的你一直走在薩滿的道路上，你與地球上所有的水都有非常深的連結。你和你的部落族人一直都知道如何找到水，如何使用水，如何祈雨，如何引導水。</p><p>你已經世世代代被教導有關於薩滿的智慧。你的傳承與熊部落有關，因此你部分任務是成為薩滿去保護它。不僅是你的責任水域，還包括植物，精靈們以及各種自然存有。就像許多薩滿的知識和智慧一樣。長期以來，它們已經過變化和受保護，你知道受保護的封印。你是薩滿智慧的封印保護者。</p><p>在黑暗時代，你必須多次使用防護力去確保薩滿智慧的核心不會被觸及或改變。在這一生中，你等待回歸薩滿的力量，它們都與水相關連。</p><p>你顯然知道你也與土地、植物和動物都很有連結，而你最擅長的領域是水。在這個時期和一生中，你的任務之一是淨化地球的水質，支持水的流動和方向，水與所有元素之間的平衡，水的知識非常靠近你。</p><p>～～～～～～～～～～～</p><p>薩滿水知識解密</p><p>四個整天</p><p>上課方式：現場及線上同步</p></div><article class="doc testimonial" id="water-fb"><div class="prose"><h3 class="doc-t">Water knowledge 學習心得</h3><p>我興沖沖報名Shemaya老師的水知識，想說應該不會像之前老師的課那樣往內走轉化那麼多吧。應該只是在學習水的相關知識吧？沒想到，最後我仍難以言語去形容老師究竟帶我們走多深。</p><p>水知識是Agni及MaRa幫Shemaya老師接下來的特別課程。老師教我們以水知識能量去做脈輪與細胞的深層清理，這也會活化、喚醒內在與水的記憶連結。課程最後解封印去迎回我們個人的水儀式，作為獨特的療癒服務。在要迎回個人的水儀式時，我的心很抗拒而看不到自己的工具。Shemaya老師帶我去取回特別的心之缽，並告訴我這是可盛裝大海母親的海水—去療癒悲傷的心。老師引導我以水缽取海水療癒我自己的心，我跟著做了，可是內在卻有種什麼快傾瀉出來的感覺。</p><h4>第一次心生想逃跑念頭</h4><p>下課後我開始哭，持續哭了兩天，不明白自己怎麼有那麼多的悲傷？無止盡的絕望？ 孤獨、憤怒、害怕、無力感…彷如海洋一樣深的傷痛，源源不絕的自我心輪流淌出來。這絕不是這一世的經驗，而是過去許多的轉世，沒被好好療癒的悲傷印記。哭兩天後，老師找到了我，在電話中她以能量帶領我去用我超抗拒的海洋心缽，去療癒我的心。整個療程結束後，之前那些無盡的悲傷、痛苦、絕望都不見了，而我心輪的愛竟能擴展到前所未有的廣闊！</p><p>回想老師幫我接下水儀式時，她提示我的水儀式是特別療癒心中巨大的悲傷，尤其那些藏在心底深處的悲傷，眼淚必須被釋放掉，心才有更多空間去承載愛。沒想到，我自己就深刻的先走一回了！好感激自己累世那麼多的傷痛，能在此刻一併被轉化，還生出更多愛及力量。每次以水祭司身份執行水儀式時，我都會被深深感動，終於感受到海洋母親的愛是那般深廣，無條件承載著世間一切悲歡喜樂，並為之淨化，然後帶著我們走向愛與平靜、喜悅。</p><h4>Shemaya老師是解封印高手</h4><p>上課前，我好奇去問老師「解封印」是什麼？沒想到在水知識中，老師真的帶我們去解除了個人靈魂的封印！陪我走過轉化的先生也見證了我走過轉化。他很感觸的說看到我被「解封印了」！聽起來很魔法啊！這神奇魔法，也為我們的日常生活帶來晉升。</p><p>課程尾聲的冥想火典中，一扇很大的門出現在我眼前，門上有著非常光亮的十字架。門從兩邊向內推開，內部教堂又新又亮，明亮到我眼睛都快睜不開了。老師說水知識打開了我的心，也更新了我內在的聖殿，這是更新過的、有更多光的聖殿。老師鼓勵我多作療癒，讓人們去觸碰自己內在的神聖與愛。最後我們也見證每位水祭司所給出的個人水儀式，好感動！我不再覺得自己渺小，反而對能給出靈性服務而感到真心喜悅。</p><p>我終於明白老師的水知識，真的不是頭腦層級所能理解的知識了！</p><p>深深感謝在黃金世紀裡，自己能跟隨Shemaya老師學習，從自我療癒到療癒他人，融入合一所帶來的美好。水祭司們的水儀式所帶給世界的所有正向影響也觸動我，專注在療癒時，我們和世界萬物是合一的，我們每個人都是重要的。祈願這世界，所有人都迎向更多的愛與和平</p><p>Om Namah Shivaya</p></div></article></div></div><a class="tlink" href="booking.html?s=水知識">報名或詢問這門課程</a></section>
+<section class="item" id="elements"><div class="item-h"><h2>四大元素與基督之光</h2><a class="fb-link" href="#elements-fb">學員回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/c-elements.webp" width="800" height="800" alt="四大元素與基督之光課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><p>透過與天使群合作，你將潛入大地之心，重溯自己在地球的旅程，那些亞特蘭提斯時期及黑暗時代留下的個人陰影將被消融，在你之內的薩滿力量得以修復整合。</p><p>第五天的基督之光帶你回到萬物合一的愛中，古老的天堂與地球經驗，被整合轉化為黃金世紀的新力量，為你所用。</p><p>來自天堂大地，不同品質的元素重新整合你的身心，為重生做準備。</p><p>過去令你難以在地球扎根的陰影，在此時已被消融。第五天，你隱藏許久的力量和面向，將會在基督之光整合。當你準備好時，Shemaya 會為你取回屬於你個人的靈性天賦。Shemaya 會教你如何使用這獨一無二的神聖天賦或光工具。</p><p>五天的蛻變過程，協助你從舊到全新，打開你薩滿的力量，並和物質世界接軌。你開始和四方的大靈合作，以雙手或呼吸、薩滿吟唱、舞蹈，帶下不同的元素能量，為自己及他人帶來黃金世紀創造性的療癒。</p><p>基督之光整合並更新不同面向的你</p><p>迎回個人天賦力量及團體療癒</p><p>上課方式：現場及視訊同步</p></div><article class="doc testimonial" id="elements-fb"><div class="prose"><h3 class="doc-t">四大元素與基督之光課程學員分享</h3><h4>＊我被天狼星薩滿星光圈粉了</h4><p>從第一天風元素到最後一天的基督之光，我都有著滿滿的感動，彷彿走過千山萬水，穿越不同時空，像剝洋蔥一樣一層又一層，走過了好深的療癒，最後也迎回自己遺忘的面向。</p><p>沒想到課程第一天就直接帶出長期被我忽略的議題，那種長期以來，心很深的孤單、無法融入群體、被誤解的傷心於是我把自己藏起來了。我在接受老師的天狼星金光網絡療癒時，透過螢幕給遠距的我全然的愛的擁抱，當下我全身震顫感動不已，天狼星巨大的愛讓我願意敞開心，將好深好深的悲傷都釋放了。風也清掉我深藏的那些對外在發生的不公不義的憤怒與絕望，這些的古老情緒釋放完，也終結了我最近太陽神經叢的不適。沒想到我就在驚艷和淚水中完成了第一個元素。那些湧出的情緒和釋放都被神聖之愛接住，我很安心，好感動能有老師和夥伴協助與接納。</p><p>沒想到進入火元素，把我更多內在隱藏的議題帶出來。後心輪和後勺浮出的諸多自我批判，還有接收來自他人的批判，幸好這些頑固的信念，都在Shemaya老師的天狼星自我價值星星的星光中轉化了。</p><p>Shemaya老師會協助我們去檢視夥伴需療癒的核心點，透過結合不同元素，以天狼星星光能量綜合為夥伴作療癒工作。這優異的療癒簡直無比快速，還充滿了滋養效果，讓我被老師的天狼星薩滿星光系列圈粉了。</p><p>金光泥土真的有深的愛，她深撫慰我過往在地球上遺留的創傷以及無法原諒的故事。我在愛及淚水中，放手了古老陰影與創傷。如果不是在課程中這樣深入的走一遭，憑我自己是沒辦法看到的，更遑論去作修復療癒。</p><p>每個元素代表的品質，老師耐心帶我們走過，深刻體驗到元素的個別力量與合作帶來的效應。在老師帶領的前世回溯裡，我看到自己是如何跟大地母親有了裂痕，哭得非常傷心的我，竟然在土元素裡得到愛的重生！我一直對土元素充滿抗拒，在土元素這天課程後，我深深感受到大地母親廣大的包容，天地萬物都是愛，讓我願意重新在地球上好好生活。</p><p>最後一天，大家排隊等待Shemaya老師幫個人取回天賦時，我非常焦慮。但是，當老師將它放入我手裡的那刻，我卻忍不住大哭了……那是一種被我遺忘很久了，我終於等到你了的心情！老師說，訊息一下就下來了，好像天賦等不及要回來似的！耶穌說，這是我遺忘很久的紅寶石之心，它可協助療癒哀傷、悲傷、憂鬱、心的創傷等等，也與寬恕有關。</p><p>Shemaya 老師總是毫不保留的傾囊相授，教我們很多療癒師的核心精神及專業技巧，都使我受益匪淺。在夥伴療癒的分享裡，也看到老師天狼星薩滿星光噴霧和四大元素結合，療癒效率是如何加乘的。課程內容都觸碰到每個人身心內藏得很深的情緒。當不舒服的情緒浮現，我偷偷叫苦，但又很快地被轉化掉，透過老師紮實的訓練，許多概念我越來越清楚，在不斷熟加應用後，療癒變得很輕盈愉快。</p><p>老師的「四大元素和基督之光」課程，帶給我和家人完整的療癒技巧，支持著我們的日常生活。它教我如何更輕鬆與天地、大自然作連結，協助我在順流與臣服中，看見一切事件背後的課題與美意，也讓我能穿越古老創傷、清除掉有毒意識及不被愛的印記，送走那些不再服務於我的信念等等……，我的心除了感恩還是感恩！謝謝Shemaya老師、謝謝同學、謝謝大地母親、四元素、謝謝這一切。</p><p>Om Namah Shivaya</p></div></article></div></div><a class="tlink" href="booking.html?s=四大元素與基督之光">報名或詢問這門課程</a></section>
 <section class="item" id="wolf"><h2>狼祭司與熊部落</h2><div class="item-side"><div class="is-ph"><img src="assets/c-wolf.webp" width="800" height="800" alt="狼祭司與熊部落課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>薩滿傳承裡，狼的力量特質是領導者，卓越的引領者、教導者，狼也體現忠誠、獨立、智慧以及和家族群體的連結力。狼有能力為迷途者找到方向，狼族部落也有許多獨特的知識，特別是在藥草療癒的智慧。</p><p>前兩天，我會透過狼部落獨特力量，協助你打開更多自身的奧秘，有關於“我是誰”，”如何跳脫障礙我的枷鎖”，“我能帶給世界什麼禮物“，狼的力量帶你進入內在精神旅程，你將憶起自己曾是大地祭司、薩滿祭司或是神諭者、療癒祭司，或祝禱祭司....無論當時或此時的你，在哪一條神聖道路上，你內在神聖將重啟並充滿光，你的神聖之心，獨特的薩滿的療癒品質被喚醒，被療癒，你迎回自己的力量。我帶你進入狼的部落，以祂的銳利之眼看世界，卓越的狼帶你穿越自身幻象，卸下既有限制，狼的領導力與智慧使你憶起自己，自我賦權並打開你自身的封印。</p><p>透過狼傳承的知識，會進行不同主題的療癒：女性力量、內在和平、自我價值、領導力、白魔法解毒、狼神聖藥草智慧的點化，藥草療癒知識教授，及認出你所屬的部落。</p><p>你將得到以下神聖工具：</p><p>大地火典</p><p>＊金光狼：領導力與自我賦權</p><p>＊夏克緹狼：夏克緹的保護與療癒力</p><p>＊和平藥草：解決衝突 創造內在和平</p><p>＊紫光智慧之火 ：神聖智慧與擴展</p><p>＊狼爪藥草：黑金光的解毒與深度淨化</p><p>與熊同行</p><p>在薩滿傳承裡，熊擁有強大的愛、保護，滋養，療癒力，熊也顯現踏實、直覺力與獨處得到的創意。</p><p>進階的三天內，我將帶你更深的沈入靈魂旅程，連結個人的力量動物，迎回並整合過往的靈魂碎片。熊部落的愛力量使你的心得到深入療癒、提升你的治癒能力與堅毅。你也會得到有關自己的神聖教導，以及有關未來方向的指引。在這個轉化之旅中，你會與五大狼群進行以下主題的療癒：移除內在陰影、古老封印、釋放衝突、治療心很深的遺忘（與自己愛的斷裂）、移除在你之內的黑魔法印記、有關白魔法藥草的教導。</p><p>你將得到以下神聖工具：</p><p>薩滿療癒和諧火典</p><p>抹大拉瑪莉亞火典</p><p>＊金光神聖松子：古老陰影消融與潛能迎回</p><p>＊夏克緹火鳳凰：轉化重生</p><p>＊治心藥草：療癒愛的斷裂，重返你的道路</p><p>＊抹大拉瑪莉亞香膏：神聖療傷膏</p><p>＊紫金光蓮花：神聖保護與校準天堂</p><p>適合對象：想探索內在靈魂奧秘，渴望轉化、療癒成為更完整更自由、快樂的人。喜愛大自然，喜歡薩滿，或是想跟力量動物連結，或是薩滿力量動物是狼、熊的人們</p><p>共5個整天 ，含講義，教材，證書及夏克緹火鳳凰等10瓶能量噴霧，茶點</p></div></div></div><a class="tlink" href="booking.html?s=狼祭司與熊部落">報名或詢問這門課程</a></section>
 <section class="item" id="sirius-ws"><h2>天狼星工作坊</h2><div class="item-side"><div class="is-ph"><img src="assets/c-sirius.webp" width="900" height="675" alt="天狼星工作坊課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>天狼星薩滿星光系統，是2019年由德國大師SunYa協助Shemaya下載五顆星光。隨著個人靈性發展，2022年Shemaya又接下五顆星光。7年來，天狼星的薩滿星光系統常被用在大型課程及個人療程中，支持許多人的身心快速轉化。</p><p>宇宙層級高振動頻率的天狼星光訊息，能打開人類窄化與限制性的認知，易與宇宙萬物合一，進而體驗無二元對立帶來的合一智慧。其光訊息以粒子狀態與人體內的水分子共振，能淨化並形成水訊號重組，促進身體器官與器官之間的溝通與合作，對身體有實際協助。</p><p>Shemaya現在以工作坊形式分享天狼星星際的知識與智慧，它能修復個人累世在地球的轉世經驗，並開啟個人靈魂本有的內在智慧。</p><p>兩個整天的課程，會走十個主題來修復個人的靈魂旅程：</p><p>1, 在心中種下愛的種子</p><p>2,清除腦霧，聚焦於真實</p><p>3,校準你的身心能量系統</p><p>4,放手過去失敗的經驗與心痛，修復靈魂印記</p><p>5,移除難以表達自我的限制</p><p>6,克服分離及孤獨，回到萬物合一</p><p>7,移除不值得的陰影</p><p>8,將不同轉世已發展的靈魂面向整合為全新力量</p><p>9,看見並釋放掉你已知或不知的，潛藏的僵化想法或經驗。</p><p>10,來自源頭之光的支持與保護</p><p>課程贈送十瓶天狼星星光精華</p><p>現場與線上遠距同步上課</p><p>歡迎詢問最新開課日期</p></div></div></div><a class="tlink" href="booking.html?s=天狼星工作坊">報名或詢問這門課程</a></section>
 <h2 class="course-group">初階課程</h2>
-<section class="item" id="crystal"><h2>薩滿水晶療癒</h2><div class="item-side"><div class="is-ph"><img src="assets/c-crystal.webp" width="800" height="800" alt="薩滿水晶療癒課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>水晶礦石是光的聚合體，無論被展開在空間內丶戴在身上，它的光都在運作。來自大地母親的水晶礦石，自古以來有著無窮的療癒力量，祖先們拿它們來入藥丶治病，也用水晶礦石來連結天地丶作祭祀，建蓋神廟，甚至藉水晶光頻的保護力量隨時護身。</p><p>也許你收集不少水晶，或是讀了書本上的水晶知識，仍不易感覺到水晶實際的能量。你想知道什麼時刻，該用什麼水晶來支持自己嗎?</p><p>想更了解自己的身心語言與水晶訊息嗎?</p><p>想學習以水晶來做療癒的專業技巧嗎?</p><p>具有多年教學經驗的Shemay老師，會從不同硬度的水晶礦石如何影響人體健康，以及水晶光波如何影響人們的脈輪及光體開始，綜合水晶的科學資訊、古老薩滿智慧、列木尼亞古老知識教學，再併入專業水晶光排列療法，以主題性的脈輪教學一直深入到水晶的靈性光能，歡迎對身心療育有興趣的你，來學習這門有趣又實用的療癒藝術。</p><p>課程內容：</p><p>1.認識各大水晶礦物水晶，品質鍳定晶系丶結構解理及生物能磁場判定水晶用途</p><p>2,水晶對身體系統的影響，水晶儲存與記憶原理/淨化方式</p><p>3.全脈輪水晶排列系統</p><p>4,由海底輪，臍輪一直到頂輪的七脈輪主題療癒</p><p>5,解碼身心的水晶礦石</p><p>6,找到支持自己的水晶</p><p>7,實際接收各式的水晶光能</p><p>8,水晶能量開啟與實作</p><p>9,薩滿水晶療癒技巧</p><p>為期四個整天的課程</p><p>台北現場/線上同步上課</p><p>Shemaya 水晶相關的資歴：</p><p>*聖火傳承靈性大師/靈性老師</p><p>*浴光之路帶領人</p><p>*薩滿四元素與基督之光課程帶領人</p><p>*神聖自然藥草祭司課程帶領人</p><p>*薩滿狼祭司與熊部落訓練帶領人</p><p>*解密薩滿潛能“水知識”課程帶領人</p><p>*德國阿法氣風水顧問</p><p>*夏威夷卡崔娜認證水晶療癒師</p><p>*薩滿水晶療癒師</p><p>課程內容為現場與缐上同步授課，老師會備有各式水晶實際給予療癒與示範</p></div></div></div><a class="tlink" href="booking.html?s=薩滿水晶療癒">報名或詢問這門課程</a></section>
+<section class="item" id="crystal"><h2>薩滿水晶療癒訓練</h2><div class="item-side"><div class="is-ph"><img src="assets/c-crystal.webp" width="800" height="800" alt="薩滿水晶療癒訓練課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>水晶礦石是光的聚合體，無論被展開在空間內丶戴在身上，它的光都在運作。來自大地母親的水晶礦石，自古以來有著無窮的療癒力量，祖先們拿它們來入藥丶治病，也用水晶礦石來連結天地丶作祭祀，建蓋神廟，甚至藉水晶光頻的保護力量隨時護身。</p><p>也許你收集不少水晶，或是讀了書本上的水晶知識，仍不易感覺到水晶實際的能量。你想知道什麼時刻，該用什麼水晶來支持自己嗎?</p><p>想更了解自己的身心語言與水晶訊息嗎?</p><p>想學習以水晶來做療癒的專業技巧嗎?</p><p>具有多年教學經驗的Shemay老師，會從不同硬度的水晶礦石如何影響人體健康，以及水晶光波如何影響人們的脈輪及光體開始，綜合水晶的科學資訊、古老薩滿智慧、列木尼亞古老知識教學，再併入專業水晶光排列療法，以主題性的脈輪教學一直深入到水晶的靈性光能，歡迎對身心療育有興趣的你，來學習這門有趣又實用的療癒藝術。</p><p>課程內容：</p><p>1.認識各大水晶礦物水晶，品質鍳定晶系丶結構解理及生物能磁場判定水晶用途</p><p>2,水晶對身體系統的影響，水晶儲存與記憶原理/淨化方式</p><p>3.全脈輪水晶排列系統</p><p>4,由海底輪，臍輪一直到頂輪的七脈輪主題療癒</p><p>5,解碼身心的水晶礦石</p><p>6,找到支持自己的水晶</p><p>7,實際接收各式的水晶光能</p><p>8,水晶能量開啟與實作</p><p>9,薩滿水晶療癒技巧</p><p>為期四個整天的課程</p><p>台北現場/線上同步上課</p><p>Shemaya 水晶相關的資歴：</p><p>*聖火傳承靈性大師/靈性老師</p><p>*浴光之路帶領人</p><p>*薩滿四元素與基督之光課程帶領人</p><p>*神聖自然藥草祭司課程帶領人</p><p>*薩滿狼祭司與熊部落訓練帶領人</p><p>*解密薩滿潛能“水知識”課程帶領人</p><p>*德國阿法氣風水顧問</p><p>*夏威夷卡崔娜認證水晶療癒師</p><p>*薩滿水晶療癒師</p><p>課程內容為現場與缐上同步授課，老師會備有各式水晶實際給予療癒與示範</p></div></div></div><a class="tlink" href="booking.html?s=薩滿水晶療癒訓練">報名或詢問這門課程</a></section>
 <section class="item" id="flower"><h2>脈輪花精卡療癒師</h2><div class="item-side"><div class="is-ph"><img src="assets/c-flower.webp" width="800" height="1071" alt="脈輪花精卡療癒師課程" loading="lazy"></div><div class="is-tx"><div class="prose"><p>也許你也有這套與眾不同的療癒脈輪的牌卡，你想要學習完整的花精脈輪卡療癒嗎？</p><p>經過能量化的阿卡莎脈輪花精療癒卡，能帶你走入更深的自我探索，開啟與靈魂對話。49張源自德國Su Ya老師的&lt;神聖阿卡莎脈輪花精療癒卡&gt;， 攜帶著蓮花純淨的品質，連結了植物在天界星光芽種子的資訊，帶有植物花朵的高頻意識及獨特的星光種子資訊；透過愛與美的純淨之光，去協助人們以消融脈輪所儲存的舊故事，化解並阻塞釋放來自負面經驗及情緒的捆綁，引導人們去檢視自身的生命議題，進行自我內在的深度對話，消釐清事物核心，消融舊有限制，將和諧與美的共振帶入生命之流。</p><p>黃金世紀的三日課程是愛的魔法~</p><p>進入黃金世紀，所有的轉化都更加快速、輕盈，阿卡莎花精牌陣也有全新編排的三天授證課程，你與星光種子訊息及植物花朵建立連結，主題式的伙伴療癒練習，能快速調頻脈輪，重新建立新的丶溫柔和諧的能量流動，牌陣的花光能療癒丶補足脈輪所需的愛，協助人們得以展現真實的面貌，她使人們在充滿愛與信任中，得以接受生命給予的各種禮物。</p><p>訓練中教授的各式牌陣主題內容，將帶來不同面向的自我療育，也提升身心的振動頻率，使人們能更顺利進入高頻的黃金世紀。畢業後的授證牌陣療癒師，可給出專業療癒的服務及諮詢。</p><p>【課程內容】</p><p>1.啟動與點化:啟動花卡中的火蓮花，阿卡莎花精療癒聖殿的點化，與守護神性協助者們連結丶開始和天使及花仙子們更深的連結</p><p>2.療癒牌陣的運用，包含四位大師牌陣、陰陽平衡與療癒牌陣、神性之母、神性之父、七位蓮花天使牌陣、十二位智者牌陣、七脈輪平衡與充電...等。</p><p>3.黃金世紀全新牌陣練習與運用，包括太陽聖殿牌陣丶金光天使牌陣、與靈性協助者合一牌陣、聖母瑪利亞牌陣、Avatar的七道光牌陣、新世紀的厄色尼牌陣。</p><p>4.學習如何淨化牌卡</p><p>5.介紹阿瓦塔拉花精卡</p><p>6.學習設置療癒的曼達拉，用以療癒或靜心，去支持自我脈輪能量丶工作或生命課題</p><p>7.學習運用不同的牌陣，搭配阿卡莎花精去支持所進行的自我療癒，舒緩身心壓力及平衡情緒</p><p>8.透過夥伴練習，學習以阿卡莎脈輪花精療癒卡給出靈性相關服務丶諮商</p><p>9.學習解讀花卡訊息，在生活中隨時了解自己或親友正在經歷什麼?並有能力提供合適的照顧技巧</p><p>10.協助面對關係、家庭、個人方向、生涯規劃、情緒等重要議題</p><p>11.對象廣泛：嬰幼兒丶兒童丶家人丶寵物丶空間... 任何時刻讓更多的愛支持丶滋養自己</p><p>學費：</p><p>完整三天的授證訓練，$14,000元（包含：全彩講義、授證證書、全新一套花卡）</p><p>帶領人Shemaya</p></div></div></div><a class="tlink" href="booking.html?s=脈輪花精卡療癒師">報名或詢問這門課程</a></section>
 <section class="item" id="herb-care"><h2>天堂光植物與身心</h2><div class="item-side"><div class="is-ph"><div class="ph-empty">課程圖待提供</div></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div><a class="tlink" href="booking.html?s=天堂光植物與身心">報名或詢問這門課程</a></section>
 </div>
@@ -495,6 +526,24 @@ figure.pcard:hover img{opacity:1}
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>
+  <div class="footer-info">
+    <div class="fw-in">
+      <section class="widget fi"><h2 class="widget-title">購物須知</h2>
+        <h3>購物流程</h3><p>選購商品 → 加入購物車 → 填寫資料 → 付款 → 訂購完成</p>
+        <h3>付款方式</h3><ol><li>ATM轉帳 銀行實體ATM轉帳 / 網路轉帳</li><li>超商代碼付款 前往超商便利生活站機台 (如: 7-11 ibon) 至代碼繳費功能輸入代碼，即可印出繳費單 (限制總金額$20,000以下)</li></ol>
+        <h3>取消訂單</h3><p>訂單未付款及未出貨前，請進入「我的帳戶」 → 「訂單記錄查詢」即可自行取消訂單。</p>
+        <h3>寄件方式</h3><p>郵局掛號，或超商7-11 或全家</p>
+        <h3>運費</h3><p>一般客戶訂購商品總金額超過新台幣5000元(含)，享免運。</p><p>未滿新台幣$5000元時，消費者需自付運費。</p>
+        <h3>訂單查詢</h3><p>完成訂購後，請進入: 「我的帳戶」 → 「訂單記錄查詢」</p>
+      </section>
+      <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
+        <h3>出貨及配送說明</h3><p>配送地區為台灣本島地區，其他地區或國家請先寫信跟我們聯繫，國際運費實報實銷。</p><p>商品出貨後一般可於1~3個工作天內送達 (實際送達時間仍將依貨流公司的配送量調節，配送狀況可查詢貨物追蹤查詢網頁)</p>
+      </section>
+      <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
+        <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
+      </section>
+    </div>
+  </div>
   <div class="site-info">&copy; 2026 SHEMAYA 夏克緹薩滿的金色大門</div>
 </footer>
 <script>
@@ -503,7 +552,6 @@ figure.pcard:hover img{opacity:1}
   var menu = document.getElementById('menu');
   var btn = document.getElementById('menuBtn');
 
-  // desktop dropdown: limit height to space left below the item
   function fit(li) {
     var sub = li.querySelector('.sub');
     if (!sub || mq.matches) return;
@@ -521,7 +569,6 @@ figure.pcard:hover img{opacity:1}
   window.addEventListener('resize', refit);
   window.addEventListener('scroll', refit, { passive: true });
 
-  // mobile menu
   function closeMenu() {
     if (!menu.classList.contains('open')) return;
     menu.classList.remove('open');
@@ -538,7 +585,6 @@ figure.pcard:hover img{opacity:1}
     var bar = document.querySelector('.nav-bar');
     var navTop = bar.getBoundingClientRect().top;
     if (open && navTop > 0) {
-      // bring the bar to the top so the open menu gets the full screen height
       window.scrollTo({ top: window.scrollY + navTop, behavior: 'instant' });
     }
     fitMenu();
@@ -566,7 +612,6 @@ figure.pcard:hover img{opacity:1}
     document.querySelectorAll('.sub-toggle').forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
   });
 
-  // horizontal row
   var row = document.getElementById('shopRow');
   document.querySelectorAll('.row-ctrl button').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -574,6 +619,49 @@ figure.pcard:hover img{opacity:1}
       row.scrollBy({ left: row.clientWidth * 0.9 * Number(b.dataset.dir), behavior: reduce ? 'auto' : 'smooth' });
     });
   });
+
+  var gal = document.getElementById('galRow');
+  if (gal) {
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var hold = false, seen = false, touchAt = 0;
+    var galStep = function (dir) {
+      var fig = gal.querySelector('figure');
+      var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
+      var max = gal.scrollWidth - gal.clientWidth;
+      var x = gal.scrollLeft + dir * w;
+      if (dir > 0 && gal.scrollLeft >= max - 2) x = 0;
+      else if (dir < 0 && gal.scrollLeft <= 2) x = max;
+      gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
+    };
+    document.querySelectorAll('.gal-btn').forEach(function (b) {
+      b.addEventListener('click', function () { galStep(Number(b.dataset.dir)); });
+    });
+    var galBox = gal.parentNode;
+    galBox.addEventListener('mouseenter', function () { hold = true; });
+    galBox.addEventListener('mouseleave', function () { hold = false; });
+    galBox.addEventListener('focusin', function () { hold = true; });
+    galBox.addEventListener('focusout', function () { hold = false; });
+    gal.addEventListener('touchstart', function () { touchAt = Date.now(); }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(gal);
+    } else {
+      seen = true;
+    }
+    setInterval(function () {
+      if (hold || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
+      galStep(1);
+    }, 4000);
+  }
+
+  var nlBtn = document.getElementById('nlBtn');
+  if (nlBtn) {
+    var nlSend = function () {
+      var v = document.getElementById('nlEmail').value.trim();
+      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '測試站示範：資料不會送出。' : '請輸入正確的 Email。';
+    };
+    nlBtn.addEventListener('click', nlSend);
+    document.getElementById('nlEmail').addEventListener('keydown', function (e) { if (e.key === 'Enter') nlSend(); });
+  }
 })();
 </script>
 <div id="page-end" hidden></div>

@@ -5,7 +5,7 @@
 <link rel="expect" href="#page-end" blocking="render">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>靈魂藍圖解碼｜Shemaya 夏克緹薩滿的金色大門</title>
+<title>靈魂藍圖與療癒｜Shemaya 夏克緹薩滿的金色大門</title>
 <meta name="description" content="Shemaya 一對一深度療癒、身心探索、靈性訓練授證課程與靈性商店。">
 <link rel="icon" type="image/webp" href="assets/logo-gold.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,19 +26,21 @@ a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 ul{list-style:none}
 
-/* ===== header ===== */
+
 .site-header{display:contents}
-.site-title{text-align:center;padding:35px 20px}
+
+.site-title{text-align:center;padding:20px 20px}
 .site-title a{display:inline-block;vertical-align:top}
 .site-title{line-height:0}
-.site-title img{width:790px;height:auto}
+.site-title img{width:600px;height:auto}
 
 .nav-bar{position:sticky;top:0;z-index:50;background:var(--bg);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .nav-in{position:relative;display:flex;justify-content:center;align-items:center;max-width:1440px;margin:0 auto;padding:0 150px}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
-.menu>li+li{margin-left:33px}
-.menu>li+li::before{content:"/";position:absolute;left:-20px;top:24px;color:#bbb}
+
+.menu>li+li{margin-left:30px}
+.menu>li+li::before{content:"/";position:absolute;left:-18px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -62,10 +64,10 @@ ul{list-style:none}
 .menu-toggle,.mbook,.sub-toggle{display:none}
 
 
-/* ===== banner ===== */
+
 .banner{width:100%;height:max(180px,calc(100vw * 800 / 2880));background:var(--tint);display:flex;align-items:center;justify-content:center;color:var(--ink-sub);font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-align:center;padding:0 16px}
 
-/* ===== sections ===== */
+
 .sec{padding:var(--sec) 0}
 .sec.alt{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .wrap{max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding:0 var(--gut)}
@@ -74,7 +76,7 @@ ul{list-style:none}
 .sec-head{margin-bottom:56px;padding-bottom:24px;border-bottom:1px solid var(--line)}
 .sec-head.row-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
 
-/* services */
+
 .svc{display:grid;grid-template-columns:repeat(8,1fr);gap:40px 32px}
 .svc li{grid-column:span 2;min-width:0}
 .svc li:nth-child(5){grid-column:2/span 2}
@@ -86,7 +88,7 @@ ul{list-style:none}
 .svc h3{font-size:20px;font-weight:700;letter-spacing:.06em;margin-top:16px;text-align:center;transition:color .2s}
 .svc a:hover h3,.svc a:focus-visible h3{color:var(--accent-dark)}
 
-/* courses */
+
 .course-group{display:flex;align-items:center;gap:16px;font-size:22px;font-weight:700;line-height:1.4;letter-spacing:.06em;margin:72px 0 32px}
 .course-group.first{margin-top:0}
 .course-group::after{content:"";flex:1;height:1px;background:var(--line)}
@@ -101,7 +103,7 @@ ul{list-style:none}
 .course p{color:var(--ink-sub);font-size:17px;line-height:1.8}
 .course .more{display:inline-block;margin-top:12px;color:var(--accent-dark);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid currentColor;padding-bottom:2px}
 
-/* shop row */
+
 .row-ctrl{display:flex;gap:8px;flex-shrink:0}
 .row-ctrl button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);cursor:pointer;font-size:16px;color:var(--ink);transition:border-color .2s,color .2s}
 .row-ctrl button:hover{border-color:var(--accent);color:var(--accent-dark)}
@@ -112,7 +114,7 @@ ul{list-style:none}
 .row .noimg::before{content:"圖待提供"}
 .row span{display:block;text-align:center;padding-top:16px;font-size:16px;letter-spacing:.06em}
 
-/* about */
+
 .about{display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:center}
 .about .ph{aspect-ratio:3/4;background:var(--tint)}
 .about .ph img{width:100%;height:100%;object-fit:cover}
@@ -122,13 +124,13 @@ ul{list-style:none}
 .btn:hover{background:#6f5523}
 .tlink{color:var(--accent-dark);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.08em;border-bottom:1px solid currentColor;padding-bottom:2px}
 
-/* free */
+
 .free{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
 .free figure{min-width:0}
 .free img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--tint)}
 .free figcaption{margin-top:12px;font-size:15px;text-align:center;letter-spacing:.06em}
 
-/* footer */
+
 .footer-widgets{background:var(--white);border-top:1px solid var(--line);padding:72px 0}
 .fw-in{max-width:calc(var(--wrap) + var(--gut)*2);margin:0 auto;padding:0 var(--gut);display:grid;grid-template-columns:repeat(3,1fr);gap:56px}
 .widget-title{display:inline-block;font-family:var(--sans);font-size:13px;font-weight:900;letter-spacing:.12em;color:var(--ink);padding-bottom:4px;border-bottom:2px solid var(--accent);margin-bottom:24px}
@@ -137,26 +139,26 @@ ul{list-style:none}
 .fw-in li a:hover{color:var(--accent-dark)}
 .site-info{background:var(--ink);color:#fff;text-align:center;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;padding:32px 16px}
 
-/* ===== responsive ===== */
+
 @media (max-width:1436px){
-  .menu>li+li{margin-left:21px}
-  .menu>li+li::before{left:-13px}
+  .menu>li+li{margin-left:18px}
+  .menu>li+li::before{left:-12px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:16px}
-  .menu>li+li::before{left:-11px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-10px}
 }
 @media (max-width:1260px){
   .menu>li{font-size:14px}
-  .menu>li+li{margin-left:13px}
-  .menu>li+li::before{left:-9px}
+  .menu>li+li{margin-left:11px}
+  .menu>li+li::before{left:-8px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
   .menu>li{font-size:12.5px}
-  .menu>li+li{margin-left:12px}
-  .menu>li+li::before{left:-9px}
+  .menu>li+li{margin-left:10px}
+  .menu>li+li::before{left:-8px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -234,7 +236,24 @@ ul{list-style:none}
   *,*::before,*::after{transition:none !important;animation:none !important}
 }
 
-/* ===== 測試站內頁 ===== */
+
+
+.footer-info{background:var(--white);border-top:1px solid var(--line);padding:48px 0 56px}
+.fi{font-family:var(--sans);font-size:14px;line-height:1.75;color:var(--ink-sub)}
+.fi h3{margin:16px 0 4px;font-family:var(--sans);font-size:14px;font-weight:700;color:var(--ink);letter-spacing:.04em}
+.fi .widget-title+h3{margin-top:0}
+.fi p{margin:0 0 4px}
+.fi ol{margin:0 0 4px;padding-left:1.4em;list-style:decimal}
+.fi ol li{margin:2px 0}
+.nl-l{display:block;font-weight:700;color:var(--ink)}
+.nl-row{display:flex;gap:8px;margin-top:4px}
+.nl-row input{flex:1;min-width:0;height:42px;padding:0 12px;border:1px solid var(--line);background:#fff;font:inherit;color:var(--ink)}
+.nl-row button{flex:none;height:42px;padding:0 18px;border:0;background:var(--accent);color:#fff;font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.1em;cursor:pointer}
+.nl-row button:hover{background:var(--accent-dark)}
+.nl-msg{min-height:1.75em;margin-top:8px}
+
+
+
 [hidden]{display:none !important}
 .test-bar{background:var(--ink);color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:.08em;text-align:center;padding:6px 16px}
 .hero{background:var(--white);border-bottom:1px solid var(--line);padding:56px 0}
@@ -308,7 +327,7 @@ ul{list-style:none}
   .pd{grid-template-columns:1fr;gap:24px}
 }
 
-/* ===== 10/17 新增：文章層級、心得、商品介紹、預約日曆 ===== */
+
 .prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
 .prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
 .prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
@@ -333,7 +352,7 @@ ul{list-style:none}
 .cal-head button{width:44px;height:44px;border:1px solid var(--line);background:var(--white);font-size:22px;color:var(--ink);cursor:pointer}
 .cal-head button:disabled{opacity:.35;cursor:default}
 .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);grid-template-rows:27px repeat(6,44px);gap:4px}
-/* 星期列＋六週固定列高：日曆由程式畫出前就先佔好高度，網路分段載入時下方欄位不會被往下推 */
+
 .cal-grid .wd{text-align:center;font:13px var(--sans);color:var(--ink-sub);padding:4px 0}
 .cal-grid .day{height:44px;border:1px solid transparent;background:transparent;font:15px var(--sans);color:#a49d92}
 .cal-grid button.day:disabled{cursor:default}
@@ -355,11 +374,11 @@ ul{list-style:none}
   .cal-grid .day{height:40px;font-size:14px}
   .slot{flex:1;min-width:0}
 }
-/* 只展示照片的商品卡（保健排毒系列暫不販售）：不是連結，不做滑過效果 */
+
 figure.pcard:hover img{opacity:1}
-/* 頁面大標題用 90% 黑（客戶 10/17） */
+
 .sec-title{color:#1a1a1a}
-/* 空間能量風水：長文在左，右側三張圖垂直排列；手機改為文章上方三張並排 */
+
 .side-grid{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
 .side-ph{display:grid;gap:20px;grid-column:2;grid-row:1}
 .side-tx{grid-column:1;grid-row:1;min-width:0}
@@ -373,8 +392,8 @@ figure.pcard:hover img{opacity:1}
   .side-ph{grid-template-columns:repeat(3,1fr);gap:8px}
   .side-ph.n4{grid-template-columns:repeat(2,1fr)}
 }
-/* 本頁項目目錄移到主圖區標題下方（客戶 10/19：身心探索等頁主圖旁空白太大）；桌機與主圖並排，手機排在主圖下方 */
-/* 第一列只取標題本身高度、剩餘高度給目錄列：網路分段載入時目錄晚到也不會改變標題位置（10/19 線上量到置底對齊造成位移） */
+
+
 .hero-in.has-ph.has-toc{grid-template-rows:auto 1fr;align-items:start;row-gap:0}
 .has-toc>.hero-tx{grid-column:1;grid-row:1;align-self:start;padding-top:24px}
 .has-toc>.hero-ph{grid-column:2;grid-row:1/3}
@@ -384,16 +403,21 @@ figure.pcard:hover img{opacity:1}
   .has-toc>.hero-ph{grid-row:1}
   .has-toc>.toc{grid-column:1/-1;margin-top:24px}
 }
-/* 生命轉彎為天命鋪路：文末兩個按鈕 */
+
+.hero-in.has-ph.ph-land{grid-template-columns:1fr 400px}
+.ph-land>.hero-ph{aspect-ratio:4/3}
+@media (max-width:1024px){ .hero-in.has-ph.ph-land{grid-template-columns:1fr 300px} }
+@media (max-width:767px){ .hero-in.has-ph.ph-land{grid-template-columns:1fr 150px} }
+
 .cta2{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn.btn-o{background:transparent;color:var(--accent-dark);box-shadow:inset 0 0 0 1px var(--accent-dark)}
 .btn.btn-o:hover{background:var(--tint)}
 @media (max-width:767px){ .cta2 .btn{flex:1 1 100%;text-align:center;padding:14px 20px} }
-/* 薩滿課程目錄分組（客戶 10/19：課程/工作坊、個案/療程） */
+
 .toc .toc-h{flex-basis:100%;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--ink-sub)}
 .toc .toc-h~.toc-h{margin-top:10px}
-/* 客戶 10/20：每個療程項目／課程都是說明文字在左、主圖在右（同空間能量風水頁的右欄寬）；手機主圖排在文字上方 */
-/* 圖在 DOM 中排在文字之前，桌機以格線放到右欄：網路分段載入時手機版不會因圖晚到而推擠文字 */
+
+
 .item-side{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:48px;align-items:start}
 .is-ph{grid-column:2;grid-row:1;display:grid;gap:16px}
 .is-tx{grid-column:1;grid-row:1;min-width:0}
@@ -407,18 +431,25 @@ figure.pcard:hover img{opacity:1}
   .is-ph,.is-tx{grid-column:auto;grid-row:auto}
   .is-ph{max-width:560px}
 }
-/* 客戶 10/21：區段標題右側「個案回饋」按鈕（金色字），點了捲到該區段個案回饋開頭；寬度不夠時換到標題下方 */
+
 .item-h{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;margin-bottom:24px}
 .item-h>h2{font-size:24px;line-height:1.4;font-weight:700;letter-spacing:.04em}
-.fb-link{display:inline-block;padding:5px 16px;border:1px solid var(--accent);color:var(--accent-dark);font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.1em;line-height:1.6}
-.fb-link:hover,.fb-link:focus-visible{background:var(--tint)}
-/* 客戶 10/21 14:45：各種創傷釋放標題右側三個子項連結；靈魂藍圖解析與療癒文尾右側「我要預約」 */
-.sub-links{display:flex;flex-wrap:wrap;gap:8px 12px}
+.fb-link{display:inline-block;padding:2px 0;color:var(--accent-dark);font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.08em;line-height:1.6;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color .15s}
+.fb-link:hover,.fb-link:focus-visible{text-decoration-color:currentColor}
+
+.sub-links{display:flex;flex-wrap:wrap;gap:4px 20px}
+
+.hero-fb{margin-top:12px}
+
+.prose ul.dots{list-style:disc;margin:0 0 12px;padding-left:1.4em;max-width:42em}
+.prose ul.dots li{margin:2px 0}
 .cta-r{text-align:right;margin-top:28px}
 @media (max-width:767px){ .cta-r .btn{display:block;text-align:center;padding:14px 20px} }
-/* 客戶 10/21 14:45：各種業力釋放右欄三張圖（原比例直排）；手機三張並排在文字上方 */
-@media (max-width:767px){ .is-ph.trio{max-width:none;grid-template-columns:repeat(3,1fr);gap:8px;align-items:start} }
-/* 客戶 10/21：光屋、花卡、髮梳售價右邊「我要訂購」（手機可換行） */
+
+
+@media (max-width:767px){ .is-ph.multi{max-width:none;grid-template-columns:repeat(2,1fr);gap:8px;align-items:start}
+  .is-ph.multi img:last-child:nth-child(odd){grid-column:1/-1} }
+
 .buyline{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:8px}
 .buyline span{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink)}
 @media (max-width:767px){
@@ -426,6 +457,7 @@ figure.pcard:hover img{opacity:1}
   .item-h>h2{font-size:21px}
 }
 </style>
+<script>(function(){var m={"five-stages": "#blueprint"};function go(){var k=location.hash.slice(1);if(!Object.prototype.hasOwnProperty.call(m,k))return;var t=m[k];if(t.charAt(0)==="#"&&document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){location.replace(t)});else location.replace(t)}go();window.addEventListener("hashchange",go)})();</script>
 </head>
 <body>
 <div class="test-bar">測試站：僅供確認版面與連結，內容與價格以正式站為準</div>
@@ -441,7 +473,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
-            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#tara">度母蓮花瑜伽</a></li><li><a href="explore.html#unblock">消除停滯堵塞</a></li>
+            <li><a href="explore.html#status">個人狀態諮詢</a></li><li><a href="explore.html#path">豐盛生命願景解析</a></li><li><a href="explore.html#belief">負向信念刪除</a></li><li><a href="explore.html#relation">關係結構療癒</a></li><li><a href="explore.html#tara">個人化度母蓮花瑜伽</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="yuguang.html" aria-haspopup="true">浴光之路</a>
           <div class="dd"><ul class="sub">
@@ -449,21 +481,21 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
+            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="courses.html#water">水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒訓練</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程與療程</a>
           <div class="dd"><ul class="sub">
             <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#fire-snake">薩滿聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#session">預約你的薩滿療程</a></li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
-        <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖解碼</a>
+        <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖與療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="soul.html#five-stages">生命五階段</a></li><li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
+            <li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
           </ul></div></li>
         <li><a href="space.html">空間能量風水</a></li>
         <li><a href="videos.html">影音課程</a></li>
         <li class="has-sub"><a href="shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">水晶設計區</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
+            <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
@@ -472,12 +504,11 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖解碼</nav><h1 class="sec-title">靈魂藍圖解碼</h1></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖解碼"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#blueprint">靈魂藍圖解析與療癒</a></li><li><a href="#five-stages">生命五階段</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li><li><a href="#feedback">解讀回饋</a></li></ul></nav></div></section>
+<section class="hero"><div class="wrap hero-in has-ph has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 靈魂藍圖與療癒</nav><h1 class="sec-title">靈魂藍圖與療癒</h1><p class="hero-fb"><a class="fb-link" href="#feedback">個案回饋</a></p></div><div class="hero-ph"><img src="assets/sv-soul.webp" width="900" height="1200" alt="靈魂藍圖與療癒"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#blueprint">靈魂藍圖解析與療癒</a></li><li><a href="#partner">伴侶感情關係解碼</a></li><li><a href="#fortune">人生大運流年運勢</a></li><li><a href="#timeline">六個月時間線大師解讀</a></li></ul></nav></div></section>
 <div class="wrap inner">
-<section class="item" id="blueprint"><h2>靈魂藍圖解析與療癒</h2><div class="item-side"><div class="is-ph"><img src="assets/x-blueprint.webp" width="900" height="1200" alt="靈魂藍圖解碼 解讀你的人生藍圖" loading="lazy"></div><div class="is-tx"><div class="prose"><p>每個人誕生的時間點都透露個人此生的靈魂藍圖，透過去解析個人很多組的密碼組合，其中的每一組都有其強大力量，對此人都能產生正面及負面的影響力，而造就不同的人生劇本。靈魂藍圖是我們在投生到地球前自己所設計好的考卷，透過一連串的考題去磨練心智，去成就智慧。有些人的考題很高階困難，有的人考題比較輕鬆。整體來說，個人主修功課就是個人過去都還沒學會的，所以對當事人而言都是較困難的。考不過的人生課題，就下輩子繼續修，一直持續沒過關的課題，往往會越加沉重棘手。我們主修密碼倘若能修得好，靈魂所帶來的天賦就能打開，人生各方面也能有所躍進。</p><p>Shemaya提供的靈魂藍圖解析套組，融合不同領域的專業，及個人豐富的人生歷練，以專業療癒師的能力，能讓你更知曉自己的心性、行為模式，如何了形塑自己的價值觀、人生觀，揭露所隱藏的個人優勢與弱點。</p><p>能確實掌握生命中所有的重點、該努力的方向。當你越了解自己的特質、慣性、惰性，面對重要選擇時，就越能有所覺察與有精準的下手處，而少一些盲目與重複。</p><p>療程內容：個人靈魂藍圖的人生計劃解析：包含原生家庭、幼年、青少年期、成年、中年期與老年期的各階段裡，你可能經驗到的人生考題，因個性造成的缺點與障礙，如何排除困難，如何穿越考題。解析也包含了個人對情感的行為模式，安全感、金錢觀、信任議題、與親密關係的建構，人生觀等如何影響你的家庭或職場成就。</p><p>接著我們再透過解析的內人做諮商談話，我會抓出你最重要的卡點，為你做能量工作，協助釋放深植在你腦袋的錯誤信念，讓你能夠將新的，對你完整而有益的人生藍圖，一步步真正落實在你的生活裡。</p><p>療育內容包含個人內在心性剖析、人生藍圖計畫深度解讀，最棒的還有對你很重要的能量清理療程，整個專案內容是很重要而且非常超值的，建議每個人一生最少要做一次。</p></div><p class="cta-r"><a class="btn" href="booking.html?s=靈魂藍圖解析與療癒">我要預約</a></p></div></div></section>
-<section class="item" id="five-stages"><h2>生命五階段</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=生命五階段">預約或詢問這個項目</a></section>
+<section class="item" id="blueprint"><div class="item-h"><h2>靈魂藍圖解析與療癒</h2><a class="fb-link" href="#feedback">個案回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-blueprint.webp" width="900" height="1200" alt="靈魂藍圖解碼 解讀你的人生藍圖" loading="lazy"></div><div class="is-tx"><div class="prose"><p>每個人誕生的時間點都透露個人此生的靈魂藍圖，透過去解析個人很多組的密碼組合，其中的每一組都有其強大力量，對此人都能產生正面及負面的影響力，而造就不同的人生劇本。靈魂藍圖是我們在投生到地球前自己所設計好的考卷，透過一連串的考題去磨練心智，去成就智慧。有些人的考題很高階困難，有的人考題比較輕鬆。整體來說，個人主修功課就是個人過去都還沒學會的，所以對當事人而言都是較困難的。考不過的人生課題，就下輩子繼續修，一直持續沒過關的課題，往往會越加沉重棘手。我們主修密碼倘若能修得好，靈魂所帶來的天賦就能打開，人生各方面也能有所躍進。</p><p>Shemaya提供的靈魂藍圖解析套組，融合不同領域的專業，及個人豐富的人生歷練，以專業療癒師的能力，能讓你更知曉自己的心性、行為模式，如何了形塑自己的價值觀、人生觀，揭露所隱藏的個人優勢與弱點。</p><p>能確實掌握生命中所有的重點、該努力的方向。當你越了解自己的特質、慣性、惰性，面對重要選擇時，就越能有所覺察與有精準的下手處，而少一些盲目與重複。</p><p>療程內容：個人靈魂藍圖的人生計劃解析：包含原生家庭、幼年、青少年期、成年、中年期與老年期的各階段裡，你可能經驗到的人生考題，因個性造成的缺點與障礙，如何排除困難，如何穿越考題。解析也包含了個人對情感的行為模式，安全感、金錢觀、信任議題、與親密關係的建構，人生觀等如何影響你的家庭或職場成就。</p><p>接著我們再透過解析的內人做諮商談話，我會抓出你最重要的卡點，為你做能量工作，協助釋放深植在你腦袋的錯誤信念，讓你能夠將新的，對你完整而有益的人生藍圖，一步步真正落實在你的生活裡。</p><p>療育內容包含個人內在心性剖析、人生藍圖計畫深度解讀，最棒的還有對你很重要的能量清理療程，整個專案內容是很重要而且非常超值的，建議每個人一生最少要做一次。</p></div><p class="cta-r"><a class="btn" href="booking.html?s=靈魂藍圖解析與療癒">我要預約</a></p></div></div></section>
 <section class="item" id="partner"><h2>伴侶感情關係解碼</h2><div class="prose"><h3 class="doc-t">情感模式解碼</h3><p>情感交流與相互了解是經營伴侶關係，甚至是婚姻關係中很重要的事。</p><p>但是常常遇到某些事，我們不了解為何對方會這樣想？為什麼他會這樣作？為什麼他不能感受到我的情緒？</p><p>答案很簡單，因為對方思緒回路跟你是完全不同。</p><p>作了幾對伴侶的感情模式解碼，發現每個人的情感認知及需求都不同，以致在伴侶或夫妻關係之間，有時感到不被理解，甚至有誤解或情感失落。</p><p>在東方傳統文化裡，男女性交往時常會看重對象是否孝順，而有些女性婚後才發現，對方太重視父母，妻子只有盡不完的責任義務（勞碌）卻得不到丈夫應給的重視（自己順位被擺最後）另外有家業大的家庭，娶妻是為繁衍後代來繼承家業，感情再怎麼經營也比不上生個男孩強。這不是古代宮鬥才有嗎？不，二十一世紀的今天，不少人心中仍有這樣的思維，在遇到重大抉擇時會立見高下。</p><p>透過預約解讀彼此的情感模式，有個案看明白了！對方其實只想要二人世界，想要被陪伴，無奈當事人並未表明不想有小孩。生了小孩意味著不輕鬆要犧牲，也要更多付出時間和精神、金錢⋯等代價。偽單親媽媽常抱怨先生缺乏責任感？明明生活一起，自己卻過著偽單親的生活。這即是伴侶關係中，一個人想努力完整家庭，另外一個人只想要兩人世界，對彼此的期待不同，最後造成失落與痛苦。</p><p>夫妻關係或伴侶關係，泰半影響到個人對人生的幸福感。若能儘早去了解自己的情感模式，以及你所重視的情人、伴侶或是其他家人的情感模式是很重要的學習功課。</p><p>一旦了解自己的性格、情緒模式，也了解對方的規格模組，看懂、學會用新的方法去相處，慢慢地改變，自然就越來越輕鬆愉快。也由於看懂了，我們才能更專注在自己身上，不必強求對方做不到的事。</p><p>情感解碼也能用來解碼：親子模式或事業夥伴模式、婆媳模式、師生、同儕模式等各種關係模式，只要你認爲重要的人都可以。</p><p>想了解更多嗎？歡迎私訊預約我。</p></div><a class="tlink" href="booking.html?s=伴侶感情關係解碼">預約或詢問這個項目</a></section>
-<section class="item" id="fortune"><h2>人生大運流年運勢</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=人生大運流年運勢">預約或詢問這個項目</a></section>
+<section class="item" id="fortune"><h2>人生大運流年運勢</h2><div class="item-side"><div class="is-ph"><img src="assets/x-fortune.webp" width="1200" height="900" alt="人生大運 流年運勢解析" loading="lazy"></div><div class="is-tx"><div class="prose"><p>為了前瞻未來，人們常會做自己的人生流年運勢解析，因為這種個人年度性的總結檢視，能幫助自己跳脫既有想法與小我意識，改以宏觀角度看到個人在宇宙時空能量的交互作用下，一整年的生活中可能遇到哪些考驗，好的機會點在何時出現，以及哪些是需要告別、需要收尾的，透過這個流年運勢解析，也能幫助我們訂製目標精準的年度計劃。</p><p>影響我們整年運勢的原因有：個人流年運勢與個人生命核心功課。我們每個人都用一輩子時間，去修煉自己的生命功課，那為什麼有人做什麼就是順風順水？有人卻屢撞南牆？有人總是原地打轉，屢屢跳不出迴旋呢？人若是缺少自我覺察力，就可能只想擺脫眼前燙手問題，而未思考到考題背後是要學什麼，也可能「不明白」或是沒看懂困難考題是要考什麼。考試看不懂考題，當然寫答案出錯就很可能。此時，若能有專業顧問在旁幫你解析指出重點，那順利過關機會會變大。</p><h4>以某個個案作舉例（為保護隱私已改名與省略內容）</h4><p>Mary在2026流年中，她常感到疲倦、不舒服，工作場域等外在環境劇烈改變，對她身心影響特別強烈。生活中發生的事情有時讓她有種想撞壁，或感覺走到盡頭之感。</p><p>仔細看她的流年，原來是整體能量走到終點、必須歸零的階段。所以在這一整年裡，所發生的事就是要她學習放手。我建議她該年度特別需練習做深入覺察，敞開心放手讓舊的人事物離開。面對令人不預期的變化，若是執著不改變，或死抓著某些關係衍生的情緒，則會陷入她自己密碼內的負向力—批判、對立或受害者角色裡。</p><p>我們若不明白自己走的流年重點，一直讓對抗或緊抓的情緒主導，身心可能陷入反覆的疲憊與痛苦。還有，Mary現在若辛苦去執行新計劃，無論開新的事業體或新關係，最後可能都會徒勞無功。流年帶來的影響同樣也作用在個人的情緒、內在情感層面。對Mary而言，流年也會特別出現某些讓她練習愛與被愛的課題，特別是那些自己頭腦知道，卻還做不到的主題。（以下簡略）</p><p>綜合整體流年與藍圖人生功課一併作完解析，我會給對當事人完整而有用的訊息，以及在生活中如何改變的建議，並透過諮商去找到她信念中的卡點，最後我會以移動能量的技巧，清除對她有害的錯誤信念。讓信念回到正向很重要，如此才能協助顯化當事人想要的成功與幸福。</p><p>你在什麼時間點預約此項服務都是合適的哦！</p><p>你的流年運勢解析是由你年度生日起算的，並非每年的1月1號哦。有興趣的朋友請私訊我</p></div></div></div><a class="tlink" href="booking.html?s=人生大運流年運勢">預約或詢問這個項目</a></section>
 <section class="item" id="timeline"><h2>六個月時間線大師解讀</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=六個月時間線大師解讀">預約或詢問這個項目</a></section>
 <section class="item" id="feedback"><h2>解讀回饋</h2><div class="prose"><h3 class="doc-t">靈魂藍圖解讀</h3><h4>個案Ａ：</h4><p>「Shemaya老師為兒子做靈魂藍圖解讀，是將從我腦袋中擷取育兒多年的困惑與掙扎、包含兒子的思維與挫折，老師從各個角度把它們解析出來，再指引我應對的方法。這不像是坊間的解讀，更像是在看靈魂星盤啊。</p><p>老師的解讀是由幼年時期貫穿到成年的每個階段環節，以有根有據的給了實際的建議。過往的我，內心有某些對孩子的某些直覺，也很努力去了解孩子，可總有不得其門而入，自己一直有失敗之感，這些挫折深深的打擊著我和兒子，還不斷的累積，形成彼此都痛苦的相處模式。老師為我作深度的解讀分析後，也給了我重新調整的方向與實際做法；也引導我，如何在和孩子互動下學習裡去成就彼此。</p><p>最棒的是，老師為我找出長久以來，一直累積在我頭部的負向信念，然後她幫我刪除掉，超棒的！接下來在與孩子相處裡，我能察覺到自己的某些慣性模式出現，也較能輕鬆一點，能夠放慢腳步、去轉換思維與換新的做法，讓我非常開心。</p><p>真心推薦預約Shemaya老師量身定做的個人靈魂藍圖解讀，能為自己、或為家人、為伴侶，或為孩子提早看見自己的性格、品質狀態。這能解惑了我長年來的困擾，這人生是非常有幫助的。」</p><h4>個案Ｂ：</h4><p>「自從開始靈性學習與療癒，我先生不斷掙扎於靈性與現實生活之間，既想遵從內心渴望，又苦於害怕放手固執信念後，無力守護家人。這也造成我們不少次意見相左的不愉快。即使看到問題，我們也有心無力，無方向無方法去處理啊。</p><p>這次Shemaya老師為我先生做的靈魂藍圖解讀，老師也為他刪除一個他累生累世累積下來某個很沈重信念後，先生感覺身上沉重的負擔減輕了許多。看到他這樣，我由衷開心與感動。非常謝謝老師的時間付出與專業指引。」</p><p>以上為一對一的個人諮商，歡迎預約</p></div></section>
 </div>
@@ -490,6 +521,24 @@ figure.pcard:hover img{opacity:1}
       <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
     </div>
   </div>
+  <div class="footer-info">
+    <div class="fw-in">
+      <section class="widget fi"><h2 class="widget-title">購物須知</h2>
+        <h3>購物流程</h3><p>選購商品 → 加入購物車 → 填寫資料 → 付款 → 訂購完成</p>
+        <h3>付款方式</h3><ol><li>ATM轉帳 銀行實體ATM轉帳 / 網路轉帳</li><li>超商代碼付款 前往超商便利生活站機台 (如: 7-11 ibon) 至代碼繳費功能輸入代碼，即可印出繳費單 (限制總金額$20,000以下)</li></ol>
+        <h3>取消訂單</h3><p>訂單未付款及未出貨前，請進入「我的帳戶」 → 「訂單記錄查詢」即可自行取消訂單。</p>
+        <h3>寄件方式</h3><p>郵局掛號，或超商7-11 或全家</p>
+        <h3>運費</h3><p>一般客戶訂購商品總金額超過新台幣5000元(含)，享免運。</p><p>未滿新台幣$5000元時，消費者需自付運費。</p>
+        <h3>訂單查詢</h3><p>完成訂購後，請進入: 「我的帳戶」 → 「訂單記錄查詢」</p>
+      </section>
+      <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
+        <h3>出貨及配送說明</h3><p>配送地區為台灣本島地區，其他地區或國家請先寫信跟我們聯繫，國際運費實報實銷。</p><p>商品出貨後一般可於1~3個工作天內送達 (實際送達時間仍將依貨流公司的配送量調節，配送狀況可查詢貨物追蹤查詢網頁)</p>
+      </section>
+      <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
+        <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
+      </section>
+    </div>
+  </div>
   <div class="site-info">&copy; 2026 SHEMAYA 夏克緹薩滿的金色大門</div>
 </footer>
 <script>
@@ -498,7 +547,6 @@ figure.pcard:hover img{opacity:1}
   var menu = document.getElementById('menu');
   var btn = document.getElementById('menuBtn');
 
-  // desktop dropdown: limit height to space left below the item
   function fit(li) {
     var sub = li.querySelector('.sub');
     if (!sub || mq.matches) return;
@@ -516,7 +564,6 @@ figure.pcard:hover img{opacity:1}
   window.addEventListener('resize', refit);
   window.addEventListener('scroll', refit, { passive: true });
 
-  // mobile menu
   function closeMenu() {
     if (!menu.classList.contains('open')) return;
     menu.classList.remove('open');
@@ -533,7 +580,6 @@ figure.pcard:hover img{opacity:1}
     var bar = document.querySelector('.nav-bar');
     var navTop = bar.getBoundingClientRect().top;
     if (open && navTop > 0) {
-      // bring the bar to the top so the open menu gets the full screen height
       window.scrollTo({ top: window.scrollY + navTop, behavior: 'instant' });
     }
     fitMenu();
@@ -561,7 +607,6 @@ figure.pcard:hover img{opacity:1}
     document.querySelectorAll('.sub-toggle').forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
   });
 
-  // horizontal row
   var row = document.getElementById('shopRow');
   document.querySelectorAll('.row-ctrl button').forEach(function (b) {
     b.addEventListener('click', function () {
@@ -569,6 +614,49 @@ figure.pcard:hover img{opacity:1}
       row.scrollBy({ left: row.clientWidth * 0.9 * Number(b.dataset.dir), behavior: reduce ? 'auto' : 'smooth' });
     });
   });
+
+  var gal = document.getElementById('galRow');
+  if (gal) {
+    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var hold = false, seen = false, touchAt = 0;
+    var galStep = function (dir) {
+      var fig = gal.querySelector('figure');
+      var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
+      var max = gal.scrollWidth - gal.clientWidth;
+      var x = gal.scrollLeft + dir * w;
+      if (dir > 0 && gal.scrollLeft >= max - 2) x = 0;
+      else if (dir < 0 && gal.scrollLeft <= 2) x = max;
+      gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
+    };
+    document.querySelectorAll('.gal-btn').forEach(function (b) {
+      b.addEventListener('click', function () { galStep(Number(b.dataset.dir)); });
+    });
+    var galBox = gal.parentNode;
+    galBox.addEventListener('mouseenter', function () { hold = true; });
+    galBox.addEventListener('mouseleave', function () { hold = false; });
+    galBox.addEventListener('focusin', function () { hold = true; });
+    galBox.addEventListener('focusout', function () { hold = false; });
+    gal.addEventListener('touchstart', function () { touchAt = Date.now(); }, { passive: true });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(gal);
+    } else {
+      seen = true;
+    }
+    setInterval(function () {
+      if (hold || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
+      galStep(1);
+    }, 4000);
+  }
+
+  var nlBtn = document.getElementById('nlBtn');
+  if (nlBtn) {
+    var nlSend = function () {
+      var v = document.getElementById('nlEmail').value.trim();
+      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '測試站示範：資料不會送出。' : '請輸入正確的 Email。';
+    };
+    nlBtn.addEventListener('click', nlSend);
+    document.getElementById('nlEmail').addEventListener('keydown', function (e) { if (e.key === 'Enter') nlSend(); });
+  }
 })();
 </script>
 <div id="page-end" hidden></div>
