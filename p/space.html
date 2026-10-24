@@ -39,8 +39,8 @@ ul{list-style:none}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
 
-.menu>li+li{margin-left:30px}
-.menu>li+li::before{content:"/";position:absolute;left:-18px;top:24px;color:#bbb}
+.menu>li+li{margin-left:23px}
+.menu>li+li::before{content:"/";position:absolute;left:-14px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -141,24 +141,24 @@ ul{list-style:none}
 
 
 @media (max-width:1436px){
-  .menu>li+li{margin-left:18px}
-  .menu>li+li::before{left:-12px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-9px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:13px}
-  .menu>li+li::before{left:-10px}
+  .menu>li+li{margin-left:8px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1260px){
-  .menu>li{font-size:14px}
-  .menu>li+li{margin-left:11px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:13.5px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
-  .menu>li{font-size:12.5px}
-  .menu>li+li{margin-left:10px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:12px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -199,6 +199,8 @@ ul{list-style:none}
   .picks-in{grid-template-columns:1fr;gap:32px}
   .strip{padding:40px 24px 0}
   .fbvid{padding:0 24px 48px}
+  .say{padding:0 24px 72px}
+  .say-gal .gal-row{grid-auto-columns:calc((100% - 16px)/2)}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
@@ -456,6 +458,54 @@ figure.pcard:hover img{opacity:1}
   .item-h{margin-bottom:16px}
   .item-h>h2{font-size:21px}
 }
+
+.hero-pts{margin-top:16px;font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--ink-sub);letter-spacing:.04em}
+.hero-pts li{position:relative;padding-left:18px}
+.hero-pts li::before{content:"";position:absolute;left:2px;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+.quote{margin:0 0 28px;padding:20px 24px;background:var(--tint);border-left:3px solid var(--accent);color:var(--ink-sub)}
+.quote p{margin:0 0 10px;max-width:42em;overflow-wrap:anywhere}
+.quote p:last-child{margin-bottom:0;font-family:var(--sans);font-size:14px}
+
+.fb-wait{margin-top:28px}
+.fb-wait h4{margin-bottom:10px}
+
+.art-h{margin-bottom:12px}
+.art-h>h3{margin-bottom:0}
+.item-h>.fb-link+.sub-links{padding-left:20px;border-left:1px solid var(--line)}
+
+.testimonial>.item-side{margin-bottom:28px}
+
+.posts{display:grid;gap:0;max-width:880px}
+.post-card{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line)}
+.post-card:first-child{padding-top:0}
+.post-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--tint)}
+.pc-tx p{max-width:34em}
+.pc-tx h2{margin:0 0 8px;font-size:20px;line-height:1.45;font-weight:700}
+.pc-tx h2 a:hover,.pc-tx h2 a:focus-visible{color:var(--accent-dark)}
+.pc-tx p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin-bottom:8px;font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--ink-sub);overflow-wrap:anywhere}
+.post{border-top:0;padding-top:0}
+
+.post-date{font-family:var(--sans);font-size:14px;color:var(--ink-sub);letter-spacing:.06em}
+.poem p{line-height:1.9}
+.poem .post-lead{font-size:19px;font-weight:700;color:var(--ink);line-height:1.7}
+.poem .post-close{font-size:19px;font-weight:700;color:var(--accent-dark);line-height:1.7;margin-top:20px}
+.poem .post-by{font-family:var(--sans);font-size:14px;color:var(--ink-sub)}
+
+.title-row .hero-fb{margin:0;display:flex;flex-wrap:wrap;gap:4px 20px}
+
+.fw-in.fw-free{display:block}
+.fw-free .free{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.fw-free .free figcaption{margin-top:8px;font-size:14px}
+.fw-free .widget-title a:hover,.fw-free .widget-title a:focus-visible{color:var(--accent-dark)}
+@media (max-width:1024px){ .fw-free .free{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:600px){
+  .post-card{grid-template-columns:1fr;gap:14px}
+  .fw-free .free{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media (max-width:767px){
+  .item-h>.fb-link+.sub-links{padding-left:0;border-left:0;flex-basis:100%}
+}
 </style>
 </head>
 <body>
@@ -496,6 +546,7 @@ figure.pcard:hover img{opacity:1}
           <div class="dd"><ul class="sub">
             <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
+        <li><a href="blog.html">部落格</a></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
       <a class="mbook" href="booking.html">立即預約</a>
@@ -503,31 +554,32 @@ figure.pcard:hover img{opacity:1}
   </nav>
 </header>
 <main id="top">
-<section class="hero"><div class="wrap hero-in has-ph"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 空間能量風水</nav><h1 class="sec-title">空間能量風水</h1></div><div class="hero-ph"><img src="assets/sv-space.webp" width="900" height="1200" alt="空間能量風水"></div></div></section>
+<section class="hero"><div class="wrap hero-in has-ph"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 空間能量風水</nav><div class="title-row"><h1 class="sec-title">空間能量風水</h1><p class="hero-fb"><a class="fb-link" href="#space-fb">居家風水回饋</a><a class="fb-link" href="#space-biz-fb">商業空間風水回饋</a></p></div><ul class="hero-pts"><li>不必拆牆或更改格局，一施作後就永久有效</li><li>消除空間裡老舊能量，導入支持的全新能量</li><li>強化空間內氣的流動，依據需求目標作訂製</li><li>提升全家人生活品質，支持生命之流的發展</li><li>支持事業健康與人脈，吸引人潮帶來財富流</li><li>讓空間成為永久支持，住家店面或廠辦皆宜</li></ul></div><div class="hero-ph"><img src="assets/sv-space.webp" width="900" height="1200" alt="空間能量風水"></div></div></section>
 <div class="wrap inner">
-<section class="item" id="space"><div class="side-grid"><div class="side-ph"><img src="assets/x-space-home.webp" width="800" height="600" alt="居家空間" loading="lazy"><img src="assets/x-space-biz.webp" width="800" height="600" alt="商業空間" loading="lazy"><img src="assets/x-space-cards.webp" width="800" height="600" alt="花精卡與花朵排成的能量圓" loading="lazy"></div><div class="side-tx"><div class="prose"><p>東方傳統風水常是帝王貴族專用，是「找到風水寶地」來提升財運運勢。但風水寶地極稀有，平民百姓無法取得的。Shemaya提供來自德國的空間風水，基於建築物既有條件進行大幅度優化與能量提升，讓空間整體被轉化提升，得以支持屋主全員，連周遭環境的能量品質也會更和諧。</p><p>建築物和空間的使用者之間常有著密切關係，居住者長期的情緒流、身心狀況都會在空間內留下能量印記。此外，建築物所處的土地，週遭地理位置也會創造各種不同的能量互相影響。多年前為了找工作室，我看過很多房子，有些是到現場根本不想進去的。有時仲介還在介紹，我已頭痛到想衝出去，也遇過一進門就心開舒爽，令人很愉悅的房子。Shemaya 的女兒也是對能量敏感的體質，在某間搶手熱門區域的電梯大樓，一進去她就覺得喉嚨被掐住，全身起雞皮疙瘩的她向我求救，我們心照不宣謝謝仲介快步離開。</p><p>有人也許會說自己不是敏感體質，沒啥感覺呀。對能量沒感覺並不代表能量不起作用。空間內若存有好的能量就能支持住在其中的人們，無論在工作、生活起居、事業或人生規劃上，都能有足夠的電力支持。若一進入空間就能放鬆，感覺到安全、輕鬆，喜悅、愉快、正向、和諧。</p><p>反之，若長期處於一個能量混濁、氣不流動，或不和諧的空間，則會阻礙居住者的健康，身心難以放鬆也可能形成害怕改變的心態，難以行動、缺乏活力，對生活失去衝勁，甚至在人生運勢與事業方面都會受影響。</p><h3 class="doc-t">＊居家空間能量風水服務：</h3><p>是避風遮雨之處，也是我們和心所愛的人建立愛與連結的殿堂，家提供我們能夠休養生息，能靜心沈澱，能補充元氣的地方。Shemaya 能在有限條件內，不進行打牆、不變更格局動線，不需大規模的改建、裝潢，就能為空間的使用者帶來氣的和諧。</p><p>想讓你的家的氣飽滿流暢嗎？它決定了居住者的事業、家庭、健康、心情等活性指數。你想與家人擁有美好環境，充沛的光和愛，讓思緒清晰、智慧與滋養健康，落實人生夢想嗎？歡迎和Shemaya 聯繫洽詢。</p><h3 class="doc-t">＊商業空間能量風水服務：</h3><p>公司、店面、工作室等商業場所，若擁有豐富、飽滿的氣流，即能帶來更多人脈與財脈。在業務上帶來流暢性，也能在人事上和諧同心，也能支持老闆作清晰、正確的決策，讓企業體運勢與金錢流動更順利。風水顧問創造出的輕鬆、愉悅的場域，讓使用者在對內、對外都有良好的溝通及互動，對外則會使公司行號更容易被顧客看見，提高業運績效。歡迎和Shemaya 聯繫洽詢。</p><h3 class="doc-t">居家空間案例：</h3><h4>＊更升級的光亮住宅（台北市東區）</h4><p>精華區的高級住宅區，是室內有六十多坪待出租的華廈，在我作了初步空間風水後，進去的每個人紛紛評價說是超棒的房子很舒服，沒多久被電視台相中，租去拍電視劇。當空間風水正式做完後，第一位房客來看，對極高價位租金稍有猶豫，但感受到裡面流暢的氣和光仍當場簽約了。</p><h4>＊符合你家成員所需的能量（台北市信義區住宅）</h4><p>雖重新翻新過，二手屋仍存有上手屋主的舊能量。這家的男主人、女主人皆是IT人員，當我幫房子移除舊能量，將帶入流動的氣的新風水成立後，自喻對能量麻瓜的案主一進家門，馬上感受到不同！她說無對外窗的廁所突然不悶也不臭了，原本較暗的角落變得很明亮，走道有種被拓寬的空間感，她講說：好像家裡作了大裝潢耶！明明沒打牆沒改格局，空間卻變更寬敞、明亮、更大，鮮明的空氣感更流暢。</p><h4>＊對身心健康正向改善（台中大里）</h4><p>四層透天厝，案主家有敏感體質幼兒，孩子瘦弱不好照顧並有嚴重皮膚病。跟案主討論後，便開始工作，完成時，幼兒對房間的新能量很興奮的開心大叫，新風水證明很支持幼兒身心狀況逐漸穩定，現在孩子健康得和平常人沒兩樣。</p><h4>＊全面性移除舊結構 （嘉義市）</h4><p>別墅型透天，周遭能量卻是封閉而固著，建築物和天地能量是斷裂的，像孤島的土地滯留著憤怒、鬥爭、悔恨的能量，也吸引更多沈重能量囤聚於此，導致案主夜晚睡眠會受干擾。剛進去時，花園死寂無生氣也毫無人聲。透過能量的深層清理、多次能量轉化以及神聖祝福，屋子及外圍能量開始有明顯改變。能量敞開、光更流動，鳥兒也成群飛來唱歌，一向窗戶緊閉的鄰居開始有了人聲、琴聲、古箏聲，土地開始有生氣、人有人氣、活力回來了。</p><h4>＊全新完工大透天（彰化）</h4><p>新完工大透天，周遭土地及建築物有老舊能量結構。先針對新屋內較缺乏氣流的問題，去強化Prana的流暢性，然後為空間作祝升級。作完靈魂引導，我讀到這片住宅地有「關係失和」的衝突及需要寬恕的情緒印記。在我做了許多消融憤怒與衝突的工作後，屋主才告訴我，原來這片土地最早原為傳統家族式三合院，近代挖到温泉，土地被大開來挖埋管線，計劃蓋温泉會館⋯但中途遇而建館未竟。建商接手蓋住宅區後發生紛爭，包商憤而在數戶的水管內大灌水泥。此戶雖然慶幸未受灌泥漿波及，但土地仍然想透過此次的能量風水移除負面情緒印記。</p><p>完工後屋主回來驗收，巡視後她說「屋子怎麼變得很輕、很通風！」去二樓房及廁所時，她嚇了一跳！「哇！怎麼這麼「亮」！」是的，當空間裡本有的凝滯、沈重及不屬於愛與光的能量被移除、清理後，空間感覺會變輕，而Prana/氣被提升後，也會使人有「好通風」的流暢感。空間在許多高頻的充滿這空間後，再入屋子的人會感到屋子怎麼「變好亮了」？有點像是5瓦燈泡換成LED燈，但是卻是更自然的好光頻。</p><h3 class="doc-t">公司/商業空間（台北市信義區）</h3><p>此次服務的建築物空間是多人共用的公司，是台北市信義區上了年紀的建築物。</p><p>對商業空間而言，豐富、飽滿的氣能對公司在人資上、業務上帶來流暢性，也支持老闆作出清晰、明確的決策，風水顧問將更多的光導入，流動於整個空間，創造出輕鬆、愉悅的場域，讓使用者在對內、對外都有良好的溝通及合作互動，也會使公司行號更容易被人們看見，進而提高商業的營運績效。</p><p>一開始，我花相當多時間移動地下室的阻塞。地下室常有能量停滯的問題，若加上廁所排導管不全，就更易凝聚瘴氣沼氣，不只令人不適，久了也會影響樓上的事務運作，甚至員工的穩定性。移除陳舊能量後，打開新的能量入口，最後才能引導光進入。消融空間的不快樂能量後，氣變更流暢了，負責人來到地下儲物空間，也說那種令人不悅的氣味不見了。</p><p>黃金世紀阿法氣空間風水總是針對個案需求，有效調整空間的能量結構，讓大自然的氣進出順暢，為空間使用者強化氣的和諧，對於商業空間/公司/店舖/工作室有莫大助益，能在人事、業務上帶來愛、和平、光⋯等正向改變。在個人居家住戶施作阿法氣空間風水，除了提升居家的氣，增進人體健康和諧外，光和愛充滿的空間也會支持個人的生命道路、人生願景的實現。</p></div></div></div><a class="tlink" href="booking.html?s=空間能量風水">預約或詢問這個項目</a></section>
+<section class="item" id="space"><div class="side-grid"><div class="side-ph"><img src="assets/x-space-home.webp" width="800" height="600" alt="居家空間" loading="lazy"><img src="assets/x-space-biz.webp" width="800" height="600" alt="商業空間" loading="lazy"><img src="assets/x-space-cards.webp" width="800" height="600" alt="花精卡與花朵排成的能量圓" loading="lazy"></div><div class="side-tx"><div class="prose"><p>建築物與空間使用者之間有著密不可分的關係，居住者長期的情緒流動、身心狀況，都會在空間內留下能量印記；同時，建築物所處的土地與周遭地理位置，也會交織出各種相互影響的能量場。</p><p>東方傳統風水往往是帝王貴族專用，追求的是「找到風水寶地」來提升財運，但這樣的寶地極其稀有，平民百姓難以企及。相較之下，Shemaya 提供的德國空間風水，乃是基於建築物既有條件，不必大興土木拆牆改格局，就能進行大幅度的優化與能量提升，讓整個空間重轉化升級，不僅能支持屋主全家成員，連周遭環境的能量品質也會更加和諧。</p><p>好能量的空間：通常有明亮、氣流順暢，採光良好等狀態、讓人一進去就倍感舒服與放鬆，也會感覺到安全、輕鬆，喜悅、愉快、和諧。這樣的空間會讓人想一直待著。通常這樣的好風水也能呈現生氣蓬勃、匯聚人氣，也能吸引豐盛的財富流到來，同時流通的氣也能支持身體健康。擁有這樣的好空間的人，無論事業或身心健康，都能有足夠的電力支持，好的風水也會支持一個人走上真正屬於自己的生命道路。</p><p>我看過上百間房子，其中有些房子一到現場，就讓人打從心底不想進去。仲介還在介紹，我已頭痛到想奪門而出；也有一進門就心感舒爽、令人無比愉悅的空間。我女兒也是對能量極度敏感的體質。某次看一間位於熱門精華區的電梯大樓，才剛踏進去，她就覺得喉嚨像被掐住般難受、全身起雞皮疙瘩而立刻向我求救。我們心照不宣地謝過仲介，快步離開了那棟房子。倘若人長期處於能量混濁、氣場滯礙難行，或充滿衝突不和諧的空間中，不僅會阻礙居住者的健康、使身心難以真正放鬆，更可能在潛移默化中產生負面影響——引發莫名的害怕與退縮心態，變得難以採取行動、對生活無衝勁與活力，甚至在人生運勢與事業發展上都大受牽制。</p><h3 class="doc-t">＊居家空間能量風水服務：</h3><p>“家”是避風遮雨之處，也是我們和心所愛的人建立愛與連結的殿堂，家提供我們能夠休養生息，能靜心沈澱，能補充元氣的地方。Shemaya 能在有限條件內，不進行打牆、不變更格局動線，不需大規模的改建、裝潢，就能為空間的使用者帶來氣的和諧。</p><p>想讓你的家的氣飽滿流暢嗎？它決定了居住者的事業、家庭、健康、心情等活性指數。你想與家人擁有美好環境，充沛的光和愛，讓思緒清晰、智慧與滋養健康，落實人生夢想嗎？歡迎和Shemaya 聯繫洽詢。</p><h3 class="doc-t">＊商業空間能量風水服務：</h3><p>公司、店面、工作室等商業場所，若擁有豐富、飽滿的氣流，即能帶來更多人脈與財脈。在業務上帶來流暢性，也能在人事上和諧同心，也能支持老闆作清晰、正確的決策，讓企業體運勢與金錢流動更順利。風水顧問創造出的輕鬆、愉悅的場域，讓使用者在對內、對外都有良好的溝通及互動，對外則會使公司行號更容易被顧客看見，提高業運績效。歡迎和Shemaya 聯繫洽詢。</p><h3 class="doc-t" id="space-fb">居家空間案例：</h3><h4>＊更升級的光亮住宅（台北市東區）</h4><p>精華區的高級住宅區，是室內有六十多坪待出租的華廈，在我作了初步空間風水後，進去的每個人紛紛評價說是超棒的房子很舒服，沒多久被電視台相中，租去拍電視劇。當空間風水正式做完後，第一位房客來看，對極高價位租金稍有猶豫，但感受到裡面流暢的氣和光仍當場簽約了。</p><h4>＊符合你家成員所需的能量（台北市信義區住宅）</h4><p>雖重新翻新過，二手屋仍存有上手屋主的舊能量。這家的男主人、女主人皆是IT人員，當我幫房子移除舊能量，將帶入流動的氣的新風水成立後，自喻對能量麻瓜的案主一進家門，馬上感受到不同！她說無對外窗的廁所突然不悶也不臭了，原本較暗的角落變得很明亮，走道有種被拓寬的空間感，她講說：好像家裡作了大裝潢耶！明明沒打牆沒改格局，空間卻變更寬敞、明亮、更大，鮮明的空氣感更流暢。</p><h4>＊對身心健康正向改善（台中大里）</h4><p>四層透天厝，案主家有敏感體質幼兒，孩子瘦弱不好照顧並有嚴重皮膚病。跟案主討論後，便開始工作，完成時，幼兒對房間的新能量很興奮的開心大叫，新風水證明很支持幼兒身心狀況逐漸穩定，現在孩子健康得和平常人沒兩樣。</p><h4>＊全面性移除舊結構 （嘉義市）</h4><p>別墅型透天，周遭能量卻是封閉而固著，建築物和天地能量是斷裂的，像孤島的土地滯留著憤怒、鬥爭、悔恨的能量，也吸引更多沈重能量囤聚於此，導致案主夜晚睡眠會受干擾。剛進去時，花園死寂無生氣也毫無人聲。透過能量的深層清理、多次能量轉化以及神聖祝福，屋子及外圍能量開始有明顯改變。能量敞開、光更流動，鳥兒也成群飛來唱歌，一向窗戶緊閉的鄰居開始有了人聲、琴聲、古箏聲，土地開始有生氣、人有人氣、活力回來了。</p><h4>＊全新完工大透天（彰化）</h4><p>新完工大透天，周遭土地及建築物有老舊能量結構。先針對新屋內較缺乏氣流的問題，去強化Prana的流暢性，然後為空間作祝升級。作完靈魂引導，我讀到這片住宅地有「關係失和」的衝突及需要寬恕的情緒印記。在我做了許多消融憤怒與衝突的工作後，屋主才告訴我，原來這片土地最早原為傳統家族式三合院，近代挖到温泉，土地被大開來挖埋管線，計劃蓋温泉會館⋯但中途遇而建館未竟。建商接手蓋住宅區後發生紛爭，包商憤而在數戶的水管內大灌水泥。此戶雖然慶幸未受灌泥漿波及，但土地仍然想透過此次的能量風水移除負面情緒印記。</p><p>完工後屋主回來驗收，巡視後她說「屋子怎麼變得很輕、很通風！」去二樓房及廁所時，她嚇了一跳！「哇！怎麼這麼「亮」！」是的，當空間裡本有的凝滯、沈重及不屬於愛與光的能量被移除、清理後，空間感覺會變輕，而Prana/氣被提升後，也會使人有「好通風」的流暢感。空間在許多高頻的充滿這空間後，再入屋子的人會感到屋子怎麼「變好亮了」？有點像是5瓦燈泡換成LED燈，但是卻是更自然的好光頻。</p><h3 class="doc-t" id="space-biz-fb">公司/商業空間（台北市信義區）</h3><p>此次服務的建築物空間是多人共用的公司，是台北市信義區上了年紀的建築物。</p><p>對商業空間而言，豐富、飽滿的氣能對公司在人資上、業務上帶來流暢性，也支持老闆作出清晰、明確的決策，風水顧問將更多的光導入，流動於整個空間，創造出輕鬆、愉悅的場域，讓使用者在對內、對外都有良好的溝通及合作互動，也會使公司行號更容易被人們看見，進而提高商業的營運績效。</p><p>一開始，我花相當多時間移動地下室的阻塞。地下室常有能量停滯的問題，若加上廁所排導管不全，就更易凝聚瘴氣沼氣，不只令人不適，久了也會影響樓上的事務運作，甚至員工的穩定性。移除陳舊能量後，打開新的能量入口，最後才能引導光進入。消融空間的不快樂能量後，氣變更流暢了，負責人來到地下儲物空間，也說那種令人不悅的氣味不見了。</p><p>黃金世紀阿法氣空間風水總是針對個案需求，有效調整空間的能量結構，讓大自然的氣進出順暢，為空間使用者強化氣的和諧，對於商業空間/公司/店舖/工作室有莫大助益，能在人事、業務上帶來愛、和平、光⋯等正向改變。在個人居家住戶施作阿法氣空間風水，除了提升居家的氣，增進人體健康和諧外，光和愛充滿的空間也會支持個人的生命道路、人生願景的實現。</p></div></div></div><a class="tlink" href="booking.html?s=空間能量風水">預約或詢問這個項目</a></section>
 </div>
 </main>
 <footer>
   <div class="footer-widgets">
-    <div class="fw-in">
-      <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
+    <div class="fw-in fw-free">
+      <section class="widget"><h2 class="widget-title"><a href="free.html">免費課程與公益</a></h2>
+      <div class="free">
+        <figure><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></figure>
+        <figure><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></figure>
+        <figure><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></figure>
+        <figure><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></figure>
+        <figure><img src="assets/f-5.webp" width="600" height="600" alt="靜心" loading="lazy"><figcaption>靜心</figcaption></figure>
+        </div>
+      </section>
     </div>
   </div>
   <div class="footer-info">
     <div class="fw-in">
       <section class="widget fi"><h2 class="widget-title">購物須知</h2>
-        <h3>購物流程</h3><p>選購商品 → 加入購物車 → 填寫資料 → 付款 → 訂購完成</p>
-        <h3>付款方式</h3><ol><li>ATM轉帳 銀行實體ATM轉帳 / 網路轉帳</li><li>超商代碼付款 前往超商便利生活站機台 (如: 7-11 ibon) 至代碼繳費功能輸入代碼，即可印出繳費單 (限制總金額$20,000以下)</li></ol>
-        <h3>取消訂單</h3><p>訂單未付款及未出貨前，請進入「我的帳戶」 → 「訂單記錄查詢」即可自行取消訂單。</p>
-        <h3>寄件方式</h3><p>郵局掛號，或超商7-11 或全家</p>
-        <h3>運費</h3><p>一般客戶訂購商品總金額超過新台幣5000元(含)，享免運。</p><p>未滿新台幣$5000元時，消費者需自付運費。</p>
-        <h3>訂單查詢</h3><p>完成訂購後，請進入: 「我的帳戶」 → 「訂單記錄查詢」</p>
+        <ul><li><a href="shopping.html#flow">購物流程</a></li><li><a href="shopping.html#pay">付款方式</a></li><li><a href="shopping.html#cancel">取消訂單</a></li><li><a href="shopping.html#ship">寄件方式</a></li><li><a href="shopping.html#fee">運費</a></li><li><a href="shopping.html#query">訂單查詢</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
-        <h3>出貨及配送說明</h3><p>配送地區為台灣本島地區，其他地區或國家請先寫信跟我們聯繫，國際運費實報實銷。</p><p>商品出貨後一般可於1~3個工作天內送達 (實際送達時間仍將依貨流公司的配送量調節，配送狀況可查詢貨物追蹤查詢網頁)</p>
+        <ul><li><a href="shipping.html#delivery">出貨及配送說明</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
@@ -610,10 +662,11 @@ figure.pcard:hover img{opacity:1}
     });
   });
 
-  var gal = document.getElementById('galRow');
-  if (gal) {
-    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var hold = false, seen = false, touchAt = 0;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.gal').forEach(function (galBox) {
+    var gal = galBox.querySelector('.gal-row');
+    if (!gal) return;
+    var hover = false, focus = false, seen = false, touchAt = 0;
     var galStep = function (dir) {
       var fig = gal.querySelector('figure');
       var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
@@ -623,14 +676,13 @@ figure.pcard:hover img{opacity:1}
       else if (dir < 0 && gal.scrollLeft <= 2) x = max;
       gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
     };
-    document.querySelectorAll('.gal-btn').forEach(function (b) {
+    galBox.querySelectorAll('.gal-btn').forEach(function (b) {
       b.addEventListener('click', function () { galStep(Number(b.dataset.dir)); });
     });
-    var galBox = gal.parentNode;
-    galBox.addEventListener('mouseenter', function () { hold = true; });
-    galBox.addEventListener('mouseleave', function () { hold = false; });
-    galBox.addEventListener('focusin', function () { hold = true; });
-    galBox.addEventListener('focusout', function () { hold = false; });
+    galBox.addEventListener('mouseenter', function () { hover = true; });
+    galBox.addEventListener('mouseleave', function () { hover = false; });
+    galBox.addEventListener('focusin', function () { focus = true; });
+    galBox.addEventListener('focusout', function (e) { if (!galBox.contains(e.relatedTarget)) focus = false; });
     gal.addEventListener('touchstart', function () { touchAt = Date.now(); }, { passive: true });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(gal);
@@ -638,10 +690,10 @@ figure.pcard:hover img{opacity:1}
       seen = true;
     }
     setInterval(function () {
-      if (hold || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
+      if (hover || focus || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
       galStep(1);
-    }, 4000);
-  }
+    }, Number(galBox.dataset.interval) || 4000);
+  });
 
   var nlBtn = document.getElementById('nlBtn');
   if (nlBtn) {

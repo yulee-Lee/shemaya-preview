@@ -39,8 +39,8 @@ ul{list-style:none}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
 
-.menu>li+li{margin-left:30px}
-.menu>li+li::before{content:"/";position:absolute;left:-18px;top:24px;color:#bbb}
+.menu>li+li{margin-left:23px}
+.menu>li+li::before{content:"/";position:absolute;left:-14px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -141,24 +141,24 @@ ul{list-style:none}
 
 
 @media (max-width:1436px){
-  .menu>li+li{margin-left:18px}
-  .menu>li+li::before{left:-12px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-9px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:13px}
-  .menu>li+li::before{left:-10px}
+  .menu>li+li{margin-left:8px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1260px){
-  .menu>li{font-size:14px}
-  .menu>li+li{margin-left:11px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:13.5px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
-  .menu>li{font-size:12.5px}
-  .menu>li+li{margin-left:10px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:12px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -199,6 +199,8 @@ ul{list-style:none}
   .picks-in{grid-template-columns:1fr;gap:32px}
   .strip{padding:40px 24px 0}
   .fbvid{padding:0 24px 48px}
+  .say{padding:0 24px 72px}
+  .say-gal .gal-row{grid-auto-columns:calc((100% - 16px)/2)}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
@@ -456,6 +458,54 @@ figure.pcard:hover img{opacity:1}
   .item-h{margin-bottom:16px}
   .item-h>h2{font-size:21px}
 }
+
+.hero-pts{margin-top:16px;font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--ink-sub);letter-spacing:.04em}
+.hero-pts li{position:relative;padding-left:18px}
+.hero-pts li::before{content:"";position:absolute;left:2px;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+.quote{margin:0 0 28px;padding:20px 24px;background:var(--tint);border-left:3px solid var(--accent);color:var(--ink-sub)}
+.quote p{margin:0 0 10px;max-width:42em;overflow-wrap:anywhere}
+.quote p:last-child{margin-bottom:0;font-family:var(--sans);font-size:14px}
+
+.fb-wait{margin-top:28px}
+.fb-wait h4{margin-bottom:10px}
+
+.art-h{margin-bottom:12px}
+.art-h>h3{margin-bottom:0}
+.item-h>.fb-link+.sub-links{padding-left:20px;border-left:1px solid var(--line)}
+
+.testimonial>.item-side{margin-bottom:28px}
+
+.posts{display:grid;gap:0;max-width:880px}
+.post-card{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line)}
+.post-card:first-child{padding-top:0}
+.post-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--tint)}
+.pc-tx p{max-width:34em}
+.pc-tx h2{margin:0 0 8px;font-size:20px;line-height:1.45;font-weight:700}
+.pc-tx h2 a:hover,.pc-tx h2 a:focus-visible{color:var(--accent-dark)}
+.pc-tx p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin-bottom:8px;font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--ink-sub);overflow-wrap:anywhere}
+.post{border-top:0;padding-top:0}
+
+.post-date{font-family:var(--sans);font-size:14px;color:var(--ink-sub);letter-spacing:.06em}
+.poem p{line-height:1.9}
+.poem .post-lead{font-size:19px;font-weight:700;color:var(--ink);line-height:1.7}
+.poem .post-close{font-size:19px;font-weight:700;color:var(--accent-dark);line-height:1.7;margin-top:20px}
+.poem .post-by{font-family:var(--sans);font-size:14px;color:var(--ink-sub)}
+
+.title-row .hero-fb{margin:0;display:flex;flex-wrap:wrap;gap:4px 20px}
+
+.fw-in.fw-free{display:block}
+.fw-free .free{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.fw-free .free figcaption{margin-top:8px;font-size:14px}
+.fw-free .widget-title a:hover,.fw-free .widget-title a:focus-visible{color:var(--accent-dark)}
+@media (max-width:1024px){ .fw-free .free{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:600px){
+  .post-card{grid-template-columns:1fr;gap:14px}
+  .fw-free .free{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media (max-width:767px){
+  .item-h>.fb-link+.sub-links{padding-left:0;border-left:0;flex-basis:100%}
+}
 </style>
 </head>
 <body>
@@ -496,6 +546,7 @@ figure.pcard:hover img{opacity:1}
           <div class="dd"><ul class="sub">
             <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
+        <li><a href="blog.html">部落格</a></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
       <a class="mbook" href="booking.html">立即預約</a>
@@ -510,31 +561,32 @@ figure.pcard:hover img{opacity:1}
 <h2 class="course-group">個案/療程</h2>
 <section class="item" id="fire-snake"><div class="item-h"><h2>薩滿聖蛇取毒</h2><a class="fb-link" href="#fire-snake-fb">個案回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-snake.webp" width="1200" height="900" alt="薩滿 聖蛇取毒" loading="lazy"></div><div class="is-tx"><div class="prose"><p>能移除儲存在你身體、光體上所累積的毒，包含有形的毒及意識形態的毒。有毒意識比如「我是個失敗者」、「不可能」、「世界是危險的」、「我很窮」、「沒人愛我」⋯這些信念毒會以黑點或黑霧的方式存在，它們會阻斷光的流動，也會阻礙個人對夢想的追尋，也打擊信心，甚至癱瘓個人的行動力。</p><p>取毒療程是每個人都需要的，有定期施作的朋友，都感受到了莫大幫助。</p><p id="fire-snake-fb">自2017年起，我給過很多很多薩滿療程，至今已升級為整合型的完整療育。這次預約薩滿取毒療程的案主，有很多感動，經當事人同意，以下是重點分享。</p><p>當Shemaya的聖蛇在移除我腿部的毒時，一股能量讓我落地，也帶回我和大地母親親密的連結，我好深的感動，還心酸地想哭。令我印象深刻的是，當聖蛇吸取我左邊頭頂的意識毒（神不在了）時，驚訝發現拉出的是好長好長的一條意識！透過老師的力量動物協助毒素被轉化為純粹紫光。</p><p>聖蛇從我太陽神經叢後方所取出的毒，是「我是沒力量的」的信念毒，Shemaya說那是來自外界信念系統所植入的，難怪我會常對自己沒信心。透過這個療程，我明白自己和天父的關係，是如何影響原生家庭的。對於我從來沒感受過的，自然不會去尋找。但是在這次療癒過程中，我感到許多的愛許多光流入我，我真的感受到是被愛著的，雙手發熱心中好溫暖，而不自禁打從心底想要微笑。</p><p>最後Shemaya給我天狼星系統中的愛，當金光種子一股腦地倒入我的海底輪，好滿足好滿的愛填滿我。那個當下，我心中突然冒出「我好想你呀」的熟悉感。這股愛喚醒我內在愛的力量。</p><p>這是一個充滿愛與力量的薩滿療程，我會依據個人狀態給出整合療癒，歡迎跟Shemaya連繫預約。</p><p>看見你的薩滿軌跡</p><p>整合型療癒</p></div></div></div><a class="tlink" href="booking.html?s=薩滿聖蛇取毒">預約或詢問這個項目</a></section>
 <section class="item" id="return"><div class="item-h"><h2>鑽石療癒-重返薩滿之路</h2><a class="fb-link" href="#return-feedback">個案回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-return.webp" width="1200" height="900" alt="天狼星 重返你的薩滿道路 鑽石" loading="lazy"></div><div class="is-tx"><div class="prose"><p>「重新連結你的薩滿之道」的白金光鑽石“，是由Sun Ya協助，由Shemaya的星際源頭—天狼星所下載的鑽石。核心是金光，外在閃耀著純淨的白光，帶著清晰與強大的力量，能剝除在你之內所有屬於薩滿的黑暗與幻象，從分離到重新連結，連結到自身的源頭，並且協助人憶起自己，去重新連結個人的薩滿道路。</p><p>對於準備好的人，這個重新連結你的薩滿之道的鑽石，能夠集中你所有的力量，去專注在自己道路上的目標。</p><p>＊有關這顆鑽石的故事：</p><p>Shemaya，你穿越了那些薩滿的古老黑暗，人們被你的光吸引，許多人們帶著不同的古老，未療癒的薩滿經驗與黑暗能量來到你身邊。那是在亞特蘭提斯崩毀後，薩滿們使用的那些具有獨特力量的薩滿藥草，但人們不知，那股力量帶他進入的的並不是天堂，而是不同的世界；與自身議題有關的各種幻象。千百年來薩滿的黑暗經驗，一直儲存在脈輪中，很不容易被意識到。</p><p>你的光，常常是像鏡子般，映照出人們長久以來自己所抗拒的議題：那些關於古老的黑暗與光的分離。由於這些太強大，而且是不對光所敞開的，是很艱難的考驗。如果人們沒有去意識到這些衝突，是來自身的幻象所創造出來的，便會對你產生抗拒或是投射。而這與光的對抗，若強大到無法穿越，人們會選擇轉身離開。這也是你已經驗到的某些學員們的狀態。</p><p>這個白金光鑽石能剝除在個人之內，所有屬於薩滿的黑暗與幻象，從分離到重新連結，連結到自身的源頭，並且協助人憶起自己所屬的部落，重新連結個人自己的薩滿道路。對於準備好的人，這個重新連結你的薩滿之道的鑽石，能夠集中你所有的力量，去專注在自己道路上的目標。</p></div></div></div><a class="tlink" href="booking.html?s=鑽石療癒-重返薩滿之路">預約或詢問這個項目</a></section>
-<section class="item" id="session"><div class="item-h"><h2>預約你的薩滿療程</h2><a class="fb-link" href="#session-fb">個案回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-session.webp" width="1200" height="900" alt="預約 屬於你自己的薩滿療程" loading="lazy"></div><div class="is-tx"><div class="prose"><h3 class="doc-t">量身訂作屬於你自己的薩滿療程</h3><h4>服務內容</h4><p>1,諮詢</p><p>2,確認你的療癒主題</p><p>3,療育技巧:會依據個案實際需要而設計的二至三個療育作組合。所用到的療育技巧可能有以下，薩滿聖蛇取毒、海藍寶水淨化、前世回溯、黑光幻象消除、四大元素療癒、大地紅光、薩滿吟唱、力量動物、脈輪創傷移除、靈性手Ｏ術（若需要），也可能加上天堂植物藥草</p><p>4,整合，收尾總結</p><p>5,給予建議</p><h4 id="session-fb">以下是某位個案回饋：</h4><p>我清楚感受到聖蛇靈巧的移動，由喉嚨開始，金蛇的能量將喉嚨纏繞再緩緩滑入吸出，再前往我的心輪、太陽神經叢，Shemaya 以蛇咬出從我的太陽神經叢的毒，轉化後置入的是閃耀的印加帝國黃金訊息。我的膝蓋則取出中毒箭的黑血，被轉化放回的是令人很舒服的藥泥，陸續她又幫我做了幾個。我發現除Shemaya為我進行療癒外，似乎還有一雙強有力的手也支援著我為我做療癒。結束後才知道，那是Shemaya的力量動物—黑熊和她一起合作療癒。</p><p>Shemaya以薩滿吟唱，為我的喉輪、心輪的吟唱。吟唱中，我看見自己是傷痕累累的印加戰士，看到戰場、戰爭的畫面⋯到後面看見我沒辦法保護族人，族人們死亡使我心好痛。吟唱到後段，似乎有股聲音傳來說：「回來吧！戰士，過去的你已經盡了最大的力量了！」「回來吧！放下過往，我們有新的任務！」頓時內心有種被找回來，被召喚之感。</p><p>我總共進行了七個脈輪開啟的深度療癒，每個脈輪打開的瞬間，都有很多光快速向我流進來，某幾個脈輪速度更快，像很多的光順著流，甚至是用灌的進來。待第七個脈輪完成後，我的全身突然開啟一場大火！火越燒越燄，火焰太劇烈了，我都快站不住腳還火熱到起暈眩了，快撐不下時Shemaya 的黑熊給了我大大的支撐。</p><p>沒想到我的脈輪釋放這麼多！我頭好暈而得坐下來休息，全身熱到不行，好想喝水，我一口氣在Shemaya那裡喝了兩大杯水。</p><p>Shemaya 對我說：「感謝你榮耀大地母親！」，「大地之母叫我為你療癒過去的諸多創傷」我也真的感到這療程帶給我很多的愛與火。我被滿滿的愛包圍。回家後還持續喝水，發現原本我掰咖好幾週的腳卻輕盈多了。</p><p>一定要說，我真的很喜歡Shemaya 提供的個人薩滿療癒！</p><p>她的薩滿聖蛇和其他療癒技巧，都讓我感覺到自己舊有的軌跡被去除，身心變得輕盈多了！現在我能再裝進很多新的，學習一切新時代所需的。XD</p></div></div></div><a class="tlink" href="booking.html?s=預約你的薩滿療程">預約或詢問這個項目</a></section>
-<section class="item" id="symbols"><h2>北美印地安神聖符號</h2><p class="pending">內容待 Shemaya 提供</p><a class="tlink" href="booking.html?s=北美印地安神聖符號">預約或詢問這個項目</a></section>
+<section class="item" id="session"><div class="item-h"><h2>預約你的薩滿療程</h2><a class="fb-link" href="#session-fb">個案回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-session.webp" width="1200" height="900" alt="預約 屬於你自己的薩滿療程" loading="lazy"></div><div class="is-tx"><div class="prose"><h3 class="doc-t">量身訂作屬於你自己的薩滿療程</h3><h4>服務內容</h4><p>1,諮詢</p><p>2,確認你的療癒主題</p><p>3,療育技巧:會依據個案實際需要而設計的二至三個療育作組合。所用到的療育技巧可能有以下，薩滿聖蛇取毒、海藍寶水淨化、前世回溯、黑光幻象消除、四大元素療癒、大地紅光、薩滿吟唱、力量動物、脈輪創傷移除、靈性手Ｏ術（若需要），也可能加上天堂植物藥草</p><p>4,整合，收尾總結</p><p>5,給予建議</p><h4 id="session-fb">以下是某位個案回饋：</h4><p>我清楚感受到聖蛇靈巧的移動，由喉嚨開始，金蛇的能量將喉嚨纏繞再緩緩滑入吸出，再前往我的心輪、太陽神經叢，Shemaya 以蛇咬出從我的太陽神經叢的毒，轉化後置入的是閃耀的印加帝國黃金訊息。我的膝蓋則取出中毒箭的黑血，被轉化放回的是令人很舒服的藥泥，陸續她又幫我做了幾個。我發現除Shemaya為我進行療癒外，似乎還有一雙強有力的手也支援著我為我做療癒。結束後才知道，那是Shemaya的力量動物—黑熊和她一起合作療癒。</p><p>Shemaya以薩滿吟唱，為我的喉輪、心輪的吟唱。吟唱中，我看見自己是傷痕累累的印加戰士，看到戰場、戰爭的畫面⋯到後面看見我沒辦法保護族人，族人們死亡使我心好痛。吟唱到後段，似乎有股聲音傳來說：「回來吧！戰士，過去的你已經盡了最大的力量了！」「回來吧！放下過往，我們有新的任務！」頓時內心有種被找回來，被召喚之感。</p><p>我總共進行了七個脈輪開啟的深度療癒，每個脈輪打開的瞬間，都有很多光快速向我流進來，某幾個脈輪速度更快，像很多的光順著流，甚至是用灌的進來。待第七個脈輪完成後，我的全身突然開啟一場大火！火越燒越燄，火焰太劇烈了，我都快站不住腳還火熱到起暈眩了，快撐不下時Shemaya 的黑熊給了我大大的支撐。</p><p>沒想到我的脈輪釋放這麼多！我頭好暈而得坐下來休息，全身熱到不行，好想喝水，我一口氣在Shemaya那裡喝了兩大杯水。</p><p>Shemaya 對我說：「感謝你榮耀大地母親！」，「大地之母叫我為你療癒過去的諸多創傷」我也真的感到這療程帶給我很多的愛與火。我被滿滿的愛包圍。回家後還持續喝水，發現原本我掰咖好幾週的腳卻輕盈多了。</p><p>一定要說，我真的很喜歡Shemaya 提供的個人薩滿療癒！</p><p>她的薩滿聖蛇和其他療癒技巧，都讓我感覺到自己舊有的軌跡被去除，身心變得輕盈多了！現在我能再裝進很多新的，學習一切新時代所需的。XD</p></div><hr class="sep"><div class="prose"><p>心裡很想知道自己到底失落了什麼？便和Shemaya 預約個人療程。</p><p>我們深談後，Shemaya開始為我的心吟唱。隱約中，我站立的身體被風前後搖晃著，我來到了海邊吹海風。躺下後，呼吸變有點沈，Shemaya 指著我的胸口時，猛然我眼前竟然出現耶穌的影像。耶穌一直看著我，好溫柔的眼神呀，我不禁眼眶濕。後來出現漩渦，轉眼我又走在有落葉的白色道路。</p><p>Shemaya 手指碰到我的腹部，往腹部按摩著，剎那間我看見一個小女孩，坐在高高的懸崖邊，雙腿自在、開心地晃呀晃的，一副無憂無慮的樣子。她綁著捲髮咖啡色辮子，穿著像古西班牙衣服..，那是我嗎？好喜歡她無憂、無畏的樣子。</p><p>療程尾聲，閉眼的我看見 Shemaya 化為女神的模樣，隨之而來的是無法控制的嚎啕大哭與全身顫抖。她溫柔、四肢發麻。她溫柔地鼓勵我允許這份愛在體內流動，愛流動讓我哭得更大聲，好傷心啊！哭完後，我全身仍不停顫抖，整個人像剛手術過後那樣，雙手雙腳也麻。</p><p>原來Shemaya與她的力量動物為我取回遺失許久的「對愛的感受力」。不只滋養了我全身，特別還有臍輪和心輪，重新喚起我對這世界、對人們的愛的感受力。</p><p>透過對談，我終於明白，從小以來長期對金錢的不安全感與恐懼，使我情感麻木，讓我不信任到了極點，海底輪及心輪長期下來很淤塞。腹部與腳的問題源自對遺忘愛與信任。療程能量反應最明顯的是四肢很多舊能量釋放與劇烈抖麻，小腿像被大地之母填滿勇氣及力量。</p><p>過去未能面對的，我總是無意識的選擇遺忘。羅馬不是一天造成的，這些問題累積、累積到最後，變成現在這個樣子。謝謝Shemaya 為我作這個療程，讓我直面內心深處，也找回對愛的感受力，我不再無意識逃避。謝謝Shemaya的火薩滿。</p></div></div></div><a class="tlink" href="booking.html?s=預約你的薩滿療程">預約或詢問這個項目</a></section>
+<section class="item" id="symbols"><div class="item-h"><h2>北美印地安神聖符號</h2><a class="fb-link" href="#symbols-fb">個案回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-symbols.webp" width="1200" height="900" alt="北美印第安 神聖符號" loading="lazy"></div><div class="is-tx"><div class="prose"><p>這是來自火神阿格尼的古老智慧。共有35種符號核心賦能的北美印第安神聖符號，能為你快速開啟全維度的能量升級。</p><p>Shemaya會從中讀取（以第八脈輪）三項最適合當下你身心狀況的主題，透過北美印第安的神聖符號，來快速開啟你的身體與氣場能量，為你帶來快速改變。</p><p>共有35種力量符號，以下僅列出少部分作爲讀者參考：</p><p>＊接納任何面向真實的自己</p><p>＊感恩所有的一切發生</p><p>＊女性力量（得到女性源頭的滋養及慈悲）</p><p>＊釋放外來不真實的資訊（使自身系統保持穩定）</p><p>＊將經驗及領悟整合進入你之內</p><p>＊強化透過語言去表達自己的能力（對不善言語表達自己的人）</p><p>＊活出和大地連結的品質（豐盛穩定強化行動力）</p><p>＊札根天堂和大地（心輪的愛札根天地作整合）</p><p>＊透過學習和接受新想法而得到力量</p><p>＊聖靈 太陽 愛的力量 女性 家庭</p></div></div></div><div class="fb-wait" id="symbols-fb"><h4>個案回饋</h4><p class="pending">回饋內容待 Shemaya 提供</p></div><a class="tlink" href="booking.html?s=北美印地安神聖符號">預約或詢問這個項目</a></section>
 <section class="item" id="return-feedback"><h2>鑽石療癒個案回饋</h2><div class="prose"><p>我對Shemaya老師從天狼星下載的「重回自己的薩滿之道」鑽石很心動，加上在大課後，由於能量大轉化帶來的頭痛，我想預約這個鑽石療程去幫助我。</p><p>療程中，Shemaya 老師先在我海底輪放入鑽石。鑽石光進來時，一股能量從身體底部整個往上流竄，我看到自己左右兩邊的能量明顯不平衡。隨著老師的調整，我慢慢感覺完整、舒服了。老師說在我海底輪處有來自原生家庭負面話語及信念，這些對我造成了不小的影響，她建議我要練習去原諒父母。</p><p>接著鑽石來到我眉心輪，老師為我移除了我眉心輪處那個像金箍棒的東西！它一層又一層的把我眉心輪給圈裹住了…那是此世的，加上累世陰影、批評和失敗的經驗不斷累加上去的碎片，層層疊疊形成的魔咒，老師以鑽石光加強清理這區塊。</p><p>這次鑽石療癒讓我發現到，常常上完大課程或療癒，我都出現不明的頭痛。現在總算明白了。這頭痛是來自過往的陰影與光二者所造成的衝突……。我的心其實很想更多更快前進的，可是古老的陰影一直拉住我，告訴我那些美好的能量、光的療癒都很危險的！連在花卡精緻的花光中，古老的記憶陰影再度衝擊而造成我難解的頭痛。</p><p>療程結束後，我整個人心情變得好好！頭上的桎梏不見了！腦袋變得清晰、輕盈，連眼睛都明亮了起來，超級神奇的！老師還教我一些處理舊意識的方法和技巧，也鼓勵我繼續走在光的道路上、透過持續療癒去看見自己，成為自己（我的1號曼陀羅重覆一直出現呀）。鑽石療癒做完已經好幾天了，我頭上那種輕盈的感覺還在。再使用能量噴霧或是做6指技巧後，又更舒服了！真的好神奇！</p><p>謝謝老師</p><p>Om Namah Shivaya</p><hr class="sep"><p>Shemaya老師以她的重返薩滿道路的鑽石，帶著我去看過往我在地球薩滿道路上，所留下來的黑暗陰影。我來到沙漠，鑽石光帶我到埃及神廟，原來我在埃及神廟當過祭司。接著到西伯利亞泰加林，還有中南美洲的原始森林，甚至看到一堆人骨及施作黑魔法的植物及工具。看到此，心生起一股悔過及鼻酸，原來我曾經使用黑魔法。</p><p>最驚悚的一幕是阿茲特克時期，我穿著祭司服在執行活人祭。我感受到當時的不得已的悲痛及內心陰影。明明有能力讓那些人牲不要被犧牲，卻因為某些原因而做了。這時右邊肋骨下一直好痛，老師說肝臟同步在釋放過去的古老業力，她讓我連結這個疼痛去選能量產品。</p><p>我盲抽抽到老師的「自由」噴霧！在使用自由精華後，那個深藏在我之內鬼魅般的陰影被釋放了！我感覺自己在海中享受淨化我自在游著，水裡竟然慢慢浮現很多符號數字，都是存著許多的知識信息！這像是提醒我要準備上老師的水知識課程。</p><p>雖然古代薩滿文化是這樣，在靈魂角度上我明白那是錯的，因此型塑為藏在我內心深處的魔鬼黑影，我知道自己被這個陰影困住很久了。即使現在我感受到神的恩典，即使有光向我伸出橄欖枝，內心深處仍卡著我曾經做過這麼多壞事，神怎會接納我？</p><p>做完薩滿鑽石後，連續好幾天，我的身心都一直感受到自由的能量流，真正的自由是我可以選擇不去做某件事，而我是開心的。薩滿鑽石為我做的很深的內在黑暗釋放，讓我也原諒自己，那個曾經犯錯的自己。</p><p>Om Namah Shivaya</p><p>想要移除古老薩滿留下來的黑暗嗎？這鑽石就是你需要的</p></div></section>
 </div>
 </main>
 <footer>
   <div class="footer-widgets">
-    <div class="fw-in">
-      <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
+    <div class="fw-in fw-free">
+      <section class="widget"><h2 class="widget-title"><a href="free.html">免費課程與公益</a></h2>
+      <div class="free">
+        <figure><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></figure>
+        <figure><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></figure>
+        <figure><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></figure>
+        <figure><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></figure>
+        <figure><img src="assets/f-5.webp" width="600" height="600" alt="靜心" loading="lazy"><figcaption>靜心</figcaption></figure>
+        </div>
+      </section>
     </div>
   </div>
   <div class="footer-info">
     <div class="fw-in">
       <section class="widget fi"><h2 class="widget-title">購物須知</h2>
-        <h3>購物流程</h3><p>選購商品 → 加入購物車 → 填寫資料 → 付款 → 訂購完成</p>
-        <h3>付款方式</h3><ol><li>ATM轉帳 銀行實體ATM轉帳 / 網路轉帳</li><li>超商代碼付款 前往超商便利生活站機台 (如: 7-11 ibon) 至代碼繳費功能輸入代碼，即可印出繳費單 (限制總金額$20,000以下)</li></ol>
-        <h3>取消訂單</h3><p>訂單未付款及未出貨前，請進入「我的帳戶」 → 「訂單記錄查詢」即可自行取消訂單。</p>
-        <h3>寄件方式</h3><p>郵局掛號，或超商7-11 或全家</p>
-        <h3>運費</h3><p>一般客戶訂購商品總金額超過新台幣5000元(含)，享免運。</p><p>未滿新台幣$5000元時，消費者需自付運費。</p>
-        <h3>訂單查詢</h3><p>完成訂購後，請進入: 「我的帳戶」 → 「訂單記錄查詢」</p>
+        <ul><li><a href="shopping.html#flow">購物流程</a></li><li><a href="shopping.html#pay">付款方式</a></li><li><a href="shopping.html#cancel">取消訂單</a></li><li><a href="shopping.html#ship">寄件方式</a></li><li><a href="shopping.html#fee">運費</a></li><li><a href="shopping.html#query">訂單查詢</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
-        <h3>出貨及配送說明</h3><p>配送地區為台灣本島地區，其他地區或國家請先寫信跟我們聯繫，國際運費實報實銷。</p><p>商品出貨後一般可於1~3個工作天內送達 (實際送達時間仍將依貨流公司的配送量調節，配送狀況可查詢貨物追蹤查詢網頁)</p>
+        <ul><li><a href="shipping.html#delivery">出貨及配送說明</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
@@ -617,10 +669,11 @@ figure.pcard:hover img{opacity:1}
     });
   });
 
-  var gal = document.getElementById('galRow');
-  if (gal) {
-    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var hold = false, seen = false, touchAt = 0;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.gal').forEach(function (galBox) {
+    var gal = galBox.querySelector('.gal-row');
+    if (!gal) return;
+    var hover = false, focus = false, seen = false, touchAt = 0;
     var galStep = function (dir) {
       var fig = gal.querySelector('figure');
       var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
@@ -630,14 +683,13 @@ figure.pcard:hover img{opacity:1}
       else if (dir < 0 && gal.scrollLeft <= 2) x = max;
       gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
     };
-    document.querySelectorAll('.gal-btn').forEach(function (b) {
+    galBox.querySelectorAll('.gal-btn').forEach(function (b) {
       b.addEventListener('click', function () { galStep(Number(b.dataset.dir)); });
     });
-    var galBox = gal.parentNode;
-    galBox.addEventListener('mouseenter', function () { hold = true; });
-    galBox.addEventListener('mouseleave', function () { hold = false; });
-    galBox.addEventListener('focusin', function () { hold = true; });
-    galBox.addEventListener('focusout', function () { hold = false; });
+    galBox.addEventListener('mouseenter', function () { hover = true; });
+    galBox.addEventListener('mouseleave', function () { hover = false; });
+    galBox.addEventListener('focusin', function () { focus = true; });
+    galBox.addEventListener('focusout', function (e) { if (!galBox.contains(e.relatedTarget)) focus = false; });
     gal.addEventListener('touchstart', function () { touchAt = Date.now(); }, { passive: true });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(gal);
@@ -645,10 +697,10 @@ figure.pcard:hover img{opacity:1}
       seen = true;
     }
     setInterval(function () {
-      if (hold || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
+      if (hover || focus || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
       galStep(1);
-    }, 4000);
-  }
+    }, Number(galBox.dataset.interval) || 4000);
+  });
 
   var nlBtn = document.getElementById('nlBtn');
   if (nlBtn) {

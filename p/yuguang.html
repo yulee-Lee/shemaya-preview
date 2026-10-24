@@ -39,8 +39,8 @@ ul{list-style:none}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
 
-.menu>li+li{margin-left:30px}
-.menu>li+li::before{content:"/";position:absolute;left:-18px;top:24px;color:#bbb}
+.menu>li+li{margin-left:23px}
+.menu>li+li::before{content:"/";position:absolute;left:-14px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -141,24 +141,24 @@ ul{list-style:none}
 
 
 @media (max-width:1436px){
-  .menu>li+li{margin-left:18px}
-  .menu>li+li::before{left:-12px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-9px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:13px}
-  .menu>li+li::before{left:-10px}
+  .menu>li+li{margin-left:8px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1260px){
-  .menu>li{font-size:14px}
-  .menu>li+li{margin-left:11px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:13.5px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
-  .menu>li{font-size:12.5px}
-  .menu>li+li{margin-left:10px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:12px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -199,6 +199,8 @@ ul{list-style:none}
   .picks-in{grid-template-columns:1fr;gap:32px}
   .strip{padding:40px 24px 0}
   .fbvid{padding:0 24px 48px}
+  .say{padding:0 24px 72px}
+  .say-gal .gal-row{grid-auto-columns:calc((100% - 16px)/2)}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
@@ -456,6 +458,54 @@ figure.pcard:hover img{opacity:1}
   .item-h{margin-bottom:16px}
   .item-h>h2{font-size:21px}
 }
+
+.hero-pts{margin-top:16px;font-family:var(--sans);font-size:15px;line-height:1.9;color:var(--ink-sub);letter-spacing:.04em}
+.hero-pts li{position:relative;padding-left:18px}
+.hero-pts li::before{content:"";position:absolute;left:2px;top:.8em;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+.quote{margin:0 0 28px;padding:20px 24px;background:var(--tint);border-left:3px solid var(--accent);color:var(--ink-sub)}
+.quote p{margin:0 0 10px;max-width:42em;overflow-wrap:anywhere}
+.quote p:last-child{margin-bottom:0;font-family:var(--sans);font-size:14px}
+
+.fb-wait{margin-top:28px}
+.fb-wait h4{margin-bottom:10px}
+
+.art-h{margin-bottom:12px}
+.art-h>h3{margin-bottom:0}
+.item-h>.fb-link+.sub-links{padding-left:20px;border-left:1px solid var(--line)}
+
+.testimonial>.item-side{margin-bottom:28px}
+
+.posts{display:grid;gap:0;max-width:880px}
+.post-card{display:grid;grid-template-columns:240px minmax(0,1fr);gap:28px;align-items:start;padding:28px 0;border-bottom:1px solid var(--line)}
+.post-card:first-child{padding-top:0}
+.post-card img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--tint)}
+.pc-tx p{max-width:34em}
+.pc-tx h2{margin:0 0 8px;font-size:20px;line-height:1.45;font-weight:700}
+.pc-tx h2 a:hover,.pc-tx h2 a:focus-visible{color:var(--accent-dark)}
+.pc-tx p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin-bottom:8px;font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--ink-sub);overflow-wrap:anywhere}
+.post{border-top:0;padding-top:0}
+
+.post-date{font-family:var(--sans);font-size:14px;color:var(--ink-sub);letter-spacing:.06em}
+.poem p{line-height:1.9}
+.poem .post-lead{font-size:19px;font-weight:700;color:var(--ink);line-height:1.7}
+.poem .post-close{font-size:19px;font-weight:700;color:var(--accent-dark);line-height:1.7;margin-top:20px}
+.poem .post-by{font-family:var(--sans);font-size:14px;color:var(--ink-sub)}
+
+.title-row .hero-fb{margin:0;display:flex;flex-wrap:wrap;gap:4px 20px}
+
+.fw-in.fw-free{display:block}
+.fw-free .free{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.fw-free .free figcaption{margin-top:8px;font-size:14px}
+.fw-free .widget-title a:hover,.fw-free .widget-title a:focus-visible{color:var(--accent-dark)}
+@media (max-width:1024px){ .fw-free .free{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:600px){
+  .post-card{grid-template-columns:1fr;gap:14px}
+  .fw-free .free{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+}
+@media (max-width:767px){
+  .item-h>.fb-link+.sub-links{padding-left:0;border-left:0;flex-basis:100%}
+}
 </style>
 </head>
 <body>
@@ -496,6 +546,7 @@ figure.pcard:hover img{opacity:1}
           <div class="dd"><ul class="sub">
             <li><a href="shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="shop.html#crystal">靈性水晶</a></li><li><a href="shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
+        <li><a href="blog.html">部落格</a></li>
       </ul>
       <a class="book" href="booking.html">立即預約</a>
       <a class="mbook" href="booking.html">立即預約</a>
@@ -505,32 +556,33 @@ figure.pcard:hover img{opacity:1}
 <main id="top">
 <section class="hero"><div class="wrap hero-in has-ph ph-land has-toc"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 浴光之路</nav><h1 class="sec-title">浴光之路</h1></div><div class="hero-ph"><img src="assets/x-yg-hero.webp" width="1200" height="900" alt="浴光之路"></div><nav class="toc" aria-label="本頁項目"><ul><li><a href="#yuguang">浴光之路</a></li><li><a href="#kids">兒童浴光之路</a></li><li><a href="#yg-share">浴光之路學員分享</a></li><li><a href="#kids-share">兒童浴光學員分享</a></li></ul></nav></div></section>
 <div class="wrap inner">
-<section class="item" id="yuguang"><h2>浴光之路</h2><div class="item-side"><div class="is-ph"><img src="assets/x-yuguang.webp" width="1200" height="900" alt="浴光之路" loading="lazy"></div><div class="is-tx"><div class="prose"><p>浴光之路是一條通往愛的道路。四天完整而深度轉化的靈性課程，是許多人的靈性及生命開展中極重要的訓練！在八位靈性協助者陪伴下，透過課程中深度的光的諸多練習及點化，脈輪中的過往經驗與堵塞將被清理，你所遺忘的「我是誰」，將在光中被喚醒。</p><p>我們將開始面對自己，找到自己，浴光讓心敞開去連結完整自我，轉化自身弱點，迎回本有潛能，拿回力量。浴光開啟全新的道路，讓我們在黃金世紀活出真實的力量，並且服務自他。</p><p>「快樂幸福的所有關鍵都已在你心中，神性就在你之內，等待著被你發掘、領悟與整合到你的新生命之流。</p><p>你已經遺忘自己究竟是誰，但你所需要找回的都已在你之內，你只需找到它。浴光之路將指引你一條通往活出完整自己的路。」</p><p>「浴光之路是一條你真正能踏上且到達自己的路，並讓你覺知到你生命中，你內心所渴望達到的一切，都已經在那裡等著你。你只需有勇氣踏出這一步！」</p><p>The Path into Light R『浴光之路』是由德國籍老師 Agni Eickermann 創辦的課程，創辦至今30多年，觸及所有以光工作為道路的人，目前於20多個國家仍持續地舉辦。</p><p>Agni曾說：「療癒本身最好的詮釋是自由，只有你能讓自己自由，它無法從任何療法而來，也無法從任何上師那裡而來，它只能來自你的心。」</p><p>你能為任何人做的最好的事就是：成為你自己！</p><h4>課程訓練重點：</h4><p>1，重新連結自身的光</p><p>2，打開對精微能量的感知能力</p><p>3，覺知自己的能量狀態與使用光工具</p><p>4，學習運用精微能量的療癒技巧</p><p>5，移除七個主要脈輪的阻塞</p><p>6，探索脈輪的個別品質與力量</p><p>7，學習使用脈輪能量在生活中</p><p>8，與靈性協助者連結</p><p>9，領取生命任務活出更大的自己</p><p>10，維持七大脈輪的光穩定的擴展</p><p>12，移除不屬於自己的外來能量</p><p>13，拆解失敗的鎖鏈，並創造成功鎖鏈</p><p>14，看見閱讀未來的五年</p><p>15，點化並強化在傳承之內和彼此的聯繫</p><p>你想學習透過脈輪來清理照顧自己，或是想突破現狀嗎？想要探索了解自己的生命任務嗎？你想快速前進，想要找到人生真實的方向嗎？</p><p>讓Shemaya陪你走上你的浴光之路。</p></div></div></div><a class="tlink" href="booking.html?s=浴光之路">報名或詢問這門課程</a></section>
+<section class="item" id="yuguang"><div class="item-h"><h2>浴光之路</h2><a class="fb-link" href="#yg-share">學員回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-yuguang.webp" width="1200" height="900" alt="浴光之路" loading="lazy"></div><div class="is-tx"><blockquote class="quote"><p>「當人們參加Shemaya帶領的浴光之路，她的能量使人們被安住、被支持，Shemaya愛的品質是很母性、很大地的，她的愛能支持人們去靠近自己的陰暗面，包括過去無法碰觸的或是不願接納的陰影，在Shemaya的浴光中都會被看見、被療癒。」</p><p>「Shemaya 的光是金紅色的光，能帶來大地般的接納及穩定，她帶著神性之母的愛使人容易札根及被充電。人們也能和Shemaya 一起去作有關土地的面向，以及療癒自身無法札根的議題，關於在天堂、在地球的札根，及療癒自己跟地球的關係、療癒自己和自身天堂的關係。」</p><p>（以上來自天堂知識聖殿的訊息）</p></blockquote><div class="prose"><p>浴光之路是一條通往愛的道路。四天完整而深度轉化的靈性課程，是許多人的靈性及生命開展中極重要的訓練！在八位靈性協助者陪伴下，透過課程中深度的光的諸多練習及點化，脈輪中的過往經驗與堵塞將被清理，你所遺忘的「我是誰」，將在光中被喚醒。</p><p>我們將開始面對自己，找到自己，浴光讓心敞開去連結完整自我，轉化自身弱點，迎回本有潛能，拿回力量。浴光開啟全新的道路，讓我們在黃金世紀活出真實的力量，並且服務自他。</p><p>「快樂幸福的所有關鍵都已在你心中，神性就在你之內，等待著被你發掘、領悟與整合到你的新生命之流。</p><p>你已經遺忘自己究竟是誰，但你所需要找回的都已在你之內，你只需找到它。浴光之路將指引你一條通往活出完整自己的路。」</p><p>「浴光之路是一條你真正能踏上且到達自己的路，並讓你覺知到你生命中，你內心所渴望達到的一切，都已經在那裡等著你。你只需有勇氣踏出這一步！」</p><p>The Path into Light R『浴光之路』是由德國籍老師 Agni Eickermann 創辦的課程，創辦至今30多年，觸及所有以光工作為道路的人，目前於20多個國家仍持續地舉辦。</p><p>Agni曾說：「療癒本身最好的詮釋是自由，只有你能讓自己自由，它無法從任何療法而來，也無法從任何上師那裡而來，它只能來自你的心。」</p><p>你能為任何人做的最好的事就是：成為你自己！</p><h4>課程訓練重點：</h4><p>1，重新連結自身的光</p><p>2，打開對精微能量的感知能力</p><p>3，覺知自己的能量狀態與使用光工具</p><p>4，學習運用精微能量的療癒技巧</p><p>5，移除七個主要脈輪的阻塞</p><p>6，探索脈輪的個別品質與力量</p><p>7，學習使用脈輪能量在生活中</p><p>8，與靈性協助者連結</p><p>9，領取生命任務活出更大的自己</p><p>10，維持七大脈輪的光穩定的擴展</p><p>12，移除不屬於自己的外來能量</p><p>13，拆解失敗的鎖鏈，並創造成功鎖鏈</p><p>14，看見閱讀未來的五年</p><p>15，點化並強化在傳承之內和彼此的聯繫</p><p>你想學習透過脈輪來清理照顧自己，或是想突破現狀嗎？想要探索了解自己的生命任務嗎？你想快速前進，想要找到人生真實的方向嗎？</p><p>讓Shemaya陪你走上你的浴光之路。</p></div></div></div><a class="tlink" href="booking.html?s=浴光之路">報名或詢問這門課程</a></section>
 <section class="item" id="kids"><div class="item-h"><h2>兒童浴光之路</h2><a class="fb-link" href="#kids-share">學員回饋</a></div><div class="item-side"><div class="is-ph"><img src="assets/x-kids.webp" width="1200" height="900" alt="兒童浴光" loading="lazy"></div><div class="is-tx"><div class="prose"><p>來自天堂的孩子們，依然有著與自身天堂連結的管道，然而隨著逐漸長大，孩子想探索世界的好奇心被壓抑，受到外在環境和教育體制信念影響，孩子的天堂連結管道變得越來越小，甚至遺忘了自己是誰，許多孩子可能也將自己的天賦、潛能縮退，變得疏於對外去展現自我本質，也不知道自己是有創造能力。</p><p>兒童浴光之路是協助兒童重新記起「我是誰？」並協助孩子打開光的感知，找回內在穩定、專注及扎根的安全感。浴光開啟個人自身奧秘，八位靈性協助者及帶領老師會全程以光和愛帶領孩子去看見孩子在哪裡受阻礙、綑綁？哪部分需要去學習的？</p><p>透過一個個脈輪的練習去化解舊有束縛，逐漸轉化回到本有的純淨與快樂後，當光的管道被打開，孩子被引導去迎回自己的能量工具，各個光層級的工具、技巧，並相互練習如何運用在日常生活中，為生活帶入更多自由及創造。</p><p>孩子們透過團體互動、遊戲、練習的方式去探索自己，也會學習到如何善用光工具來保護自己、協助別人，為植物、動物及地球送出祝福，也讓自己自信，加深自我價值及心性穩定。</p><p>最後，孩子會體驗到自身能力的無限，透過世界觀、宇宙觀的帶入，孩子打破原有認知的侷限，心擴展更大，真實去感受自己的光是獨特的、無限性的，促使孩子從二元分別、限制性走向與萬物融合一體，為生命播下有力量的希望種子。</p><p>有豐富親子經驗的Shemaya，曾協助不少帶著新世紀能量而來的孩子們及其母親們，整合身心及突破內外在考驗。</p><p>歡迎您家中14歲以下的兒童，來參加Shemaya的兒童浴光。想知道更多相關資訊，歡迎詢問Shemaya</p></div></div></div><a class="tlink" href="booking.html?s=兒童浴光之路">報名或詢問這門課程</a></section>
-<section class="item" id="yg-share"><h2>浴光之路學員分享</h2><p class="pending">內容待 Shemaya 提供</p></section>
+<section class="item" id="yg-share"><h2>浴光之路學員分享</h2><div class="prose"><h4>＊快速蛻變的道路</h4><p>以前的我，人生缺乏目標與動力，急欲尋求突破，偶然被 Shemaya 的療程吸引，那內容文字如雷神索爾的強力鎚入我的心，使我立馬報名預約。療程中，我身體感受到明顯的熱流與寒氣排出，脈輪的解讀更是精準對應我現狀。我問老師，有什麼能夠讓我快速改變自己，改變人生？Shemaya便提到浴光訓練。一聽到學費，頭腦瞬間冒出無數抗拒與藉口，不過，心中抵不過強烈想改變的渴望，我下定決心報名。</p><p>在與老師討論的漫長過程中，Shemaya 的正能量與「專注將力量用在想要的事物上」給了我巨大支持，重重關卡也能重重過，最終順利排班、挪出保費，我排除萬難踏上浴光之路。</p><p>原以為自己是麻瓜，在浴光首日，脈輪及對應顏色、功能、品質，對我都是全新概念。練習接收天與地能量時，我感受到大地之母的愛好豐沛、好滋養，從海底輪往上一個個脈輪敞開吸收，天堂來的光明、溫暖、愛、喚醒、清明⋯，我感受到天堂與大地之母豐沛的愛充滿脈輪，漸漸我發現自己的感知能力回來了。</p><p>來到七脈輪的堵塞移除及潛能迎回的療癒，我們班十個人，老師總共要為作一百四十個脈輪，聽起來好辛苦。輪到我時，能量流運作使我的左手不由自主抖動，一開始我想控制住不抖，Shemaya老師卻說讓能量流動，讓阻塞離開。沒想到一放鬆，身體竟誇張的抖動，甚至全身開始劇烈搖晃，當下才明白，原來自己的脈輪堵塞得好嚴重。尤其是老師為我清理喉輪時，我身體劇烈發抖到連唸真言都無法，就像有人掐著脖子不讓我唸那樣困難。老師請全體同學大念真言，齊力唱誦的能量很震撼，也支持我順利完成。從此後，我發現自己的靈視力與感應能力突然三級跳，連同學們都好羨慕。</p><p>聆聽巴巴吉訊息時，頓時電流充滿全身，我的靈魂彷彿徹底甦醒了！某天早晨六點半，我由苗栗赴台北浴光的途中，機車拋錨熄火完全發不動。以往我會慌張，但這次我內心平靜地，持續使用光劍發送並請求協助，多次後竟順利發動趕上火車，深刻察覺到自己內心已經變得強大、無畏。課程中的眉心輪與巴巴吉連結練習，更讓我體驗到自己的感知力竟100%準確。</p><p>參加浴光是我人生做過最對的決定， 它打開我人生一道重要的大門。在密集訓練中，帶來我未曾有過的靈性體驗，還有愛、理解、信任及支持，其價值，已遠遠超過學費。</p><h4>＊浴光讓我心中滿光和愛</h4><p>六歲兒子挑釁著、冷眼的看著我説，「歐，妳還有眼淚啊?!」</p><p>「這是我從小親手帶大的兒子嗎?」</p><p>五雷轟頂後，腦中一片空白。大哭完後，為了想突破親子關係之中的愛的議題，我陸續去上過許多親子溝通技巧的心理課程。</p><p>一切彷彿被安排好的，與Shemaya從網路相識、溝通是由於六年前孩子皮膚問題。直到今年和她才有正式碰面，而她也讀到我的議題，「你將用包容、理解的女性領導力量來教育孩子，我很願意陪伴妳穿越這個過程」我接受她的建議，心全然信任的我就踏上了浴光之路。</p><p>訓練開始時，我有點不安，擔心若我無感很尷尬，有點懷疑真的能從心感知到光嗎?</p><p>有點緊張，心鎖被看見時會不會覺得很丟臉?有點害怕，同學會不會暗想我都不會呢?</p><p>事實證明以上都是多慮，訓練進入第三天、第四天時，我一度完全感受到自己的內心充滿愛時，回家面對孩子的爭吵、胡鬧，我竟然能跳脫，完全不被影響，才驚覺到...OH...原來當自己「愛的倉庫」是滿的時候，能如如不動還有能力以智慧的方式，去面對和孩子的課題。</p><p>原來，內心平靜是如此</p><p>內心充滿光和愛是如此</p><p>浴光給我如此強大的愛作支撐時，讓我體驗到前所未有的平靜。</p><p>心這樣深刻的感動，讓我非常激動，在一個個不斷的練習過程中，不自覺的我流下許多眼淚（應該是自己靈魂被感動吧）。</p><p>領取生命任務時，接受Shemaya真誠且溫暖擁抱我時，我真心感受到她是如此用心陪伴著我走這趟旅程，眼淚又情不自禁流下，那不是悲傷難過，而是感動流下被愛與喜悅的眼淚。</p><p>非常開心靈性協助者們的愛，讓我體會、領悟到我所需知道的。感謝我自己願意給自己機會，在人生中，能夠有個完全不一樣的新開始。</p><p>上完浴光後，覺得自己的眼神都不一樣了，覺得好有神，充滿了夏克緹的美！看起來好美好順眼啊！（台中）</p><h4>＊快速整合身心與更新脈輪</h4><p>身為天生敏感體質，我自二十歲起頻繁經歷夢境、聲音與預知。為此我博覽群書、走訪各大宗教，也試過求醫問事與中醫、芳療、瑜珈等多元學習，最後甚至投入中草藥種植以求安穩生活。因家庭背景與擔憂被視為神經病，我長期壓抑心聲、內心煎熬。</p><p>因緣具足下，我遇見了 Shemaya 老師並展開浴光訓練。課堂中我學會使用光劍保護自己，不再對異次元現象無止盡地恐懼與耗能。在靈性協助者與老師引領下，我釋放陰影、移除七脈輪舊結構，雖一度重現過去世被背叛與對抗黑暗的痛苦，但在潛能完整迎回後，那痛苦早已消失無蹤，臍輪做完後甚至開心到想跳舞。</p><p>過去夢靨與現實苦受，在訓練中得到照見、理解與深度清理。最後一天，老師為我讀取極其貼合的生命任務，讓我感受到被理解與支持。踏上浴光之路，我整個人被更新，找回內在力量，不再因受外界能量影響而耗盡自己的能量，浴光也讓我學到只要接受自己是光，就能突破侷限的思維與困境，運用浴光所學的教導，不僅支持我活出快樂，同時也能照亮他人。</p><p>感謝自己選擇這條路，感謝靈性協助者，更感謝 Shemaya 老師的愛，陪伴我走上光的道路！（台中）</p><h4>＊謝謝你認出了我</h4><p>能被Shemaya支持著上浴光真的太好了！能夠來上浴光是我做過最棒的決定！</p><p>浴光的團體練習，讓我深刻感受到每個人給予的能量強弱與品質，甚至匯聚成我身體周圍溫暖的能量流，我很享受那樣多的愛的互動。這些充滿愛與光的練習，也讓我感到好溫暖而感動流淚。浴光有很多練習，都是讓我學習去感知自己與他人的能量流動，察覺未曾發現的盲點。隨著課程推進，滿滿的分享與歡笑讓愛流動，推動了我內在極大的進展。</p><p>最震撼的是領取賽巴巴個人訊息時，老師還沒唸完我就嚎啕大哭。我完全知道她在說什麼！</p><p>但是，我又不知道她在說什麼。</p><p>那不是悲傷的眼淚，那是靈魂被認出來的感動</p><p>我隱藏了這麼這麼久，甚至已經自己忘記為何而來、從何而去，在這個世界上的每一天該何去何從。在無盡的黑夜中，我尋找光的出現…。</p><p>如今，終於被認出來了，認出真正的我，這就是我一直以來在找尋的答案、是我需要解開謎團的指引。</p><p>多麼渴望認出自己啊！</p><p>謝謝賽巴巴認出了我</p><p>感謝 Shemaya 一路溫暖而堅定的支持與陪伴。（澳洲）</p></div></section>
 <section class="item" id="kids-share"><h2>兒童浴光學員分享</h2><div class="prose"><h4>小朋友媽媽回饋：</h4><p>我的兒子Daru是心地善良，不喜歡與人爭的孩子。Daru曾是個表達上不清不楚，需要媽媽代為翻譯，甚至連爸爸都不清楚他想表達什麼。這次趁暑假回台灣，讓他上了Shemaya老師的兒童浴光後，在表達能力上有明顯進步。</p><p>以往他在學校若有不開心並不會主動說，都是我感知到他不對勁，與他談心才能知道。浴光之後，他時常與我聊天，表達在校的情緒感受。學校老師曾提及，Daru在校遇困難時不會主動求助，非得老師發現他的問題才能去幫助他。浴光之後，我發現他能勇於提出問題及尋求幫助。</p><p>以前他常做惡夢，有時還會哭泣。浴光之後，做惡夢的次數變少了，即使做了惡夢也不再那麼驚恐，還能平靜的跟我述說著他的夢。</p><p>娘家爸爸有次跟我說，他走路浮浮的不穩、不踏實。我也觀察到他在跑步時，身體有些不太協調，似乎能量沒有穩穩紮根在地球。此外他對於進入陌生環境也常感到不安。在兒童浴光之後，他的手腳更靈活，人也自在多了，就是一種安心放鬆的狀態。</p><p>Shemaya老師曾說Daru是非常支持我的小孩，以前我沒感受到這點，上過兒童浴光後，他果真更支持我，我也能感受到他對我無限的愛與貼心。</p><p>浴光課程對孩子來說，就是在遊戲中學習光、使用光工具，Daru會使用光在肚子痛、肚子餓時及送光祝福他人。感謝Shemaya帶領的兒童浴光課程，讓Daru每一天都能安心自在地球上生活、學習。</p><p>Shemaya 帶領的兒童浴光，歡迎你的孩子一起浴光</p></div></section>
 </div>
 </main>
 <footer>
   <div class="footer-widgets">
-    <div class="fw-in">
-      <section class="widget"><h2 class="widget-title">認識 SHEMAYA</h2><ul><li><a href="free.html#story">早年的故事</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">小型工作坊</h2><ul><li><a href="free.html#growth">身心成長</a></li><li><a href="free.html#fullmoon">滿月火典療癒</a></li><li><a href="free.html#body">身體解密</a></li><li><a href="free.html#family">親子伴侶關係</a></li></ul></section>
-      <section class="widget"><h2 class="widget-title">免費課程與公益</h2><ul><li><a href="free.html#attune">免費點化</a></li><li><a href="free.html#meditation">靜心冥想帶領</a></li><li><a href="free.html#mother">神性之母的祝福</a></li><li><a href="free.html#reading-club">心靈讀書會</a></li><li><a href="free.html#land">土地服務</a></li><li><a href="free.html#irregular">不定期服務</a></li></ul></section>
+    <div class="fw-in fw-free">
+      <section class="widget"><h2 class="widget-title"><a href="free.html">免費課程與公益</a></h2>
+      <div class="free">
+        <figure><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></figure>
+        <figure><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></figure>
+        <figure><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></figure>
+        <figure><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></figure>
+        <figure><img src="assets/f-5.webp" width="600" height="600" alt="靜心" loading="lazy"><figcaption>靜心</figcaption></figure>
+        </div>
+      </section>
     </div>
   </div>
   <div class="footer-info">
     <div class="fw-in">
       <section class="widget fi"><h2 class="widget-title">購物須知</h2>
-        <h3>購物流程</h3><p>選購商品 → 加入購物車 → 填寫資料 → 付款 → 訂購完成</p>
-        <h3>付款方式</h3><ol><li>ATM轉帳 銀行實體ATM轉帳 / 網路轉帳</li><li>超商代碼付款 前往超商便利生活站機台 (如: 7-11 ibon) 至代碼繳費功能輸入代碼，即可印出繳費單 (限制總金額$20,000以下)</li></ol>
-        <h3>取消訂單</h3><p>訂單未付款及未出貨前，請進入「我的帳戶」 → 「訂單記錄查詢」即可自行取消訂單。</p>
-        <h3>寄件方式</h3><p>郵局掛號，或超商7-11 或全家</p>
-        <h3>運費</h3><p>一般客戶訂購商品總金額超過新台幣5000元(含)，享免運。</p><p>未滿新台幣$5000元時，消費者需自付運費。</p>
-        <h3>訂單查詢</h3><p>完成訂購後，請進入: 「我的帳戶」 → 「訂單記錄查詢」</p>
+        <ul><li><a href="shopping.html#flow">購物流程</a></li><li><a href="shopping.html#pay">付款方式</a></li><li><a href="shopping.html#cancel">取消訂單</a></li><li><a href="shopping.html#ship">寄件方式</a></li><li><a href="shopping.html#fee">運費</a></li><li><a href="shopping.html#query">訂單查詢</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
-        <h3>出貨及配送說明</h3><p>配送地區為台灣本島地區，其他地區或國家請先寫信跟我們聯繫，國際運費實報實銷。</p><p>商品出貨後一般可於1~3個工作天內送達 (實際送達時間仍將依貨流公司的配送量調節，配送狀況可查詢貨物追蹤查詢網頁)</p>
+        <ul><li><a href="shipping.html#delivery">出貨及配送說明</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
@@ -613,10 +665,11 @@ figure.pcard:hover img{opacity:1}
     });
   });
 
-  var gal = document.getElementById('galRow');
-  if (gal) {
-    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var hold = false, seen = false, touchAt = 0;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.gal').forEach(function (galBox) {
+    var gal = galBox.querySelector('.gal-row');
+    if (!gal) return;
+    var hover = false, focus = false, seen = false, touchAt = 0;
     var galStep = function (dir) {
       var fig = gal.querySelector('figure');
       var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
@@ -626,14 +679,13 @@ figure.pcard:hover img{opacity:1}
       else if (dir < 0 && gal.scrollLeft <= 2) x = max;
       gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
     };
-    document.querySelectorAll('.gal-btn').forEach(function (b) {
+    galBox.querySelectorAll('.gal-btn').forEach(function (b) {
       b.addEventListener('click', function () { galStep(Number(b.dataset.dir)); });
     });
-    var galBox = gal.parentNode;
-    galBox.addEventListener('mouseenter', function () { hold = true; });
-    galBox.addEventListener('mouseleave', function () { hold = false; });
-    galBox.addEventListener('focusin', function () { hold = true; });
-    galBox.addEventListener('focusout', function () { hold = false; });
+    galBox.addEventListener('mouseenter', function () { hover = true; });
+    galBox.addEventListener('mouseleave', function () { hover = false; });
+    galBox.addEventListener('focusin', function () { focus = true; });
+    galBox.addEventListener('focusout', function (e) { if (!galBox.contains(e.relatedTarget)) focus = false; });
     gal.addEventListener('touchstart', function () { touchAt = Date.now(); }, { passive: true });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(gal);
@@ -641,10 +693,10 @@ figure.pcard:hover img{opacity:1}
       seen = true;
     }
     setInterval(function () {
-      if (hold || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
+      if (hover || focus || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
       galStep(1);
-    }, 4000);
-  }
+    }, Number(galBox.dataset.interval) || 4000);
+  });
 
   var nlBtn = document.getElementById('nlBtn');
   if (nlBtn) {

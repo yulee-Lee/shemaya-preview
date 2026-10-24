@@ -39,8 +39,8 @@ ul{list-style:none}
 .menu{display:flex;justify-content:center;flex-wrap:nowrap}
 .menu>li{position:relative;font-size:15.3px;line-height:22.95px}
 
-.menu>li+li{margin-left:30px}
-.menu>li+li::before{content:"/";position:absolute;left:-18px;top:24px;color:#bbb}
+.menu>li+li{margin-left:23px}
+.menu>li+li::before{content:"/";position:absolute;left:-14px;top:24px;color:#bbb}
 .menu>li>a{display:block;padding:24px 0;white-space:nowrap;transition:color .15s}
 .menu>li.has-sub>a{padding-right:18px}
 .menu>li.has-sub>a::after{content:"";position:absolute;right:0;top:34px;border:5px solid transparent;border-top-color:var(--accent);border-bottom-width:0}
@@ -141,24 +141,24 @@ ul{list-style:none}
 
 
 @media (max-width:1436px){
-  .menu>li+li{margin-left:18px}
-  .menu>li+li::before{left:-12px}
+  .menu>li+li{margin-left:13px}
+  .menu>li+li::before{left:-9px}
 }
 @media (max-width:1340px){
   .menu>li{font-size:14.5px}
-  .menu>li+li{margin-left:13px}
-  .menu>li+li::before{left:-10px}
+  .menu>li+li{margin-left:8px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1260px){
-  .menu>li{font-size:14px}
-  .menu>li+li{margin-left:11px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:13.5px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
   .nav-in{padding:0 130px 0 20px}
 }
 @media (max-width:1100px){
-  .menu>li{font-size:12.5px}
-  .menu>li+li{margin-left:10px}
-  .menu>li+li::before{left:-8px}
+  .menu>li{font-size:12px}
+  .menu>li+li{margin-left:7px}
+  .menu>li+li::before{left:-6px}
 }
 @media (max-width:1180px){
   .courses{gap:40px}
@@ -199,6 +199,8 @@ ul{list-style:none}
   .picks-in{grid-template-columns:1fr;gap:32px}
   .strip{padding:40px 24px 0}
   .fbvid{padding:0 24px 48px}
+  .say{padding:0 24px 72px}
+  .say-gal .gal-row{grid-auto-columns:calc((100% - 16px)/2)}
   :root{--gut:32px;--sec:72px}
   .sec-title{font-size:30px}
   .row{grid-auto-columns:calc((100% - 48px)/3);gap:24px}
@@ -292,6 +294,7 @@ ul{list-style:none}
           <div class="dd"><ul class="sub">
             <li><a href="../p/shop.html#spray">光精華噴霧（六大系列）</a></li><li><a href="../p/shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="../p/shop.html#crystal">靈性水晶</a></li><li><a href="../p/shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="../p/shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="../p/shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
+        <li><a href="../p/blog.html">部落格</a></li>
       </ul>
       <a class="book" href="../p/booking.html">立即預約</a>
       <a class="mbook" href="../p/booking.html">立即預約</a>
@@ -391,15 +394,10 @@ ul{list-style:none}
   <div class="footer-info">
     <div class="fw-in">
       <section class="widget fi"><h2 class="widget-title">購物須知</h2>
-        <h3>購物流程</h3><p>選購商品 → 加入購物車 → 填寫資料 → 付款 → 訂購完成</p>
-        <h3>付款方式</h3><ol><li>ATM轉帳 銀行實體ATM轉帳 / 網路轉帳</li><li>超商代碼付款 前往超商便利生活站機台 (如: 7-11 ibon) 至代碼繳費功能輸入代碼，即可印出繳費單 (限制總金額$20,000以下)</li></ol>
-        <h3>取消訂單</h3><p>訂單未付款及未出貨前，請進入「我的帳戶」 → 「訂單記錄查詢」即可自行取消訂單。</p>
-        <h3>寄件方式</h3><p>郵局掛號，或超商7-11 或全家</p>
-        <h3>運費</h3><p>一般客戶訂購商品總金額超過新台幣5000元(含)，享免運。</p><p>未滿新台幣$5000元時，消費者需自付運費。</p>
-        <h3>訂單查詢</h3><p>完成訂購後，請進入: 「我的帳戶」 → 「訂單記錄查詢」</p>
+        <ul><li><a href="../p/shopping.html#flow">購物流程</a></li><li><a href="../p/shopping.html#pay">付款方式</a></li><li><a href="../p/shopping.html#cancel">取消訂單</a></li><li><a href="../p/shopping.html#ship">寄件方式</a></li><li><a href="../p/shopping.html#fee">運費</a></li><li><a href="../p/shopping.html#query">訂單查詢</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
-        <h3>出貨及配送說明</h3><p>配送地區為台灣本島地區，其他地區或國家請先寫信跟我們聯繫，國際運費實報實銷。</p><p>商品出貨後一般可於1~3個工作天內送達 (實際送達時間仍將依貨流公司的配送量調節，配送狀況可查詢貨物追蹤查詢網頁)</p>
+        <ul><li><a href="../p/shipping.html#delivery">出貨及配送說明</a></li></ul>
       </section>
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
@@ -483,10 +481,11 @@ ul{list-style:none}
     });
   });
 
-  var gal = document.getElementById('galRow');
-  if (gal) {
-    var still = window.matchMedia('(prefers-reduced-motion: reduce)');
-    var hold = false, seen = false, touchAt = 0;
+  var still = window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.gal').forEach(function (galBox) {
+    var gal = galBox.querySelector('.gal-row');
+    if (!gal) return;
+    var hover = false, focus = false, seen = false, touchAt = 0;
     var galStep = function (dir) {
       var fig = gal.querySelector('figure');
       var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
@@ -496,14 +495,13 @@ ul{list-style:none}
       else if (dir < 0 && gal.scrollLeft <= 2) x = max;
       gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
     };
-    document.querySelectorAll('.gal-btn').forEach(function (b) {
+    galBox.querySelectorAll('.gal-btn').forEach(function (b) {
       b.addEventListener('click', function () { galStep(Number(b.dataset.dir)); });
     });
-    var galBox = gal.parentNode;
-    galBox.addEventListener('mouseenter', function () { hold = true; });
-    galBox.addEventListener('mouseleave', function () { hold = false; });
-    galBox.addEventListener('focusin', function () { hold = true; });
-    galBox.addEventListener('focusout', function () { hold = false; });
+    galBox.addEventListener('mouseenter', function () { hover = true; });
+    galBox.addEventListener('mouseleave', function () { hover = false; });
+    galBox.addEventListener('focusin', function () { focus = true; });
+    galBox.addEventListener('focusout', function (e) { if (!galBox.contains(e.relatedTarget)) focus = false; });
     gal.addEventListener('touchstart', function () { touchAt = Date.now(); }, { passive: true });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (es) { seen = es[0].isIntersecting; }).observe(gal);
@@ -511,10 +509,10 @@ ul{list-style:none}
       seen = true;
     }
     setInterval(function () {
-      if (hold || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
+      if (hover || focus || !seen || still.matches || document.hidden || Date.now() - touchAt < 8000) return;
       galStep(1);
-    }, 4000);
-  }
+    }, Number(galBox.dataset.interval) || 4000);
+  });
 
   var nlBtn = document.getElementById('nlBtn');
   if (nlBtn) {
