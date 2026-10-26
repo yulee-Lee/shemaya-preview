@@ -624,6 +624,7 @@ figure.pcard:hover img{opacity:1}
   } else {
     var p = document.createElement('p'); p.className = 'pending'; p.textContent = '商品介紹待 Shemaya 提供'; box.appendChild(p);
   }
+  if (d.nd) { var nd = document.createElement('p'); nd.className = 'note'; nd.textContent = d.nd; box.appendChild(nd); }
   var s = document.getElementById('pSeries'); s.textContent = d.s; s.href = d.u;
   document.title = d.n + '｜Shemaya 夏克緹薩滿的金色大門';
   var q = document.getElementById('qty');
