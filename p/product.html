@@ -296,6 +296,9 @@ ul{list-style:none}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
 .pd-ph{background:var(--tint);aspect-ratio:1/1}
 .pd-ph img{width:100%;height:100%;object-fit:contain}
+.pd-x img{display:block;width:100%;height:auto;margin-top:16px}
+.ph-empty.ph-card,.ph-empty.ph-fill{max-width:none;width:100%}
+.ph-empty.ph-fill{height:100%}
 .pp-big{font-family:var(--sans);font-size:18px;color:var(--ink-sub);margin:16px 0 32px}
 .buy label{display:block;font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:8px}
 .qty{display:flex;margin-bottom:24px}
@@ -578,7 +581,7 @@ figure.pcard:hover img{opacity:1}
 <section class="hero"><div class="wrap"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / <a id="pSeries" href="shop.html">商品</a></nav></div></section>
 <div class="wrap inner">
   <div class="pd" id="pd" hidden>
-    <div class="pd-ph" id="pPh"></div>
+    <div class="pd-col"><div class="pd-ph" id="pPh"></div><div class="pd-x" id="pX"></div></div>
     <div>
       <h1 class="sec-title" id="pName"></h1>
       <p class="pp-big" id="pPrice"></p>
@@ -604,6 +607,10 @@ figure.pcard:hover img{opacity:1}
   var im = document.createElement('img');
   im.width = d.w; im.height = d.h; im.alt = d.n; im.src = 'assets/' + code + '.webp';
   document.getElementById('pPh').appendChild(im);
+  (d.x || []).forEach(function (x) {
+    var e = document.createElement('img'); e.src = 'assets/' + x[0] + '.webp'; e.alt = x[1]; e.width = x[2]; e.height = x[3];
+    document.getElementById('pX').appendChild(e);
+  });
   document.getElementById('pName').textContent = d.n;
   function money(v) { return 'NT$' + v.toLocaleString('en-US'); }
   var sel = document.getElementById('size'), price = document.getElementById('pPrice');

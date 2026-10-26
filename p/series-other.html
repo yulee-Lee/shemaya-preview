@@ -296,6 +296,9 @@ ul{list-style:none}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
 .pd-ph{background:var(--tint);aspect-ratio:1/1}
 .pd-ph img{width:100%;height:100%;object-fit:contain}
+.pd-x img{display:block;width:100%;height:auto;margin-top:16px}
+.ph-empty.ph-card,.ph-empty.ph-fill{max-width:none;width:100%}
+.ph-empty.ph-fill{height:100%}
 .pp-big{font-family:var(--sans);font-size:18px;color:var(--ink-sub);margin:16px 0 32px}
 .buy label{display:block;font-family:var(--sans);font-size:14px;font-weight:700;margin-bottom:8px}
 .qty{display:flex;margin-bottom:24px}
@@ -582,15 +585,19 @@ figure.pcard:hover img{opacity:1}
 </div>
 <script>
 (function () {
-  var S = {flower:{n:'身心情緒花精系列',a:'罌粟花精',w:800,h:800},
-christ:{n:'基督之愛系列',a:'基督之愛五隻產品',w:800,h:800},
-healer:{n:'療癒師產品系列',a:'金光狼',w:800,h:800},
-crystal:{n:'水晶光能系列',a:'和諧水晶精素',w:800,h:800}};
+  var S = {"flower":{"n": "身心情緒花精系列", "a": "身心情緒花精", "w": 800, "h": 800},
+"guanyin":{"n": "觀音系列", "a": "觀音系列", "w": 800, "h": 800},
+"christ":{"n": "基督之愛系列", "a": "基督之愛五隻產品", "w": 800, "h": 800},
+"rainbow":{"n": "彩虹沙賓系列", "a": "彩虹沙賓系列", "w": 0, "h": 0},
+"healer":{"n": "療癒師產品系列", "a": "療癒師系列", "w": 800, "h": 800},
+"crystal":{"n": "水晶光能系列", "a": "和諧水晶精素", "w": 800, "h": 800}};
   var code = new URLSearchParams(location.search).get('s');
   var d = Object.prototype.hasOwnProperty.call(S, code) ? S[code] : null;
   if (!d) { document.getElementById('sNone').hidden = false; document.getElementById('sName').textContent = '找不到這個系列'; return; }
   document.getElementById('sd').hidden = false;
-  var im = document.createElement('img'); im.width = d.w; im.height = d.h; im.alt = d.a; im.src = 'assets/o-' + code + '.webp';
+  var im;
+  if (d.w) { im = document.createElement('img'); im.width = d.w; im.height = d.h; im.alt = d.a; im.src = 'assets/o-' + code + '.webp'; }
+  else { im = document.createElement('div'); im.className = 'ph-empty ph-fill'; im.textContent = '照片待提供'; }
   document.getElementById('sPh').appendChild(im);
   document.getElementById('sName').textContent = d.n; document.getElementById('sCrumb').textContent = d.n;
   document.title = d.n + '｜Shemaya 夏克緹薩滿的金色大門';
