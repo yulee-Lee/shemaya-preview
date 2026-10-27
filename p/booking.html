@@ -278,6 +278,9 @@ ul{list-style:none}
 .item .tlink{display:inline-block;margin-top:24px}
 .course-group+.item{border-top:0;padding-top:0}
 .prose p{margin:0 0 12px;max-width:42em;overflow-wrap:anywhere}
+
+.prose p.li{margin-bottom:2px}
+.prose p.li:has(+ :not(.li)),.prose p.li:last-child{margin-bottom:12px}
 .doc{margin-bottom:32px}
 .doc h3{font-size:19px;font-weight:700;margin-bottom:12px;color:var(--accent-dark)}
 .pending{display:inline-block;background:var(--tint);color:var(--ink-sub);font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:10px 16px;border-left:3px solid var(--accent)}
@@ -343,6 +346,14 @@ ul{list-style:none}
 .testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
 .series-intro{margin-bottom:40px}
 .pdesc{grid-column:1/-1;margin-top:16px;padding-top:32px;border-top:1px solid var(--line)}
+
+@media (min-width:1025px){
+  #pd.pd{grid-template-columns:minmax(0,440px) minmax(200px,240px) minmax(0,1fr);gap:40px;align-items:stretch}
+  #pd .pdesc{grid-column:auto;margin-top:0;padding:0 8px 0 32px;border-top:0;border-left:1px solid var(--line);contain:size;overflow-y:auto;overscroll-behavior:contain}
+  #pd .pdesc p:last-child{margin-bottom:0}
+}
+.pdesc:focus{outline:none}
+.pdesc:focus-visible{outline:2px solid var(--accent-dark);outline-offset:4px}
 .buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
 .tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
 .tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
@@ -498,7 +509,11 @@ figure.pcard:hover img{opacity:1}
 .title-row .hero-fb{margin:0;display:flex;flex-wrap:wrap;gap:4px 20px}
 
 .fw-in.fw-free{display:block}
-.fw-free .free{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.fw-free .free{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+
+.free a{display:block;color:inherit;text-decoration:none}
+.free img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.free a:hover figcaption,.free a:focus-visible figcaption{color:var(--accent-dark)}
 .fw-free .free figcaption{margin-top:8px;font-size:14px}
 .fw-free .widget-title a:hover,.fw-free .widget-title a:focus-visible{color:var(--accent-dark)}
 @media (max-width:1024px){ .fw-free .free{grid-template-columns:repeat(3,minmax(0,1fr))} }
@@ -526,7 +541,11 @@ figure.pcard:hover img{opacity:1}
 .qs-na{padding-left:12px;color:var(--ink-sub)}
 .qs-list a img{display:block;width:36px;height:36px;object-fit:cover;flex:none;background:var(--tint)}
 .qs-list a:hover,.qs-list a:focus-visible{border-color:var(--accent);color:var(--accent-dark)}
-.qs-growth{flex-direction:column;align-items:flex-start}
+
+.qs-growth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px}
+.qs-growth a{height:100%}
+@media (max-width:1024px){ .qs-growth{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:600px){ .qs-growth{grid-template-columns:1fr} }
 .qs-note{margin:16px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 @media (max-width:600px){ .qs{padding:20px 16px} .qs-k{padding:7px 12px} }
 </style>
@@ -541,7 +560,7 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
+            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
@@ -561,7 +580,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖與療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
+            <li><a href="soul.html">預約靈魂藍圖及療癒</a></li><li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
           </ul></div></li>
         <li><a href="space.html">空間能量風水</a></li>
         <li><a href="videos.html">影音課程</a></li>
@@ -587,7 +606,7 @@ figure.pcard:hover img{opacity:1}
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
     <div id="panelSvc" role="tabpanel" aria-labelledby="tabSvc">
-      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心內觀解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>各種創傷釋放</option><option>個人潛能閱讀</option><option>消融轉世迴路</option><option>蓮花身心療癒</option><option>金光神經系統</option><option>蓮花創傷療癒</option><option>重新啟動療程</option><option>青春之泉</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>賽巴巴和平聖灰</option><option>個人化度母蓮花瑜伽</option></optgroup><optgroup label="薩滿課程與療程"><option>薩滿聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option><option>預約你的薩滿療程</option><option>北美印地安神聖符號</option></optgroup><optgroup label="靈魂藍圖與療癒"><option>靈魂藍圖解析與療癒</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
+      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心內觀解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>Maha蓮花身心療癒</option><option>金光神經系統</option><option>蓮花創傷療癒</option><option>重新啟動療程</option><option>青春之泉</option><option>各種創傷釋放</option><option>消融轉世迴路</option><option>個人潛能閱讀</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>賽巴巴和平聖灰</option><option>個人化度母蓮花瑜伽</option></optgroup><optgroup label="薩滿課程與療程"><option>薩滿聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option><option>預約你的薩滿療程</option><option>北美印地安神聖符號</option></optgroup><optgroup label="靈魂藍圖與療癒"><option>靈魂藍圖解析與療癒</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
       <div class="f"><span class="lab" id="calLab">選擇日期與時段 <em>必填</em></span>
         <div class="cal" id="cal" role="group" aria-labelledby="calLab">
           <div class="cal-head"><button type="button" id="calPrev" aria-label="上個月">‹</button><span id="calTitle" aria-live="polite"></span><button type="button" id="calNext" aria-label="下個月">›</button></div>
@@ -710,7 +729,7 @@ figure.pcard:hover img{opacity:1}
   draw();
 
   var s = new URLSearchParams(location.search).get('s');
-  var RENAMED = { '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '個人化度母蓮花瑜伽', '度母蓮花瑜伽': '個人化度母蓮花瑜伽', '火薩滿聖蛇': '薩滿聖蛇取毒', '聖蛇取毒': '薩滿聖蛇取毒', '聖蛇薩滿取毒': '薩滿聖蛇取毒', '身心能量解讀': '身心內觀解讀', '個人身心解讀': '身心內觀解讀', '創傷釋放': '各種創傷釋放', '光藥草保健療癒': '天堂光植物與身心', '薩滿水晶療癒': '薩滿水晶療癒訓練', '消除停滯堵塞': '個人狀態諮詢' };
+  var RENAMED = { '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '個人化度母蓮花瑜伽', '度母蓮花瑜伽': '個人化度母蓮花瑜伽', '火薩滿聖蛇': '薩滿聖蛇取毒', '聖蛇取毒': '薩滿聖蛇取毒', '聖蛇薩滿取毒': '薩滿聖蛇取毒', '身心能量解讀': '身心內觀解讀', '個人身心解讀': '身心內觀解讀', '創傷釋放': '各種創傷釋放', '光藥草保健療癒': '天堂光植物與身心', '薩滿水晶療癒': '薩滿水晶療癒訓練', '消除停滯堵塞': '個人狀態諮詢', '蓮花身心療癒': 'Maha蓮花身心療癒' };
   if (s && Object.prototype.hasOwnProperty.call(RENAMED, s)) s = RENAMED[s];
   if (s) {
     var hit = false;
@@ -756,23 +775,20 @@ figure.pcard:hover img{opacity:1}
     <div class="fw-in fw-free">
       <section class="widget"><h2 class="widget-title"><a href="free.html">免費課程與公益</a></h2>
       <div class="free">
-        <figure><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></figure>
-        <figure><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></figure>
-        <figure><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></figure>
-        <figure><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></figure>
-        <figure><img src="assets/f-5.webp" width="600" height="600" alt="靜心" loading="lazy"><figcaption>靜心</figcaption></figure>
+        <figure><a href="free.html#women"><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></a></figure>
+        <figure><a href="free.html#online"><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></a></figure>
+        <figure><a href="free.html#dawn"><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></a></figure>
+        <figure><a href="free.html#ganesha"><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></a></figure>
+        <figure><a href="free.html#meditation"><img src="assets/f-5.webp" width="600" height="600" alt="靜心與心冥想點化" loading="lazy"><figcaption>靜心與心冥想點化</figcaption></a></figure>
+        <figure><a href="free.html#fullmoon-fire"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典與療癒" loading="lazy"><figcaption>滿月火典與療癒</figcaption></a></figure>
         </div>
       </section>
     </div>
   </div>
   <div class="footer-info">
     <div class="fw-in">
-      <section class="widget fi"><h2 class="widget-title">購物須知</h2>
-        <ul><li><a href="shopping.html#flow">購物流程</a></li><li><a href="shopping.html#pay">付款方式</a></li><li><a href="shopping.html#cancel">取消訂單</a></li><li><a href="shopping.html#ship">寄件方式</a></li><li><a href="shopping.html#fee">運費</a></li><li><a href="shopping.html#query">訂單查詢</a></li></ul>
-      </section>
-      <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
-        <ul><li><a href="shipping.html#delivery">出貨及配送說明</a></li></ul>
-      </section>
+      <section class="widget fi"><h2 class="widget-title"><a href="shopping.html">購物須知</a></h2></section>
+      <section class="widget fi"><h2 class="widget-title"><a href="shipping.html">送貨政策</a></h2></section>
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
       </section>

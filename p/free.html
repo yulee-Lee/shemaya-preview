@@ -278,6 +278,9 @@ ul{list-style:none}
 .item .tlink{display:inline-block;margin-top:24px}
 .course-group+.item{border-top:0;padding-top:0}
 .prose p{margin:0 0 12px;max-width:42em;overflow-wrap:anywhere}
+
+.prose p.li{margin-bottom:2px}
+.prose p.li:has(+ :not(.li)),.prose p.li:last-child{margin-bottom:12px}
 .doc{margin-bottom:32px}
 .doc h3{font-size:19px;font-weight:700;margin-bottom:12px;color:var(--accent-dark)}
 .pending{display:inline-block;background:var(--tint);color:var(--ink-sub);font-family:var(--sans);font-size:14px;letter-spacing:.06em;padding:10px 16px;border-left:3px solid var(--accent)}
@@ -343,6 +346,14 @@ ul{list-style:none}
 .testimonial>h3{font-size:19px;font-weight:700;color:var(--accent-dark);margin-bottom:12px}
 .series-intro{margin-bottom:40px}
 .pdesc{grid-column:1/-1;margin-top:16px;padding-top:32px;border-top:1px solid var(--line)}
+
+@media (min-width:1025px){
+  #pd.pd{grid-template-columns:minmax(0,440px) minmax(200px,240px) minmax(0,1fr);gap:40px;align-items:stretch}
+  #pd .pdesc{grid-column:auto;margin-top:0;padding:0 8px 0 32px;border-top:0;border-left:1px solid var(--line);contain:size;overflow-y:auto;overscroll-behavior:contain}
+  #pd .pdesc p:last-child{margin-bottom:0}
+}
+.pdesc:focus{outline:none}
+.pdesc:focus-visible{outline:2px solid var(--accent-dark);outline-offset:4px}
 .buy select{display:block;width:100%;max-width:240px;height:44px;margin-bottom:24px;font:16px var(--sans);color:var(--ink);background:var(--white);border:1px solid #b9b2a6;padding:0 12px;border-radius:0}
 .tabs{display:flex;margin-bottom:32px;border-bottom:1px solid var(--line)}
 .tabs button{flex:1;min-height:48px;background:transparent;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;font:700 16px var(--sans);color:var(--ink-sub);letter-spacing:.06em;cursor:pointer}
@@ -498,7 +509,11 @@ figure.pcard:hover img{opacity:1}
 .title-row .hero-fb{margin:0;display:flex;flex-wrap:wrap;gap:4px 20px}
 
 .fw-in.fw-free{display:block}
-.fw-free .free{grid-template-columns:repeat(5,minmax(0,1fr));gap:20px}
+.fw-free .free{grid-template-columns:repeat(6,minmax(0,1fr));gap:20px}
+
+.free a{display:block;color:inherit;text-decoration:none}
+.free img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.free a:hover figcaption,.free a:focus-visible figcaption{color:var(--accent-dark)}
 .fw-free .free figcaption{margin-top:8px;font-size:14px}
 .fw-free .widget-title a:hover,.fw-free .widget-title a:focus-visible{color:var(--accent-dark)}
 @media (max-width:1024px){ .fw-free .free{grid-template-columns:repeat(3,minmax(0,1fr))} }
@@ -526,7 +541,11 @@ figure.pcard:hover img{opacity:1}
 .qs-na{padding-left:12px;color:var(--ink-sub)}
 .qs-list a img{display:block;width:36px;height:36px;object-fit:cover;flex:none;background:var(--tint)}
 .qs-list a:hover,.qs-list a:focus-visible{border-color:var(--accent);color:var(--accent-dark)}
-.qs-growth{flex-direction:column;align-items:flex-start}
+
+.qs-growth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px}
+.qs-growth a{height:100%}
+@media (max-width:1024px){ .qs-growth{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:600px){ .qs-growth{grid-template-columns:1fr} }
 .qs-note{margin:16px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 @media (max-width:600px){ .qs{padding:20px 16px} .qs-k{padding:7px 12px} }
 </style>
@@ -541,7 +560,7 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#lotus">蓮花身心療癒</a></li>
+            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
@@ -561,7 +580,7 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖與療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
+            <li><a href="soul.html">預約靈魂藍圖及療癒</a></li><li><a href="soul.html#partner">伴侶感情關係解碼</a></li><li><a href="soul.html#fortune">人生大運流年運勢</a></li><li><a href="soul.html#timeline">六個月時間線大師解讀</a></li>
           </ul></div></li>
         <li><a href="space.html">空間能量風水</a></li>
         <li><a href="videos.html">影音課程</a></li>
@@ -579,7 +598,7 @@ figure.pcard:hover img{opacity:1}
 <main id="top">
 <section class="hero"><div class="wrap hero-in"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 免費課程與公益</nav><h1 class="sec-title">免費課程與公益</h1></div></div></section>
 <div class="wrap inner">
-<div class="free"><figure><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></figure><figure><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></figure><figure><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></figure><figure><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></figure></div>
+<div class="free"><figure><a href="#women"><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></a></figure><figure><a href="#online"><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></a></figure><figure><a href="#dawn"><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></a></figure><figure><a href="#ganesha"><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></a></figure><figure><a href="#meditation"><img src="assets/f-5.webp" width="600" height="600" alt="靜心與心冥想點化" loading="lazy"><figcaption>靜心與心冥想點化</figcaption></a></figure><figure><a href="#fullmoon-fire"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典與療癒" loading="lazy"><figcaption>滿月火典與療癒</figcaption></a></figure></div>
 <h2 class="course-group">認識 SHEMAYA</h2>
 <section class="item" id="story"><h2>早年的故事</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <h2 class="course-group">小型工作坊</h2>
@@ -588,8 +607,14 @@ figure.pcard:hover img{opacity:1}
 <section class="item" id="body"><h2>身體解密</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="family"><h2>親子伴侶關係</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <h2 class="course-group">免費課程與公益</h2>
+<section class="item" id="dawn"><h2>蘇伯巴壇美好破曉</h2><div class="item-side"><div class="is-ph"><img src="assets/f-3.webp" width="600" height="650" alt="蘇伯巴壇美好破曉" loading="lazy"></div><div class="is-tx"><div class="prose"><p>Suprabhatham 蘇伯巴壇美好破曉，是賽巴巴的神聖殿堂菩塔巴提所唱誦的，它由帶領者唱誦，能喚醒每個人內在的神聖，並感謝神在這新的一天指導、帶領我們。</p><p>蘇伯巴壇唱誦也是唱出對神的祈禱，透過這唱誦，我們再度對神憶念，讓神性體驗打開心，得以謙卑、平靜與喜悅去迎接新的一天。</p><p>由恨轉化為愛火典：這個神聖的火儀式，能協助人與土地去轉化原有的仇恨與情緒，火會將恨轉化為光，回到你身上。</p><p>21聲Omkaram：唱頌21次的Om。Om之音是宇宙初始之聲音，也是永恆的神性之音。</p><p>靜心冥想：15分鐘的靜心冥想，透過靜心冥想，我們能夠進入到平靜專注。改變腦波並重新平衡自律神經系統。它使我們的心念能回歸清晰及寧靜，也會協助我們回到內在的神聖空間中。</p></div></div></div></section>
+<section class="item" id="ganesha"><h2>象神火典</h2><div class="item-side"><div class="is-ph"><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"></div><div class="is-tx"><div class="prose"><p>Ganesha說「那些你想對這個世界隱藏的，使你脆弱的，把它交給我，我將會轉化它。這是我如何為你移除阻礙。」</p><p>Ganesha 是Shiva的兒子，祂是世界的統治者，也是創造者，祂是所有世界、所有大門的鑰匙。他支持那些願意與他連結，以及在自身道路上行走的人們。」《耶穌書》</p><p>清理你的道路與感知。</p><p>象神火典的能量協助你清理道路上的阻礙。</p><p>這是個強大清除阻礙的火典，能為參加者及空間帶來很大的喜悅及輕鬆</p></div></div></div></section>
+<section class="item" id="shakti"><h2>夏克緹火典</h2><div class="prose"><p>Shakti 夏克緹：源自古印第安梵語，意指神聖的母親，也是神聖的女性創造力量。夏克緹火典是獻給神聖母親的儀式，藉由火的形式將神聖母親能量帶到地球上來，滋養、增長、療癒每個存有的女性創造面向，並療癒長久以來失衡的男女能量。</p><p>透過夏克緹之火餵養大地，協助各存有（大地及人）達成陰陽和諧平衡，每個人內在女性能量也將得到充電，它支持女性朋友們。</p></div></section>
+<section class="item" id="fullmoon-fire"><h2>滿月火典與療癒</h2><div class="item-side"><div class="is-ph"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典與療癒" loading="lazy"></div><div class="is-tx"><div class="prose"><p>滿月是陰性能量最強的時刻，我們選擇在滿月時，透過祝神聖儀式與靈性療癒等方式，在身體，情緒與心等不同的層級去滋養女性內在的陰能量。</p><p>滿月重點是釋放在我們之內的舊模式，讓舊模式所帶來的情感雜亂被梳理釋放。Shemaya會帶你去觸碰在你之內的神聖女性力量，讓自我之愛，尊嚴與力量回來。</p><p>這是最適合身心的能量清理，Shemaya定期舉辦的滿月火典與療癒，常會結合不同的天堂植物之光，薩滿元素或蓮花療癒等，每次內容都不同。</p></div></div></div></section>
+<section class="item" id="online"><h2>線上共修</h2><div class="item-side"><div class="is-ph"><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"></div><div class="is-tx"><div class="prose"><p>是協助想要把靈性實踐在生活上的人，Shemaya會透過帶領大家由呼吸、冥想、火典、某些療癒內容，讓參與者將神聖帶入心，淨化身心，回到平靜與愛中。</p><p>參加者請為自己準備好安靜的空間</p><p>請準時進入，並關閉您的麥克風</p></div></div></div></section>
+<section class="item" id="meditation"><h2>靜心冥想</h2><div class="item-side"><div class="is-ph"><img src="assets/f-5.webp" width="600" height="600" alt="靜心冥想" loading="lazy"></div><div class="is-tx"><div class="prose"><p>長期規律的自己進行靜心冥想，不只能讓人保持身心的平穩與自在，也讓有心使自己心靈成長的人，得到更多的覺知與清明，有助靈性成長。</p><p>如果您長期有做靜心冥想的習慣，也願意持續在生活中練習靜心，可以考慮預約心輪點化。</p><p>心輪點化是黃金世紀新的冥想方式，由聖火傳承靈性老師所提供的靜心點化，此點化將打開並深化您與自身內心的連結，也加深您的冥想體驗。</p><p>這是必須到現場，一對一的點化。</p></div></div></div></section>
+<section class="item" id="women"><h2>女人圈</h2><div class="item-side"><div class="is-ph"><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"></div><div class="is-tx"><div class="prose"><p>Shemaya長期支持女性朋友的身心成長，如果您想要改變、想探索內在，想透過學習得到成長，成為更快樂、更輕盈、更自由、更有力量，歡迎加入我們的女人圈。</p></div></div></div></section>
 <section class="item" id="attune"><h2>免費點化</h2><div class="item-side"><div class="is-ph"><img src="assets/x-attune.webp" width="800" height="800" alt="免費點化" loading="lazy"></div><div class="is-tx"><div class="prose"><h3 class="doc-t">心輪冥想點化</h3><p>心輪冥想是黃金世紀層級的冥想，每天早晚練習十五分鐘，能帶來身心穩定、思緒清晰、身心能量流動、陰陽平衡、反應敏捷，能夠聆聽心與內在高我溝通，甚至與神交流，處理生活或事業上的決策都能清晰正確。</p><p>心輪冥想點化是Shemaya提供的免費服務之一，需要面對面到現場，點化後，必須持續做14天以上的心輪冥想。</p></div></div></div><article class="doc" id="attune-joy"><h3>「我是快樂，我是愛、我是光」點化</h3><p class="pending">內容待 Shemaya 提供</p></article></section>
-<section class="item" id="meditation"><h2>靜心冥想帶領</h2><div class="item-side"><div class="is-ph"><img src="assets/f-5.webp" width="600" height="600" alt="靜心冥想帶領" loading="lazy"></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div></section>
 <section class="item" id="mother"><h2>神性之母的祝福</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="reading-club"><h2>心靈讀書會</h2><p class="pending">內容待 Shemaya 提供</p></section>
 <section class="item" id="land"><h2>土地服務</h2><div class="item-side"><div class="is-ph"><img src="assets/f-6.webp" width="600" height="600" alt="土地服務" loading="lazy"></div><div class="is-tx"><p class="pending">內容待 Shemaya 提供</p></div></div></section>
@@ -601,23 +626,20 @@ figure.pcard:hover img{opacity:1}
     <div class="fw-in fw-free">
       <section class="widget"><h2 class="widget-title"><a href="free.html">免費課程與公益</a></h2>
       <div class="free">
-        <figure><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></figure>
-        <figure><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></figure>
-        <figure><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></figure>
-        <figure><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></figure>
-        <figure><img src="assets/f-5.webp" width="600" height="600" alt="靜心" loading="lazy"><figcaption>靜心</figcaption></figure>
+        <figure><a href="free.html#women"><img src="assets/f-1.webp" width="600" height="600" alt="女人圈" loading="lazy"><figcaption>女人圈</figcaption></a></figure>
+        <figure><a href="free.html#online"><img src="assets/f-2.webp" width="600" height="448" alt="線上共修" loading="lazy"><figcaption>線上共修</figcaption></a></figure>
+        <figure><a href="free.html#dawn"><img src="assets/f-3.webp" width="600" height="650" alt="美好破曉" loading="lazy"><figcaption>美好破曉</figcaption></a></figure>
+        <figure><a href="free.html#ganesha"><img src="assets/f-4.webp" width="600" height="600" alt="象神火典" loading="lazy"><figcaption>象神火典</figcaption></a></figure>
+        <figure><a href="free.html#meditation"><img src="assets/f-5.webp" width="600" height="600" alt="靜心與心冥想點化" loading="lazy"><figcaption>靜心與心冥想點化</figcaption></a></figure>
+        <figure><a href="free.html#fullmoon-fire"><img src="assets/x-fullmoon.webp" width="800" height="800" alt="滿月火典與療癒" loading="lazy"><figcaption>滿月火典與療癒</figcaption></a></figure>
         </div>
       </section>
     </div>
   </div>
   <div class="footer-info">
     <div class="fw-in">
-      <section class="widget fi"><h2 class="widget-title">購物須知</h2>
-        <ul><li><a href="shopping.html#flow">購物流程</a></li><li><a href="shopping.html#pay">付款方式</a></li><li><a href="shopping.html#cancel">取消訂單</a></li><li><a href="shopping.html#ship">寄件方式</a></li><li><a href="shopping.html#fee">運費</a></li><li><a href="shopping.html#query">訂單查詢</a></li></ul>
-      </section>
-      <section class="widget fi"><h2 class="widget-title">送貨政策</h2>
-        <ul><li><a href="shipping.html#delivery">出貨及配送說明</a></li></ul>
-      </section>
+      <section class="widget fi"><h2 class="widget-title"><a href="shopping.html">購物須知</a></h2></section>
+      <section class="widget fi"><h2 class="widget-title"><a href="shipping.html">送貨政策</a></h2></section>
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
       </section>
