@@ -551,6 +551,14 @@ figure.pcard:hover img{opacity:1}
 
 
 @media (max-width:1024px){.mbook{padding:6px 26px;line-height:21px}}
+
+.hero.hero-toc{padding-bottom:32px}
+.hero-toc+.inner{padding-top:32px}
+.hero-toc+.inner>.item:first-child{border-top:0;padding-top:0}
+.hero-toc+.inner>.course-group:first-child{margin-top:0}
+@media (max-width:767px){ .hero.hero-toc{padding-bottom:24px} .hero-toc+.inner{padding-top:24px} }
+
+@media (max-width:420px){ .tabs button{font-size:15px;letter-spacing:.02em} }
 </style>
 </head>
 <body>
@@ -601,10 +609,11 @@ figure.pcard:hover img{opacity:1}
 <main id="top">
 <section class="hero"><div class="wrap hero-in"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 立即預約</nav><h1 class="sec-title">立即預約</h1></div></div></section>
 <div class="wrap inner narrow">
-  <p class="note">這是測試站的表單示範，按下送出只會在頁面上顯示結果，資料不會送出也不會儲存。日曆上的可預約時段是示範用，正式站由 Shemaya 在後台設定日期與時段，已被預約的時段會自動關閉，之後可隨時調整。</p>
+  <p class="note">這是測試站的表單示範，按下送出只會在頁面上顯示結果，資料不會送出也不會儲存。日曆上的可預約時段是示範用，正式站由 Shemaya 在後台設定日期與時段，已被預約的時段會自動關閉，之後可隨時調整。工作坊的場次正式站由 Shemaya 在後台新增，報名時直接選。</p>
   <noscript><p class="pending">表單示範需要開啟 JavaScript。</p></noscript>
   <div class="tabs" role="tablist" aria-label="選擇預約或報名">
     <button type="button" role="tab" id="tabSvc" aria-controls="panelSvc" aria-selected="true">預約療程個案</button>
+    <button type="button" role="tab" id="tabWs" aria-controls="panelWs" aria-selected="false" tabindex="-1">工作坊報名</button>
     <button type="button" role="tab" id="tabCourse" aria-controls="panelCourse" aria-selected="false" tabindex="-1">課程報名</button>
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
@@ -617,6 +626,10 @@ figure.pcard:hover img{opacity:1}
           <div class="cal-slots" id="calSlots" aria-live="polite"><p class="cal-hint">請先點選可預約的日期（有底色的日期）</p></div>
         </div>
       </div>
+    </div>
+    <div id="panelWs" role="tabpanel" aria-labelledby="tabWs" hidden>
+      <div class="f"><label for="bkWs">想參加的工作坊 <em>必填</em></label><input id="bkWs" maxlength="60"></div>
+      <p class="note">請填寫工作坊名稱或日期，Shemaya 會再與您聯絡確認。</p>
     </div>
     <div id="panelCourse" role="tabpanel" aria-labelledby="tabCourse" hidden>
       <div class="f"><label for="bkCourse">想報名的課程 <em>必填</em></label><select id="bkCourse"><option value="">請選擇</option><option>浴光之路</option><option>兒童浴光之路</option><option>神聖藥草祭司</option><option>水知識</option><option>四大元素與基督之光</option><option>狼祭司與熊部落</option><option>天狼星工作坊</option><option>薩滿水晶療癒訓練</option><option>脈輪花精卡療癒師</option><option>天堂光植物與身心</option><option>阿里山薩滿僻靜之旅</option></select></div>
@@ -638,10 +651,11 @@ figure.pcard:hover img{opacity:1}
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var msg = $('bkMsg'), mode = 'svc', picked = null;
-  var tabs = { svc: $('tabSvc'), course: $('tabCourse') }, panels = { svc: $('panelSvc'), course: $('panelCourse') };
+  var ORDER = ['svc', 'ws', 'course'];
+  var tabs = { svc: $('tabSvc'), ws: $('tabWs'), course: $('tabCourse') }, panels = { svc: $('panelSvc'), ws: $('panelWs'), course: $('panelCourse') };
   function setMode(m, focus) {
     mode = m;
-    ['svc', 'course'].forEach(function (k) {
+    ORDER.forEach(function (k) {
       var on = k === m;
       tabs[k].setAttribute('aria-selected', on ? 'true' : 'false');
       tabs[k].tabIndex = on ? 0 : -1;
@@ -651,11 +665,12 @@ figure.pcard:hover img{opacity:1}
     msg.textContent = '';
     if (focus) tabs[m].focus();
   }
-  tabs.svc.addEventListener('click', function () { setMode('svc'); });
-  tabs.course.addEventListener('click', function () { setMode('course'); });
-  [tabs.svc, tabs.course].forEach(function (t) {
-    t.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); setMode(mode === 'svc' ? 'course' : 'svc', true); }
+  ORDER.forEach(function (k) {
+    tabs[k].addEventListener('click', function () { setMode(k); });
+    tabs[k].addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); setMode(ORDER[e.key === 'Home' ? 0 : ORDER.length - 1], true); return; }
+      if (d) { e.preventDefault(); setMode(ORDER[(ORDER.indexOf(k) + d + ORDER.length) % ORDER.length], true); }
     });
   });
 
@@ -755,6 +770,8 @@ figure.pcard:hover img{opacity:1}
         $('cal').setAttribute('aria-invalid', 'true');
         if (!first) first = $('calGrid').querySelector('.day.open') || $('calNext');
       }
+    } else if (mode === 'ws') {
+      need($('bkWs'), !!$('bkWs').value.trim(), '請填寫想參加的工作坊');
     } else {
       need($('bkCourse'), !!$('bkCourse').value, '請選擇想報名的課程');
     }
@@ -766,7 +783,9 @@ figure.pcard:hover img{opacity:1}
     msg.className = 'notice';
     msg.textContent = mode === 'svc'
       ? '測試站：已收到格式正確的預約（' + $('bkSvc').value + '，' + picked.t + '），資料不會送出也不會儲存。'
-      : '測試站：已收到格式正確的課程報名（' + $('bkCourse').value + '），資料不會送出也不會儲存。';
+      : mode === 'ws'
+        ? '測試站：已收到格式正確的工作坊報名（' + $('bkWs').value.trim() + '），資料不會送出也不會儲存。'
+        : '測試站：已收到格式正確的課程報名（' + $('bkCourse').value + '），資料不會送出也不會儲存。';
   });
 })();
 </script>
