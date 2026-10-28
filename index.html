@@ -323,6 +323,15 @@ ul{list-style:none}
   .widget img{aspect-ratio:4/3}
   .fw-free .free{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 }
+#courses{font-size:28px}
+.main-card{padding-top:40px}
+.course-group.first{margin-top:24px}
+.course-group+.course{margin-top:24px}
+.course{margin-top:30px}
+.course .tx p{font-size:15px;line-height:1.75}
+.course .more{margin-top:6px;font-size:13px}
+@media (max-width:1024px){.main-card{padding-top:28px}}
+@media (max-width:600px){#courses{font-size:22px}.main-card{padding-top:20px}.course{margin-top:24px}}
 </style>
 </head>
 <body>
@@ -502,7 +511,14 @@ ul{list-style:none}
       <div class="row-ctrl"><button type="button" data-dir="-1" aria-label="往左">&#8592;</button><button type="button" data-dir="1" aria-label="往右">&#8594;</button></div>
     </div>
     <div class="row" id="shopRow" tabindex="0" aria-label="靈性商店分類，可左右捲動">
-      <a href="p/shop.html#spray"><img src="assets/p-sirius-00.webp" width="500" height="500" alt="光精華噴霧（八大系列）" loading="lazy"><span>光精華噴霧（八大系列）</span></a>
+      <a href="p/series-nature.html"><img src="assets/hs-nature.webp" width="500" height="500" alt="自然之美系列" loading="lazy"><span>自然之美系列</span></a>
+      <a href="p/series-detox.html"><img src="assets/hs-detox.webp" width="500" height="500" alt="人氣王明星商品" loading="lazy"><span>人氣王明星商品</span></a>
+      <a href="p/series-other.html?s=flower"><img src="assets/hs-flower.webp" width="500" height="500" alt="身心情緒花精系列" loading="lazy"><span>身心情緒花精系列</span></a>
+      <a href="p/series-sirius.html"><img src="assets/hs-sirius.webp" width="500" height="500" alt="天狼星系列" loading="lazy"><span>天狼星系列</span></a>
+      <a href="p/series-other.html?s=christ"><img src="assets/hs-christ.webp" width="500" height="500" alt="基督之愛系列" loading="lazy"><span>基督之愛系列</span></a>
+      <a href="p/series-other.html?s=guanyin"><img src="assets/hs-guanyin.webp" width="500" height="500" alt="觀音系列" loading="lazy"><span>觀音系列</span></a>
+      <a href="p/series-other.html?s=rainbow"><img src="assets/hs-rainbow.webp" width="500" height="500" alt="彩虹沙賓系列" loading="lazy"><span>彩虹沙賓系列</span></a>
+      <a href="p/series-other.html?s=healer"><img src="assets/hs-healer.webp" width="500" height="500" alt="療癒師系列" loading="lazy"><span>療癒師系列</span></a>
       <a href="p/shop.html#crystal-spray"><img src="assets/h-crystal-spray.webp" width="500" height="500" alt="水晶光能噴霧" loading="lazy"><span>水晶光能噴霧</span></a>
       <a href="p/shop.html#crystal"><i class="noimg" aria-hidden="true"></i><span>靈性水晶</span></a>
       <a href="p/shop.html#lighthouse"><img src="assets/h-lighthouse.webp" width="500" height="500" alt="空間風水淨化劑（光屋）" loading="lazy"><span>空間風水淨化劑（光屋）</span></a>
@@ -510,7 +526,14 @@ ul{list-style:none}
       <a href="p/shop.html#comb"><img src="assets/h-comb.webp" width="500" height="500" alt="拉克希米女神髮梳" loading="lazy"><span>拉克希米女神髮梳</span></a>
     </div>
     <ul class="mrow" aria-label="靈性商店分類">
-      <li><a href="p/shop.html#spray"><img src="assets/m-sirius.webp" width="240" height="240" alt="" loading="lazy"><h3>光精華噴霧（八大系列）</h3><span>八大系列</span></a></li>
+      <li><a href="p/series-nature.html"><img src="assets/ms-nature.webp" width="240" height="240" alt="" loading="lazy"><h3>自然之美系列</h3><span>8 款</span></a></li>
+      <li><a href="p/series-detox.html"><img src="assets/ms-detox.webp" width="240" height="240" alt="" loading="lazy"><h3>人氣王明星商品</h3><span>暫不販售，僅展示照片</span></a></li>
+      <li><a href="p/series-other.html?s=flower"><img src="assets/ms-flower.webp" width="240" height="240" alt="" loading="lazy"><h3>身心情緒花精系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
+      <li><a href="p/series-sirius.html"><img src="assets/ms-sirius.webp" width="240" height="240" alt="" loading="lazy"><h3>天狼星系列</h3><span>10 款＋整套</span></a></li>
+      <li><a href="p/series-other.html?s=christ"><img src="assets/ms-christ.webp" width="240" height="240" alt="" loading="lazy"><h3>基督之愛系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
+      <li><a href="p/series-other.html?s=guanyin"><img src="assets/ms-guanyin.webp" width="240" height="240" alt="" loading="lazy"><h3>觀音系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
+      <li><a href="p/series-other.html?s=rainbow"><img src="assets/ms-rainbow.webp" width="240" height="240" alt="" loading="lazy"><h3>彩虹沙賓系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
+      <li><a href="p/series-other.html?s=healer"><img src="assets/ms-healer.webp" width="240" height="240" alt="" loading="lazy"><h3>療癒師系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
       <li><a href="p/shop.html#crystal-spray"><img src="assets/m-crystal.webp" width="240" height="240" alt="" loading="lazy"><h3>水晶光能噴霧</h3><span>水晶光能系列</span></a></li>
       <li><a href="p/shop.html#crystal"><i class="noimg" aria-hidden="true"></i><h3>靈性水晶</h3><span>商品由 Shemaya 自行上架</span></a></li>
       <li><a href="p/shop.html#lighthouse"><img src="assets/m-lighthouse.webp" width="240" height="240" alt="" loading="lazy"><h3>空間風水淨化劑（光屋）</h3><span>NT$2,500</span></a></li>
