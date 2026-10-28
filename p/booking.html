@@ -548,6 +548,9 @@ figure.pcard:hover img{opacity:1}
 @media (max-width:600px){ .qs-growth{grid-template-columns:1fr} }
 .qs-note{margin:16px 0 0;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 @media (max-width:600px){ .qs{padding:20px 16px} .qs-k{padding:7px 12px} }
+
+
+@media (max-width:1024px){.mbook{padding:6px 26px;line-height:21px}}
 </style>
 </head>
 <body>
@@ -560,7 +563,7 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li>
+            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#essence">靈魂本質閱讀</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
@@ -606,7 +609,7 @@ figure.pcard:hover img{opacity:1}
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
     <div id="panelSvc" role="tabpanel" aria-labelledby="tabSvc">
-      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心內觀解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>Maha蓮花身心療癒</option><option>金光神經系統</option><option>蓮花創傷療癒</option><option>重新啟動療程</option><option>青春之泉</option><option>各種創傷釋放</option><option>消融轉世迴路</option><option>個人潛能閱讀</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>賽巴巴和平聖灰</option><option>個人化度母蓮花瑜伽</option></optgroup><optgroup label="薩滿課程與療程"><option>薩滿聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option><option>預約你的薩滿療程</option><option>北美印地安神聖符號</option></optgroup><optgroup label="靈魂藍圖與療癒"><option>靈魂藍圖解析與療癒</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><option>其他</option></select></div>
+      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心內觀解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>Maha蓮花身心療癒</option><option>金光神經系統</option><option>蓮花創傷療癒</option><option>重新啟動療程</option><option>青春之泉</option><option>各種創傷釋放</option><option>消融轉世迴路</option><option>個人潛能閱讀</option><option>靈魂本質閱讀</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>賽巴巴和平聖灰</option><option>個人化度母蓮花瑜伽</option></optgroup><optgroup label="薩滿課程與療程"><option>薩滿聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option><option>預約你的薩滿療程</option><option>北美印地安神聖符號</option></optgroup><optgroup label="靈魂藍圖與療癒"><option>靈魂藍圖解析與療癒</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><optgroup label="靈性商店"><option>靈性水晶訂製</option></optgroup><option>其他</option></select></div>
       <div class="f"><span class="lab" id="calLab">選擇日期與時段 <em>必填</em></span>
         <div class="cal" id="cal" role="group" aria-labelledby="calLab">
           <div class="cal-head"><button type="button" id="calPrev" aria-label="上個月">‹</button><span id="calTitle" aria-live="polite"></span><button type="button" id="calNext" aria-label="下個月">›</button></div>
@@ -622,8 +625,8 @@ figure.pcard:hover img{opacity:1}
     <div class="f"><label for="bkName">姓名 <em>必填</em></label><input id="bkName" maxlength="40" autocomplete="name"></div>
     <div class="f"><label for="bkLine">LINE ID <em>必填</em></label><input id="bkLine" maxlength="40"></div>
     <div class="f2">
-      <div class="f"><label for="bkPhone">手機 <em>手機或 Email 至少填一項</em></label><input id="bkPhone" type="tel" maxlength="20" autocomplete="tel" inputmode="tel"></div>
-      <div class="f"><label for="bkEmail">Email</label><input id="bkEmail" type="email" maxlength="80" autocomplete="email"></div>
+      <div class="f"><label for="bkPhone">手機 <em>必填</em></label><input id="bkPhone" type="tel" maxlength="20" autocomplete="tel" inputmode="tel"></div>
+      <div class="f"><label for="bkEmail">Email <em>必填</em></label><input id="bkEmail" type="email" maxlength="80" autocomplete="email"></div>
     </div>
     <div class="f"><label for="bkNote">備註</label><textarea id="bkNote" rows="4" maxlength="500"></textarea></div>
     <button class="btn" id="bkSend" type="button">送出預約</button>
@@ -757,10 +760,8 @@ figure.pcard:hover img{opacity:1}
     }
     need($('bkName'), !!$('bkName').value.trim(), '請填寫姓名');
     need($('bkLine'), !!$('bkLine').value.trim(), '請填寫 LINE ID');
-    var phoneOk = !phone || /^[0-9+\-\s()]{8,20}$/.test(phone);
-    var emailOk = !email || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    need($('bkPhone'), !!(phone || email) && phoneOk, phone ? '手機格式不正確' : '手機或 Email 請至少填一項');
-    need($('bkEmail'), emailOk, 'Email 格式不正確');
+    need($('bkPhone'), /^[0-9+\-\s()]{8,20}$/.test(phone), phone ? '手機格式不正確' : '請填寫手機');
+    need($('bkEmail'), /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email), email ? 'Email 格式不正確' : '請填寫 Email');
     if (errs.length) { msg.className = 'notice err'; msg.textContent = errs.join('；') + '。'; first.focus(); return; }
     msg.className = 'notice';
     msg.textContent = mode === 'svc'
