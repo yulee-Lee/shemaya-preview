@@ -333,6 +333,15 @@ ul{list-style:none}
 @media (max-width:1024px){.main-card{padding-top:28px}}
 @media (max-width:600px){#courses{font-size:22px}.main-card{padding-top:20px}.course{margin-top:24px}}
 .widget .wnote{font-size:14px;line-height:1.75;color:#8a8580;margin:0}
+.intro-t{margin:0;font-family:"Noto Serif TC",Georgia,serif;font-size:17px;line-height:1.95;font-weight:400;letter-spacing:0;color:var(--ink)}
+.intro-p{margin:0 auto;max-width:none;font-family:"Noto Serif TC",Georgia,serif;font-size:17px;line-height:1.95;color:var(--ink);text-align:center}
+.intro-p.intro-gap{margin-top:1.95em}
+.intro-p.intro-end{display:table;text-align:left}
+.intro-p .ln{display:block}
+.intro-p .ln>span{display:inline-block}
+@media (max-width:600px){.intro-t,.intro-p{font-size:16px;line-height:1.9}.intro-p.intro-gap{margin-top:1.9em}}
+.picks-in{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:1024px){.picks-in{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -357,7 +366,7 @@ ul{list-style:none}
           </ul></div></li>
         <li class="has-sub"><a href="p/courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">深度訓練</li><li><a href="p/courses.html#herb-priest">神聖藥草祭司</a></li><li><a href="p/courses.html#water">水知識</a></li><li><a href="p/courses.html#elements">四大元素與基督之光</a></li><li><a href="p/courses.html#wolf">狼祭司與熊部落</a></li><li><a href="p/courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="p/courses.html#crystal">薩滿水晶療癒訓練</a></li><li><a href="p/courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="p/courses.html#herb-care">天堂光植物與身心</a></li>
+            <li class="sub-h">深度訓練</li><li><a href="p/courses.html#herb-priest">神聖自然藥草祭司</a></li><li><a href="p/courses.html#water">薩滿水知識</a></li><li><a href="p/courses.html#elements">四大元素與基督之光</a></li><li><a href="p/courses.html#wolf">狼祭司與熊部落</a></li><li><a href="p/courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="p/courses.html#crystal">薩滿水晶療癒訓練</a></li><li><a href="p/courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="p/courses.html#herb-care">天堂光植物與身心</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="p/tribe.html" aria-haspopup="true">薩滿課程與療程</a>
           <div class="dd"><ul class="sub">
@@ -371,7 +380,7 @@ ul{list-style:none}
         <li><a href="p/videos.html">影音課程</a></li>
         <li class="has-sub"><a href="p/shop.html" aria-haspopup="true">靈性商店</a>
           <div class="dd"><ul class="sub">
-            <li><a href="p/shop.html#spray">光精華噴霧（八大系列）</a></li><li><a href="p/shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="p/shop.html#crystal">靈性水晶</a></li><li><a href="p/shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="p/shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="p/shop.html#comb">拉克希米女神髮梳</a></li>
+            <li><a href="p/shop.html#spray">神聖光精華噴霧</a></li><li><a href="p/shop.html#crystal-spray">水晶光能噴霧</a></li><li><a href="p/shop.html#crystal">靈性水晶設計與訂製</a></li><li><a href="p/shop.html#lighthouse">空間風水淨化劑（光屋）</a></li><li><a href="p/shop.html#cards">阿卡莎脈輪花精卡</a></li><li><a href="p/shop.html#comb">拉克希米女神髮梳</a></li>
           </ul></div></li>
         <li><a href="p/blog.html">部落格</a></li>
       </ul>
@@ -385,28 +394,27 @@ ul{list-style:none}
 
 <section class="intro" aria-labelledby="introTitle">
   <img class="intro-ph" src="assets/intro-face.webp" width="360" height="360" alt="Shemaya">
-  <h2 class="intro-t" id="introTitle">嗨，我是<span>Shemaya</span></h2>
-  <p class="intro-sub">靈性名字代表著將吠陀的美帶到地球</p>
-  <p class="intro-p">累積13年教學經驗，與豐富的個案經驗，Shemaya 見證過許多學員們的破繭重生。</p>
-  <p class="intro-skill">擅長：靈性諮詢與療癒，引領靈性覺醒，提供多種專業能量教學服務<br>專注陪伴 35+ 朋友</p>
-  <ul class="intro-list"><li>穿越束縛限制，拿回生命主權</li><li>轉化幽影阻礙，活出璀璨天賦</li><li>靈性落地生活，創造自信喜悅</li></ul>
-  <p class="intro-quote">陪你的每一步，都走在光與愛的真實中<br>讓生命，成為一場為了愛與美而展開的覺醒之旅</p>
-  <p class="intro-sign">Love, Shemaya</p>
+  <h2 class="intro-t" id="introTitle">嗨！我是Shemaya</h2>
+  <p class="intro-p"><span class="ln"><span>累積 13 年以上深厚教學與個案經驗，</span><span>見證無數人破繭重生</span></span><span class="ln"><span>擅長靈性諮詢，</span><span>引領靈性覺醒，</span><span>提供專業能量教學與服務</span></span></p>
+  <p class="intro-p intro-gap"><span class="ln"><span>專注陪伴 35+ 朋友</span></span><span class="ln"><span>找回光與生命主權</span></span><span class="ln"><span>穿越束縛，</span><span>轉化阻礙</span></span><span class="ln"><span>靈性落地，</span><span>活出天賦</span></span></p>
+  <p class="intro-p intro-end"><span class="ln"><span>Shemaya 陪伴妳走在光與愛中，</span></span><span class="ln"><span>讓生命，</span><span>成為一場為愛與美而展開的覺醒之旅</span></span></p>
 </section>
 
-<section class="picks" aria-label="近期課程與熱門療程">
+<section class="picks" aria-label="熱門療程、近期課程與近期工作坊">
   <div class="picks-in">
-    <div class="pick-col"><h2 class="pick-t">近期課程</h2><ul>
-      <li><a href="p/courses.html#elements"><div class="pk-h"><h3>四大元素與基督之光</h3><span class="more">看介紹</span></div><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><span class="pick-date">開課日期：待公布</span></a></li>
-      <li><a href="p/courses.html#sirius-ws"><div class="pk-h"><h3>天狼星工作坊</h3><span class="more">看介紹</span></div><p>Shemaya現在以工作坊形式分享天狼星星際的知識與智慧，它能修復個人累世在地球的轉世經驗，並開啟個人靈魂本有的內在智慧。</p><span class="pick-date">開課日期：待公布</span></a></li>
-      <li><a href="p/courses.html#herb-care"><div class="pk-h"><h3>天堂光植物與身心</h3><span class="more">看介紹</span></div><span class="pick-date">開課日期：待公布</span></a></li>
-    </ul></div>
     <div class="pick-col"><h2 class="pick-t">熱門療程</h2><ul>
       <li><a href="p/healing.html#past-life"><div class="pk-h"><h3>前世回溯</h3><span class="more">看介紹</span></div><p>人生中不斷出現的重複課題，在你做過諮詢或其他處理卻未能釋懷/解決，那這樣的前世回溯是你需要的。</p></a></li>
       <li><a href="p/explore.html#belief"><div class="pk-h"><h3>負向信念刪除</h3><span class="more">看介紹</span></div><p>你的人生劇本怎麼寫，命運就如實的呈現。</p></a></li>
       <li><a href="p/healing.html#karma"><div class="pk-h"><h3>各種業力釋放</h3><span class="more">看介紹</span></div></a></li>
       <li><a href="p/tribe.html#fire-snake"><div class="pk-h"><h3>薩滿聖蛇取毒</h3><span class="more">看介紹</span></div><p>取毒療程是每個人都需要的，有定期施作的朋友，都感受到了莫大幫助。</p></a></li>
       <li><a href="p/soul.html"><div class="pk-h"><h3>靈魂藍圖與療癒</h3><span class="more">看介紹</span></div><p>靈魂藍圖是我們在投生到地球前自己所設計好的考卷，透過一連串的考題去磨練心智，去成就智慧。</p></a></li>
+    </ul></div>
+    <div class="pick-col"><h2 class="pick-t">近期課程</h2><ul>
+      <li><a href="p/courses.html#elements"><div class="pk-h"><h3>四大元素與基督之光</h3><span class="more">看介紹</span></div><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><span class="pick-date">開課日期：待公布</span></a></li>
+      <li><a href="p/courses.html#herb-care"><div class="pk-h"><h3>天堂光植物與身心</h3><span class="more">看介紹</span></div><span class="pick-date">開課日期：待公布</span></a></li>
+    </ul></div>
+    <div class="pick-col"><h2 class="pick-t">近期工作坊</h2><ul>
+      <li><a href="p/courses.html#sirius-ws"><div class="pk-h"><h3>天狼星工作坊</h3><span class="more">看介紹</span></div><p>Shemaya現在以工作坊形式分享天狼星星際的知識與智慧，它能修復個人累世在地球的轉世經驗，並開啟個人靈魂本有的內在智慧。</p><span class="pick-date">開課日期：待公布</span></a></li>
     </ul></div>
   </div>
 </section>
@@ -500,7 +508,7 @@ ul{list-style:none}
     <h2 class="course-group first">深度訓練</h2>
     <article class="course"><a class="ph" href="p/yuguang.html"><img src="assets/c-yuguang.webp" width="607" height="852" alt="浴光之路課程" loading="lazy"></a><div class="tx"><h3>浴光之路</h3><p>帶你超越頭腦的各種限制，以心去認識自己的課程，帶你透過脈輪練習，剝下你在世間的稱謂丶角色丶形象⋯，去認識真正的，完整的自己。</p><a class="more" href="p/yuguang.html">課程介紹</a></div></article>
     <article class="course"><a class="ph" href="p/courses.html#herb-priest"><img src="assets/c-herb.webp" width="800" height="1067" alt="神聖自然藥草祭司課程" loading="lazy"></a><div class="tx"><h3>神聖自然藥草祭司</h3><p>承自耶穌聖殿的愛及藥草女神與薩滿植物界的療癒力量，喚醒那些曾與大自然合一的人們，以及在過去對植物知識有連結的人們。</p><a class="more" href="p/courses.html#herb-priest">課程介紹</a></div></article>
-    <article class="course"><a class="ph" href="p/courses.html#water"><img src="assets/c-water.webp" width="800" height="600" alt="水知識課程" loading="lazy"></a><div class="tx"><h3>水知識</h3><p>是由Agni及Mara為Shemaya所讀下來的薩滿課程之一。</p><a class="more" href="p/courses.html#water">課程介紹</a></div></article>
+    <article class="course"><a class="ph" href="p/courses.html#water"><img src="assets/c-water.webp" width="800" height="600" alt="薩滿水知識課程" loading="lazy"></a><div class="tx"><h3>薩滿水知識</h3><p>是由Agni及Mara為Shemaya所讀下來的薩滿課程之一。</p><a class="more" href="p/courses.html#water">課程介紹</a></div></article>
     <article class="course"><a class="ph" href="p/courses.html#elements"><img src="assets/c-elements.webp" width="800" height="800" alt="黃金世紀四大元素與基督之光課程" loading="lazy"></a><div class="tx"><h3>黃金世紀四大元素與基督之光</h3><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><a class="more" href="p/courses.html#elements">課程介紹</a></div></article>
     <article class="course"><a class="ph" href="p/courses.html#wolf"><img src="assets/c-wolf.webp" width="800" height="800" alt="狼祭司與熊部落課程" loading="lazy"></a><div class="tx"><h3>狼祭司與熊部落</h3><p>薩滿傳承裡，狼的力量特質是領導者，卓越的引領者、教導者，狼也體現忠誠、獨立、智慧以及和家族群體的連結力。</p><a class="more" href="p/courses.html#wolf">課程介紹</a></div></article>
     <h2 class="course-group">初階課程</h2>
@@ -521,7 +529,7 @@ ul{list-style:none}
       <a href="p/series-other.html?s=rainbow"><img src="assets/hs-rainbow.webp" width="500" height="500" alt="彩虹沙賓系列" loading="lazy"><span>彩虹沙賓系列</span></a>
       <a href="p/series-other.html?s=healer"><img src="assets/hs-healer.webp" width="500" height="500" alt="療癒師系列" loading="lazy"><span>療癒師系列</span></a>
       <a href="p/shop.html#crystal-spray"><img src="assets/h-crystal-spray.webp" width="500" height="500" alt="水晶光能噴霧" loading="lazy"><span>水晶光能噴霧</span></a>
-      <a href="p/shop.html#crystal"><img src="assets/h-gem.webp" width="500" height="500" alt="靈性水晶" loading="lazy"><span>靈性水晶</span></a>
+      <a href="p/shop.html#crystal"><img src="assets/h-gem.webp" width="500" height="500" alt="靈性水晶設計與訂製" loading="lazy"><span>靈性水晶設計與訂製</span></a>
       <a href="p/shop.html#lighthouse"><img src="assets/h-lighthouse.webp" width="500" height="500" alt="空間風水淨化劑（光屋）" loading="lazy"><span>空間風水淨化劑（光屋）</span></a>
       <a href="p/shop.html#cards"><img src="assets/h-cards.webp" width="500" height="500" alt="阿卡莎脈輪花精卡" loading="lazy"><span>阿卡莎脈輪花精卡</span></a>
       <a href="p/shop.html#comb"><img src="assets/h-comb.webp" width="500" height="500" alt="拉克希米女神髮梳" loading="lazy"><span>拉克希米女神髮梳</span></a>
@@ -536,7 +544,7 @@ ul{list-style:none}
       <li><a href="p/series-other.html?s=rainbow"><img src="assets/ms-rainbow.webp" width="240" height="240" alt="" loading="lazy"><h3>彩虹沙賓系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
       <li><a href="p/series-other.html?s=healer"><img src="assets/ms-healer.webp" width="240" height="240" alt="" loading="lazy"><h3>療癒師系列</h3><span>商品由 Shemaya 自行上架</span></a></li>
       <li><a href="p/shop.html#crystal-spray"><img src="assets/m-crystal.webp" width="240" height="240" alt="" loading="lazy"><h3>水晶光能噴霧</h3><span>水晶光能系列</span></a></li>
-      <li><a href="p/shop.html#crystal"><img src="assets/m-gem.webp" width="240" height="240" alt="" loading="lazy"><h3>靈性水晶</h3><span>商品由 Shemaya 自行上架</span></a></li>
+      <li><a href="p/shop.html#crystal"><img src="assets/m-gem.webp" width="240" height="240" alt="" loading="lazy"><h3>靈性水晶設計與訂製</h3><span>商品由 Shemaya 自行上架</span></a></li>
       <li><a href="p/shop.html#lighthouse"><img src="assets/m-lighthouse.webp" width="240" height="240" alt="" loading="lazy"><h3>空間風水淨化劑（光屋）</h3><span>NT$2,500</span></a></li>
       <li><a href="p/shop.html#cards"><img src="assets/m-cards.webp" width="240" height="240" alt="" loading="lazy"><h3>阿卡莎脈輪花精卡</h3><span>NT$2,100</span></a></li>
       <li><a href="p/shop.html#comb"><img src="assets/m-comb.webp" width="240" height="240" alt="" loading="lazy"><h3>拉克希米女神髮梳</h3><span>NT$6,600</span></a></li>
