@@ -573,6 +573,11 @@ figure.pcard:hover img{opacity:1}
   #pd.pd{grid-template-columns:minmax(0,400px) minmax(190px,210px) minmax(0,1fr);gap:32px}
   #pd .pdesc{padding-left:28px}
 }
+
+.to-home-w{display:flex;justify-content:flex-end;margin:0;padding:0 24px 24px;background:#fff}.to-home{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#d6b25e 0%,#a6803a 55%,#c49a45 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.9),0 0 0 1px #a6803a;color:#fff;font-family:var(--serif);font-size:12px;letter-spacing:.06em;line-height:1;text-decoration:none}.to-home::before{content:"";width:8px;height:8px;border-left:1.5px solid #fff;border-top:1.5px solid #fff;transform:rotate(45deg);margin:4px 0 6px}.to-home:hover{filter:brightness(1.06)}.to-home:focus-visible{outline:2px solid var(--accent-dark);outline-offset:3px}@media (max-width:600px){.to-home-w{padding:0 16px 20px}.to-home{width:56px;height:56px;font-size:11px}}
+
+.post-card{grid-template-columns:1fr;gap:14px}  
+@media (min-width:768px){.posts{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;max-width:none}.post-card:nth-child(2){padding-top:0}}
 </style>
 </head>
 <body>
@@ -585,7 +590,7 @@ figure.pcard:hover img{opacity:1}
       <ul class="menu" id="menu">
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
-            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#potential">個人潛能閱讀</a></li><li><a href="healing.html#essence">靈魂本質閱讀</a></li>
+            <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#phoenix">火鳳凰身心轉化</a></li><li><a href="healing.html#essence">靈魂本質閱讀</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="explore.html" aria-haspopup="true">身心探索</a>
           <div class="dd"><ul class="sub">
@@ -597,11 +602,11 @@ figure.pcard:hover img{opacity:1}
           </ul></div></li>
         <li class="has-sub"><a href="courses.html" aria-haspopup="true">靈性訓練授證</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖自然藥草祭司</a></li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒訓練</a></li><li><a href="courses.html#flower">脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
+            <li class="sub-h">深度訓練</li><li><a href="courses.html#herb-priest">神聖自然藥草祭司</a></li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#sirius-ws">天狼星工作坊</a></li><li class="sub-h">初階課程</li><li><a href="courses.html#crystal">薩滿水晶療癒訓練</a></li><li><a href="courses.html#flower">阿卡莎脈輪花精卡療癒師</a></li><li><a href="courses.html#herb-care">天堂光植物與身心</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="tribe.html" aria-haspopup="true">薩滿課程與療程</a>
           <div class="dd"><ul class="sub">
-            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#fire-story">我的火薩滿故事</a></li><li><a href="tribe.html#fire-snake">薩滿聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#session">預約你的薩滿療程</a></li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
+            <li class="sub-h">課程/工作坊</li><li><a href="courses.html#water">薩滿水知識</a></li><li><a href="tribe.html#alishan">阿里山薩滿僻靜之旅</a></li><li><a href="courses.html#elements">四大元素與基督之光</a></li><li><a href="courses.html#wolf">狼祭司與熊部落</a></li><li><a href="courses.html#crystal">薩滿水晶之旅</a></li><li><a href="courses.html#sirius-ws">天狼星薩滿之旅</a></li><li class="sub-h">個案/療程</li><li><a href="tribe.html#fire-story">Shemaya的火薩滿故事</a></li><li><a href="tribe.html#fire-snake">薩滿聖蛇取毒</a></li><li><a href="tribe.html#return">鑽石療癒-重返薩滿之路</a></li><li><a href="tribe.html#session">預約你的薩滿療程</a></li><li><a href="tribe.html#symbols">北美印地安神聖符號</a></li><li><a href="tribe.html#return-feedback">鑽石療癒個案回饋</a></li>
           </ul></div></li>
         <li class="has-sub"><a href="soul.html" aria-haspopup="true">靈魂藍圖與療癒</a>
           <div class="dd"><ul class="sub">
@@ -632,7 +637,7 @@ figure.pcard:hover img{opacity:1}
   </div>
   <div class="bk" id="bk" role="form" aria-label="預約與報名表單示範">
     <div id="panelSvc" role="tabpanel" aria-labelledby="tabSvc">
-      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心內觀解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>Maha蓮花身心療癒</option><option>金光神經系統</option><option>蓮花創傷療癒</option><option>重新啟動療程</option><option>青春之泉</option><option>各種創傷釋放</option><option>消融轉世迴路</option><option>個人潛能閱讀</option><option>靈魂本質閱讀</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>賽巴巴和平聖灰</option><option>個人化度母蓮花瑜伽</option></optgroup><optgroup label="薩滿課程與療程"><option>薩滿聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option><option>預約你的薩滿療程</option><option>北美印地安神聖符號</option></optgroup><optgroup label="靈魂藍圖與療癒"><option>靈魂藍圖解析與療癒</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><optgroup label="靈性商店"><option>靈性水晶訂製</option></optgroup><option>其他</option></select></div>
+      <div class="f"><label for="bkSvc">想預約的療程 <em>必填</em></label><select id="bkSvc"><option value="">請選擇</option><optgroup label="一對一深度療癒"><option>身心內觀解讀</option><option>前世回溯</option><option>各種業力釋放</option><option>Maha蓮花身心療癒</option><option>金光神經系統</option><option>蓮花創傷療癒</option><option>重新啟動療程</option><option>青春之泉</option><option>各種創傷釋放</option><option>消融轉世迴路</option><option>火鳳凰身心轉化</option><option>靈魂本質閱讀</option></optgroup><optgroup label="身心探索"><option>個人狀態諮詢</option><option>豐盛生命願景解析</option><option>負向信念刪除</option><option>關係結構療癒</option><option>賽巴巴和平聖灰</option><option>個人化度母蓮花瑜伽</option></optgroup><optgroup label="薩滿課程與療程"><option>薩滿聖蛇取毒</option><option>鑽石療癒-重返薩滿之路</option><option>預約你的薩滿療程</option><option>北美印地安神聖符號</option></optgroup><optgroup label="靈魂藍圖與療癒"><option>靈魂藍圖解析與療癒</option><option>伴侶感情關係解碼</option><option>人生大運流年運勢</option><option>六個月時間線大師解讀</option></optgroup><optgroup label="空間能量風水"><option>空間能量風水</option></optgroup><optgroup label="靈性商店"><option>靈性水晶訂製</option></optgroup><option>其他</option></select></div>
       <div class="f"><span class="lab" id="calLab">選擇日期與時段 <em>必填</em></span>
         <div class="cal" id="cal" role="group" aria-labelledby="calLab">
           <div class="cal-head"><button type="button" id="calPrev" aria-label="上個月">‹</button><span id="calTitle" aria-live="polite"></span><button type="button" id="calNext" aria-label="下個月">›</button></div>
@@ -761,7 +766,7 @@ figure.pcard:hover img{opacity:1}
   draw();
 
   var s = new URLSearchParams(location.search).get('s');
-  var RENAMED = { '水知識': '薩滿水知識', '神聖藥草祭司': '神聖自然藥草祭司', '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '個人化度母蓮花瑜伽', '度母蓮花瑜伽': '個人化度母蓮花瑜伽', '火薩滿聖蛇': '薩滿聖蛇取毒', '聖蛇取毒': '薩滿聖蛇取毒', '聖蛇薩滿取毒': '薩滿聖蛇取毒', '身心能量解讀': '身心內觀解讀', '個人身心解讀': '身心內觀解讀', '創傷釋放': '各種創傷釋放', '光藥草保健療癒': '天堂光植物與身心', '薩滿水晶療癒': '薩滿水晶療癒訓練', '消除停滯堵塞': '個人狀態諮詢', '蓮花身心療癒': 'Maha蓮花身心療癒', '脈輪花精卡療癒師': '阿卡莎脈輪花精卡療癒師訓練' };
+  var RENAMED = { '水知識': '薩滿水知識', '神聖藥草祭司': '神聖自然藥草祭司', '人生道路校準': '豐盛生命願景解析', '訂製個人蓮花譚崔瑜伽': '個人化度母蓮花瑜伽', '度母蓮花瑜伽': '個人化度母蓮花瑜伽', '火薩滿聖蛇': '薩滿聖蛇取毒', '聖蛇取毒': '薩滿聖蛇取毒', '聖蛇薩滿取毒': '薩滿聖蛇取毒', '身心能量解讀': '身心內觀解讀', '個人身心解讀': '身心內觀解讀', '創傷釋放': '各種創傷釋放', '光藥草保健療癒': '天堂光植物與身心', '薩滿水晶療癒': '薩滿水晶療癒訓練', '消除停滯堵塞': '個人狀態諮詢', '蓮花身心療癒': 'Maha蓮花身心療癒', '脈輪花精卡療癒師': '阿卡莎脈輪花精卡療癒師訓練', '個人潛能閱讀': '火鳳凰身心轉化' };
   if (s && Object.prototype.hasOwnProperty.call(RENAMED, s)) s = RENAMED[s];
   if (s) {
     var hit = false;
@@ -828,6 +833,7 @@ figure.pcard:hover img{opacity:1}
       </section>
     </div>
   </div>
+  <p class="to-home-w"><a class="to-home" href="../index.html" aria-label="回首頁">回首頁</a></p>
   <div class="site-info">&copy; 2026 SHEMAYA 夏克緹薩滿的金色大門</div>
 </footer>
 <script>
