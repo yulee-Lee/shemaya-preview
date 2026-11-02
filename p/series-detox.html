@@ -343,7 +343,8 @@ ul{list-style:none}
 
 .prose h4{font-family:var(--sans);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 8px;letter-spacing:.04em}
 .prose .doc-t{font-size:19px;font-weight:700;color:var(--accent-dark);margin:0 0 12px}
-.prose hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
+
+hr.sep{border:0;border-top:1px solid var(--line);margin:24px 0;max-width:42em}
 .doc>h3{font-size:20px}
 .doc>.prose>h4:first-child{margin-top:4px}
 .kinds{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 0 32px;padding:16px 20px;background:var(--white);border:1px solid var(--line);list-style:none;font-size:16px;color:var(--accent-dark);font-weight:700;letter-spacing:.04em}
@@ -469,7 +470,11 @@ figure.pcard:hover img{opacity:1}
 
 
 @media (max-width:767px){ .is-ph.multi{max-width:none;grid-template-columns:repeat(2,1fr);gap:8px;align-items:start}
-  .is-ph.multi img:last-child:nth-child(odd){grid-column:1/-1} }
+  .is-ph.multi img:last-child:nth-child(odd){grid-column:1/-1}
+  
+  .is-ph.multi.ph-lead>:nth-child(-n+3){grid-column:1/-1}
+  .is-ph.multi.ph-lead img:last-child:nth-child(odd):not(:nth-child(-n+3)){grid-column:auto}
+  .is-ph.multi.ph-lead img:last-child:nth-child(even):not(:nth-child(-n+3)){grid-column:1/-1} }
 
 .buyline{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:8px}
 .buyline span{font-family:var(--sans);font-size:17px;font-weight:700;color:var(--ink)}
