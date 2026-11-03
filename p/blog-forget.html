@@ -601,6 +601,12 @@ figure.pcard:hover img{opacity:1}
 @media (max-width:1024px){ .item-side>.ph-row{grid-template-columns:repeat(2,minmax(0,1fr))} }
 @media (max-width:767px){ .item-side>.ph-row{gap:8px} }
 
+@media (min-width:768px){
+  .item-side:has(>.ph-row){row-gap:0;grid-template-rows:max-content 1fr}
+  .item-side:has(>.ph-row)>.is-tx{grid-row:1/span 2}
+  .item-side>.ph-row{grid-column:2;grid-row:2;grid-template-columns:minmax(0,1fr);margin-top:16px}
+}
+
 .blog-cols{display:grid;gap:40px}
 .blog-col-t{font-size:20px;line-height:1.4;font-weight:700;letter-spacing:.04em;color:var(--accent-dark);padding-bottom:12px;margin-bottom:24px;border-bottom:1px solid var(--line)}
 .blog-col .posts{display:grid;grid-template-columns:1fr;gap:0;max-width:none}
