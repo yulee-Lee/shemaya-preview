@@ -585,6 +585,33 @@ figure.pcard:hover img{opacity:1}
 @media (min-width:768px){.posts{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;max-width:none}.post-card:nth-child(2){padding-top:0}}
 
 @media (min-width:1025px){.sub a{padding:7px 20px}}
+
+.item{padding:28px 0}
+.item .tlink{margin-top:16px}
+.inner .course-group{margin-top:40px}
+.testimonial{margin-top:24px}
+.testimonial>.item-side:last-child,.doc:has(+ .tlink){margin-bottom:0}
+@media (max-width:767px){
+  .item{padding:24px 0}
+  .inner .course-group{margin-top:32px}
+}
+
+.item-side>.ph-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.ph-row img{display:block;width:100%;height:auto;background:var(--tint)}
+@media (max-width:1024px){ .item-side>.ph-row{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:767px){ .item-side>.ph-row{gap:8px} }
+
+.blog-cols{display:grid;gap:40px}
+.blog-col-t{font-size:20px;line-height:1.4;font-weight:700;letter-spacing:.04em;color:var(--accent-dark);padding-bottom:12px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.blog-col .posts{display:grid;grid-template-columns:1fr;gap:0;max-width:none}
+.blog-col .post-card{padding:0 0 28px;margin-bottom:28px}
+.blog-col .post-card:last-child{border-bottom:0;margin-bottom:0}
+.pc-tx h3{margin:0 0 8px;font-size:19px;line-height:1.45;font-weight:700}
+.pc-tx h3 a:hover,.pc-tx h3 a:focus-visible{color:var(--accent-dark)}
+@media (min-width:768px){ .blog-cols{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;align-items:start} }
+@media (max-width:767px){ .blog-col-t{font-size:18px;margin-bottom:16px} }
+
+.is-tx>.doc:last-child{margin-bottom:0}
 </style>
 </head>
 <body>
@@ -634,11 +661,10 @@ figure.pcard:hover img{opacity:1}
 </header>
 <main id="top">
 <section class="hero"><div class="wrap hero-in"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 部落格</nav><h1 class="sec-title">部落格</h1></div></div></section>
-<div class="wrap inner"><div class="posts">
-<article class="post-card"><a class="pc-ph" href="blog-plants.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-plants.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h2><a href="blog-plants.html">植物與星光的故事</a></h2><p>目前地球的外在環境，勾動了我們在亞特蘭堤斯末期的記憶，能夠在此刻，去釋放個人靈魂裡藏很深的古老陰影，是很幸福的事。</p><a class="tlink" href="blog-plants.html">閱讀全文</a></div></article>
-<article class="post-card"><a class="pc-ph" href="blog-forget.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-forget.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h2><a href="blog-forget.html">勿忘我，記起自己的生命任務</a></h2><p>為什麼我們不記得自己是誰、從何而來，也不記得上一世的事？</p><a class="tlink" href="blog-forget.html">閱讀全文</a></div></article>
-<article class="post-card"><a class="pc-ph" href="blog-dark.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-dark.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h2><a href="blog-dark.html">黑暗是什麼</a></h2><p>黑暗，不是天黑的那種暗，而是生命與光失連的時刻。</p><a class="tlink" href="blog-dark.html">閱讀全文</a></div></article>
-<article class="post-card"><a class="pc-ph" href="blog-architect.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-architect.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h2><a href="blog-architect.html">你是自己未來的建築師</a></h2><p>由你現在採取的行動決定，而不是你為明天計畫的行動。</p><a class="tlink" href="blog-architect.html">閱讀全文</a></div></article>
+<div class="wrap inner"><div class="blog-cols">
+<section class="blog-col"><h2 class="blog-col-t">靈性成長與生活</h2><div class="posts"><article class="post-card"><a class="pc-ph" href="blog-plants.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-plants.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h3><a href="blog-plants.html">植物與星光的故事</a></h3><p>目前地球的外在環境，勾動了我們在亞特蘭堤斯末期的記憶，能夠在此刻，去釋放個人靈魂裡藏很深的古老陰影，是很幸福的事。</p><a class="tlink" href="blog-plants.html">閱讀全文</a></div></article><article class="post-card"><a class="pc-ph" href="blog-forget.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-forget.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h3><a href="blog-forget.html">勿忘我，記起自己的生命任務</a></h3><p>為什麼我們不記得自己是誰、從何而來，也不記得上一世的事？</p><a class="tlink" href="blog-forget.html">閱讀全文</a></div></article></div></section>
+<section class="blog-col"><h2 class="blog-col-t">心情故事</h2><div class="posts"><article class="post-card"><a class="pc-ph" href="blog-dark.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-dark.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h3><a href="blog-dark.html">黑暗是什麼</a></h3><p>黑暗，不是天黑的那種暗，而是生命與光失連的時刻。</p><a class="tlink" href="blog-dark.html">閱讀全文</a></div></article></div></section>
+<section class="blog-col"><h2 class="blog-col-t">靈性教導分享</h2><div class="posts"><article class="post-card"><a class="pc-ph" href="blog-architect.html" tabindex="-1" aria-hidden="true"><img src="assets/t-blog-architect.webp" width="480" height="360" alt="" loading="lazy"></a><div class="pc-tx"><h3><a href="blog-architect.html">你是自己未來的建築師</a></h3><p>由你現在採取的行動決定，而不是你為明天計畫的行動。</p><a class="tlink" href="blog-architect.html">閱讀全文</a></div></article></div></section>
 </div></div>
 </main>
 <footer>

@@ -585,6 +585,33 @@ figure.pcard:hover img{opacity:1}
 @media (min-width:768px){.posts{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px;max-width:none}.post-card:nth-child(2){padding-top:0}}
 
 @media (min-width:1025px){.sub a{padding:7px 20px}}
+
+.item{padding:28px 0}
+.item .tlink{margin-top:16px}
+.inner .course-group{margin-top:40px}
+.testimonial{margin-top:24px}
+.testimonial>.item-side:last-child,.doc:has(+ .tlink){margin-bottom:0}
+@media (max-width:767px){
+  .item{padding:24px 0}
+  .inner .course-group{margin-top:32px}
+}
+
+.item-side>.ph-row{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.ph-row img{display:block;width:100%;height:auto;background:var(--tint)}
+@media (max-width:1024px){ .item-side>.ph-row{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:767px){ .item-side>.ph-row{gap:8px} }
+
+.blog-cols{display:grid;gap:40px}
+.blog-col-t{font-size:20px;line-height:1.4;font-weight:700;letter-spacing:.04em;color:var(--accent-dark);padding-bottom:12px;margin-bottom:24px;border-bottom:1px solid var(--line)}
+.blog-col .posts{display:grid;grid-template-columns:1fr;gap:0;max-width:none}
+.blog-col .post-card{padding:0 0 28px;margin-bottom:28px}
+.blog-col .post-card:last-child{border-bottom:0;margin-bottom:0}
+.pc-tx h3{margin:0 0 8px;font-size:19px;line-height:1.45;font-weight:700}
+.pc-tx h3 a:hover,.pc-tx h3 a:focus-visible{color:var(--accent-dark)}
+@media (min-width:768px){ .blog-cols{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;align-items:start} }
+@media (max-width:767px){ .blog-col-t{font-size:18px;margin-bottom:16px} }
+
+.is-tx>.doc:last-child{margin-bottom:0}
 </style>
 <script>(function(){var m={"five-stages": "#blueprint"};function go(){var k=location.hash.slice(1);if(!Object.prototype.hasOwnProperty.call(m,k))return;var t=m[k];if(t.charAt(0)==="#"&&document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){location.replace(t)});else location.replace(t)}go();window.addEventListener("hashchange",go)})();</script>
 </head>
