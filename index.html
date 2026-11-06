@@ -349,6 +349,7 @@ ul{list-style:none}
 .picks-in{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:1024px){.picks-in{grid-template-columns:1fr}}
 </style>
+<style>.fbvid-grid{display:grid;gap:24px;max-width:1140px;margin:0 auto}.fbvid-grid[data-n="1"]{max-width:720px}.fbvid-grid[data-n="2"]{grid-template-columns:repeat(2,minmax(0,1fr))}.fbvid-grid .fbvid-in{max-width:none;width:100%}.fbvid-grid .fbvid-in video{aspect-ratio:16/9}@media (max-width:767px){.fbvid-grid[data-n="2"]{grid-template-columns:1fr}}</style>
 <style>.to-home-w{display:flex;justify-content:flex-end;margin:0;padding:0 24px 24px;background:#fff}.to-home{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#d6b25e 0%,#a6803a 55%,#c49a45 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.9),0 0 0 1px #a6803a;color:#fff;font-family:var(--serif);font-size:12px;letter-spacing:.06em;line-height:1;text-decoration:none}.to-home::before{content:"";width:8px;height:8px;border-left:1.5px solid #fff;border-top:1.5px solid #fff;transform:rotate(45deg);margin:4px 0 6px}.to-home:hover{filter:brightness(1.06)}.to-home:focus-visible{outline:2px solid var(--accent-dark);outline-offset:3px}@media (max-width:600px){.to-home-w{padding:0 16px 20px}.to-home{width:56px;height:56px;font-size:11px}}@media (min-width:1025px){.sub a{padding:7px 20px}}</style>
 </head>
 <body>
@@ -589,8 +590,8 @@ ul{list-style:none}
   </aside>
 </div>
 
-<section class="fbvid" aria-label="浴光之路短片">
-  <div class="fbvid-in"><video controls playsinline preload="metadata" width="720" height="720" poster="assets/v-home-poster.webp" aria-label="浴光之路短片"><source src="assets/v-home.mp4" type="video/mp4"></video></div>
+<section class="fbvid" aria-label="首頁影片">
+  <div class="fbvid-grid" data-n="1"><div class="fbvid-in"><video controls playsinline preload="metadata" width="1280" height="720" poster="assets/v-home-1-poster.webp" aria-label="浴光之路影片（前段）"><source src="assets/v-home-1.mp4" type="video/mp4"></video></div></div>
 </section>
 
 <footer>
@@ -618,7 +619,7 @@ ul{list-style:none}
     </div>
   </div>
   <p class="to-home-w"><a class="to-home" href="index.html" aria-label="回首頁">回首頁</a></p>
-  <div class="site-info">&copy; 2026 SHEMAYA 夏克緹薩滿的金色大門</div>
+  <div class="site-info">Copyright &copy; 2026 Shemaya 夏克緹薩滿的金色大門.All rights reserved.</div>
 </footer>
 
 <script>
@@ -738,6 +739,30 @@ ul{list-style:none}
   }
 })();
 </script>
+<style>
+.dm-pop{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(20,14,8,.62)}
+.dm-pop[hidden]{display:none}
+.dm-box{position:relative;max-width:100%;max-height:100%}
+.dm-box a{display:block}
+.dm-box img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);box-shadow:0 8px 40px rgba(0,0,0,.45)}
+.dm-x{position:absolute;top:8px;right:8px;width:44px;height:44px;border:0;background:rgba(40,28,16,.78);color:#fff;font:400 28px/44px var(--sans,sans-serif);text-align:center;cursor:pointer;padding:0}
+.dm-x:hover,.dm-x:focus-visible{background:#8a6a2e;outline:2px solid #fff;outline-offset:-4px}
+</style>
+<div id="dm-pop" class="dm-pop" role="dialog" aria-modal="true" aria-label="療程優惠消息" hidden>
+<div class="dm-box"><button type="button" class="dm-x" aria-label="關閉">×</button>
+<a class="dm-link" href="#news"><img src="assets/dm-popup.webp" width="1092" height="1440" alt="薩滿聖蛇除毒與元素療癒：三種療程選擇與優惠價，優惠價格有效期限至 11/30，點擊查看最新消息" decoding="async" fetchpriority="low"></a></div>
+</div>
+<script>(function(){var p=document.getElementById("dm-pop");if(!p)return;try{if(sessionStorage.getItem("dmSeen"))return}catch(e){}
+var last=null,x=p.querySelector(".dm-x"),a=p.querySelector(".dm-link");
+function close(){p.hidden=true;try{sessionStorage.setItem("dmSeen","1")}catch(e){}if(last&&last.focus)last.focus()}
+function seen(){try{sessionStorage.setItem("dmSeen","1")}catch(e){}}
+function open(){last=document.activeElement;p.hidden=false;seen();x.focus()}
+setTimeout(open,1000);
+p.addEventListener("click",function(e){if(e.target===p||e.target===x)close()});
+a.addEventListener("click",close);
+document.addEventListener("keydown",function(e){if(p.hidden)return;if(e.key==="Escape"){close();return}
+if(e.key==="Tab"){var f=[x,a],i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?-1:1)+2)%2].focus()}});
+})();</script>
 <div id="page-end" hidden></div>
 </body>
 </html>
