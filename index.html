@@ -349,8 +349,9 @@ ul{list-style:none}
 .picks-in{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:1024px){.picks-in{grid-template-columns:1fr}}
 </style>
-<style>.fbvid-grid{display:grid;gap:24px;max-width:1140px;margin:0 auto}.fbvid-grid[data-n="1"]{max-width:720px}.fbvid-grid[data-n="2"]{grid-template-columns:repeat(2,minmax(0,1fr))}.fbvid-grid .fbvid-in{max-width:none;width:100%}.fbvid-grid[data-n="3"]{grid-template-columns:repeat(3,minmax(0,1fr))}.fbvid-grid .fbvid-in video{aspect-ratio:16/9;object-fit:contain;background:#000}@media (max-width:1023px){.fbvid-grid[data-n="3"]{grid-template-columns:1fr;max-width:560px}}@media (max-width:767px){.fbvid-grid[data-n="2"]{grid-template-columns:1fr}}.fbvid-row{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin:24px auto 0;max-width:1140px}.fbvid-fb{width:100%;max-width:366px}.vid-v{width:100%;max-width:366px}.vid-v video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#000}.fbvid-fb iframe{display:block;width:100%;height:591px;border:0;overflow:hidden}</style>
+<style>.ytc{position:relative;width:100%}.ytc-btn{display:block;position:relative;width:100%;padding:0;border:0;background:#000;cursor:pointer;aspect-ratio:16/9;overflow:hidden}.ytc-btn img{display:block;width:100%;height:100%;object-fit:cover}.ytc-play{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px 0 0 -26px;border-radius:50%;background:rgba(0,0,0,.55);box-shadow:inset 0 0 0 2px #fff;transition:background .15s}.ytc-play::after{content:"";position:absolute;left:20px;top:15px;border-left:16px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}.ytc-btn:hover .ytc-play,.ytc-btn:focus-visible .ytc-play{background:rgba(0,0,0,.78)}.ytc-btn:focus-visible{outline:2px solid var(--accent-dark);outline-offset:2px}.ytc-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:1140px;margin:0 auto}.ytc-grid .ytc{flex:0 0 calc((100% - 64px)/5);width:auto}@media (max-width:1023px){.ytc-grid .ytc{flex-basis:calc((100% - 32px)/3)}}@media (max-width:767px){.ytc-grid .ytc{flex-basis:calc((100% - 16px)/2)}}.vid-yt{max-width:360px;margin:24px auto}.ytm{position:fixed;left:0;top:0;right:0;bottom:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.84);padding:16px}.ytm[hidden]{display:none}.ytm-box{position:relative;width:min(960px,100%,calc((100vh - 32px)*16/9));aspect-ratio:16/9;background:#000}.ytm-box.v{width:min(calc((100vh - 32px)*9/16),100%);aspect-ratio:9/16}.ytm-box iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}.ytm-x{position:absolute;right:12px;top:10px;width:44px;height:44px;border:0;background:rgba(255,255,255,.92);color:#222;font-size:26px;line-height:44px;cursor:pointer;z-index:2}.ytm-x:hover{background:#fff}</style>
 <style>.to-home-w{display:flex;justify-content:flex-end;margin:0;padding:0 24px 24px;background:#fff}.to-home{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#d6b25e 0%,#a6803a 55%,#c49a45 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.9),0 0 0 1px #a6803a;color:#fff;font-family:var(--serif);font-size:12px;letter-spacing:.06em;line-height:1;text-decoration:none}.to-home::before{content:"";width:8px;height:8px;border-left:1.5px solid #fff;border-top:1.5px solid #fff;transform:rotate(45deg);margin:4px 0 6px}.to-home:hover{filter:brightness(1.06)}.to-home:focus-visible{outline:2px solid var(--accent-dark);outline-offset:3px}@media (max-width:600px){.to-home-w{padding:0 16px 20px}.to-home{width:56px;height:56px;font-size:11px}}@media (min-width:1025px){.sub a{padding:7px 20px}}</style>
+<style>.book{padding:7px 20px}.widget .wbtn{padding:9px 0}.row-head .entry-title.sm{font-size:22px}@media (min-width:601px){.row{grid-auto-columns:calc((100% - 48px)/4);gap:16px}}@media (min-width:1024px){.row{grid-auto-columns:calc((100% - 72px)/4);gap:24px}}@media (max-width:600px){.row-head .entry-title.sm{font-size:18px}}.gal-btn{width:46px;height:46px;margin-top:-23px;background:#fff;color:#222;box-shadow:0 1px 8px rgba(0,0,0,.4);font-size:26px;line-height:46px}.gal-btn:hover{color:var(--accent-dark)}</style>
 </head>
 <body>
 
@@ -408,15 +409,8 @@ ul{list-style:none}
   <p class="intro-p intro-end"><span class="ln"><span>Shemaya 陪伴妳走在光與愛中</span></span><span class="ln"><span>讓生命，</span><span>成為一場為愛與美而展開的覺醒之旅</span></span></p>
 </section>
 
-<section class="picks" aria-label="熱門療程、近期課程與近期工作坊">
+<section class="picks" aria-label="近期課程、近期工作坊與熱門療程">
   <div class="picks-in">
-    <div class="pick-col"><h2 class="pick-t">熱門療程</h2><ul>
-      <li><a href="p/healing.html#past-life"><div class="pk-h"><h3>前世回溯</h3><span class="more">看介紹</span></div><p>人生中不斷出現的重複課題，在你做過諮詢或其他處理卻未能釋懷/解決，那這樣的前世回溯是你需要的。</p></a></li>
-      <li><a href="p/explore.html#belief"><div class="pk-h"><h3>負向信念刪除</h3><span class="more">看介紹</span></div><p>你的人生劇本怎麼寫，命運就如實的呈現。</p></a></li>
-      <li><a href="p/healing.html#karma"><div class="pk-h"><h3>各種業力釋放</h3><span class="more">看介紹</span></div></a></li>
-      <li><a href="p/tribe.html#fire-snake"><div class="pk-h"><h3>薩滿聖蛇取毒</h3><span class="more">看介紹</span></div><p>取毒療程是每個人都需要的，有定期施作的朋友，都感受到了莫大幫助。</p></a></li>
-      <li><a href="p/soul.html"><div class="pk-h"><h3>靈魂藍圖與療癒</h3><span class="more">看介紹</span></div><p>靈魂藍圖是我們在投生到地球前自己所設計好的考卷，透過一連串的考題去磨練心智，去成就智慧。</p></a></li>
-    </ul></div>
     <div class="pick-col"><h2 class="pick-t">近期課程</h2><ul>
       <li><a href="p/courses.html#elements"><div class="pk-h"><h3>四大元素與基督之光</h3><span class="more">看介紹</span></div><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><span class="pick-date">開課日期：待公布</span></a></li>
       <li><a href="p/courses.html#herb-care"><div class="pk-h"><h3>天堂光植物與身心</h3><span class="more">看介紹</span></div><span class="pick-date">開課日期：待公布</span></a></li>
@@ -424,11 +418,18 @@ ul{list-style:none}
     <div class="pick-col"><h2 class="pick-t">近期工作坊</h2><ul>
       <li><a href="p/courses.html#sirius-ws"><div class="pk-h"><h3>天狼星工作坊</h3><span class="more">看介紹</span></div><p>Shemaya現在以工作坊形式分享天狼星星際的知識與智慧，它能修復個人累世在地球的轉世經驗，並開啟個人靈魂本有的內在智慧。</p><span class="pick-date">開課日期：待公布</span></a></li>
     </ul></div>
+    <div class="pick-col"><h2 class="pick-t">熱門療程</h2><ul>
+      <li><a href="p/healing.html#past-life"><div class="pk-h"><h3>前世回溯</h3><span class="more">看介紹</span></div><p>人生中不斷出現的重複課題，在你做過諮詢或其他處理卻未能釋懷/解決，那這樣的前世回溯是你需要的。</p></a></li>
+      <li><a href="p/explore.html#belief"><div class="pk-h"><h3>負向信念刪除</h3><span class="more">看介紹</span></div><p>你的人生劇本怎麼寫，命運就如實的呈現。</p></a></li>
+      <li><a href="p/healing.html#karma"><div class="pk-h"><h3>各種業力釋放</h3><span class="more">看介紹</span></div></a></li>
+      <li><a href="p/tribe.html#fire-snake"><div class="pk-h"><h3>薩滿聖蛇取毒</h3><span class="more">看介紹</span></div><p>取毒療程是每個人都需要的，有定期施作的朋友，都感受到了莫大幫助。</p></a></li>
+      <li><a href="p/soul.html"><div class="pk-h"><h3>靈魂藍圖與療癒</h3><span class="more">看介紹</span></div><p>靈魂藍圖是我們在投生到地球前自己所設計好的考卷，透過一連串的考題去磨練心智，去成就智慧。</p></a></li>
+    </ul></div>
   </div>
 </section>
 
 <section class="strip" aria-label="課程與活動照片">
-  <div class="gal">
+  <div class="gal" data-step="page" data-interval="5000">
     <div class="gal-row" id="galRow" tabindex="0" aria-label="課程與活動照片，共 27 張，可左右捲動">
       <figure><img src="assets/g-01.webp" width="900" height="600" alt="Shemaya 課程與活動照片 1" loading="lazy"></figure>
       <figure><img src="assets/g-02.webp" width="900" height="600" alt="Shemaya 課程與活動照片 2" loading="lazy"></figure>
@@ -521,7 +522,7 @@ ul{list-style:none}
     <article class="course"><a class="ph" href="p/courses.html#herb-priest"><img src="assets/c-herb.webp" width="800" height="1067" alt="神聖自然藥草祭司課程" loading="lazy"></a><div class="tx"><h3>神聖自然藥草祭司</h3><p>承自耶穌聖殿的愛及藥草女神與薩滿植物界的療癒力量，喚醒那些曾與大自然合一的人們，以及在過去對植物知識有連結的人們。</p><a class="more" href="p/courses.html#herb-priest">課程介紹</a></div></article>
     <article class="course"><a class="ph" href="p/courses.html#water"><img src="assets/c-water.webp" width="800" height="600" alt="薩滿水知識課程" loading="lazy"></a><div class="tx"><h3>薩滿水知識</h3><p>是由Agni及Mara為Shemaya所讀下來的薩滿課程之一。</p><a class="more" href="p/courses.html#water">課程介紹</a></div></article>
     <article class="course"><a class="ph" href="p/courses.html#elements"><img src="assets/c-elements.webp" width="800" height="800" alt="黃金世紀四大元素與基督之光課程" loading="lazy"></a><div class="tx"><h3>黃金世紀四大元素與基督之光</h3><p>四元素是薩滿傳承的基礎，本課程五天的訓練，是黃金世紀的四大元素升級版本。</p><a class="more" href="p/courses.html#elements">課程介紹</a></div></article>
-    <article class="course"><a class="ph" href="p/courses.html#wolf"><img src="assets/hc-wolf.webp" width="800" height="600" alt="狼祭司與熊部落課程" loading="lazy"></a><div class="tx"><h3>狼祭司與熊部落</h3><p>薩滿傳承裡，狼的力量特質是領導者，卓越的引領者、教導者，狼也體現忠誠、獨立、智慧以及和家族群體的連結力。</p><a class="more" href="p/courses.html#wolf">課程介紹</a></div></article>
+    <article class="course"><a class="ph" href="p/courses.html#wolf"><img src="assets/hc-wolf.webp" width="800" height="800" alt="狼祭司與熊部落課程" loading="lazy"></a><div class="tx"><h3>狼祭司與熊部落</h3><p>薩滿傳承裡，狼的力量特質是領導者，卓越的引領者、教導者，狼也體現忠誠、獨立、智慧以及和家族群體的連結力。</p><a class="more" href="p/courses.html#wolf">課程介紹</a></div></article>
     <h2 class="course-group">初階課程</h2>
     <article class="course"><a class="ph" href="p/courses.html#crystal"><img src="assets/c-crystal.webp" width="800" height="800" alt="薩滿水晶之旅課程" loading="lazy"></a><div class="tx"><h3>薩滿水晶之旅</h3><p>水晶礦石是光的聚合體，無論被展開在空間內丶戴在身上，它的光都在運作。</p><a class="more" href="p/courses.html#crystal">課程介紹</a></div></article>
     <article class="course"><a class="ph" href="p/courses.html#flower"><img src="assets/hc-flower.webp" width="800" height="600" alt="阿卡莎脈輪花精卡療癒師訓練課程" loading="lazy"></a><div class="tx"><h3>阿卡莎脈輪花精卡療癒師訓練</h3><p>也許你也有這套與眾不同的療癒脈輪的牌卡，你想要學習完整的花精脈輪卡療癒嗎？</p><a class="more" href="p/courses.html#flower">課程介紹</a></div></article>
@@ -591,7 +592,7 @@ ul{list-style:none}
 </div>
 
 <section class="fbvid" aria-label="首頁影片">
-  <div class="fbvid-grid" data-n="3"><div class="fbvid-in"><video controls playsinline preload="none" width="1280" height="720" poster="assets/v-home-1-poster.webp" aria-label="走向自己、成為自己的道路影片（橘色）"><source src="assets/v-home-1.mp4" type="video/mp4"></video></div><div class="fbvid-in"><video controls playsinline preload="none" width="1280" height="720" poster="assets/v-home-2-poster.webp" aria-label="浴光之路影片（有音樂）"><source src="assets/v-home-2.mp4" type="video/mp4"></video></div><div class="fbvid-in"><video controls playsinline preload="none" width="960" height="720" poster="assets/v-water-poster.webp" aria-label="薩滿水知識影片"><source src="assets/v-water.mp4" type="video/mp4"></video></div></div><div class="fbvid-row"><div class="vid-v"><video controls playsinline preload="none" width="720" height="1280" poster="assets/v-herb-poster.webp" aria-label="神聖自然藥草祭司影片"><source src="assets/v-herb.mp4" type="video/mp4"></video></div><div class="vid-v"><video controls playsinline preload="none" width="720" height="1280" poster="assets/v-ali-poster.webp" aria-label="阿里山薩滿僻靜影片"><source src="assets/v-ali.mp4" type="video/mp4"></video></div></div>
+  <div class="ytc-grid" data-n="5"><div class="ytc" data-yt="GooXmk_Apoo" data-o="h"><button type="button" class="ytc-btn" aria-label="播放：走向自己、成為自己的道路影片"><img src="assets/yt-home-1.webp" width="960" height="540" alt="" loading="lazy"><span class="ytc-play" aria-hidden="true"></span></button></div><div class="ytc" data-yt="HZcWTVXFZtg" data-o="h"><button type="button" class="ytc-btn" aria-label="播放：浴光之路影片"><img src="assets/yt-home-2.webp" width="960" height="540" alt="" loading="lazy"><span class="ytc-play" aria-hidden="true"></span></button></div><div class="ytc" data-yt="QyRxmuNe93A" data-o="h"><button type="button" class="ytc-btn" aria-label="播放：薩滿水知識影片"><img src="assets/yt-water.webp" width="960" height="540" alt="" loading="lazy"><span class="ytc-play" aria-hidden="true"></span></button></div><div class="ytc" data-yt="RCgQFDTZ9-E" data-o="v"><button type="button" class="ytc-btn" aria-label="播放：神聖自然藥草祭司影片"><img src="assets/yt-herb.webp" width="960" height="540" alt="" loading="lazy"><span class="ytc-play" aria-hidden="true"></span></button></div><div class="ytc" data-yt="uCuU35pKCAI" data-o="v"><button type="button" class="ytc-btn" aria-label="播放：阿里山薩滿僻靜影片"><img src="assets/yt-ali.webp" width="960" height="540" alt="" loading="lazy"><span class="ytc-play" aria-hidden="true"></span></button></div></div><script>(function(){var m=null,last=null,off=[];function close(){if(!m)return;m.parentNode.removeChild(m);m=null;off.forEach(function(e){e.inert=false});off=[];document.removeEventListener("keydown",key);if(last&&last.focus)last.focus()}function key(e){if(e.key==="Escape")close();else if(e.key==="Tab"&&m){var f=m.querySelectorAll("button,iframe");if(!f.length)return;var a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}}}function open(c){close();last=c.querySelector("button");var id=c.getAttribute("data-yt"),v=c.getAttribute("data-o")==="v";m=document.createElement("div");m.className="ytm";m.setAttribute("role","dialog");m.setAttribute("aria-modal","true");m.setAttribute("aria-label","影片播放");var b=document.createElement("div");b.className="ytm-box"+(v?" v":"");var x=document.createElement("button");x.type="button";x.className="ytm-x";x.setAttribute("aria-label","關閉影片");x.innerHTML="&times;";x.addEventListener("click",close);var f=document.createElement("iframe");f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0&playsinline=1";f.title=last.getAttribute("aria-label");f.setAttribute("allow","autoplay; encrypted-media; picture-in-picture; fullscreen");f.setAttribute("allowfullscreen","");f.setAttribute("referrerpolicy","strict-origin-when-cross-origin");b.appendChild(f);m.appendChild(b);m.appendChild(x);m.addEventListener("click",function(e){if(e.target===m)close()});document.body.appendChild(m);[].slice.call(document.body.children).forEach(function(e){if(e!==m&&!e.inert){e.inert=true;off.push(e)}});document.addEventListener("keydown",key);x.focus()}document.addEventListener("click",function(e){var c=e.target.closest&&e.target.closest(".ytc");if(c&&c.querySelector(".ytc-btn")){e.preventDefault();open(c)}});})();</script>
 </section>
 
 <footer>
@@ -704,7 +705,8 @@ ul{list-style:none}
       var fig = gal.querySelector('figure');
       var w = fig.getBoundingClientRect().width + (parseFloat(getComputedStyle(gal).columnGap) || 0);
       var max = gal.scrollWidth - gal.clientWidth;
-      var x = gal.scrollLeft + dir * w;
+      var n = galBox.getAttribute('data-step') === 'page' ? Math.max(1, Math.round(gal.clientWidth / w)) : 1;
+      var x = gal.scrollLeft + dir * w * n;
       if (dir > 0 && gal.scrollLeft >= max - 2) x = 0;
       else if (dir < 0 && gal.scrollLeft <= 2) x = max;
       gal.scrollTo({ left: x, behavior: still.matches ? 'auto' : 'smooth' });
@@ -756,7 +758,7 @@ ul{list-style:none}
 var last=null,x=p.querySelector(".dm-x"),a=p.querySelector(".dm-link");
 function close(){p.hidden=true;try{sessionStorage.setItem("dmSeen","1")}catch(e){}if(last&&last.focus)last.focus()}
 function seen(){try{sessionStorage.setItem("dmSeen","1")}catch(e){}}
-function open(){last=document.activeElement;p.hidden=false;seen();x.focus()}
+function open(){if(document.querySelector(".ytm")){seen();return}last=document.activeElement;p.hidden=false;seen();x.focus()}
 setTimeout(open,1000);
 p.addEventListener("click",function(e){if(e.target===p||e.target===x)close()});
 a.addEventListener("click",close);
