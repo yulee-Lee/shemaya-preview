@@ -334,7 +334,7 @@ ul{list-style:none}
 @media (max-width:600px){#courses{font-size:22px}.main-card{padding-top:20px}.course{margin-top:24px}}
 .widget .wnote{font-size:14px;line-height:1.75;color:#8a8580;margin:0}
 .say{padding-bottom:64px}
-.say-gal .gal-row{align-items:start}
+.say-gal .gal-row{align-items:start;overflow-y:hidden}
 .say-card{line-height:1.7;padding:36px 28px 22px}
 .say-card blockquote{flex:none}
 .say-card p+p{margin-top:6px}
@@ -512,6 +512,7 @@ ul{list-style:none}
     <button class="gal-btn prev" type="button" data-dir="-1" aria-label="上一則">&#8249;</button>
     <button class="gal-btn next" type="button" data-dir="1" aria-label="下一則">&#8250;</button>
   </div>
+<script>(function(){var g=document.querySelector('.say-gal');if(!g)return;var row=g.querySelector('.gal-row'),cs=[].slice.call(row.querySelectorAll('.say-card')),t=null;function fit(shrink){var rr=row.getBoundingClientRect(),h=0;cs.forEach(function(c){var r=c.getBoundingClientRect();if(r.right>rr.left+1&&r.left<rr.right-1)h=Math.max(h,c.offsetHeight)});if(!h)return;var cur=parseFloat(row.style.height)||0;if(h>cur){row.style.transition='none';row.style.height=h+'px'}else if(shrink&&h<cur){row.style.transition='height .2s';row.style.height=h+'px'}}row.addEventListener('scroll',function(){fit(false);clearTimeout(t);t=setTimeout(function(){fit(true)},140)},{passive:true});window.addEventListener('resize',function(){row.style.height='';fit(true)});window.addEventListener('load',function(){fit(true)});if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){fit(true)});fit(true)})();</script>
 </section>
 <div class="site-content">
   <main class="main-card">
