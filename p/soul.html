@@ -679,6 +679,9 @@ figure.pcard:hover img{opacity:1}
 .hero.hero-toc{padding-bottom:24px}
 .hero-toc+.inner{padding-top:24px}
 @media (max-width:600px){.hero{padding:20px 0}.inner{padding-top:24px}.item{padding:20px 0}.item>h2,.item-h{margin-bottom:12px}.hero.hero-toc{padding-bottom:16px}.hero-toc+.inner{padding-top:16px}}
+
+.footer-info .to-home-w{margin:0;padding:0;background:transparent;grid-column:1/-1}
+@media (min-width:1025px){.footer-info .fw-in{grid-template-columns:repeat(3,minmax(0,1fr)) auto}.footer-info .to-home-w{grid-column:auto;align-self:start}}
 </style>
 <script>(function(){var m={"five-stages": "#blueprint"};function go(){var k=location.hash.slice(1);if(!Object.prototype.hasOwnProperty.call(m,k))return;var t=m[k];if(t.charAt(0)==="#"&&document.readyState==="loading")document.addEventListener("DOMContentLoaded",function(){location.replace(t)});else location.replace(t)}go();window.addEventListener("hashchange",go)})();</script>
 </head>
@@ -759,9 +762,9 @@ figure.pcard:hover img{opacity:1}
       <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
         <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
       </section>
+    <p class="to-home-w"><a class="to-home" href="../index.html" aria-label="回首頁">回首頁</a></p>
     </div>
   </div>
-  <p class="to-home-w"><a class="to-home" href="../index.html" aria-label="回首頁">回首頁</a></p>
   <div class="site-info">Copyright &copy; 2026 Shemaya 夏克緹薩滿的金色大門.All rights reserved.</div>
 </footer>
 <script>
