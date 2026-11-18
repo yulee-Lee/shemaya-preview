@@ -689,6 +689,12 @@ figure.pcard:hover img{opacity:1}
 @media (max-width:600px){.hero{padding-bottom:12px}.inner{padding-top:16px}.inner>.item{padding-bottom:16px}.inner>.item+.item{padding-top:16px}.item>h2{font-size:19px;margin-bottom:8px}}
 
 @media (min-width:1025px){.footer-info .to-home-w{margin-top:50px}}
+
+.nl-sec{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:14px;align-items:start}.nl-sec .widget-title{margin:4px 0 0;white-space:nowrap}.nl-sec .nl{display:contents}.nl-sec .nl-l{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}.nl-sec .nl-row{margin-top:-3px}.nl-sec .nl-msg{grid-column:2;margin-top:6px}
+@media (min-width:1025px){.footer-info .to-home-w{margin-top:-14px}}
+
+.menu>li.menu-home{display:none}.menu>li.menu-home+li::before{display:none}.menu>li.menu-home+li{margin-left:0}
+@media (max-width:1024px){.menu>li.menu-home{display:block}}
 </style>
 </head>
 <body>
@@ -699,6 +705,7 @@ figure.pcard:hover img{opacity:1}
     <div class="nav-in">
       <button class="menu-toggle" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu"><i></i>選單</button>
       <ul class="menu" id="menu">
+        <li class="menu-home"><a href="../index.html">首頁</a></li>
         <li class="has-sub"><a href="healing.html" aria-haspopup="true">一對一深度療癒</a>
           <div class="dd"><ul class="sub">
             <li><a href="healing.html#reading">身心內觀解讀</a></li><li><a href="healing.html#past-life">前世回溯</a></li><li><a href="healing.html#karma">各種業力釋放</a></li><li><a href="healing.html#lotus">Maha蓮花身心療癒</a></li><li><a href="healing.html#trauma">各種創傷釋放</a></li><li><a href="healing.html#reincarnation">消融轉世迴路</a></li><li><a href="healing.html#phoenix">火鳳凰身心轉化</a></li><li><a href="healing.html#essence">靈魂本質閱讀</a></li>
@@ -762,8 +769,8 @@ figure.pcard:hover img{opacity:1}
     <div class="fw-in">
       <section class="widget fi"><h2 class="widget-title"><a href="shopping.html">購物須知</a></h2></section>
       <section class="widget fi"><h2 class="widget-title"><a href="shipping.html">送貨政策</a></h2></section>
-      <section class="widget fi"><h2 class="widget-title">訂閱電子報</h2>
-        <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
+      <section class="widget fi nl-sec"><h2 class="widget-title">訂閱電子報</h2>
+        <div class="nl" id="nlForm" role="form" aria-label="訂閱電子報"><label class="nl-l" for="nlEmail">Email</label><div class="nl-row"><input id="nlEmail" type="email" maxlength="80" autocomplete="email" inputmode="email" placeholder="Email"><button type="button" id="nlBtn">訂閱</button></div><p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p></div>
       </section>
     <p class="to-home-w"><a class="to-home" href="../index.html" aria-label="回首頁">回首頁</a></p>
     </div>
@@ -815,6 +822,14 @@ figure.pcard:hover img{opacity:1}
   });
   window.addEventListener('resize', fitMenu);
   window.addEventListener('scroll', fitMenu, { passive: true });
+  var openY = 0;
+  btn.addEventListener('click', function () { openY = window.scrollY; });
+  window.addEventListener('scroll', function () {
+    if (menu.classList.contains('open') && Math.abs(window.scrollY - openY) > 30) closeMenu();
+  }, { passive: true });
+  document.addEventListener('pointerdown', function (e) {
+    if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+  }, { passive: true });
   items.forEach(function (li) {
     var t = document.createElement('button');
     t.type = 'button';
