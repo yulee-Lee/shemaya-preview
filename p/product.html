@@ -777,8 +777,6 @@ figure.pcard:hover img{opacity:1}
   var box = document.getElementById('pDesc');
   if (d.d.length) {
     d.d.forEach(function (t) { var p = document.createElement('p'); p.textContent = t; box.appendChild(p); });
-  } else {
-    var p = document.createElement('p'); p.className = 'pending'; p.textContent = '商品介紹待 Shemaya 提供'; box.appendChild(p);
   }
   if (d.nd) { var nd = document.createElement('p'); nd.className = 'note'; nd.textContent = d.nd; box.appendChild(nd); }
   var s = document.getElementById('pSeries'); s.textContent = d.s; s.href = d.u;
@@ -795,7 +793,7 @@ figure.pcard:hover img{opacity:1}
   q.addEventListener('change', clamp);
   document.getElementById('buy').addEventListener('submit', function (e) {
     e.preventDefault(); clamp();
-    document.getElementById('buyMsg').textContent = '測試站不開放購買。正式站開放後，可將商品加入購物車並以 ATM 轉帳付款。（' + d.n + (d.o.length > 1 ? ' ' + d.o[Number(sel.value)][0] : '') + ' × ' + q.value + '）';
+    document.getElementById('buyMsg').textContent = '目前暫時無法線上購買，歡迎來信 chlorisgrace@gmail.com，或到臉書粉絲專頁聯絡我們。（' + d.n + (d.o.length > 1 ? ' ' + d.o[Number(sel.value)][0] : '') + ' × ' + q.value + '）';
   });
 })();
 </script>
@@ -938,7 +936,7 @@ figure.pcard:hover img{opacity:1}
   if (nlBtn) {
     var nlSend = function () {
       var v = document.getElementById('nlEmail').value.trim();
-      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '測試站示範：資料不會送出。' : '請輸入正確的 Email。';
+      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '電子報訂閱即將開放，需要的話請先與我們聯絡。' : '請輸入正確的 Email。';
     };
     nlBtn.addEventListener('click', nlSend);
     document.getElementById('nlEmail').addEventListener('keydown', function (e) { if (e.key === 'Enter') nlSend(); });

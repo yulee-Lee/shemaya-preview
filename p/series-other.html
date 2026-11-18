@@ -735,7 +735,7 @@ figure.pcard:hover img{opacity:1}
 <section class="hero"><div class="wrap"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / <a href="shop.html">靈性商店</a> / <span id="sCrumb">系列</span></nav><h1 class="sec-title" id="sName">系列</h1></div></section>
 <div class="wrap inner">
   <div class="pd" id="sd" hidden><div class="pd-ph" id="sPh"></div>
-  <div><p class="pending">本系列商品由 Shemaya 自行上架</p><a class="btn" href="shop.html">回靈性商店</a></div></div>
+  <div><a class="btn" href="shop.html">回靈性商店</a></div></div>
   <div id="sNone" hidden><p class="note">找不到這個系列，請回商店重新選擇。</p><a class="btn" href="shop.html">回靈性商店</a></div>
 </div>
 <script>
@@ -897,7 +897,7 @@ figure.pcard:hover img{opacity:1}
   if (nlBtn) {
     var nlSend = function () {
       var v = document.getElementById('nlEmail').value.trim();
-      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '測試站示範：資料不會送出。' : '請輸入正確的 Email。';
+      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '電子報訂閱即將開放，需要的話請先與我們聯絡。' : '請輸入正確的 Email。';
     };
     nlBtn.addEventListener('click', nlSend);
     document.getElementById('nlEmail').addEventListener('keydown', function (e) { if (e.key === 'Enter') nlSend(); });

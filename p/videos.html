@@ -734,7 +734,7 @@ figure.pcard:hover img{opacity:1}
 <main id="top">
 <section class="hero"><div class="wrap hero-in"><div class="hero-tx"><nav class="crumbs" aria-label="麵包屑"><a href="../index.html">首頁</a> / 影音課程</nav><h1 class="sec-title">影音課程</h1></div></div></section>
 <div class="wrap inner narrow">
-<section class="item" id="list"><h2>線上影音課程</h2><p class="pending">內容待 Shemaya 提供</p><p class="note">正式站上線後，學員購買課程即可在學員後台的「我的課程」觀看影片與講義，課程內容由 Shemaya 上傳。</p></section>
+<section class="item" id="list"><h2>線上影音課程</h2><p class="note">影音課程即將開放，敬請期待。</p></section>
 </div>
 </main>
 <footer>
@@ -875,7 +875,7 @@ figure.pcard:hover img{opacity:1}
   if (nlBtn) {
     var nlSend = function () {
       var v = document.getElementById('nlEmail').value.trim();
-      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '測試站示範：資料不會送出。' : '請輸入正確的 Email。';
+      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '電子報訂閱即將開放，需要的話請先與我們聯絡。' : '請輸入正確的 Email。';
     };
     nlBtn.addEventListener('click', nlSend);
     document.getElementById('nlEmail').addEventListener('keydown', function (e) { if (e.key === 'Enter') nlSend(); });

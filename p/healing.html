@@ -883,7 +883,7 @@ figure.pcard:hover img{opacity:1}
   if (nlBtn) {
     var nlSend = function () {
       var v = document.getElementById('nlEmail').value.trim();
-      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '測試站示範：資料不會送出。' : '請輸入正確的 Email。';
+      document.getElementById('nlMsg').textContent = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '電子報訂閱即將開放，需要的話請先與我們聯絡。' : '請輸入正確的 Email。';
     };
     nlBtn.addEventListener('click', nlSend);
     document.getElementById('nlEmail').addEventListener('keydown', function (e) { if (e.key === 'Enter') nlSend(); });
