@@ -5,7 +5,7 @@ document.head.appendChild(st);
 var busy=false,pend=false;
 function scan(){
   busy=true;
-  var els=document.querySelectorAll('.sx-r,#pd .pdesc');
+  var els=document.querySelectorAll('.sx-r,#pd .pdesc,.pd-more .pdesc');
   for(var i=0;i<els.length;i++){
     var el=els[i],h=el.querySelector('.scroll-hint');
     if(el.offsetParent===null){continue;}

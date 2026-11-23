@@ -297,7 +297,7 @@ ul{list-style:none}
 .pcard .pn{display:block;text-align:center;padding-top:12px;font-size:16px;letter-spacing:.06em}
 .pcard .pp{display:block;text-align:center;font-family:var(--sans);font-size:13px;color:var(--ink-sub)}
 .pd{display:grid;grid-template-columns:minmax(0,480px) 1fr;gap:56px;align-items:start}
-.pd-ph{background:var(--tint);aspect-ratio:1/1}
+.pd-more .pd{margin-top:56px;padding-top:56px;border-top:1px solid var(--line)}@media(max-width:820px){.pd-more{display:none}}@media (min-width:1025px){.pd-more .pd{grid-template-columns:minmax(0,400px) minmax(190px,210px) minmax(0,1fr);gap:32px;align-items:stretch}.pd-more .pdesc{grid-column:auto;margin-top:0;padding:0 8px 0 28px;border-top:0;border-left:1px solid var(--line);contain:size;overflow-y:auto;overscroll-behavior:contain}.pd-more .pdesc p:last-child{margin-bottom:0}}.pd-ph{background:var(--tint);aspect-ratio:1/1}
 .pd-ph img{width:100%;height:100%;object-fit:contain}
 .pd-x img{display:block;width:100%;height:auto;margin-top:16px}
 .ph-empty.ph-card,.ph-empty.ph-fill{max-width:none;width:100%}
@@ -805,6 +805,45 @@ figure.pcard:hover img{opacity:1}
     e.preventDefault(); clamp();
     document.getElementById('buyMsg').textContent = '目前暫時無法線上購買，歡迎來信 chlorisgrace@gmail.com，或到臉書粉絲專頁聯絡我們。（' + d.n + (d.o.length > 1 ? ' ' + d.o[Number(sel.value)][0] : '') + ' × ' + q.value + '）';
   });
+
+  (function () {
+    if (code.charAt(0) !== 's' || window.matchMedia('(max-width:820px)').matches) return;
+    var pd = document.getElementById('pd');
+    var same = K.filter(function (k) { return P[k].u === d.u; });
+    var at = same.indexOf(code); if (at < 0 || same.length < 2) return;
+    var order = same.slice(at + 1).concat(same.slice(0, at));
+    var more = document.createElement('div'); more.className = 'pd-more';
+    order.forEach(function (c) {
+      var x = P[c], blk = pd.cloneNode(true);
+      blk.removeAttribute('id'); blk.hidden = false;
+      [].forEach.call(blk.querySelectorAll('[id]'), function (e) { e.removeAttribute('id'); });
+      var ph = blk.querySelector('.pd-ph'); ph.textContent = '';
+      var im = document.createElement('img'); im.width = x.w; im.height = x.h; im.alt = x.n; im.src = 'assets/' + c + '.webp'; im.loading = 'lazy'; ph.appendChild(im);
+      blk.querySelector('.pd-x').textContent = '';
+      var h = blk.querySelector('h1'), h2 = document.createElement('h2'); h2.className = h.className; h2.textContent = x.n; h.parentNode.replaceChild(h2, h);
+      var o = x.o[0]; blk.querySelector('.pp-big').textContent = (x.set ? '整套優惠價 ' : '') + money(o[1]) + (x.set || !o[0] ? '' : '／' + o[0]);
+      var dsc = blk.querySelector('.pdesc'); dsc.textContent = '';
+      x.d.forEach(function (t) { var p = document.createElement('p'); p.textContent = t; dsc.appendChild(p); });
+      if (x.nd) { var nd = document.createElement('p'); nd.className = 'note'; nd.textContent = x.nd; dsc.appendChild(nd); }
+      var qi = blk.querySelector('.qty input'); qi.value = 1; qi.id = 'qty-' + c;
+      var lb = blk.querySelector('label[for="qty"]'); if (lb) lb.setAttribute('for', 'qty-' + c);
+      blk.querySelector('form.buy').setAttribute('data-n', x.n);
+      var i = K.indexOf(c), pv = K[(i - 1 + kn) % kn], nx = K[(i + 1) % kn], as = blk.querySelectorAll('.pnav a');
+      as[0].href = 'product.html?p=' + pv; as[0].title = '看上個商品：' + P[pv].n; as[1].href = 'product.html?p=' + nx; as[1].title = '看下個商品：' + P[nx].n;
+      blk.querySelector('.notice').textContent = '';
+      more.appendChild(blk);
+    });
+    pd.insertAdjacentElement('afterend', more);
+    more.addEventListener('click', function (e) {
+      var b = e.target.closest('.qty button'); if (!b) return;
+      var i = b.parentNode.querySelector('input'), v = parseInt(i.value, 10); v = isNaN(v) ? 1 : v;
+      i.value = Math.min(99, Math.max(1, v + Number(b.getAttribute('data-q'))));
+    });
+    more.addEventListener('submit', function (e) {
+      e.preventDefault(); var f = e.target, i = f.querySelector('input'), v = parseInt(i.value, 10); v = isNaN(v) ? 1 : Math.min(99, Math.max(1, v)); i.value = v;
+      f.parentNode.querySelector('.notice').textContent = '目前暫時無法線上購買，歡迎來信 chlorisgrace@gmail.com，或到臉書粉絲專頁聯絡我們。（' + f.getAttribute('data-n') + ' × ' + v + '）';
+    });
+  })();
 })();
 </script>
 </main>
